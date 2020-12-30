@@ -19,7 +19,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'cace7b6fb49a5f8d57d23db1eddb22c669b23cd7',
+    'reference' => 'ffd191360df79be9ed89d25bbf15647718c92e90',
     'name' => 'drupal/legacy-project',
   ),
   'versions' => 
@@ -163,6 +163,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '8.x-2.0',
+    ),
+    'drupal/audiofield' => 
+    array (
+      'pretty_version' => '1.10.0',
+      'version' => '1.10.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.10',
     ),
     'drupal/automated_cron' => 
     array (
@@ -991,7 +1000,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'cace7b6fb49a5f8d57d23db1eddb22c669b23cd7',
+      'reference' => 'ffd191360df79be9ed89d25bbf15647718c92e90',
     ),
     'drupal/libraries' => 
     array (
