@@ -1,0 +1,14 @@
+uuid: c7ae9e4e-9708-44e0-9c76-8c68a7c274ad
+name: Emailify
+mail: root@localhost.localdomain
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node/2
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE

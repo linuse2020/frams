@@ -1,0 +1,42 @@
+name: Frams
+description: A theme based on Radix.
+screenshot: screenshot.png
+core: 8.x
+# version: VERSION
+engine: twig
+type: theme
+base theme: radix
+
+regions:
+  sidebar_menu: Sidebar menu
+  navbar_branding: Navbar branding
+  navbar_left:  Navbar left
+  navbar_right: Navbar right
+  header: Header
+  content: Content
+  page_bottom: Page bottom
+  footer: Footer
+
+libraries:
+  - radix/style
+  - frams/style
+  - frams/custom
+  - frams/fonts
+  - frams/star-ratings
+  - frams/percircle-progress
+
+libraries-override:
+  radix/bootstrap: false
+
+ckeditor_stylesheets:
+  - assets/css/frams.style.css
+
+component-libraries:
+  frams:
+    paths:
+      - ./src/components
+
+# Information added by Drupal.org packaging script on 2020-01-26
+version: '8.x-4.7'
+project: 'radix'
+datestamp: 1580057585

@@ -1,0 +1,14 @@
+uuid: 23cd85a4-f9d5-466b-b913-70198b0d3bdc
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.subscriber
+  module:
+    - user
+id: user_add_role_action.subscriber
+label: 'Add the Subscriber role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: subscriber

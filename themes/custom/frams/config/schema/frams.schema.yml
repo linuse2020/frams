@@ -1,0 +1,5 @@
+# Schema for the configuration files of the Frams theme.
+
+transbee.settings:
+  type: theme_settings
+  label: 'Frams settings'

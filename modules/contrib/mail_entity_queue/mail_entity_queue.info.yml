@@ -1,0 +1,17 @@
+name: Mail Entity Queue
+description: Provides an entity queues based system to process mails.
+package: Mail
+
+# core: 8.x
+type: module
+
+configure: entity.mail_entity_queue.collection
+
+dependencies:
+  - 'drupal:system (>= 8.5)'
+
+# Information added by Drupal.org packaging script on 2018-07-04
+version: '8.x-1.0-alpha1'
+core: '8.x'
+project: 'mail_entity_queue'
+datestamp: 1530682425

@@ -1,0 +1,49 @@
+style:
+  version: VERSION
+  css:
+    theme:
+      assets/css/frams.style.css: {}
+  js:
+    assets/js/frams.script.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+
+custom:
+  js:
+    assets/js/frams-custom.js: {}
+  dependencies:
+    - core/jquery
+
+preloader:
+  css:
+    theme:
+      assets/css/preloader.css: {}
+  js:
+    assets/js/preloader.min.js: {}
+  dependencies:
+    - core/jquery
+
+fonts:
+  css:
+    theme:
+      '//fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700': { type: external, minified: true }
+      '//fonts.googleapis.com/css2?family=Eczar:wght@700': { type: external, minified: true }
+
+star-ratings:
+  css:
+    theme:
+      assets/css/star-rating-svg.css: {}
+  js:
+    assets/js/jquery.star-rating-svg.js: {}
+  dependencies:
+    - core/jquery
+
+percircle-progress:
+  css:
+    theme:
+      assets/css/percircle.css: {}
+  js:
+    assets/js/percircle.js: {}
+  dependencies:
+    - core/jquery

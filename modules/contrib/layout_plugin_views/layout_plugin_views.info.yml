@@ -1,0 +1,13 @@
+name: Layout Plugin Views
+description: 'Allows users to dispay Views fields in the regions of pluggable layouts provided trough the layout plugin module.'
+type: module
+# core: 8.x
+dependencies:
+  - layout_plugin
+  - views
+
+# Information added by Drupal.org packaging script on 2018-10-16
+version: '8.x-1.1'
+core: '8.x'
+project: 'layout_plugin_views'
+datestamp: 1539714486

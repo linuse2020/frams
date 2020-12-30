@@ -1,0 +1,16 @@
+uuid: b356da09-90ec-425c-b079-efac4e931139
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - entity_browser_example
+_core:
+  default_config_hash: 9tkUrs5_jvuW1b9tMuT7F6JgIjuaeys9XIV49iKTbKU
+name: 'Entity browser test'
+type: entity_browser_test
+description: 'Testing entity browser.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

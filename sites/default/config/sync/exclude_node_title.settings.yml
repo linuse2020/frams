@@ -1,0 +1,16 @@
+nid_list:
+  - 1
+  - 2
+translation_sync: true
+search: false
+_core:
+  default_config_hash: avgYHPM-altr_AzKnQXTMVOX45XPWncreZepSjW8m7c
+content_types:
+  article: none
+  entity_browser_test: none
+  page: user
+content_type_modes:
+  article: {  }
+  entity_browser_test: {  }
+  page:
+    - full

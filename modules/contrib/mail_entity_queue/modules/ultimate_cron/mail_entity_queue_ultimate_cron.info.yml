@@ -1,0 +1,16 @@
+name: Mail Entity Queue ultimate cron
+description: Integrates ultimate cron with the mail entity queue module.
+package: Mail
+
+# core: 8.x
+type: module
+
+dependencies:
+  - mail_entity_queue:mail_entity_queue
+  - ultimate_cron:ultimate_cron
+
+# Information added by Drupal.org packaging script on 2018-07-04
+version: '8.x-1.0-alpha1'
+core: '8.x'
+project: 'mail_entity_queue'
+datestamp: 1530682425

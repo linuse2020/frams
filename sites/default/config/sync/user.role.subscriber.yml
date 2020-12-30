@@ -1,0 +1,10 @@
+uuid: 9cc724f3-8e49-41a3-a9cc-0c4992471b4a
+langcode: en
+status: true
+dependencies: {  }
+id: subscriber
+label: Subscriber
+weight: 3
+is_admin: null
+permissions:
+  - 'use exclude node title'

@@ -1,0 +1,31 @@
+.navbar {
+  right: auto;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  position: fixed;
+  align-items: flex-start;
+  @media screen and (max-width: 991) {
+    width: 232px;
+  }
+  .form-inline {
+
+    .form-actions {
+      display: none;
+    }
+  }
+}
+
+.toolbar-oriented .toolbar-bar {
+  z-index: 1200;
+}
+
+.toolbar-horizontal {
+
+  .toolbar-menu {
+
+    &.nav {
+      float: left;
+    }
+  }
+}

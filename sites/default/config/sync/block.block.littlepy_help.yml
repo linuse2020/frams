@@ -1,0 +1,22 @@
+uuid: dc731fe8-42f1-4270-b810-76d4eb50cacf
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - littlepy
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: littlepy_help
+theme: littlepy
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

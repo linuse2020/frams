@@ -1,0 +1,13 @@
+name: 'Views Secondary Row'
+description: 'Provides a table style allowing fields to be broken into a secondary row.'
+# core: 8.x
+dependencies:
+  - views
+package: Views
+type: module
+
+# Information added by Drupal.org packaging script on 2015-12-22
+version: '8.x-1.0'
+core: '8.x'
+project: 'views_secondary_row'
+datestamp: 1450793946
