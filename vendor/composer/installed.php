@@ -1,12 +1,12 @@
 <?php return array (
   'root' => 
   array (
-    'pretty_version' => '1.0.0+no-version-set',
-    'version' => '1.0.0.0',
+    'pretty_version' => 'dev-master',
+    'version' => 'dev-master',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => 'cace7b6fb49a5f8d57d23db1eddb22c669b23cd7',
     'name' => 'drupal/legacy-project',
   ),
   'versions' => 
@@ -670,6 +670,15 @@
         0 => '8.9.11',
       ),
     ),
+    'drupal/entity_reference_revisions' => 
+    array (
+      'pretty_version' => '1.8.0',
+      'version' => '1.8.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.8',
+    ),
     'drupal/entityreference_filter' => 
     array (
       'pretty_version' => '1.2.0',
@@ -964,12 +973,12 @@
     ),
     'drupal/legacy-project' => 
     array (
-      'pretty_version' => '1.0.0+no-version-set',
-      'version' => '1.0.0.0',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => 'cace7b6fb49a5f8d57d23db1eddb22c669b23cd7',
     ),
     'drupal/libraries' => 
     array (
@@ -1158,6 +1167,15 @@
       array (
         0 => '8.9.11',
       ),
+    ),
+    'drupal/paragraphs' => 
+    array (
+      'pretty_version' => '1.12.0',
+      'version' => '1.12.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.12',
     ),
     'drupal/path' => 
     array (

@@ -61,6 +61,7 @@
         "drupal/menu_item_role_access": "^2.0",
         "drupal/menu_link_attributes": "^1.1",
         "drupal/menu_token": "^1.0@alpha",
+        "drupal/paragraphs": "^1.12",
         "drupal/profile": "^1.2",
         "drupal/queue_ui": "^2.2",
         "drupal/radix_layouts": "^4.1",
