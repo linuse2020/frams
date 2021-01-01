@@ -1,0 +1,19 @@
+uuid: e802ff17-af92-44de-b6a9-d36fe4fca3d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_survey_number
+    - paragraphs.paragraphs_type._survey_details
+id: paragraph._survey_details.field_survey_number
+field_name: field_survey_number
+entity_type: paragraph
+bundle: _survey_details
+label: 'Survey Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

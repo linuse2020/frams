@@ -1,0 +1,36 @@
+uuid: 4bd15239-c531-4459-a7e1-c05bbf41e4be
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.tdo.body
+    - field.field.node.tdo.field_district_office_contact
+    - field.field.node.tdo.field_district_officer_designati
+    - field.field.node.tdo.field_email
+    - node.type.tdo
+  module:
+    - text
+    - user
+id: node.tdo.teaser
+targetEntityType: node
+bundle: tdo
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_district_office_contact: true
+  field_district_officer_designati: true
+  field_email: true

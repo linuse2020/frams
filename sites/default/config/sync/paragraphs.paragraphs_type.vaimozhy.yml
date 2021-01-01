@@ -1,0 +1,10 @@
+uuid: d2ce6040-1425-4132-adac-814555c01600
+langcode: en
+status: true
+dependencies: {  }
+id: vaimozhy
+label: Vaimozhy
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

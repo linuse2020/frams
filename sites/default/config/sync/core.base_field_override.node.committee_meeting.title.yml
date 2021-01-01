@@ -1,0 +1,18 @@
+uuid: d3390df1-58ff-49ba-a469-0667a961815d
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.committee_meeting
+id: node.committee_meeting.title
+field_name: title
+entity_type: node
+bundle: committee_meeting
+label: 'Meeting Date(dd-mm-yyyy)'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,28 @@
+uuid: 24a062fa-08b9-4632-8bf6-034dd37ebb9f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_frc_meeting_minutes
+    - node.type.application
+    - node.type.committee_meeting
+id: node.application.field_frc_meeting_minutes
+field_name: field_frc_meeting_minutes
+entity_type: node
+bundle: application
+label: 'frc Meeting Minutes'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      committee_meeting: committee_meeting
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

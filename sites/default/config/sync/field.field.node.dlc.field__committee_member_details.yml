@@ -1,0 +1,49 @@
+uuid: c776bc52-7f67-4f08-ac3c-b6f71b13258b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field__committee_member_details
+    - node.type.dlc
+    - paragraphs.paragraphs_type.committee_member_details
+  module:
+    - entity_reference_revisions
+id: node.dlc.field__committee_member_details
+field_name: field__committee_member_details
+entity_type: node
+bundle: dlc
+label: ' Committee member details'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      committee_member_details: committee_member_details
+    target_bundles_drag_drop:
+      _survey_details:
+        weight: 14
+        enabled: false
+      committee_member_details:
+        enabled: true
+        weight: 8
+      family_members_details:
+        weight: 9
+        enabled: false
+      meeting_members_details:
+        weight: 10
+        enabled: false
+      other_claims:
+        weight: 11
+        enabled: false
+      vaimozhy:
+        weight: 12
+        enabled: false
+      vaimozhy_witness_details:
+        weight: 13
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,10 @@
+uuid: 57be546b-2dba-4598-958e-34f7c5d03248
+langcode: en
+status: true
+dependencies: {  }
+id: other_claims
+label: 'Other claims'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

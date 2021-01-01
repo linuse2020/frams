@@ -1,0 +1,10 @@
+uuid: cdb8adb4-5cd9-43fb-bf00-8c0f2ee17fdf
+langcode: en
+status: true
+dependencies: {  }
+id: frc_members_details
+label: 'FRC Members Details'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

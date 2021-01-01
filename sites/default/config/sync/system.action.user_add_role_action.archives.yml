@@ -1,0 +1,14 @@
+uuid: 97c8de73-217f-458b-9e6c-02f0beb1c137
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.archives
+  module:
+    - user
+id: user_add_role_action.archives
+label: 'Add the Archives role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: archives

@@ -1,0 +1,19 @@
+uuid: 48e49737-9255-48aa-8df7-8c3d281d941b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_vaimozhy_witness_name
+    - paragraphs.paragraphs_type.vaimozhy_witness_details
+id: paragraph.vaimozhy_witness_details.field_vaimozhy_witness_name
+field_name: field_vaimozhy_witness_name
+entity_type: paragraph
+bundle: vaimozhy_witness_details
+label: 'Vaimozhy Witness Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

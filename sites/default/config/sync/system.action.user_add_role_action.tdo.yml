@@ -1,0 +1,14 @@
+uuid: 9cf7e2af-da01-45f9-bebf-8228e2800cb9
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.tdo
+  module:
+    - user
+id: user_add_role_action.tdo
+label: 'Add the TDO role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: tdo

@@ -1,0 +1,24 @@
+uuid: 1d5ad372-9208-40e9-ad46-e441d8b3d53c
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - profile
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: profile.field_profile_promoter
+field_name: field_profile_promoter
+entity_type: profile
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

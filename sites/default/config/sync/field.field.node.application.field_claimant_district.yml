@@ -1,0 +1,29 @@
+uuid: eac459ad-ec01-4c4a-8342-752517884769
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_claimant_district
+    - node.type.application
+    - taxonomy.vocabulary.district
+id: node.application.field_claimant_district
+field_name: field_claimant_district
+entity_type: node
+bundle: application
+label: 'Claimant District'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      district: district
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

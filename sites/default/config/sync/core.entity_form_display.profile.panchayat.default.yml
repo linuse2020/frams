@@ -1,0 +1,32 @@
+uuid: 82e0e34d-0dd7-4f42-9138-f4a6018a3e24
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.panchayat.field_grama_panchayat
+    - profile.type.panchayat
+  module:
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: profile.panchayat.default
+targetEntityType: profile
+bundle: panchayat
+mode: default
+content:
+  field_grama_panchayat:
+    weight: 26
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  is_default: true

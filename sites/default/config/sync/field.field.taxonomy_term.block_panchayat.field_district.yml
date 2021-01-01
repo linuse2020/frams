@@ -1,0 +1,21 @@
+uuid: f0e68793-4755-4d60-8299-54e81e6c26de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_district
+    - taxonomy.vocabulary.block_panchayat
+id: taxonomy_term.block_panchayat.field_district
+field_name: field_district
+entity_type: taxonomy_term
+bundle: block_panchayat
+label: District
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings: {  }
+field_type: entity_reference

@@ -1,0 +1,9 @@
+uuid: ba51a926-8874-40b6-8562-3d22e2f3820c
+langcode: en
+status: true
+dependencies: {  }
+id: panchayat
+label: PANCHAYAT
+weight: 8
+is_admin: null
+permissions: {  }

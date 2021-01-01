@@ -1,0 +1,23 @@
+uuid: 3d3f9ff3-75ff-42c3-837c-5a71e7ef9b34
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_submit_photograph_of_coupl
+    - node.type.application
+id: node.application.field_submit_photograph_of_coupl
+field_name: field_submit_photograph_of_coupl
+entity_type: node
+bundle: application
+label: 'Submit photograph of Couple'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

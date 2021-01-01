@@ -1,0 +1,54 @@
+uuid: 9361a769-2e59-4b47-a25a-f4f7a8cf225f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.promoter.field_profile_promoter
+    - field.field.profile.promoter.field_tdo
+    - field.field.profile.promoter.field_teo
+    - profile.type.promoter
+  module:
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: profile.promoter.default
+targetEntityType: profile
+bundle: promoter
+mode: default
+content:
+  field_profile_promoter:
+    weight: 26
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_tdo:
+    weight: 27
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_teo:
+    weight: 28
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  is_default: true

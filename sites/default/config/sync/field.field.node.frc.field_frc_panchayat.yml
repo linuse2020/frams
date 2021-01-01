@@ -1,0 +1,29 @@
+uuid: 26cc58a8-9b19-463c-82c8-fbf419377fc2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_frc_panchayat
+    - node.type.frc
+    - taxonomy.vocabulary.grama_panchayat
+id: node.frc.field_frc_panchayat
+field_name: field_frc_panchayat
+entity_type: node
+bundle: frc
+label: 'frc Panchayat'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      grama_panchayat: grama_panchayat
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

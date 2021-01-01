@@ -1,0 +1,9 @@
+uuid: daea7c53-7b58-4745-90dc-bcfde73baa9a
+langcode: en
+status: true
+dependencies: {  }
+id: slc
+label: SLC
+weight: 7
+is_admin: null
+permissions: {  }

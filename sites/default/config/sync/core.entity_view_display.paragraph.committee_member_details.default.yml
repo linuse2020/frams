@@ -1,0 +1,47 @@
+uuid: 9573cbe1-4d11-4dc1-bfa2-1d0264cb679d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.committee_member_details.field_category
+    - field.field.paragraph.committee_member_details.field_contact_number
+    - field.field.paragraph.committee_member_details.field_email
+    - field.field.paragraph.committee_member_details.field_member_name
+    - paragraphs.paragraphs_type.committee_member_details
+  module:
+    - options
+id: paragraph.committee_member_details.default
+targetEntityType: paragraph
+bundle: committee_member_details
+mode: default
+content:
+  field_category:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_contact_number:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_email:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_member_name:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

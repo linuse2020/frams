@@ -1,0 +1,65 @@
+uuid: 73796091-c060-44c9-bce8-e163a982678a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.committee_meeting.field__venue
+    - field.field.node.committee_meeting.field_committee
+    - field.field.node.committee_meeting.field_meeting_members_details
+    - field.field.node.committee_meeting.field_meeting_minutes
+    - field.field.node.committee_meeting.field_total_participants
+    - node.type.committee_meeting
+  module:
+    - entity_reference_revisions
+    - file
+    - user
+id: node.committee_meeting.default
+targetEntityType: node
+bundle: committee_meeting
+mode: default
+content:
+  field__venue:
+    weight: 105
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_committee:
+    weight: 101
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_meeting_members_details:
+    type: entity_reference_revisions_entity_view
+    weight: 103
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_meeting_minutes:
+    weight: 102
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_total_participants:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

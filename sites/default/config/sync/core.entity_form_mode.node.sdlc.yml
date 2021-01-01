@@ -1,0 +1,10 @@
+uuid: 98aaacd1-a484-4078-9353-432e8c299fa1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.sdlc
+label: SDLC
+targetEntityType: node
+cache: true

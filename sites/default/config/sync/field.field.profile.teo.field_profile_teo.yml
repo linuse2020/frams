@@ -1,0 +1,28 @@
+uuid: 3b446419-da00-489d-afe1-b2e9ffb2f239
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_profile_teo
+    - node.type.teo
+    - profile.type.teo
+id: profile.teo.field_profile_teo
+field_name: field_profile_teo
+entity_type: profile
+bundle: teo
+label: 'Profile TEO'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      teo: teo
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

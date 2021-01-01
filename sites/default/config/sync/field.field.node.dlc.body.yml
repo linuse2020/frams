@@ -1,0 +1,23 @@
+uuid: b55ccfd9-e23c-4d09-bfa1-5eea5b74c8c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.dlc
+  module:
+    - text
+id: node.dlc.body
+field_name: body
+entity_type: node
+bundle: dlc
+label: Details
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

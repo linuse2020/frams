@@ -1,0 +1,43 @@
+uuid: cfbb3550-f4ce-48a7-9de8-27d47724d004
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.teo.field_profile_teo
+    - field.field.profile.teo.field_tdo
+    - profile.type.teo
+  module:
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: profile.teo.default
+targetEntityType: profile
+bundle: teo
+mode: default
+content:
+  field_profile_teo:
+    weight: 27
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_tdo:
+    weight: 28
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  is_default: true

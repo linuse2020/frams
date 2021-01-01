@@ -1,0 +1,61 @@
+uuid: 469c5087-cc25-446d-9dc7-52b2f4347dda
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.vaimozhy.field_oorumooppan_age
+    - field.field.paragraph.vaimozhy.field_oorumooppan_name
+    - field.field.paragraph.vaimozhy.field_oorumooppan_vaimozhy
+    - field.field.paragraph.vaimozhy.field_vaimozhy_witness_details
+    - paragraphs.paragraphs_type.vaimozhy
+  module:
+    - field_layout
+    - file
+    - layout_discovery
+    - paragraphs
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: paragraph.vaimozhy.default
+targetEntityType: paragraph
+bundle: vaimozhy
+mode: default
+content:
+  field_oorumooppan_age:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_oorumooppan_name:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_oorumooppan_vaimozhy:
+    weight: 4
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  field_vaimozhy_witness_details:
+    type: entity_reference_paragraphs
+    weight: 3
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true

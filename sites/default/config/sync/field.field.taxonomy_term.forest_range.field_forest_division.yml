@@ -1,0 +1,29 @@
+uuid: 90fa3ad1-07e5-4efe-b23d-b7d15b00ca5c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_forest_division
+    - taxonomy.vocabulary.forest_division
+    - taxonomy.vocabulary.forest_range
+id: taxonomy_term.forest_range.field_forest_division
+field_name: field_forest_division
+entity_type: taxonomy_term
+bundle: forest_range
+label: 'Forest Division'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      forest_division: forest_division
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

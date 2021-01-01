@@ -1,0 +1,152 @@
+uuid: 11742709-6790-48d3-b4e2-fcb4f6b7d695
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.application.field__claimant_range
+    - field.field.node.application.field__claimant_taluk
+    - field.field.node.application.field__form_appendix2
+    - field.field.node.application.field__frc_secretary_report
+    - field.field.node.application.field__photo
+    - field.field.node.application.field__voter_id_card_no
+    - field.field.node.application.field_address
+    - field.field.node.application.field_adharcard_no
+    - field.field.node.application.field_alloted_land_cultivation
+    - field.field.node.application.field_alloted_land_habitation
+    - field.field.node.application.field_archives
+    - field.field.node.application.field_cast_cirtificate
+    - field.field.node.application.field_caste_cert_spouse
+    - field.field.node.application.field_caste_cert_spouse_
+    - field.field.node.application.field_claimant_constituency
+    - field.field.node.application.field_claimant_district
+    - field.field.node.application.field_claimant_dlc
+    - field.field.node.application.field_claimant_frc
+    - field.field.node.application.field_claimant_panchayat
+    - field.field.node.application.field_claimant_promoter
+    - field.field.node.application.field_claimant_sdlc
+    - field.field.node.application.field_claimant_settlement
+    - field.field.node.application.field_claimant_slc
+    - field.field.node.application.field_claimant_tdo
+    - field.field.node.application.field_claimant_teo
+    - field.field.node.application.field_claimant_village
+    - field.field.node.application.field_contact_no
+    - field.field.node.application.field_declaration
+    - field.field.node.application.field_disputed_lands
+    - field.field.node.application.field_dlc_meeting_minutes
+    - field.field.node.application.field_email
+    - field.field.node.application.field_field_displaced
+    - field.field.node.application.field_field_extent_of_land
+    - field.field.node.application.field_form_appendix4
+    - field.field.node.application.field_frc_meeting_minutes
+    - field.field.node.application.field_frc_site_map
+    - field.field.node.application.field_frc_site_photo
+    - field.field.node.application.field_habitation
+    - field.field.node.application.field_is_schedules_tribe
+    - field.field.node.application.field_is_spouse_st
+    - field.field.node.application.field_name_of_father
+    - field.field.node.application.field_name_of_mother
+    - field.field.node.application.field_name_of_other_claimants
+    - field.field.node.application.field_name_of_the_spouse
+    - field.field.node.application.field_not_submit_couple_photo
+    - field.field.node.application.field_number_of_claims_submitted
+    - field.field.node.application.field_other_claims
+    - field.field.node.application.field_other_family_members
+    - field.field.node.application.field_other_traditional_ri
+    - field.field.node.application.field_panchayat_report
+    - field.field.node.application.field_pattas
+    - field.field.node.application.field_photo_couple
+    - field.field.node.application.field_ration_card_no
+    - field.field.node.application.field_rehabilitation
+    - field.field.node.application.field_sdlc_meeting_minutes_
+    - field.field.node.application.field_self_cultivation
+    - field.field.node.application.field_submit_adharcard
+    - field.field.node.application.field_submit_photograph_of_coupl
+    - field.field.node.application.field_submit_ration_card
+    - field.field.node.application.field_submit_voter_id
+    - field.field.node.application.field_survery_conducted
+    - field.field.node.application.field_survey_details
+    - field.field.node.application.field_upload_adharcard_copy
+    - field.field.node.application.field_upload_ration_card_copy
+    - field.field.node.application.field_upload_voters_id_copy
+    - field.field.node.application.field_vaimozhy
+    - node.type.application
+  module:
+    - user
+id: node.application.teaser
+targetEntityType: node
+bundle: application
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field__claimant_range: true
+  field__claimant_taluk: true
+  field__form_appendix2: true
+  field__frc_secretary_report: true
+  field__photo: true
+  field__voter_id_card_no: true
+  field_address: true
+  field_adharcard_no: true
+  field_alloted_land_cultivation: true
+  field_alloted_land_habitation: true
+  field_archives: true
+  field_cast_cirtificate: true
+  field_caste_cert_spouse: true
+  field_caste_cert_spouse_: true
+  field_claimant_constituency: true
+  field_claimant_district: true
+  field_claimant_dlc: true
+  field_claimant_frc: true
+  field_claimant_panchayat: true
+  field_claimant_promoter: true
+  field_claimant_sdlc: true
+  field_claimant_settlement: true
+  field_claimant_slc: true
+  field_claimant_tdo: true
+  field_claimant_teo: true
+  field_claimant_village: true
+  field_contact_no: true
+  field_declaration: true
+  field_disputed_lands: true
+  field_dlc_meeting_minutes: true
+  field_email: true
+  field_field_displaced: true
+  field_field_extent_of_land: true
+  field_form_appendix4: true
+  field_frc_meeting_minutes: true
+  field_frc_site_map: true
+  field_frc_site_photo: true
+  field_habitation: true
+  field_is_schedules_tribe: true
+  field_is_spouse_st: true
+  field_name_of_father: true
+  field_name_of_mother: true
+  field_name_of_other_claimants: true
+  field_name_of_the_spouse: true
+  field_not_submit_couple_photo: true
+  field_number_of_claims_submitted: true
+  field_other_claims: true
+  field_other_family_members: true
+  field_other_traditional_ri: true
+  field_panchayat_report: true
+  field_pattas: true
+  field_photo_couple: true
+  field_ration_card_no: true
+  field_rehabilitation: true
+  field_sdlc_meeting_minutes_: true
+  field_self_cultivation: true
+  field_submit_adharcard: true
+  field_submit_photograph_of_coupl: true
+  field_submit_ration_card: true
+  field_submit_voter_id: true
+  field_survery_conducted: true
+  field_survey_details: true
+  field_upload_adharcard_copy: true
+  field_upload_ration_card_copy: true
+  field_upload_voters_id_copy: true
+  field_vaimozhy: true

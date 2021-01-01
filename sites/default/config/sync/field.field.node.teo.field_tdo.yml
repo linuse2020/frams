@@ -1,0 +1,28 @@
+uuid: 6506db50-9b5c-40a5-8d84-63058a55ee2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tdo
+    - node.type.tdo
+    - node.type.teo
+id: node.teo.field_tdo
+field_name: field_tdo
+entity_type: node
+bundle: teo
+label: TDO
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      tdo: tdo
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

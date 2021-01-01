@@ -1,0 +1,30 @@
+uuid: 76ed93d1-ccb7-4ef5-9863-950e6e735006
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.committee_meeting.field__venue
+    - field.field.node.committee_meeting.field_committee
+    - field.field.node.committee_meeting.field_meeting_members_details
+    - field.field.node.committee_meeting.field_meeting_minutes
+    - field.field.node.committee_meeting.field_total_participants
+    - node.type.committee_meeting
+  module:
+    - user
+id: node.committee_meeting.teaser
+targetEntityType: node
+bundle: committee_meeting
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field__venue: true
+  field_committee: true
+  field_meeting_members_details: true
+  field_meeting_minutes: true
+  field_total_participants: true

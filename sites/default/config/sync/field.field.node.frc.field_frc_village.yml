@@ -1,0 +1,29 @@
+uuid: 181dd1df-aee0-4f03-9db5-6480b8cdb18a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_frc_village
+    - node.type.frc
+    - taxonomy.vocabulary.village
+id: node.frc.field_frc_village
+field_name: field_frc_village
+entity_type: node
+bundle: frc
+label: 'frc Village'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      village: village
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

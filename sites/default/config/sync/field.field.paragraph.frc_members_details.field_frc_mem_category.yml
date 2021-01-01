@@ -1,0 +1,21 @@
+uuid: 33e92dc7-f772-4ae5-81f0-01dd056c041e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_frc_mem_category
+    - paragraphs.paragraphs_type.frc_members_details
+  module:
+    - options
+id: paragraph.frc_members_details.field_frc_mem_category
+field_name: field_frc_mem_category
+entity_type: paragraph
+bundle: frc_members_details
+label: 'Frc Mem Category'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

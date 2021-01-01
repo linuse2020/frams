@@ -1,0 +1,29 @@
+uuid: 8f03fb68-13f5-4021-a59b-cb52ebe6db76
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_district
+    - taxonomy.vocabulary.district
+    - taxonomy.vocabulary.taluk
+id: taxonomy_term.taluk.field_district
+field_name: field_district
+entity_type: taxonomy_term
+bundle: taluk
+label: District
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      district: district
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

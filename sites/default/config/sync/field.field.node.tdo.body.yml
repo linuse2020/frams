@@ -1,0 +1,23 @@
+uuid: a363771d-4577-49a0-b6f6-40d13eafbecf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.tdo
+  module:
+    - text
+id: node.tdo.body
+field_name: body
+entity_type: node
+bundle: tdo
+label: 'Office Address'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

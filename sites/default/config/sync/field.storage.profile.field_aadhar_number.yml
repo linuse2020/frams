@@ -1,0 +1,24 @@
+uuid: 7a929717-8dbd-4a99-9fdb-5a0a1a7b3af4
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - profile
+    - text
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: profile.field_aadhar_number
+field_name: field_aadhar_number
+entity_type: profile
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

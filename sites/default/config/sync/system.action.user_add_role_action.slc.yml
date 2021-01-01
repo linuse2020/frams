@@ -1,0 +1,14 @@
+uuid: a4561324-a6f9-4b3f-927c-6060ddb66407
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.slc
+  module:
+    - user
+id: user_add_role_action.slc
+label: 'Add the SLC role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: slc

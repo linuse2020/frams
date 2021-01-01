@@ -1,0 +1,23 @@
+uuid: bf0e0d0f-31c1-456c-973c-9c2f1c1f9c8c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_caste_cert_spouse_
+    - node.type.application
+id: node.application.field_caste_cert_spouse_
+field_name: field_caste_cert_spouse_
+entity_type: node
+bundle: application
+label: 'Other Traditional Forest Dweller: Yes/ No (If a spouse is a Scheduled Tribe (attach authenticated copy of certificate) '
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

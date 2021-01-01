@@ -1,0 +1,32 @@
+uuid: 4d1dba5a-22e4-4689-83af-08e3bf7d03c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.tdo.field_profile_tdo
+    - profile.type.tdo
+  module:
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: profile.tdo.default
+targetEntityType: profile
+bundle: tdo
+mode: default
+content:
+  field_profile_tdo:
+    weight: 26
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  is_default: true

@@ -1,0 +1,54 @@
+uuid: e839101d-ec52-4d1e-9abe-9451bb12610a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.tdo.body
+    - field.field.node.tdo.field_district_office_contact
+    - field.field.node.tdo.field_district_officer_designati
+    - field.field.node.tdo.field_email
+    - node.type.tdo
+  module:
+    - options
+    - text
+    - user
+id: node.tdo.default
+targetEntityType: node
+bundle: tdo
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_district_office_contact:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_district_officer_designati:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_email:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

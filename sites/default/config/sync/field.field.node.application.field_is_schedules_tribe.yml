@@ -1,0 +1,23 @@
+uuid: ba9baa30-3673-4dd6-ad62-d087332f8284
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_is_schedules_tribe
+    - node.type.application
+id: node.application.field_is_schedules_tribe
+field_name: field_is_schedules_tribe
+entity_type: node
+bundle: application
+label: 'Scheduled Tribe: Yes/No (Attach authenticated copy of Certificate)'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

@@ -1,0 +1,19 @@
+uuid: 39234467-7e15-402d-b137-9007db3bc5e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_promoter_contact
+    - node.type.promoters
+id: node.promoters.field_promoter_contact
+field_name: field_promoter_contact
+entity_type: node
+bundle: promoters
+label: 'Promoter Contact'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

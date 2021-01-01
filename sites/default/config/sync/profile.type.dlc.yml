@@ -1,0 +1,13 @@
+uuid: 07926a9b-d786-4fe6-92f4-7f494aea610a
+langcode: en
+status: true
+dependencies: {  }
+id: dlc
+label: DLC
+display_label: ''
+multiple: false
+registration: true
+roles:
+  dlc: dlc
+allow_revisions: false
+new_revision: false

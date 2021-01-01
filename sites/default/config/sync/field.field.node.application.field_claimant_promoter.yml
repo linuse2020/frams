@@ -1,0 +1,28 @@
+uuid: fd830322-e576-4144-80ae-405d08cca6d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_claimant_promoter
+    - node.type.application
+    - node.type.promoters
+id: node.application.field_claimant_promoter
+field_name: field_claimant_promoter
+entity_type: node
+bundle: application
+label: 'Claimant Promoter'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      promoters: promoters
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

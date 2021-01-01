@@ -1,0 +1,30 @@
+uuid: b9c57b85-c67d-4d21-8b58-a401e097b40c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.taluk.field_district
+    - taxonomy.vocabulary.taluk
+  module:
+    - text
+id: taxonomy_term.taluk.default
+targetEntityType: taxonomy_term
+bundle: taluk
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_district:
+    weight: 1
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }

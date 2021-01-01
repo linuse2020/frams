@@ -1,0 +1,10 @@
+uuid: c28acd61-7b1e-43a5-91e9-9b59b5a5ecee
+langcode: en
+status: true
+dependencies: {  }
+id: meeting_members_details
+label: 'Meeting Members Details'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

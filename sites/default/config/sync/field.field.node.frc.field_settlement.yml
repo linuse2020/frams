@@ -1,0 +1,29 @@
+uuid: 87158ddd-7a82-490e-822c-9bd8fba2eb8d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_settlement
+    - node.type.frc
+    - taxonomy.vocabulary.settlement
+id: node.frc.field_settlement
+field_name: field_settlement
+entity_type: node
+bundle: frc
+label: Settlement
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      settlement: settlement
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

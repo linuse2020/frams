@@ -1,0 +1,27 @@
+uuid: 38558d8f-554c-49c3-89b8-a55cb73688ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_panchayat_report
+    - node.type.application
+  module:
+    - file
+id: node.application.field_panchayat_report
+field_name: field_panchayat_report
+entity_type: node
+bundle: application
+label: 'Panchayat Report'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf jpeg jpg png'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

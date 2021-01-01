@@ -1,0 +1,21 @@
+uuid: ab5b1959-0999-4884-8046-8d6dd724f4ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_claim_nature
+    - paragraphs.paragraphs_type._survey_details
+  module:
+    - options
+id: paragraph._survey_details.field_claim_nature
+field_name: field_claim_nature
+entity_type: paragraph
+bundle: _survey_details
+label: 'Claim Nature'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

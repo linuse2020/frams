@@ -1,0 +1,21 @@
+uuid: 0c5d1a89-ee3e-4c18-ab8d-53f641ac034e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_contact_number
+    - paragraphs.paragraphs_type.committee_member_details
+  module:
+    - telephone
+id: paragraph.committee_member_details.field_contact_number
+field_name: field_contact_number
+entity_type: paragraph
+bundle: committee_member_details
+label: 'Contact Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

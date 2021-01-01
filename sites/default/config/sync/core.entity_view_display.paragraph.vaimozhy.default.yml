@@ -1,0 +1,52 @@
+uuid: c522a318-a1e3-421d-975a-73302c0a1d85
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.vaimozhy.field_oorumooppan_age
+    - field.field.paragraph.vaimozhy.field_oorumooppan_name
+    - field.field.paragraph.vaimozhy.field_oorumooppan_vaimozhy
+    - field.field.paragraph.vaimozhy.field_vaimozhy_witness_details
+    - paragraphs.paragraphs_type.vaimozhy
+  module:
+    - entity_reference_revisions
+    - file
+    - options
+id: paragraph.vaimozhy.default
+targetEntityType: paragraph
+bundle: vaimozhy
+mode: default
+content:
+  field_oorumooppan_age:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_oorumooppan_name:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_oorumooppan_vaimozhy:
+    weight: 4
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_vaimozhy_witness_details:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

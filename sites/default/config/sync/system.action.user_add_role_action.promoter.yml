@@ -1,0 +1,14 @@
+uuid: b911e7fa-4331-4cf9-9059-1f95772f09a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.promoter
+  module:
+    - user
+id: user_add_role_action.promoter
+label: 'Add the PROMOTER role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: promoter

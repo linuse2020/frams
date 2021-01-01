@@ -1,0 +1,13 @@
+uuid: faa8c64b-a728-4f9d-b1ea-d53a8e94061a
+langcode: en
+status: true
+dependencies: {  }
+id: claimant
+label: Claimant
+display_label: ''
+multiple: false
+registration: true
+roles:
+  claimant: claimant
+allow_revisions: false
+new_revision: false

@@ -1,0 +1,14 @@
+uuid: 047d0883-3c6b-4f80-9574-b610f304813c
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.forest
+  module:
+    - user
+id: user_remove_role_action.forest
+label: 'Remove the FOREST role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: forest

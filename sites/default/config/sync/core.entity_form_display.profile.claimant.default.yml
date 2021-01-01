@@ -1,0 +1,84 @@
+uuid: 16833289-7fda-419c-aa36-1d7e2c03f3e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.claimant.field_aadhar_number
+    - field.field.profile.claimant.field_district
+    - field.field.profile.claimant.field_frc
+    - field.field.profile.claimant.field_full_name
+    - field.field.profile.claimant.field_grama_panchayat
+    - field.field.profile.claimant.field_settlement
+    - profile.type.claimant
+  module:
+    - field_layout
+    - layout_discovery
+    - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: profile.claimant.default
+targetEntityType: profile
+bundle: claimant
+mode: default
+content:
+  field_aadhar_number:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_district:
+    weight: 27
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_frc:
+    weight: 28
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_full_name:
+    weight: 29
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_grama_panchayat:
+    weight: 30
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_settlement:
+    weight: 31
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  is_default: true

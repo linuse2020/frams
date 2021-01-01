@@ -1,0 +1,43 @@
+uuid: 1817adb7-4ec3-4bed-b471-6c28a19c3f73
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meeting_members_details
+    - node.type.committee_meeting
+    - paragraphs.paragraphs_type.meeting_members_details
+  module:
+    - entity_reference_revisions
+id: node.committee_meeting.field_meeting_members_details
+field_name: field_meeting_members_details
+entity_type: node
+bundle: committee_meeting
+label: 'Meeting Members Details'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      meeting_members_details: meeting_members_details
+    target_bundles_drag_drop:
+      family_members_details:
+        weight: 6
+        enabled: false
+      meeting_members_details:
+        enabled: true
+        weight: 7
+      other_claims:
+        weight: 8
+        enabled: false
+      vaimozhy:
+        weight: 9
+        enabled: false
+      vaimozhy_witness_details:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions

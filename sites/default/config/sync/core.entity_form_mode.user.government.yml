@@ -1,0 +1,10 @@
+uuid: 63678549-2ff6-4d51-ba77-8845b4882d3d
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.government
+label: Government
+targetEntityType: user
+cache: true

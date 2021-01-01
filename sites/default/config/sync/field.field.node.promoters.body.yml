@@ -1,0 +1,23 @@
+uuid: ff703f4e-fc44-4ccf-b34c-34009765a369
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.promoters
+  module:
+    - text
+id: node.promoters.body
+field_name: body
+entity_type: node
+bundle: promoters
+label: Address
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

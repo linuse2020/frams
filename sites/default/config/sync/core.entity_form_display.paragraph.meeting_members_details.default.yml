@@ -1,0 +1,58 @@
+uuid: 10391305-8abf-49bd-a915-5f26857f557a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.meeting_members_details.field_department
+    - field.field.paragraph.meeting_members_details.field_designation
+    - field.field.paragraph.meeting_members_details.field_member_category
+    - field.field.paragraph.meeting_members_details.field_member_name
+    - paragraphs.paragraphs_type.meeting_members_details
+  module:
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: paragraph.meeting_members_details.default
+targetEntityType: paragraph
+bundle: meeting_members_details
+mode: default
+content:
+  field_department:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_designation:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_member_category:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_member_name:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

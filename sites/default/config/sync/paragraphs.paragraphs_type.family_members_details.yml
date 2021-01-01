@@ -1,0 +1,10 @@
+uuid: 2e9d1906-c7f0-44ca-afab-21524f8e7279
+langcode: en
+status: true
+dependencies: {  }
+id: family_members_details
+label: 'Family Members Details'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

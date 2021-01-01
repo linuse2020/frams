@@ -1,0 +1,51 @@
+uuid: 24109a4e-ef5c-4535-a9f0-7a66ac802bdf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_witness_address
+    - paragraphs.paragraphs_type.vaimozhy_witness_details
+  module:
+    - address
+id: paragraph.vaimozhy_witness_details.field_witness_address
+field_name: field_witness_address
+entity_type: paragraph
+bundle: vaimozhy_witness_details
+label: 'Witness Address'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    langcode: ''
+    country_code: IN
+    administrative_area: Kerala
+    locality: ''
+    dependent_locality: null
+    postal_code: ''
+    sorting_code: null
+    address_line1: ''
+    address_line2: ''
+    organization: null
+    given_name: null
+    additional_name: null
+    family_name: null
+default_value_callback: ''
+settings:
+  available_countries: {  }
+  langcode_override: ''
+  field_overrides:
+    givenName:
+      override: hidden
+    additionalName:
+      override: hidden
+    familyName:
+      override: hidden
+    organization:
+      override: hidden
+    sortingCode:
+      override: hidden
+    dependentLocality:
+      override: hidden
+  fields: {  }
+field_type: address

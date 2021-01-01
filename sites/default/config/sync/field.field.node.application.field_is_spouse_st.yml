@@ -1,0 +1,23 @@
+uuid: 4c40c7e8-78ca-4aea-9222-18d52864ac2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_is_spouse_st
+    - node.type.application
+id: node.application.field_is_spouse_st
+field_name: field_is_spouse_st
+entity_type: node
+bundle: application
+label: 'Is spouse ST'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

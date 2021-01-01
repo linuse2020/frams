@@ -1,0 +1,18 @@
+uuid: bc364eb5-870e-4fed-a8c4-e7448ad8cbc7
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.tdo
+id: node.tdo.title
+field_name: title
+entity_type: node
+bundle: tdo
+label: 'District Development Offices'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

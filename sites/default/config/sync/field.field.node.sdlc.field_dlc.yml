@@ -1,0 +1,28 @@
+uuid: 2a2c627d-ecd1-43c8-aace-87bddc9a2383
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dlc
+    - node.type.dlc
+    - node.type.sdlc
+id: node.sdlc.field_dlc
+field_name: field_dlc
+entity_type: node
+bundle: sdlc
+label: DLC
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      dlc: dlc
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

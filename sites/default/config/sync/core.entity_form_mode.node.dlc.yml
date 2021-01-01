@@ -1,0 +1,10 @@
+uuid: 4a63cd4d-68b0-409d-9ffe-6e5ad76d2a76
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.dlc
+label: DLC
+targetEntityType: node
+cache: true

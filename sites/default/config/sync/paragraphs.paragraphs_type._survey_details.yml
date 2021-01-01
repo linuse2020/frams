@@ -1,0 +1,10 @@
+uuid: 0e0fa073-8aeb-4bc8-8ba5-21e37127ba59
+langcode: en
+status: true
+dependencies: {  }
+id: _survey_details
+label: ' Survey details'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

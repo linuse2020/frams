@@ -1,0 +1,10 @@
+uuid: 35fdee34-0fa1-4d6e-8af0-3dc75fcf3737
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.promoter
+label: promoter
+targetEntityType: user
+cache: true

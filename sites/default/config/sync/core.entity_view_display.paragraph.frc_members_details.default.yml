@@ -1,0 +1,64 @@
+uuid: 444207c3-7a41-4dcd-82ee-3a138fdd29d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.frc_members_details.field_frc_mem_category
+    - field.field.paragraph.frc_members_details.field_frc_member_address
+    - field.field.paragraph.frc_members_details.field_frc_member_contact_no
+    - field.field.paragraph.frc_members_details.field_frc_member_designation
+    - field.field.paragraph.frc_members_details.field_frc_member_gender
+    - field.field.paragraph.frc_members_details.field_frc_member_name
+    - paragraphs.paragraphs_type.frc_members_details
+  module:
+    - address
+    - options
+id: paragraph.frc_members_details.default
+targetEntityType: paragraph
+bundle: frc_members_details
+mode: default
+content:
+  field_frc_mem_category:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_frc_member_address:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_frc_member_contact_no:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_frc_member_designation:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_frc_member_gender:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_frc_member_name:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

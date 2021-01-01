@@ -1,0 +1,19 @@
+uuid: a6dc7754-d1b0-41bd-a6db-695d0fe31d93
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_total_participants
+    - node.type.committee_meeting
+id: node.committee_meeting.field_total_participants
+field_name: field_total_participants
+entity_type: node
+bundle: committee_meeting
+label: 'Total participants'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

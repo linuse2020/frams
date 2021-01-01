@@ -1,0 +1,21 @@
+uuid: 5073b7b5-66dd-4aeb-8d60-86eeac71d99e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_oorumooppan_name
+    - paragraphs.paragraphs_type.vaimozhy
+  module:
+    - options
+id: paragraph.vaimozhy.field_oorumooppan_name
+field_name: field_oorumooppan_name
+entity_type: paragraph
+bundle: vaimozhy
+label: 'Oorumooppan Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

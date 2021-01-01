@@ -1,0 +1,29 @@
+uuid: 9c134be8-29f1-4894-aa15-ba6c7fb648be
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_settlement
+    - profile.type.claimant
+    - taxonomy.vocabulary.settlement
+id: profile.claimant.field_settlement
+field_name: field_settlement
+entity_type: profile
+bundle: claimant
+label: Settlement
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      settlement: settlement
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

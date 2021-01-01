@@ -1,0 +1,10 @@
+uuid: db714797-2913-4249-8203-19573f652865
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.survey
+label: SURVEY
+targetEntityType: node
+cache: true

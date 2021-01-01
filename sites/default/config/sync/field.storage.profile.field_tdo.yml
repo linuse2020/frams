@@ -1,0 +1,24 @@
+uuid: 8afd04a4-9636-4e5b-b89e-c6cc4dc8f391
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - profile
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: profile.field_tdo
+field_name: field_tdo
+entity_type: profile
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

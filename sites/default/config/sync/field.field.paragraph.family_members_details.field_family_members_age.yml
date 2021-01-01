@@ -1,0 +1,19 @@
+uuid: 6cecb66a-18e9-40d4-9118-db71d91250a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_family_members_age
+    - paragraphs.paragraphs_type.family_members_details
+id: paragraph.family_members_details.field_family_members_age
+field_name: field_family_members_age
+entity_type: paragraph
+bundle: family_members_details
+label: 'Family Members Age'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

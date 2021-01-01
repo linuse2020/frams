@@ -1,0 +1,27 @@
+uuid: 9535cf8e-5abb-4185-8f73-70741849acc8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_form_appendix4
+    - node.type.application
+  module:
+    - file
+id: node.application.field_form_appendix4
+field_name: field_form_appendix4
+entity_type: node
+bundle: application
+label: 'form appendix4'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf jpeg jpg png'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

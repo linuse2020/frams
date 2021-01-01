@@ -1,0 +1,14 @@
+uuid: 8229b73d-fa41-4cf5-a62f-f610e5a83c7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.dlc
+  module:
+    - user
+id: user_remove_role_action.dlc
+label: 'Remove the DLC role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: dlc

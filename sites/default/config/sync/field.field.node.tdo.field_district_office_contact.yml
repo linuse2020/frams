@@ -1,0 +1,19 @@
+uuid: 723951f3-c240-4002-8e46-e3e6e7abe296
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_district_office_contact
+    - node.type.tdo
+id: node.tdo.field_district_office_contact
+field_name: field_district_office_contact
+entity_type: node
+bundle: tdo
+label: 'District Office Contact'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

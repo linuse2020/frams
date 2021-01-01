@@ -1,0 +1,18 @@
+uuid: f5941bfc-0724-4294-839e-ce541e6c1a74
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: FRC
+type: frc
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

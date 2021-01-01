@@ -1,0 +1,10 @@
+uuid: 02b53dac-7261-4390-96b9-d563ec8b65ec
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.sdlc
+label: SDLC
+targetEntityType: user
+cache: true

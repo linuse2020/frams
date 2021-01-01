@@ -1,0 +1,28 @@
+uuid: 123f6609-3bbf-49b2-9336-9208865a67ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_claimant_frc
+    - node.type.application
+    - node.type.frc
+id: node.application.field_claimant_frc
+field_name: field_claimant_frc
+entity_type: node
+bundle: application
+label: 'Claimant FRC'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      frc: frc
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

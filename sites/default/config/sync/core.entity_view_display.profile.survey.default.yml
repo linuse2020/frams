@@ -1,0 +1,21 @@
+uuid: f74d6593-dbae-4d70-b1fd-f85a66c98cfb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.survey.field_district
+    - profile.type.survey
+id: profile.survey.default
+targetEntityType: profile
+bundle: survey
+mode: default
+content:
+  field_district:
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }

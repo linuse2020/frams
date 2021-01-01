@@ -1,0 +1,10 @@
+uuid: 40b098f2-04a3-4a82-83cc-8d4c372b3f7b
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.dlc
+label: DLC
+targetEntityType: user
+cache: true

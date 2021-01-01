@@ -1,0 +1,18 @@
+uuid: a93ca08e-81dc-4341-b524-5ffe4406364f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.frc
+id: node.frc.title
+field_name: title
+entity_type: node
+bundle: frc
+label: 'Forest Rights Committee'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

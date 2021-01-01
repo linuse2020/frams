@@ -1,0 +1,9 @@
+uuid: 0f5a1e37-7ab9-4312-aeee-7f85106ac54c
+langcode: en
+status: true
+dependencies: {  }
+id: claimant
+label: CLAIMANT
+weight: 12
+is_admin: null
+permissions: {  }

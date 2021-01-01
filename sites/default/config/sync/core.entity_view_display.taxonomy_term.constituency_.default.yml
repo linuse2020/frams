@@ -1,0 +1,30 @@
+uuid: d8d32c28-fa42-45e9-9fb1-99d7c1497b46
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.constituency_.field_district
+    - taxonomy.vocabulary.constituency_
+  module:
+    - text
+id: taxonomy_term.constituency_.default
+targetEntityType: taxonomy_term
+bundle: constituency_
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_district:
+    weight: 1
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }

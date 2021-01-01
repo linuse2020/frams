@@ -1,0 +1,20 @@
+uuid: 384b5417-f360-4fec-a690-ba9cd6aea7f4
+langcode: en
+status: true
+dependencies:
+  theme:
+    - frams
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: frams_local_actions
+theme: frams
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

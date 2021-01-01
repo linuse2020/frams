@@ -1,0 +1,29 @@
+uuid: ba4b8ba5-18f4-41c6-80aa-0a909fbbee8c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teo_jurisdiction_panchayat
+    - node.type.teo
+    - taxonomy.vocabulary.grama_panchayat
+id: node.teo.field_teo_jurisdiction_panchayat
+field_name: field_teo_jurisdiction_panchayat
+entity_type: node
+bundle: teo
+label: 'TEO_Jurisdiction Panchayat'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      grama_panchayat: grama_panchayat
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

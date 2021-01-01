@@ -1,0 +1,10 @@
+uuid: f133c172-f94a-40ae-87f8-2d45bbbf1e3e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.claimant
+label: CLAIMANT
+targetEntityType: node
+cache: true

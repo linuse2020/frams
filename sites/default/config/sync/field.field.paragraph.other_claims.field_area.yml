@@ -1,0 +1,19 @@
+uuid: 8d19272e-2e82-47a1-85b1-7c2b6892d552
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_area
+    - paragraphs.paragraphs_type.other_claims
+id: paragraph.other_claims.field_area
+field_name: field_area
+entity_type: paragraph
+bundle: other_claims
+label: Area
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

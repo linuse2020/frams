@@ -1,0 +1,29 @@
+uuid: d7b1443c-dbf3-4391-84d8-b14211094e57
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_district
+    - profile.type.survey
+    - taxonomy.vocabulary.district
+id: profile.survey.field_district
+field_name: field_district
+entity_type: profile
+bundle: survey
+label: District
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      district: district
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

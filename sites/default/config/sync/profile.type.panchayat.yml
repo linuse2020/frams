@@ -1,0 +1,13 @@
+uuid: 5a8ad4d7-513b-4e08-910e-0f3a4fc66dae
+langcode: en
+status: true
+dependencies: {  }
+id: panchayat
+label: Panchayat
+display_label: ''
+multiple: false
+registration: true
+roles:
+  panchayat: panchayat
+allow_revisions: false
+new_revision: false

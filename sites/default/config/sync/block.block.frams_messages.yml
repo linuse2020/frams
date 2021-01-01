@@ -1,0 +1,22 @@
+uuid: 28561c73-16ca-429c-b99a-d09501acaf7e
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - frams
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: frams_messages
+theme: frams
+region: sidebar_menu
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

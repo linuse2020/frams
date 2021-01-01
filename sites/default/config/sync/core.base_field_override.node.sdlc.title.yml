@@ -1,0 +1,18 @@
+uuid: f863fb98-357a-4eb3-8170-edfcff24362d
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.sdlc
+id: node.sdlc.title
+field_name: title
+entity_type: node
+bundle: sdlc
+label: 'Sub Divisional Level Committee'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

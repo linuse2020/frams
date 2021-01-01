@@ -1,0 +1,30 @@
+uuid: 6ff84362-c863-480b-b0b7-7dca127c48df
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.forest_division.field_forest_circle
+    - taxonomy.vocabulary.forest_division
+  module:
+    - text
+id: taxonomy_term.forest_division.default
+targetEntityType: taxonomy_term
+bundle: forest_division
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_forest_circle:
+    weight: 1
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }

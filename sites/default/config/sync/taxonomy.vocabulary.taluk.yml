@@ -1,0 +1,8 @@
+uuid: 0e5008fa-592c-48bc-a12f-3f1b7e981d24
+langcode: en
+status: true
+dependencies: {  }
+name: Taluk
+vid: taluk
+description: ''
+weight: 0

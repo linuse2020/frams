@@ -1,0 +1,23 @@
+uuid: b4c61b29-1df0-4fbf-bddc-077e77091a76
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_submit_ration_card
+    - node.type.application
+id: node.application.field_submit_ration_card
+field_name: field_submit_ration_card
+entity_type: node
+bundle: application
+label: 'Submit Ration Card'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

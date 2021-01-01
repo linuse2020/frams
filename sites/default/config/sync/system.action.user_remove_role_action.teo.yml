@@ -1,0 +1,14 @@
+uuid: 2a4f6fc1-8dbc-4e09-816c-d798da1e7914
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.teo
+  module:
+    - user
+id: user_remove_role_action.teo
+label: 'Remove the TEO role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: teo

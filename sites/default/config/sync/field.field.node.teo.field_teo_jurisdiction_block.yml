@@ -1,0 +1,29 @@
+uuid: 626f28d9-756c-4119-a48f-2a36c7fd17bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teo_jurisdiction_block
+    - node.type.teo
+    - taxonomy.vocabulary.block_panchayat
+id: node.teo.field_teo_jurisdiction_block
+field_name: field_teo_jurisdiction_block
+entity_type: node
+bundle: teo
+label: 'TEO_Jurisdiction Block'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      block_panchayat: block_panchayat
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

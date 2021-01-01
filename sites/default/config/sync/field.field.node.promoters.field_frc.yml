@@ -1,0 +1,28 @@
+uuid: b10f111e-872e-4c25-bf66-4345e42fc9fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_frc
+    - node.type.frc
+    - node.type.promoters
+id: node.promoters.field_frc
+field_name: field_frc
+entity_type: node
+bundle: promoters
+label: FRC
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      frc: frc
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

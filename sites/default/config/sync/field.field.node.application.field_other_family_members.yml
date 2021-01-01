@@ -1,0 +1,31 @@
+uuid: 8230fffd-72af-403b-b49c-a3cf33e47a82
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_other_family_members
+    - node.type.application
+    - paragraphs.paragraphs_type.family_members_details
+  module:
+    - entity_reference_revisions
+id: node.application.field_other_family_members
+field_name: field_other_family_members
+entity_type: node
+bundle: application
+label: 'Name of other members in the family with age: (including children and adult dependents)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      family_members_details: family_members_details
+    target_bundles_drag_drop:
+      family_members_details:
+        enabled: true
+        weight: 2
+field_type: entity_reference_revisions

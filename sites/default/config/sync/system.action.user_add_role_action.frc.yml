@@ -1,0 +1,14 @@
+uuid: e5b1498b-76bf-4ce4-957b-c0383b227e4b
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.frc
+  module:
+    - user
+id: user_add_role_action.frc
+label: 'Add the FRC role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: frc

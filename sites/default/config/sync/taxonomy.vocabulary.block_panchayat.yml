@@ -1,0 +1,8 @@
+uuid: 5cab2366-08ea-4392-a895-44ed3d216ac2
+langcode: en
+status: true
+dependencies: {  }
+name: 'Block Panchayat'
+vid: block_panchayat
+description: ''
+weight: 0

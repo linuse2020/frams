@@ -1,0 +1,19 @@
+uuid: 7a00aec8-68a7-47a7-afc2-679b9534346c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pattas
+    - node.type.application
+id: node.application.field_pattas
+field_name: field_pattas
+entity_type: node
+bundle: application
+label: ' Pattas/ leases/ grants, if any: (See Section 3(1) (g) of the Act) '
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

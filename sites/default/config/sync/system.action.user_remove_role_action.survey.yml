@@ -1,0 +1,14 @@
+uuid: 7e002df3-c854-4dbd-a0c4-3e8129717913
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.survey
+  module:
+    - user
+id: user_remove_role_action.survey
+label: 'Remove the SURVEY role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: survey

@@ -1,0 +1,30 @@
+uuid: 433f6df0-c3d0-44b0-97bc-da14d61cf0cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.notice_board.body
+    - node.type.notice_board
+  module:
+    - text
+    - user
+id: node.notice_board.teaser
+targetEntityType: node
+bundle: notice_board
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

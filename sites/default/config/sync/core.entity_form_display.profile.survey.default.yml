@@ -1,0 +1,32 @@
+uuid: 59c99240-dba7-4ffc-a0dd-9813d5457d97
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.survey.field_district
+    - profile.type.survey
+  module:
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: profile.survey.default
+targetEntityType: profile
+bundle: survey
+mode: default
+content:
+  field_district:
+    weight: 26
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  is_default: true

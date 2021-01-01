@@ -1,0 +1,9 @@
+uuid: 23c9a802-4bf2-4f7c-ab75-92fe266b08b1
+langcode: en
+status: true
+dependencies: {  }
+id: archives
+label: Archives
+weight: 14
+is_admin: null
+permissions: {  }

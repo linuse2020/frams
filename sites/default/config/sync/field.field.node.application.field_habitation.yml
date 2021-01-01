@@ -1,0 +1,19 @@
+uuid: dab11d1d-238d-4814-8a90-de913cddc4e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_habitation
+    - node.type.application
+id: node.application.field_habitation
+field_name: field_habitation
+entity_type: node
+bundle: application
+label: 'Extent of forest land occupied for habitation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

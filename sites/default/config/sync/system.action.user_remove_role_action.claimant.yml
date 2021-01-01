@@ -1,0 +1,14 @@
+uuid: 3be07545-e45d-4427-8020-57c248af238b
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.claimant
+  module:
+    - user
+id: user_remove_role_action.claimant
+label: 'Remove the CLAIMANT role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: claimant

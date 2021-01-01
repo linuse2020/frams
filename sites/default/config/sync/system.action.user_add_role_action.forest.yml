@@ -1,0 +1,14 @@
+uuid: b86c5278-9a1b-45c3-a7de-e4b4274be304
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.forest
+  module:
+    - user
+id: user_add_role_action.forest
+label: 'Add the FOREST role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: forest

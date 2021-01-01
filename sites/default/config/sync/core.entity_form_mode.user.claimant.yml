@@ -1,0 +1,10 @@
+uuid: 0183b6fb-644e-46c0-8888-3146a0949abc
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.claimant
+label: Claimant
+targetEntityType: user
+cache: true

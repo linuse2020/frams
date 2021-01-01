@@ -1,0 +1,29 @@
+uuid: 5afcdfbe-ff71-4dbc-aff7-5052c7bb0bbb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_district
+    - node.type.slc
+    - taxonomy.vocabulary.district
+id: node.slc.field_district
+field_name: field_district
+entity_type: node
+bundle: slc
+label: District
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      district: district
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

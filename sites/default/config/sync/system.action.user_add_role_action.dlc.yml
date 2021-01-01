@@ -1,0 +1,14 @@
+uuid: 06b2a20d-d0da-4e51-a37f-c8eedfe410c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.dlc
+  module:
+    - user
+id: user_add_role_action.dlc
+label: 'Add the DLC role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: dlc

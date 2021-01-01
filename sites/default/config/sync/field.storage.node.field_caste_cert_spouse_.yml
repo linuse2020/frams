@@ -1,0 +1,22 @@
+uuid: 9c098c58-a231-4f49-8370-1cc23af3174b
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_caste_cert_spouse_
+field_name: field_caste_cert_spouse_
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

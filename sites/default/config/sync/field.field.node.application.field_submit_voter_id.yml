@@ -1,0 +1,23 @@
+uuid: 9fbfb3f1-d00c-4a0c-8da9-89349e3467ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_submit_voter_id
+    - node.type.application
+id: node.application.field_submit_voter_id
+field_name: field_submit_voter_id
+entity_type: node
+bundle: application
+label: 'submit Voter ID'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

@@ -4,6 +4,7 @@ module:
   admin_toolbar_tools: 0
   ajax_loader: 0
   anonymous_login: 0
+  audiofield: 0
   automated_cron: 0
   big_pipe: 0
   block: 0
@@ -20,15 +21,18 @@ module:
   conditional_fields: 0
   config: 0
   contact: 0
+  content_moderation: 0
   contextual: 0
   datetime: 0
   datetime_range: 0
   dblog: 0
   dynamic_page_cache: 0
   editor: 0
+  entity: 0
   entity_browser: 0
   entity_browser_entity_form: 0
   entity_browser_example: 0
+  entity_reference_revisions: 0
   entityreference_filter: 0
   exclude_node_title: 0
   field: 0
@@ -41,6 +45,8 @@ module:
   fontawesome: 0
   fontawesome_menu_icons: 0
   front_page: 0
+  geolocation: 0
+  geolocation_address: 0
   help: 0
   history: 0
   image: 0
@@ -61,8 +67,10 @@ module:
   node: 0
   options: 0
   page_cache: 0
+  paragraphs_type_permissions: 0
   path: 0
   path_alias: 0
+  profile: 0
   queue_ui: 0
   quickedit: 0
   radix_layouts: 0
@@ -86,7 +94,9 @@ module:
   views_ui: 0
   webform: 0
   webform_ui: 0
+  workflows: 0
   views: 10
+  paragraphs: 11
   standard: 1000
 theme:
   stable: 0
@@ -94,6 +104,7 @@ theme:
   radix: 0
   littlepy: 0
   claro: 0
+  frams: 0
 profile: standard
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc

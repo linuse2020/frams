@@ -1,0 +1,13 @@
+uuid: 894e0797-3063-4e72-bf6f-2e2e88f03b0d
+langcode: en
+status: true
+dependencies: {  }
+id: teo
+label: TEO
+display_label: ''
+multiple: false
+registration: true
+roles:
+  teo: teo
+allow_revisions: false
+new_revision: false

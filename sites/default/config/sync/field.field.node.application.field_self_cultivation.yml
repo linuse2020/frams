@@ -1,0 +1,19 @@
+uuid: fc6b8b19-4ed4-4ad8-8d90-fd6b7f909f57
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_self_cultivation
+    - node.type.application
+id: node.application.field_self_cultivation
+field_name: field_self_cultivation
+entity_type: node
+bundle: application
+label: 'Extent of forest land occupied for self-cultivation, if any: (See Section 3(1) (a) of the Act) '
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

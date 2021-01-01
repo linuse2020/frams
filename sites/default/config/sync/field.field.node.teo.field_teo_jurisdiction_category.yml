@@ -1,0 +1,21 @@
+uuid: 8671d07a-bd8a-4d32-be60-ec6e9e186e37
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teo_jurisdiction_category
+    - node.type.teo
+  module:
+    - options
+id: node.teo.field_teo_jurisdiction_category
+field_name: field_teo_jurisdiction_category
+entity_type: node
+bundle: teo
+label: 'TEO Jurisdiction category'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

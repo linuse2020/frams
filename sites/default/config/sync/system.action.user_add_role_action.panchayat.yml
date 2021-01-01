@@ -1,0 +1,14 @@
+uuid: 365f70db-39bc-4a98-8127-9926e226d478
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.panchayat
+  module:
+    - user
+id: user_add_role_action.panchayat
+label: 'Add the PANCHAYAT role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: panchayat

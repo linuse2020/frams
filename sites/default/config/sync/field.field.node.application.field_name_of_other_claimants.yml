@@ -1,0 +1,19 @@
+uuid: a1a00955-0fb2-4fea-b8dc-2039e16125f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_name_of_other_claimants
+    - node.type.application
+id: node.application.field_name_of_other_claimants
+field_name: field_name_of_other_claimants
+entity_type: node
+bundle: application
+label: ' Name of the other claimant (s) if any'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

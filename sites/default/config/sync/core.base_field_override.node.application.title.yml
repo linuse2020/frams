@@ -1,0 +1,18 @@
+uuid: 9fcc4b0b-29bb-4632-830e-bf0f9f402c7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.application
+id: node.application.title
+field_name: title
+entity_type: node
+bundle: application
+label: 'Name of the claimant'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

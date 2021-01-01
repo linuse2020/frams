@@ -1,0 +1,18 @@
+uuid: 03b0a57e-3929-4722-8a9a-2594411479a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.dlc
+id: node.dlc.title
+field_name: title
+entity_type: node
+bundle: dlc
+label: 'District Level Committee'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

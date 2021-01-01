@@ -1,0 +1,10 @@
+uuid: 8ad1e601-04fe-4a72-987d-04ef34d3eef6
+langcode: en
+status: true
+dependencies: {  }
+id: committee_member_details
+label: 'Committee Member Details'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

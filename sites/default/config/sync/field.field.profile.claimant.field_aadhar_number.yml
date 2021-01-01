@@ -1,0 +1,21 @@
+uuid: c7822970-cdc6-48bd-9b2f-eee499abf43f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_aadhar_number
+    - profile.type.claimant
+  module:
+    - text
+id: profile.claimant.field_aadhar_number
+field_name: field_aadhar_number
+entity_type: profile
+bundle: claimant
+label: 'Aadhar Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

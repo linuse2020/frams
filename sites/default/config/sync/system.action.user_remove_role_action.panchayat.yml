@@ -1,0 +1,14 @@
+uuid: cb5bc734-8e83-4859-8984-366209e5f455
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.panchayat
+  module:
+    - user
+id: user_remove_role_action.panchayat
+label: 'Remove the PANCHAYAT role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: panchayat

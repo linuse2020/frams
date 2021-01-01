@@ -1,0 +1,97 @@
+uuid: c8f6e0de-ca3a-4820-b237-0e1026b74353
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.teo.field_office_category
+    - field.field.node.teo.field_tdo
+    - field.field.node.teo.field_teo_contact
+    - field.field.node.teo.field_teo_frc
+    - field.field.node.teo.field_teo_jurisdiction_block
+    - field.field.node.teo.field_teo_jurisdiction_category
+    - field.field.node.teo.field_teo_jurisdiction_panchayat
+    - field.field.node.teo.field_teo_name
+    - field.field.node.teo.field_teo_office_address
+    - node.type.teo
+  module:
+    - options
+    - user
+id: node.teo.default
+targetEntityType: node
+bundle: teo
+mode: default
+content:
+  field_office_category:
+    weight: 110
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_tdo:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_teo_contact:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_teo_frc:
+    weight: 104
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_teo_jurisdiction_block:
+    weight: 108
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_teo_jurisdiction_category:
+    weight: 105
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_teo_jurisdiction_panchayat:
+    weight: 109
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_teo_name:
+    weight: 106
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_teo_office_address:
+    weight: 107
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

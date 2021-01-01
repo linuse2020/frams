@@ -1,0 +1,14 @@
+uuid: 79011bcf-b7bd-487a-8e00-628c2cdebfe6
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.tdo
+  module:
+    - user
+id: user_remove_role_action.tdo
+label: 'Remove the TDO role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: tdo

@@ -1,0 +1,19 @@
+uuid: bf6983c4-85a6-4fd2-825d-11d21eff6f40
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_email
+    - paragraphs.paragraphs_type.committee_member_details
+id: paragraph.committee_member_details.field_email
+field_name: field_email
+entity_type: paragraph
+bundle: committee_member_details
+label: Email
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

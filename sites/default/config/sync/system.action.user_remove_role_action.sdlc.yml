@@ -1,0 +1,14 @@
+uuid: 4aff22e4-83e6-4c09-8743-b9382b00124c
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.sdlc
+  module:
+    - user
+id: user_remove_role_action.sdlc
+label: 'Remove the SDLC role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: sdlc

@@ -1,0 +1,10 @@
+uuid: 02c165ea-021e-40d7-aff9-6bbd970bba14
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.teo
+label: TEO
+targetEntityType: user
+cache: true

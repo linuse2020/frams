@@ -1,0 +1,23 @@
+uuid: 48d7b028-e761-45f9-a9e3-e6323f2e65a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.frc
+  module:
+    - text
+id: node.frc.body
+field_name: body
+entity_type: node
+bundle: frc
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

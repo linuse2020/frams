@@ -1,0 +1,21 @@
+uuid: 0b0f2cb4-7169-43eb-a36f-4f1db5940adf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teo_contact
+    - node.type.teo
+  module:
+    - telephone
+id: node.teo.field_teo_contact
+field_name: field_teo_contact
+entity_type: node
+bundle: teo
+label: 'TEO Contact'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

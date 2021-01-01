@@ -1,0 +1,21 @@
+uuid: 9964200b-3a53-457c-9f26-b7dfac238f9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_category
+    - paragraphs.paragraphs_type.committee_member_details
+  module:
+    - options
+id: paragraph.committee_member_details.field_category
+field_name: field_category
+entity_type: paragraph
+bundle: committee_member_details
+label: Category
+description: "Official|Official\r\nElected|Elected"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

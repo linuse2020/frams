@@ -1,0 +1,19 @@
+uuid: 3a590339-76eb-4b04-9198-1a813ea8e48c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_disputed_lands
+    - node.type.application
+id: node.application.field_disputed_lands
+field_name: field_disputed_lands
+entity_type: node
+bundle: application
+label: 'Disputed lands if any: (See Section 3(1) (f) of the Act)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

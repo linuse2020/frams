@@ -1,0 +1,10 @@
+uuid: 459f281e-7727-4848-8c3c-05dd1f640876
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.frc
+label: FRC
+targetEntityType: user
+cache: true

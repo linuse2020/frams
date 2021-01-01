@@ -1,0 +1,38 @@
+uuid: a46cb817-2aa0-49c1-8705-ce630ca5c4ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.teo.field_office_category
+    - field.field.node.teo.field_tdo
+    - field.field.node.teo.field_teo_contact
+    - field.field.node.teo.field_teo_frc
+    - field.field.node.teo.field_teo_jurisdiction_block
+    - field.field.node.teo.field_teo_jurisdiction_category
+    - field.field.node.teo.field_teo_jurisdiction_panchayat
+    - field.field.node.teo.field_teo_name
+    - field.field.node.teo.field_teo_office_address
+    - node.type.teo
+  module:
+    - user
+id: node.teo.teaser
+targetEntityType: node
+bundle: teo
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_office_category: true
+  field_tdo: true
+  field_teo_contact: true
+  field_teo_frc: true
+  field_teo_jurisdiction_block: true
+  field_teo_jurisdiction_category: true
+  field_teo_jurisdiction_panchayat: true
+  field_teo_name: true
+  field_teo_office_address: true

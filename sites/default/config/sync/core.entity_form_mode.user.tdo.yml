@@ -1,0 +1,10 @@
+uuid: a41b8444-6b26-4ffa-8452-a7fb06a692b5
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.tdo
+label: TDO
+targetEntityType: user
+cache: true

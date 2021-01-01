@@ -1,0 +1,37 @@
+uuid: cdeea129-6c2f-4a4b-ac67-244a3318c55b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_vaimozhy_witness_details
+    - paragraphs.paragraphs_type.vaimozhy
+    - paragraphs.paragraphs_type.vaimozhy_witness_details
+  module:
+    - entity_reference_revisions
+id: paragraph.vaimozhy.field_vaimozhy_witness_details
+field_name: field_vaimozhy_witness_details
+entity_type: paragraph
+bundle: vaimozhy
+label: 'Vaimozhy Witness Details'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      vaimozhy_witness_details: vaimozhy_witness_details
+    target_bundles_drag_drop:
+      family_members_details:
+        weight: 4
+        enabled: false
+      vaimozhy:
+        weight: 5
+        enabled: false
+      vaimozhy_witness_details:
+        enabled: true
+        weight: 6
+field_type: entity_reference_revisions

@@ -1,0 +1,13 @@
+uuid: cc77bcdc-ec33-4504-8440-224fd8a60424
+langcode: en
+status: true
+dependencies: {  }
+id: survey
+label: Survey
+display_label: ''
+multiple: false
+registration: false
+roles:
+  survey: survey
+allow_revisions: false
+new_revision: false

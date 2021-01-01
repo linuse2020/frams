@@ -1,0 +1,48 @@
+uuid: d3841093-c4b2-49fb-a6b3-fd070121ffff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.family_members_details.field_family_members_age
+    - field.field.paragraph.family_members_details.field_family_members_name
+    - field.field.paragraph.family_members_details.field_family_members_reason
+    - field.field.paragraph.family_members_details.field_relation
+    - paragraphs.paragraphs_type.family_members_details
+id: paragraph.family_members_details.default
+targetEntityType: paragraph
+bundle: family_members_details
+mode: default
+content:
+  field_family_members_age:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_family_members_name:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_family_members_reason:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_relation:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

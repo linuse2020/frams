@@ -1,0 +1,30 @@
+uuid: 0eb5c202-ae19-4108-9547-053f95736f2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.other_claims.field_area
+    - field.field.paragraph.other_claims.field_settlement
+    - paragraphs.paragraphs_type.other_claims
+id: paragraph.other_claims.default
+targetEntityType: paragraph
+bundle: other_claims
+mode: default
+content:
+  field_area:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_settlement:
+    weight: 1
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }

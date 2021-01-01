@@ -1,0 +1,14 @@
+uuid: 19377f7b-1262-4fd9-8173-d7e064489682
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.la
+  module:
+    - user
+id: user_remove_role_action.la
+label: 'Remove the LA role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: la

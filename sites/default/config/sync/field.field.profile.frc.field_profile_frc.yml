@@ -1,0 +1,28 @@
+uuid: b2337c7b-fa37-4380-afa1-5d90d68f5b2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_profile_frc
+    - node.type.frc
+    - profile.type.frc
+id: profile.frc.field_profile_frc
+field_name: field_profile_frc
+entity_type: profile
+bundle: frc
+label: 'Profile FRC'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      frc: frc
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

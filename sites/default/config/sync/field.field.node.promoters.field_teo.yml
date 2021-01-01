@@ -1,0 +1,28 @@
+uuid: 9d9cd725-3d11-456b-af82-afaef6c8bc54
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teo
+    - node.type.promoters
+    - node.type.teo
+id: node.promoters.field_teo
+field_name: field_teo
+entity_type: node
+bundle: promoters
+label: TEO
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      teo: teo
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

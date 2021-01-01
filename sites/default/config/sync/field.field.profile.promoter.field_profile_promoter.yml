@@ -1,0 +1,28 @@
+uuid: 9146d851-2a4d-4d45-9df9-bfffd020ee90
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_profile_promoter
+    - node.type.promoters
+    - profile.type.promoter
+id: profile.promoter.field_profile_promoter
+field_name: field_profile_promoter
+entity_type: profile
+bundle: promoter
+label: 'Profile Promoter'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      promoters: promoters
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,9 @@
+uuid: 15071830-634e-4e87-9d0f-20a71cff982e
+langcode: en
+status: true
+dependencies: {  }
+id: teo
+label: TEO
+weight: 10
+is_admin: null
+permissions: {  }

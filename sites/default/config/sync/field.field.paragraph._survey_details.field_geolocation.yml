@@ -1,0 +1,21 @@
+uuid: 2f26723d-3c6b-4c24-ab87-43a3e60f869b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_geolocation
+    - paragraphs.paragraphs_type._survey_details
+  module:
+    - geolocation
+id: paragraph._survey_details.field_geolocation
+field_name: field_geolocation
+entity_type: paragraph
+bundle: _survey_details
+label: Geolocation
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geolocation

@@ -1,0 +1,9 @@
+uuid: f96a3cb0-cc11-48c8-beff-df8f5f2079ef
+langcode: en
+status: true
+dependencies: {  }
+id: promoter
+label: PROMOTER
+weight: 3
+is_admin: null
+permissions: {  }

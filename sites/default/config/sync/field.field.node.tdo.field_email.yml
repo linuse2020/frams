@@ -1,0 +1,19 @@
+uuid: dea1b53e-9829-4520-a6a4-2cf9deca73e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_email
+    - node.type.tdo
+id: node.tdo.field_email
+field_name: field_email
+entity_type: node
+bundle: tdo
+label: Email
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

@@ -1,0 +1,111 @@
+uuid: fca01b8b-00ca-4172-a930-2c48ed1c02e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.user.register
+    - field.field.user.user.user_picture
+    - image.style.thumbnail
+  module:
+    - field_layout
+    - image
+    - layout_discovery
+    - profile
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+_core:
+  default_config_hash: K-1rBM8mTIkFp9RqOC2tMRUukOQ1xbRCfSKK8dEddnA
+id: user.user.register
+targetEntityType: user
+bundle: user
+mode: register
+content:
+  account:
+    weight: -10
+    region: content
+  claimant_profiles:
+    type: profile_form
+    weight: 90
+    settings:
+      form_mode: default
+    third_party_settings: {  }
+    region: content
+  contact:
+    weight: 5
+    region: content
+  dlc_profiles:
+    type: profile_form
+    weight: 90
+    settings:
+      form_mode: default
+    third_party_settings: {  }
+    region: content
+  frc_profiles:
+    type: profile_form
+    weight: 90
+    settings:
+      form_mode: default
+    third_party_settings: {  }
+    region: content
+  language:
+    weight: 0
+    region: content
+  panchayat_profiles:
+    type: profile_form
+    weight: 90
+    settings:
+      form_mode: default
+    third_party_settings: {  }
+    region: content
+  promoter_profiles:
+    type: profile_form
+    weight: 90
+    settings:
+      form_mode: default
+    third_party_settings: {  }
+    region: content
+  sdlc_profiles:
+    type: profile_form
+    weight: 90
+    settings:
+      form_mode: default
+    third_party_settings: {  }
+    region: content
+  slc_profiles:
+    type: profile_form
+    weight: 90
+    settings:
+      form_mode: default
+    third_party_settings: {  }
+    region: content
+  tdo_profiles:
+    type: profile_form
+    weight: 90
+    settings:
+      form_mode: default
+    third_party_settings: {  }
+    region: content
+  teo_profiles:
+    type: profile_form
+    weight: 90
+    settings:
+      form_mode: default
+    third_party_settings: {  }
+    region: content
+  timezone:
+    weight: 6
+    region: content
+  user_picture:
+    type: image_image
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    weight: -1
+    region: content
+hidden:
+  survey_profiles: true

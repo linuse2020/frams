@@ -1,0 +1,10 @@
+uuid: 415beeb8-56bb-4a47-9abc-bdb7db7961bf
+langcode: en
+status: true
+dependencies: {  }
+id: vaimozhy_witness_details
+label: 'Vaimozhy witness details'
+icon_uuid: null
+icon_default: null
+description: '2 Witness details should be greater than 60 years old.'
+behavior_plugins: {  }

@@ -1,0 +1,28 @@
+uuid: 87827ee4-4a21-4769-a68f-ff203ed0f8c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_claimant_tdo
+    - node.type.application
+    - node.type.tdo
+id: node.application.field_claimant_tdo
+field_name: field_claimant_tdo
+entity_type: node
+bundle: application
+label: 'Claimant TDO'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      tdo: tdo
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

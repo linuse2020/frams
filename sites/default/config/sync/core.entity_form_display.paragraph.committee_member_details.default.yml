@@ -1,0 +1,56 @@
+uuid: 82c28d05-a5f2-46cc-a927-6bbb75c28382
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.committee_member_details.field_category
+    - field.field.paragraph.committee_member_details.field_contact_number
+    - field.field.paragraph.committee_member_details.field_email
+    - field.field.paragraph.committee_member_details.field_member_name
+    - paragraphs.paragraphs_type.committee_member_details
+  module:
+    - field_layout
+    - layout_discovery
+    - telephone
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: paragraph.committee_member_details.default
+targetEntityType: paragraph
+bundle: committee_member_details
+mode: default
+content:
+  field_category:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_contact_number:
+    weight: 0
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_email:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_member_name:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

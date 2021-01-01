@@ -1,0 +1,13 @@
+uuid: 1342359b-c527-4090-bdbe-e47840e1d68a
+langcode: en
+status: true
+dependencies: {  }
+id: frc
+label: FRC
+display_label: ''
+multiple: false
+registration: true
+roles:
+  frc: frc
+allow_revisions: false
+new_revision: false

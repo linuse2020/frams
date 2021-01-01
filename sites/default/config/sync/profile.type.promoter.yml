@@ -1,0 +1,13 @@
+uuid: a94ebcee-c84b-4168-824c-1e602ad8c336
+langcode: en
+status: true
+dependencies: {  }
+id: promoter
+label: Promoter
+display_label: ''
+multiple: false
+registration: true
+roles:
+  promoter: promoter
+allow_revisions: false
+new_revision: false

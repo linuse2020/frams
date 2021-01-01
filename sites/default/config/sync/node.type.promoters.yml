@@ -1,0 +1,18 @@
+uuid: 06b799f6-251b-4aa9-8a46-5093f4c1a6ef
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Promoters
+type: promoters
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

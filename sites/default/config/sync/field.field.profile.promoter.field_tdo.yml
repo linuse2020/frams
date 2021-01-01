@@ -1,0 +1,28 @@
+uuid: 5b3b8949-5318-4ca9-bf7d-a6a987ec94cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_tdo
+    - node.type.tdo
+    - profile.type.promoter
+id: profile.promoter.field_tdo
+field_name: field_tdo
+entity_type: profile
+bundle: promoter
+label: 'District Development Offices'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      tdo: tdo
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

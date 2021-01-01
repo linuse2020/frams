@@ -1,0 +1,18 @@
+uuid: 1a99748a-bee0-44f5-9e78-a316b0836708
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: DLC
+type: dlc
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

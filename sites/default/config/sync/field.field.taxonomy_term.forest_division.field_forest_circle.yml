@@ -1,0 +1,29 @@
+uuid: c1fb7136-1bff-4c36-bd39-049dde03e67c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_forest_circle
+    - taxonomy.vocabulary.forest_circle
+    - taxonomy.vocabulary.forest_division
+id: taxonomy_term.forest_division.field_forest_circle
+field_name: field_forest_circle
+entity_type: taxonomy_term
+bundle: forest_division
+label: 'Forest Circle'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      forest_circle: forest_circle
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

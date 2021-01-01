@@ -1,0 +1,19 @@
+uuid: 5dcc9384-0cd5-4091-b5e8-8004713ce19d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_family_members_name
+    - paragraphs.paragraphs_type.family_members_details
+id: paragraph.family_members_details.field_family_members_name
+field_name: field_family_members_name
+entity_type: paragraph
+bundle: family_members_details
+label: 'Family Members Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

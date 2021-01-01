@@ -1,0 +1,28 @@
+uuid: f0eb6df3-816d-4799-9ea9-2d8e9caced2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teo_frc
+    - node.type.frc
+    - node.type.teo
+id: node.teo.field_teo_frc
+field_name: field_teo_frc
+entity_type: node
+bundle: teo
+label: 'TEO FRC'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      frc: frc
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

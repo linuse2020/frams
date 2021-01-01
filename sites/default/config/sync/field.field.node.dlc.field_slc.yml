@@ -1,0 +1,32 @@
+uuid: 5e2a4157-9c6d-48d6-bd5d-a03989bd6f0b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_slc
+    - node.type.dlc
+    - node.type.slc
+  content:
+    - 'node:slc:12ffca05-f3f2-4d38-b6c0-89bc8a993d81'
+id: node.dlc.field_slc
+field_name: field_slc
+entity_type: node
+bundle: dlc
+label: SLC
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: 12ffca05-f3f2-4d38-b6c0-89bc8a993d81
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      slc: slc
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

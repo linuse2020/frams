@@ -1,0 +1,52 @@
+uuid: 87abf236-1984-45b6-9717-e8b8757c3c61
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_frc_members_details
+    - node.type.frc
+    - paragraphs.paragraphs_type.frc_members_details
+  module:
+    - entity_reference_revisions
+id: node.frc.field_frc_members_details
+field_name: field_frc_members_details
+entity_type: node
+bundle: frc
+label: 'FRC Members Details'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      frc_members_details: frc_members_details
+    target_bundles_drag_drop:
+      _survey_details:
+        weight: 16
+        enabled: false
+      committee_member_details:
+        weight: 9
+        enabled: false
+      family_members_details:
+        weight: 10
+        enabled: false
+      frc_members_details:
+        enabled: true
+        weight: 11
+      meeting_members_details:
+        weight: 12
+        enabled: false
+      other_claims:
+        weight: 13
+        enabled: false
+      vaimozhy:
+        weight: 14
+        enabled: false
+      vaimozhy_witness_details:
+        weight: 15
+        enabled: false
+field_type: entity_reference_revisions

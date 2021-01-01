@@ -1,0 +1,29 @@
+uuid: 97d894d1-e0e2-431e-a514-56a3b22ee188
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_settlement
+    - paragraphs.paragraphs_type.other_claims
+    - taxonomy.vocabulary.settlement
+id: paragraph.other_claims.field_settlement
+field_name: field_settlement
+entity_type: paragraph
+bundle: other_claims
+label: Settlement
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      settlement: settlement
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

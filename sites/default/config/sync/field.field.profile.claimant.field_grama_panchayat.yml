@@ -1,0 +1,29 @@
+uuid: 887025d9-6341-440d-a8ef-9d2724a735eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_grama_panchayat
+    - profile.type.claimant
+    - taxonomy.vocabulary.grama_panchayat
+id: profile.claimant.field_grama_panchayat
+field_name: field_grama_panchayat
+entity_type: profile
+bundle: claimant
+label: 'Grama Panchayat'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      grama_panchayat: grama_panchayat
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

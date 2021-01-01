@@ -1,0 +1,10 @@
+uuid: 54bb82c5-1c8b-41d1-b270-9305bcc81bbe
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.panchayat
+label: Panchayat
+targetEntityType: user
+cache: true

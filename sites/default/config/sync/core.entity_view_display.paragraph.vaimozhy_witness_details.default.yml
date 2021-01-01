@@ -1,0 +1,31 @@
+uuid: 2f4a0c85-92f5-4ffd-afdd-b40f8662c839
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.vaimozhy_witness_details.field_vaimozhy_witness_name
+    - field.field.paragraph.vaimozhy_witness_details.field_witness_address
+    - paragraphs.paragraphs_type.vaimozhy_witness_details
+  module:
+    - address
+id: paragraph.vaimozhy_witness_details.default
+targetEntityType: paragraph
+bundle: vaimozhy_witness_details
+mode: default
+content:
+  field_vaimozhy_witness_name:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_witness_address:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+hidden: {  }

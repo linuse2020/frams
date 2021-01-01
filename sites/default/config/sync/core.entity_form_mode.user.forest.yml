@@ -1,0 +1,10 @@
+uuid: e7d25876-147a-4b44-a093-36722fc2b233
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.forest
+label: Forest
+targetEntityType: user
+cache: true

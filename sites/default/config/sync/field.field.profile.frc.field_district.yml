@@ -1,0 +1,29 @@
+uuid: 39997c0f-6a97-45e7-a6b6-0d07e0e9277a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_district
+    - profile.type.frc
+    - taxonomy.vocabulary.district
+id: profile.frc.field_district
+field_name: field_district
+entity_type: profile
+bundle: frc
+label: District
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      district: district
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

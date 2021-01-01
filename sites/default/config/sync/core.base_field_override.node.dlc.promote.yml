@@ -1,0 +1,22 @@
+uuid: b98bd91b-c734-4d2a-a0d3-9cab93d70783
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.dlc
+id: node.dlc.promote
+field_name: promote
+entity_type: node
+bundle: dlc
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

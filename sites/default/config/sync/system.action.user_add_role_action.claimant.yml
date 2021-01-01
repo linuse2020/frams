@@ -1,0 +1,14 @@
+uuid: 80f63f5d-602b-4780-8302-dd05540ad7b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.claimant
+  module:
+    - user
+id: user_add_role_action.claimant
+label: 'Add the CLAIMANT role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: claimant

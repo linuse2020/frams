@@ -1,0 +1,14 @@
+uuid: 06c6c13f-193e-4095-add9-cccbd0f854fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.frc
+  module:
+    - user
+id: user_remove_role_action.frc
+label: 'Remove the FRC role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: frc

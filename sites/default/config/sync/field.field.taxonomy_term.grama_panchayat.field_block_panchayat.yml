@@ -1,0 +1,29 @@
+uuid: 93425f18-d726-4969-8528-4a5596791043
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_block_panchayat
+    - taxonomy.vocabulary.block_panchayat
+    - taxonomy.vocabulary.grama_panchayat
+id: taxonomy_term.grama_panchayat.field_block_panchayat
+field_name: field_block_panchayat
+entity_type: taxonomy_term
+bundle: grama_panchayat
+label: 'Block Panchayat'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      block_panchayat: block_panchayat
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

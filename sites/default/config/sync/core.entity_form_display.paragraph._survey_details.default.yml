@@ -1,0 +1,75 @@
+uuid: 349f8670-57ac-447e-85e3-dbe7b508ed7c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph._survey_details.field_claim_nature
+    - field.field.paragraph._survey_details.field_compartment_number
+    - field.field.paragraph._survey_details.field_coupe_number
+    - field.field.paragraph._survey_details.field_geolocation
+    - field.field.paragraph._survey_details.field_survey_map
+    - field.field.paragraph._survey_details.field_survey_number
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type._survey_details
+  module:
+    - field_layout
+    - geolocation
+    - image
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: paragraph._survey_details.default
+targetEntityType: paragraph
+bundle: _survey_details
+mode: default
+content:
+  field_claim_nature:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_compartment_number:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_coupe_number:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_geolocation:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: geolocation_latlng
+    region: content
+  field_survey_map:
+    weight: 4
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_survey_number:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

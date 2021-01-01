@@ -1,0 +1,13 @@
+uuid: d1c486ca-da37-45bb-a34b-b7a28a14e265
+langcode: en
+status: true
+dependencies: {  }
+id: sdlc
+label: SDLC
+display_label: ''
+multiple: false
+registration: true
+roles:
+  sdlc: sdlc
+allow_revisions: false
+new_revision: false

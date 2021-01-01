@@ -1,0 +1,32 @@
+uuid: 7767f126-e8fb-4095-85d6-28dddf4d27ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.sdlc.field_profile_sdlc
+    - profile.type.sdlc
+  module:
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: profile.sdlc.default
+targetEntityType: profile
+bundle: sdlc
+mode: default
+content:
+  field_profile_sdlc:
+    weight: 26
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  is_default: true

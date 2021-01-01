@@ -1,0 +1,28 @@
+uuid: 4ebfa9cb-3ab6-40c9-9927-18ff4e56a195
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_claimant_sdlc
+    - node.type.application
+    - node.type.sdlc
+id: node.application.field_claimant_sdlc
+field_name: field_claimant_sdlc
+entity_type: node
+bundle: application
+label: 'Claimant SDLC'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      sdlc: sdlc
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

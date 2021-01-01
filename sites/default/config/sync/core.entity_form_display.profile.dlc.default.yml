@@ -1,0 +1,32 @@
+uuid: f03b55f6-1ebd-4296-a8b2-41d85183e747
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.dlc.field_profile_dlc
+    - profile.type.dlc
+  module:
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: profile.dlc.default
+targetEntityType: profile
+bundle: dlc
+mode: default
+content:
+  field_profile_dlc:
+    weight: 26
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  is_default: true

@@ -1,0 +1,22 @@
+uuid: 51a5686e-6fd4-4a62-bd28-f0a6042ed0c3
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - frams
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: frams_breadcrumbs
+theme: frams
+region: sidebar_menu
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

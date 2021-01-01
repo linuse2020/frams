@@ -1,0 +1,19 @@
+uuid: 1df77a66-bd24-414c-b980-0cf1dee167e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_email
+    - node.type.promoters
+id: node.promoters.field_email
+field_name: field_email
+entity_type: node
+bundle: promoters
+label: Email
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

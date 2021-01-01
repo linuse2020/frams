@@ -1,0 +1,46 @@
+uuid: 8a3299c2-782a-44f6-b0ef-68546d8584d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_survey_details
+    - node.type.application
+    - paragraphs.paragraphs_type._survey_details
+  module:
+    - entity_reference_revisions
+id: node.application.field_survey_details
+field_name: field_survey_details
+entity_type: node
+bundle: application
+label: 'Survey Details'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      _survey_details: _survey_details
+    target_bundles_drag_drop:
+      _survey_details:
+        enabled: true
+        weight: 7
+      family_members_details:
+        weight: 8
+        enabled: false
+      meeting_members_details:
+        weight: 9
+        enabled: false
+      other_claims:
+        weight: 10
+        enabled: false
+      vaimozhy:
+        weight: 11
+        enabled: false
+      vaimozhy_witness_details:
+        weight: 12
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,14 @@
+uuid: 2f8096f6-9de5-4ca8-90f9-fc26dd7edf02
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.teo
+  module:
+    - user
+id: user_add_role_action.teo
+label: 'Add the TEO role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: teo

@@ -1,0 +1,14 @@
+uuid: 29ad8ea7-ebf8-4f0a-9bb5-fae16374df81
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.slc
+  module:
+    - user
+id: user_remove_role_action.slc
+label: 'Remove the SLC role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: slc

@@ -1,0 +1,38 @@
+uuid: c17b5e8e-e264-4d2c-83c5-b89da4aa11c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.promoters.body
+    - field.field.node.promoters.field_email
+    - field.field.node.promoters.field_frc
+    - field.field.node.promoters.field_promoter_contact
+    - field.field.node.promoters.field_teo
+    - node.type.promoters
+  module:
+    - text
+    - user
+id: node.promoters.teaser
+targetEntityType: node
+bundle: promoters
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_email: true
+  field_frc: true
+  field_promoter_contact: true
+  field_teo: true

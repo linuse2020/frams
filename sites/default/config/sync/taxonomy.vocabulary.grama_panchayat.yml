@@ -1,0 +1,8 @@
+uuid: 9f0b13fb-159c-4744-a28c-d761a5300a86
+langcode: en
+status: true
+dependencies: {  }
+name: 'Grama Panchayat'
+vid: grama_panchayat
+description: ''
+weight: 0

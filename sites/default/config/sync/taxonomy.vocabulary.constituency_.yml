@@ -1,0 +1,8 @@
+uuid: 335336f9-0a4e-498c-896e-d1098246b153
+langcode: en
+status: true
+dependencies: {  }
+name: Constituency
+vid: constituency_
+description: ''
+weight: 0

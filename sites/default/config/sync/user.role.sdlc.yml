@@ -1,0 +1,9 @@
+uuid: 81cf05e1-b7cc-4c11-b15b-a23e15e18e53
+langcode: en
+status: true
+dependencies: {  }
+id: sdlc
+label: SDLC
+weight: 5
+is_admin: null
+permissions: {  }

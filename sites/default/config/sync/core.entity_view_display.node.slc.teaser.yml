@@ -1,0 +1,32 @@
+uuid: 172bdf95-5fe7-49c8-8471-b8b32304563f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.slc.body
+    - field.field.node.slc.field_district
+    - node.type.slc
+  module:
+    - text
+    - user
+id: node.slc.teaser
+targetEntityType: node
+bundle: slc
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_district: true

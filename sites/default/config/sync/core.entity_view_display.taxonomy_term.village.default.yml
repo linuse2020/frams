@@ -1,0 +1,30 @@
+uuid: 86a97213-824b-4b50-89a9-112778c1398a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.village.field_taluk
+    - taxonomy.vocabulary.village
+  module:
+    - text
+id: taxonomy_term.village.default
+targetEntityType: taxonomy_term
+bundle: village
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_taluk:
+    weight: 1
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }

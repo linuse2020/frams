@@ -1,0 +1,14 @@
+uuid: 642896b0-581c-424d-a1ce-07b8900733be
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.promoter
+  module:
+    - user
+id: user_remove_role_action.promoter
+label: 'Remove the PROMOTER role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: promoter

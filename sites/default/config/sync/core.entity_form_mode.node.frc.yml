@@ -1,0 +1,10 @@
+uuid: f7cf2aae-ff63-4e22-8a7a-e230d812b680
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.frc
+label: FRC
+targetEntityType: node
+cache: true

@@ -1,0 +1,54 @@
+uuid: 6472af48-bbc4-41c9-83e9-ca8fe4603e3f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.frc.field_district
+    - field.field.profile.frc.field_grama_panchayat
+    - field.field.profile.frc.field_profile_frc
+    - profile.type.frc
+  module:
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: profile.frc.default
+targetEntityType: profile
+bundle: frc
+mode: default
+content:
+  field_district:
+    weight: 26
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_grama_panchayat:
+    weight: 27
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_profile_frc:
+    weight: 28
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  is_default: true

@@ -1,0 +1,67 @@
+uuid: b4f58729-356a-4b89-88e4-95fe2043f5d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.claimant.field_aadhar_number
+    - field.field.profile.claimant.field_district
+    - field.field.profile.claimant.field_frc
+    - field.field.profile.claimant.field_full_name
+    - field.field.profile.claimant.field_grama_panchayat
+    - field.field.profile.claimant.field_settlement
+    - profile.type.claimant
+  module:
+    - text
+id: profile.claimant.default
+targetEntityType: profile
+bundle: claimant
+mode: default
+content:
+  field_aadhar_number:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_district:
+    weight: 1
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_frc:
+    weight: 2
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_full_name:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_grama_panchayat:
+    weight: 4
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_settlement:
+    weight: 5
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }

@@ -1,0 +1,29 @@
+uuid: 46aa6c72-a30c-48c2-bbcf-8d370f29144b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_claimant_constituency
+    - node.type.application
+    - taxonomy.vocabulary.constituency_
+id: node.application.field_claimant_constituency
+field_name: field_claimant_constituency
+entity_type: node
+bundle: application
+label: 'Claimant Constituency'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      constituency_: constituency_
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

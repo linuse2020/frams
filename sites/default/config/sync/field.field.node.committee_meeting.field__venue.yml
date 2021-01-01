@@ -1,0 +1,19 @@
+uuid: 78369b33-e0c1-4325-9649-ab352054284f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field__venue
+    - node.type.committee_meeting
+id: node.committee_meeting.field__venue
+field_name: field__venue
+entity_type: node
+bundle: committee_meeting
+label: ' Venue'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

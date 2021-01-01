@@ -1,0 +1,14 @@
+uuid: 9d73dc9b-ba70-4c5b-b54f-3e726b7a918b
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.survey
+  module:
+    - user
+id: user_add_role_action.survey
+label: 'Add the SURVEY role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: survey

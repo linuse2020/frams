@@ -1,0 +1,38 @@
+uuid: 1f0018cf-c3e4-4920-9470-ae06af6847ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_photo_couple
+    - node.type.application
+  module:
+    - image
+id: node.application.field_photo_couple
+field_name: field_photo_couple
+entity_type: node
+bundle: application
+label: 'Photo Couple'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

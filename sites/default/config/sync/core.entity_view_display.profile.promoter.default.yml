@@ -1,0 +1,39 @@
+uuid: e82b7e11-2e07-4fb4-9600-d3a02ef4e5b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.promoter.field_profile_promoter
+    - field.field.profile.promoter.field_tdo
+    - field.field.profile.promoter.field_teo
+    - profile.type.promoter
+id: profile.promoter.default
+targetEntityType: profile
+bundle: promoter
+mode: default
+content:
+  field_profile_promoter:
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_tdo:
+    weight: 1
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_teo:
+    weight: 2
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }

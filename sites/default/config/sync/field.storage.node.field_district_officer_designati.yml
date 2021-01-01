@@ -1,0 +1,31 @@
+uuid: 733293bc-2425-427e-93fb-984f6d6feefd
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - options
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_district_officer_designati
+field_name: field_district_officer_designati
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1'
+      label: 'Project Office'
+    -
+      value: '2'
+      label: 'Tribal Development office'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

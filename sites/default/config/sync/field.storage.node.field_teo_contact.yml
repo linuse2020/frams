@@ -1,0 +1,23 @@
+uuid: 92caead0-0944-444c-8f22-feb2a9cf48ef
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - telephone
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_teo_contact
+field_name: field_teo_contact
+entity_type: node
+type: telephone
+settings: {  }
+module: telephone
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

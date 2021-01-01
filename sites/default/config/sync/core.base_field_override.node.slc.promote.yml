@@ -1,0 +1,22 @@
+uuid: 071703f8-774e-41f6-94e7-1c8922e37702
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.slc
+id: node.slc.promote
+field_name: promote
+entity_type: node
+bundle: slc
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,23 @@
+uuid: 35c42d2d-8cb1-4add-b9ef-16f1ec6009d1
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - taxonomy
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: taxonomy_term.field_block_panchayat
+field_name: field_block_panchayat
+entity_type: taxonomy_term
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,14 @@
+uuid: 4906c9fb-0fff-4713-9ee6-078d95e32a81
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.archives
+  module:
+    - user
+id: user_remove_role_action.archives
+label: 'Remove the Archives role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: archives

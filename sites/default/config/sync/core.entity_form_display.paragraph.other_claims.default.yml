@@ -1,0 +1,42 @@
+uuid: 900bbb58-a5dd-49e3-8f32-fb53b1fcd315
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.other_claims.field_area
+    - field.field.paragraph.other_claims.field_settlement
+    - paragraphs.paragraphs_type.other_claims
+  module:
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: paragraph.other_claims.default
+targetEntityType: paragraph
+bundle: other_claims
+mode: default
+content:
+  field_area:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_settlement:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,28 @@
+uuid: 657ae79f-114e-4575-9418-4731adbd5edf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_claimant_dlc
+    - node.type.application
+    - node.type.dlc
+id: node.application.field_claimant_dlc
+field_name: field_claimant_dlc
+entity_type: node
+bundle: application
+label: 'Claimant DLC'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      dlc: dlc
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,21 @@
+uuid: 6122fe5b-53b6-4d4a-91ba-124b4eb443b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_frc_member_designation
+    - paragraphs.paragraphs_type.frc_members_details
+  module:
+    - options
+id: paragraph.frc_members_details.field_frc_member_designation
+field_name: field_frc_member_designation
+entity_type: paragraph
+bundle: frc_members_details
+label: 'FRC Member Designation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

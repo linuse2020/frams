@@ -1,0 +1,19 @@
+uuid: 7559b5a6-d429-493c-8653-f524da06243f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_designation
+    - paragraphs.paragraphs_type.meeting_members_details
+id: paragraph.meeting_members_details.field_designation
+field_name: field_designation
+entity_type: paragraph
+bundle: meeting_members_details
+label: Designation
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

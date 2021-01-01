@@ -1,0 +1,24 @@
+uuid: e908fa5c-56bc-412e-925a-35151b17039c
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - profile
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: profile.field_teo
+field_name: field_teo
+entity_type: profile
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

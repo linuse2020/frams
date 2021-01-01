@@ -1,0 +1,21 @@
+uuid: 8ca19754-ac49-4abb-96ff-1200296ff722
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_district_officer_designati
+    - node.type.tdo
+  module:
+    - options
+id: node.tdo.field_district_officer_designati
+field_name: field_district_officer_designati
+entity_type: node
+bundle: tdo
+label: 'District Officer Designation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

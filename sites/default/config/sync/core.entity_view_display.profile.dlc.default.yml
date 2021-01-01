@@ -1,0 +1,21 @@
+uuid: 9c4d376f-be59-4c48-b87a-6939bde52ed8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.dlc.field_profile_dlc
+    - profile.type.dlc
+id: profile.dlc.default
+targetEntityType: profile
+bundle: dlc
+mode: default
+content:
+  field_profile_dlc:
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }

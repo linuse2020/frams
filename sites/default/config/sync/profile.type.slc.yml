@@ -1,0 +1,13 @@
+uuid: dabbeb3e-113e-4c3b-8e4b-077b9cff66a9
+langcode: en
+status: true
+dependencies: {  }
+id: slc
+label: SLC
+display_label: ''
+multiple: false
+registration: true
+roles:
+  slc: slc
+allow_revisions: false
+new_revision: false

@@ -1,0 +1,21 @@
+uuid: dae94431-b338-451d-99c1-09efc229d774
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_member_category
+    - paragraphs.paragraphs_type.meeting_members_details
+  module:
+    - options
+id: paragraph.meeting_members_details.field_member_category
+field_name: field_member_category
+entity_type: paragraph
+bundle: meeting_members_details
+label: 'Member Category'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

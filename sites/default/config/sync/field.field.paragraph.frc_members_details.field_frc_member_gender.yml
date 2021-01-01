@@ -1,0 +1,21 @@
+uuid: f8f55665-59cb-4c20-925e-c6f845036b65
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_frc_member_gender
+    - paragraphs.paragraphs_type.frc_members_details
+  module:
+    - options
+id: paragraph.frc_members_details.field_frc_member_gender
+field_name: field_frc_member_gender
+entity_type: paragraph
+bundle: frc_members_details
+label: 'FRC Member Gender'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

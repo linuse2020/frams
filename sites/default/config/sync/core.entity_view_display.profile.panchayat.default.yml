@@ -1,0 +1,21 @@
+uuid: d95181b3-093c-4358-8a8d-8a370ce47708
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.panchayat.field_grama_panchayat
+    - profile.type.panchayat
+id: profile.panchayat.default
+targetEntityType: profile
+bundle: panchayat
+mode: default
+content:
+  field_grama_panchayat:
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }

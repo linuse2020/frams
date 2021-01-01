@@ -1,0 +1,19 @@
+uuid: 4eec03b2-ac64-4158-80fd-fa54a87d3083
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_name_of_father
+    - node.type.application
+id: node.application.field_name_of_father
+field_name: field_name_of_father
+entity_type: node
+bundle: application
+label: 'Name of Father'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

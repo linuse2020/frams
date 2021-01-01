@@ -1,0 +1,28 @@
+uuid: 6c66eb3a-bffb-430d-84f9-55855870d351
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sdlc_meeting_minutes_
+    - node.type.application
+    - node.type.committee_meeting
+id: node.application.field_sdlc_meeting_minutes_
+field_name: field_sdlc_meeting_minutes_
+entity_type: node
+bundle: application
+label: 'SDLC Meeting minutes '
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      committee_meeting: committee_meeting
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

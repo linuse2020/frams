@@ -1,0 +1,19 @@
+uuid: e81f171e-2812-4e18-a906-b0c072a4a8ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_alloted_land_cultivation
+    - node.type.application
+id: node.application.field_alloted_land_cultivation
+field_name: field_alloted_land_cultivation
+entity_type: node
+bundle: application
+label: 'Alloted land for self cultivation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

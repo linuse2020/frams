@@ -1,0 +1,21 @@
+uuid: ad9662b5-c91d-4f66-a0ca-eb99e6346898
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.tdo.field_profile_tdo
+    - profile.type.tdo
+id: profile.tdo.default
+targetEntityType: profile
+bundle: tdo
+mode: default
+content:
+  field_profile_tdo:
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }

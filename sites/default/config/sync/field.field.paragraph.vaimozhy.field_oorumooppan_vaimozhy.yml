@@ -1,0 +1,27 @@
+uuid: 18a4bcb5-43db-49e8-b9ab-3e2ad1813a0a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_oorumooppan_vaimozhy
+    - paragraphs.paragraphs_type.vaimozhy
+  module:
+    - file
+id: paragraph.vaimozhy.field_oorumooppan_vaimozhy
+field_name: field_oorumooppan_vaimozhy
+entity_type: paragraph
+bundle: vaimozhy
+label: 'Oorumooppan Vaimozhy'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf jpeg jpg png avi mp3'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file
