@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'ffd191360df79be9ed89d25bbf15647718c92e90',
+    'reference' => '5a9bb3c48a4cface0e973e6a3d07b100d10b3396',
     'name' => 'drupal/legacy-project',
   ),
   'versions' => 
@@ -987,7 +987,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'ffd191360df79be9ed89d25bbf15647718c92e90',
+      'reference' => '5a9bb3c48a4cface0e973e6a3d07b100d10b3396',
     ),
     'drupal/libraries' => 
     array (
@@ -1155,6 +1155,15 @@
       array (
         0 => '8.9.11',
       ),
+    ),
+    'drupal/multiple_registration' => 
+    array (
+      'pretty_version' => '2.92.0',
+      'version' => '2.92.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-2.92',
     ),
     'drupal/node' => 
     array (
@@ -1477,6 +1486,15 @@
       array (
         0 => '8.9.11',
       ),
+    ),
+    'drupal/user_view_mode' => 
+    array (
+      'pretty_version' => '1.0.0',
+      'version' => '1.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.0',
     ),
     'drupal/vapn' => 
     array (
