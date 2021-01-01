@@ -1,0 +1,100 @@
+uuid: e2bb4177-04ec-49df-8204-8ad9b61e51ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.application
+  module:
+    - content_moderation
+id: frams_applications
+label: 'FRAMS - Applications'
+type: content_moderation
+type_settings:
+  states:
+    dlc_approved:
+      published: false
+      default_revision: false
+      label: 'DLC Approved'
+      weight: 13
+    draft:
+      label: Draft
+      published: false
+      default_revision: false
+      weight: 0
+    frc_approved:
+      published: false
+      default_revision: false
+      label: 'FRC Approved'
+      weight: 12
+    frc_committee:
+      published: false
+      default_revision: false
+      label: 'FRC Committee'
+      weight: 5
+    frc_completed:
+      published: false
+      default_revision: false
+      label: 'FRC Completed'
+      weight: 7
+    frc_document_verification:
+      published: false
+      default_revision: false
+      label: 'FRC Document Verification'
+      weight: 2
+    frc_site_verification:
+      published: false
+      default_revision: false
+      label: 'FRC Site Verification'
+      weight: 3
+    panchayat_committee:
+      published: false
+      default_revision: false
+      label: 'Panchayat Committee'
+      weight: 6
+    panchayat_secretary:
+      published: false
+      default_revision: false
+      label: 'Panchayat Secretary'
+      weight: 4
+    published:
+      label: Published
+      published: true
+      default_revision: true
+      weight: 1
+    re_examine:
+      published: false
+      default_revision: false
+      label: Re-examine
+      weight: 10
+    rejected:
+      published: false
+      default_revision: false
+      label: Rejected
+      weight: 11
+    ror_issued:
+      published: false
+      default_revision: false
+      label: 'RoR Issued'
+      weight: 14
+    sdlc_committee:
+      published: false
+      default_revision: false
+      label: 'SDLC Committee'
+      weight: 8
+    sdlc_document_verification:
+      published: false
+      default_revision: false
+      label: 'SDLC Document Verification'
+      weight: 9
+  transitions:
+    create_new_draft:
+      label: 'Create New Draft'
+      to: draft
+      weight: 0
+      from:
+        - draft
+        - published
+  entity_types:
+    node:
+      - application
+  default_moderation_state: draft

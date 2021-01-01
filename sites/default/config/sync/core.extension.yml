@@ -90,6 +90,7 @@ module:
   tour: 0
   ultimate_cron: 0
   user: 0
+  user_view_mode: 0
   views_layout: 0
   views_ui: 0
   webform: 0

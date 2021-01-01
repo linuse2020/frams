@@ -1,0 +1,9 @@
+name: User View Mode
+description: Provides a view mode for each user role
+type: module
+core: 8.x
+
+# Information added by Drupal.org packaging script on 2020-07-01
+version: '8.x-1.0'
+project: 'user_view_mode'
+datestamp: 1593620650

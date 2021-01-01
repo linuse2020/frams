@@ -1,0 +1,81 @@
+<?php
+
+/**
+ * @file
+ * Contains user_view_mode.module.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\user\Entity\Role;
+use Drupal\user\UserInterface;
+
+/**
+ * Implements hook_form_alter().
+ */
+function user_view_mode_form_user_role_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $repository = \Drupal::service('entity_display.repository');
+  /** @var Role $role */
+  $role = $form_state->getFormObject()->getEntity();
+  $user_modes = array_map(function ($item) {
+    return $item['label'];
+  }, $repository->getViewModes('user'));
+  // A select list to select the view mode for each role.
+  $form['view_mode'] = [
+    '#type' => 'select',
+    '#title' => t("View Mode"),
+    '#description' => t("Set a custom view mode for each role."),
+    '#options' => $user_modes,
+    '#default_value' => $role->getThirdPartySetting('user_view_mode', 'view_mode'),
+    '#weight' => 1,
+  ];
+  // An input field to set wight for each role (Higher weight will get priority)
+  $form['weight'] = [
+    '#type' => 'number',
+    '#title' => t("Weight"),
+    '#default_value' => $role->getThirdPartySetting('user_view_mode', 'weight'),
+    '#description' => t("Higher weight means that this role is more prioritized in displaying the view mode."),
+    '#weight' => 2,
+  ];
+  $form["actions"]["submit"]["#submit"][] = 'user_view_mode_submit_role_form';
+}
+
+/**
+ * Saves the view mode of the role.
+ */
+function user_view_mode_submit_role_form($form, FormStateInterface $form_state) {
+  $view_mode = $form_state->getValue('view_mode');
+  $weight = $form_state->getValue('weight');
+  /** @var Role $role */
+  $role = $form_state->getFormObject()->getEntity();
+  $role->setThirdPartySetting('user_view_mode', 'view_mode', $view_mode);
+  $role->setThirdPartySetting('user_view_mode', 'weight', $weight);
+  $role->save();
+}
+
+function user_view_mode_entity_view_mode_alter(&$view_mode, Drupal\Core\Entity\EntityInterface $entity, $context) {
+  // Chenge view mode according to his role.
+  if ($entity->getEntityTypeId() == 'user' && ($view_mode == "full" || $view_mode == "default")) {
+    /** @var UserInterface $user */
+    $user = $entity;
+    $roles = $user->getRoles(TRUE);
+    // Only change view mode when he has only 1 role.
+    if (count($roles) == 1) {
+      $role = Role::load($roles[0]);
+      if ($role) {
+        $view_mode = $role->getThirdPartySetting('user_view_mode', 'view_mode', 'full');
+      }
+    }else{
+      $highest_id_weight = 0;
+      for($i = 0; $i < count($roles); $i++){
+        $role = Role::load($roles[$i]);
+        if($role->getWeight() > Role::load($roles[$highest_id_weight])->getWeight()){
+          $highest_id_weight = $role->getWeight();
+        }
+      }
+      $role = Role::load($roles[$highest_id_weight]);
+      if ($role) {
+        $view_mode = $role->getThirdPartySetting('user_view_mode', 'view_mode', 'full');
+      }
+    }
+  }
+}
