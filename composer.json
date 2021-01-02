@@ -81,6 +81,7 @@
         "drupal/ultimate_cron": "^2.0@alpha",
         "drupal/user_view_mode": "^1.0",
         "drupal/vapn": "^1.5",
+        "drupal/views_bulk_operations": "^3.10",
         "drupal/views_entity_form_field": "^1.0@beta",
         "drupal/views_extras": "^1.1",
         "drupal/views_flipped_table": "^1.4",
