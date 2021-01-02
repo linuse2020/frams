@@ -1,0 +1,10 @@
+{
+  "name": "drupal/entity_reference_views_token",
+  "description": "Provides a views selection plugin with support tokens.",
+  "type": "drupal-module",
+  "license": "GPL-2.0+",
+  "homepage": "http://drupal.org/project/entity_reference_views_token",
+  "require": {
+    "drupal/token": "1.*"
+  }
+}

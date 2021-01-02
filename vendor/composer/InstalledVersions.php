@@ -19,7 +19,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '5a9bb3c48a4cface0e973e6a3d07b100d10b3396',
+    'reference' => '85a7d12f821963b0c01096bbb7e7114862f91535',
     'name' => 'drupal/legacy-project',
   ),
   'versions' => 
@@ -701,6 +701,15 @@ private static $installed = array (
       ),
       'reference' => '8.x-1.8',
     ),
+    'drupal/entity_reference_views_token' => 
+    array (
+      'pretty_version' => '1.0.0-beta2',
+      'version' => '1.0.0.0-beta2',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.0-beta2',
+    ),
     'drupal/entityreference_filter' => 
     array (
       'pretty_version' => '1.2.0',
@@ -1000,7 +1009,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '5a9bb3c48a4cface0e973e6a3d07b100d10b3396',
+      'reference' => '85a7d12f821963b0c01096bbb7e7114862f91535',
     ),
     'drupal/libraries' => 
     array (
@@ -1456,6 +1465,15 @@ private static $installed = array (
       ),
       'reference' => '8.x-1.9',
     ),
+    'drupal/token_views_filter' => 
+    array (
+      'pretty_version' => '1.5.0',
+      'version' => '1.5.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.5',
+    ),
     'drupal/toolbar' => 
     array (
       'replaced' => 
@@ -1533,6 +1551,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '8.x-1.0-beta8',
+    ),
+    'drupal/views_extras' => 
+    array (
+      'pretty_version' => '1.1.0',
+      'version' => '1.1.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.1',
     ),
     'drupal/views_flipped_table' => 
     array (

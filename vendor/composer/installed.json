@@ -2596,6 +2596,54 @@
             "install-path": "../../modules/contrib/entity_reference_revisions"
         },
         {
+            "name": "drupal/entity_reference_views_token",
+            "version": "1.0.0-beta2",
+            "version_normalized": "1.0.0.0-beta2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/entity_reference_views_token.git",
+                "reference": "8.x-1.0-beta2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/entity_reference_views_token-8.x-1.0-beta2.zip",
+                "reference": "8.x-1.0-beta2",
+                "shasum": "9a32faacbc8e46af96bd0bb987d2705cdfd57de2"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9",
+                "drupal/token": "1.*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0-beta2",
+                    "datestamp": "1592993770",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "installation-source": "dist",
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "m.lebedev",
+                    "homepage": "https://www.drupal.org/user/2566550"
+                }
+            ],
+            "description": "Provides a views selection plugin with support tokens.",
+            "homepage": "http://drupal.org/project/entity_reference_views_token",
+            "support": {
+                "source": "https://git.drupalcode.org/project/entity_reference_views_token"
+            },
+            "install-path": "../../modules/contrib/entity_reference_views_token"
+        },
+        {
             "name": "drupal/entityreference_filter",
             "version": "1.2.0",
             "version_normalized": "1.2.0.0",
@@ -5454,6 +5502,53 @@
             "install-path": "../../modules/contrib/token"
         },
         {
+            "name": "drupal/token_views_filter",
+            "version": "1.5.0",
+            "version_normalized": "1.5.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/token_views_filter.git",
+                "reference": "8.x-1.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/token_views_filter-8.x-1.5.zip",
+                "reference": "8.x-1.5",
+                "shasum": "1a151906690464650ffef3fe8c9a0f4fb5c6733b"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.5",
+                    "datestamp": "1604429711",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "installation-source": "dist",
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "validoll",
+                    "homepage": "https://www.drupal.org/user/144206"
+                }
+            ],
+            "description": "This is module allow to use tokens in views filter criteria values.",
+            "homepage": "https://www.drupal.org/project/token_views_filter",
+            "support": {
+                "source": "https://git.drupalcode.org/project/token_views_filter"
+            },
+            "install-path": "../../modules/contrib/token_views_filter"
+        },
+        {
             "name": "drupal/ultimate_cron",
             "version": "2.0.0-alpha5",
             "version_normalized": "2.0.0.0-alpha5",
@@ -5679,6 +5774,62 @@
                 "issues": "https://www.drupal.org/project/issues/views_entity_form_field"
             },
             "install-path": "../../modules/contrib/views_entity_form_field"
+        },
+        {
+            "name": "drupal/views_extras",
+            "version": "1.1.0",
+            "version_normalized": "1.1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/views_extras.git",
+                "reference": "8.x-1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/views_extras-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "bb29243975a555349264dfaf9f094fc27b5cab85"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.1",
+                    "datestamp": "1511805184",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "installation-source": "dist",
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "anand.toshniwal93",
+                    "homepage": "https://www.drupal.org/user/3345088"
+                },
+                {
+                    "name": "prashant114606",
+                    "homepage": "https://www.drupal.org/user/3380762"
+                },
+                {
+                    "name": "purushotam.rai",
+                    "homepage": "https://www.drupal.org/user/3193859"
+                }
+            ],
+            "description": "Views Arguments based on session, cookie or token..",
+            "homepage": "https://www.drupal.org/project/views_extras",
+            "support": {
+                "source": "https://git.drupalcode.org/project/views_extras",
+                "issues": "https://www.drupal.org/project/issues/views_extras"
+            },
+            "install-path": "../../modules/contrib/views_extras"
         },
         {
             "name": "drupal/views_flipped_table",
