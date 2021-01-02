@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'd6cd586057c273cfef263defefe63e12fdb7839e',
+    'reference' => '5277089f179ee90877f14990b27fa2fd04823bb3',
     'name' => 'drupal/legacy-project',
   ),
   'versions' => 
@@ -822,6 +822,15 @@
       ),
       'reference' => '8.x-1.9',
     ),
+    'drupal/form_mode_control' => 
+    array (
+      'pretty_version' => '2.0.0-rc6',
+      'version' => '2.0.0.0-RC6',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-2.0-rc6',
+    ),
     'drupal/forum' => 
     array (
       'replaced' => 
@@ -996,7 +1005,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'd6cd586057c273cfef263defefe63e12fdb7839e',
+      'reference' => '5277089f179ee90877f14990b27fa2fd04823bb3',
     ),
     'drupal/libraries' => 
     array (
