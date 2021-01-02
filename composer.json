@@ -84,6 +84,7 @@
         "drupal/user_view_mode": "^1.0",
         "drupal/vapn": "^1.5",
         "drupal/view_unpublished": "^1.0",
+        "drupal/views_argument_token": "^1.0@beta",
         "drupal/views_bulk_operations": "^3.10",
         "drupal/views_entity_form_field": "^1.0@beta",
         "drupal/views_extras": "^1.1",
