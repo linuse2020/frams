@@ -19,7 +19,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '5277089f179ee90877f14990b27fa2fd04823bb3',
+    'reference' => 'fa3c5fe74d938e710115a9f2b6adec609d1b9ab1',
     'name' => 'drupal/legacy-project',
   ),
   'versions' => 
@@ -844,6 +844,15 @@ private static $installed = array (
       ),
       'reference' => '8.x-2.0-rc6',
     ),
+    'drupal/form_mode_manager' => 
+    array (
+      'pretty_version' => '1.3.0',
+      'version' => '1.3.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.3',
+    ),
     'drupal/forum' => 
     array (
       'replaced' => 
@@ -1018,7 +1027,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '5277089f179ee90877f14990b27fa2fd04823bb3',
+      'reference' => 'fa3c5fe74d938e710115a9f2b6adec609d1b9ab1',
     ),
     'drupal/libraries' => 
     array (
