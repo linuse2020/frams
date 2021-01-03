@@ -136,6 +136,7 @@ class ComposerStaticInit9de9436f91c599173609d35a420479fb
         ),
         'C' => 
         array (
+            'CssLint\\' => 8,
             'Composer\\Semver\\' => 16,
             'Composer\\Installers\\' => 20,
             'CommerceGuys\\Addressing\\' => 24,
@@ -379,6 +380,10 @@ class ComposerStaticInit9de9436f91c599173609d35a420479fb
         'Doctrine\\Common\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/common/lib/Doctrine/Common',
+        ),
+        'CssLint\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/neilime/php-css-lint/src/CssLint',
         ),
         'Composer\\Semver\\' => 
         array (
