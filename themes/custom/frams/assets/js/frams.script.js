@@ -17802,10 +17802,10 @@ module.exports = g;
 
 /***/ }),
 
-/***/ "./src/js/jobsify.script.js":
-/*!**********************************!*\
-  !*** ./src/js/jobsify.script.js ***!
-  \**********************************/
+/***/ "./src/js/frams.script.js":
+/*!********************************!*\
+  !*** ./src/js/frams.script.js ***!
+  \********************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -17829,10 +17829,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/sass/jobsify.style.scss":
-/*!*************************************!*\
-  !*** ./src/sass/jobsify.style.scss ***!
-  \*************************************/
+/***/ "./src/sass/frams.style.scss":
+/*!***********************************!*\
+  !*** ./src/sass/frams.style.scss ***!
+  \***********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -17841,14 +17841,14 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 0:
-/*!**********************************************************************!*\
-  !*** multi ./src/js/jobsify.script.js ./src/sass/jobsify.style.scss ***!
-  \**********************************************************************/
+/*!******************************************************************!*\
+  !*** multi ./src/js/frams.script.js ./src/sass/frams.style.scss ***!
+  \******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/nitheesh/webapps/jobsify/themes/custom/jobsify/src/js/jobsify.script.js */"./src/js/jobsify.script.js");
-module.exports = __webpack_require__(/*! /home/nitheesh/webapps/jobsify/themes/custom/jobsify/src/sass/jobsify.style.scss */"./src/sass/jobsify.style.scss");
+__webpack_require__(/*! /home/nitheesh/webapps/frams/themes/custom/frams/src/js/frams.script.js */"./src/js/frams.script.js");
+module.exports = __webpack_require__(/*! /home/nitheesh/webapps/frams/themes/custom/frams/src/sass/frams.style.scss */"./src/sass/frams.style.scss");
 
 
 /***/ })
