@@ -1,0 +1,7 @@
+name: FRAMS PRO
+type: module
+description: "Custom module for FRAMS Website."
+package: FRAMS
+version: 8.x
+core: 8.x
+

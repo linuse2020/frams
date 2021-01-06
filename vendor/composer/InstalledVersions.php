@@ -19,7 +19,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '799f3bce4b5e8408380cd943fbeb8e1871ec6c6f',
+    'reference' => 'd58cde34d7395e466da48597e17f457a9c09e74a',
     'name' => 'drupal/legacy-project',
   ),
   'versions' => 
@@ -637,12 +637,21 @@ private static $installed = array (
     ),
     'drupal/devel' => 
     array (
-      'pretty_version' => '4.0.1',
-      'version' => '4.0.1.0',
+      'pretty_version' => '2.1.0',
+      'version' => '2.1.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '4.0.1',
+      'reference' => '8.x-2.1',
+    ),
+    'drupal/devel_debug_log' => 
+    array (
+      'pretty_version' => '1.0.0-beta2',
+      'version' => '1.0.0.0-beta2',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.0-beta2',
     ),
     'drupal/dropzonejs' => 
     array (
@@ -981,6 +990,15 @@ private static $installed = array (
         0 => '8.9.11',
       ),
     ),
+    'drupal/kint' => 
+    array (
+      'pretty_version' => '2.1.0',
+      'version' => '2.1.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => NULL,
+    ),
     'drupal/language' => 
     array (
       'replaced' => 
@@ -1054,16 +1072,16 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '799f3bce4b5e8408380cd943fbeb8e1871ec6c6f',
+      'reference' => 'd58cde34d7395e466da48597e17f457a9c09e74a',
     ),
     'drupal/libraries' => 
     array (
-      'pretty_version' => '3.0.0-alpha6',
-      'version' => '3.0.0.0-alpha6',
+      'pretty_version' => '3.0.0-beta1',
+      'version' => '3.0.0.0-beta1',
       'aliases' => 
       array (
       ),
-      'reference' => '8.x-3.0-alpha6',
+      'reference' => '8.x-3.0-beta1',
     ),
     'drupal/link' => 
     array (
@@ -1276,6 +1294,15 @@ private static $installed = array (
         0 => '8.9.11',
       ),
     ),
+    'drupal/private_message' => 
+    array (
+      'pretty_version' => '1.3.0',
+      'version' => '1.3.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.3',
+    ),
     'drupal/profile' => 
     array (
       'pretty_version' => '1.2.0',
@@ -1450,12 +1477,12 @@ private static $installed = array (
     ),
     'drupal/swiftmailer' => 
     array (
-      'pretty_version' => '2.0.0-beta1',
-      'version' => '2.0.0.0-beta1',
+      'pretty_version' => '2.0.0',
+      'version' => '2.0.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '8.x-2.0-beta1',
+      'reference' => '8.x-2.0',
     ),
     'drupal/syslog' => 
     array (
@@ -1617,12 +1644,12 @@ private static $installed = array (
     ),
     'drupal/views_entity_form_field' => 
     array (
-      'pretty_version' => '1.0.0-beta8',
-      'version' => '1.0.0.0-beta8',
+      'pretty_version' => '1.0.0-beta9',
+      'version' => '1.0.0.0-beta9',
       'aliases' => 
       array (
       ),
-      'reference' => '8.x-1.0-beta8',
+      'reference' => '8.x-1.0-beta9',
     ),
     'drupal/views_extras' => 
     array (
@@ -1669,12 +1696,12 @@ private static $installed = array (
     ),
     'drupal/webform' => 
     array (
-      'pretty_version' => '5.22.0',
-      'version' => '5.22.0.0',
+      'pretty_version' => '5.23.0',
+      'version' => '5.23.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '8.x-5.22',
+      'reference' => '8.x-5.23',
     ),
     'drupal/workbench' => 
     array (

@@ -7,7 +7,7 @@ package: 'Views'
 dependencies:
   - drupal:views
 
-# Information added by Drupal.org packaging script on 2020-10-14
-version: '8.x-1.0-beta8'
+# Information added by Drupal.org packaging script on 2020-12-24
+version: '8.x-1.0-beta9'
 project: 'views_entity_form_field'
-datestamp: 1602694874
+datestamp: 1608835304

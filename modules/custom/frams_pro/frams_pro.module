@@ -1,0 +1,68 @@
+<?php
+
+
+/**
+* @file
+* Functions to support theming in the themename theme.
+*/
+
+use Drupal\Core\Form\FormBase;
+
+use Drupal\Core\Entity\Display\EntityFormDisplayInterface;
+use Drupal\user\Entity\User;
+use Drupal\taxonomy\Entity\Term;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Entity;
+use Drupal\Core\Entity\ContentEntityInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Render;
+use \Drupal\node\Entity\Node;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\HttpKernel\Profiler;
+use Drupal\field_collection\Entity\FieldCollectionItem;
+use Drupal\Core\Routing;
+use Drupal\Core\Link;
+use Drupal\Core\Url;
+
+/**
+ * @param \Drupal\Core\Entity\EntityInterface $user
+ */
+
+
+function frams_pro_form_alter(&$form, FormStateInterface $form_state, $form_id) {	
+	if ($form_id == 'user_claimant_form') {
+		$form_display = $form_state->get('form_display')->getMode();
+		ddl($form);
+		if ($form_display == 'claimant') {
+			
+			$form['actions']['submit']['#submit'][]  = 'claimant_user_register_submit';
+			kint($form);
+    	$form['actions']['submit']['#value'] = 'Sign Up';
+
+		}		
+	}
+}
+
+/**
+ * Custom submit handler for user registration.
+ */
+function contact_user_profile_form_submit(&$form, FormStateInterface $form_state) {
+	global $user;
+	ddl('hh');	
+  $user = \Drupal::currentUser();
+  $uid = $user->id();
+  $roles = $user->getRoles();
+  if(!in_array('administrator', $roles)) {
+    $user->set('langcode', $language);
+    $user->setUsername('name');
+    $user->setPassword($form_state->getValue('password'));
+    $user->activate();
+    $user->save();
+    if (in_array('claimant', $roles)) {
+      $form_state->setRedirect('node.add',['node_type' => 'application']);
+    }
+    else {
+      $form_state->setRedirect('<front>');
+    }
+  }
+}
