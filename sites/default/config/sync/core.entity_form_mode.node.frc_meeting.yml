@@ -1,0 +1,10 @@
+uuid: e66dc27f-2c14-4b42-9004-c7bbfa6ac001
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.frc_meeting
+label: 'FRC Meeting'
+targetEntityType: node
+cache: true

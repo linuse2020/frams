@@ -1,0 +1,54 @@
+uuid: 515114a6-13b2-4480-9c08-9367242e63b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.forest.field_forest_circle
+    - field.field.profile.forest.field_forest_division
+    - field.field.profile.forest.field_forest_range
+    - profile.type.forest
+  module:
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: profile.forest.default
+targetEntityType: profile
+bundle: forest
+mode: default
+content:
+  field_forest_circle:
+    weight: 26
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_forest_division:
+    weight: 27
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_forest_range:
+    weight: 28
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  is_default: true

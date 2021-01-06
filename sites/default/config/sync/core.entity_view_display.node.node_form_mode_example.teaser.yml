@@ -1,0 +1,32 @@
+uuid: 5dd54e68-b6aa-4005-9d4c-a923123436c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.node_form_mode_example.body
+    - field.field.node.node_form_mode_example.field_picture
+    - node.type.node_form_mode_example
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: kySsin-KUujh0II0xNbMLK39Ujnwbse6FuiVvyrnr0Q
+id: node.node_form_mode_example.teaser
+targetEntityType: node
+bundle: node_form_mode_example
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_picture: true

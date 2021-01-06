@@ -1,0 +1,57 @@
+enable: 1
+rid_anonymous:
+  weigth: '0'
+  path: ''
+rid_authenticated:
+  enabled: '1'
+  weigth: '0'
+  path: /dashboard
+rid_administrator:
+  enabled: '1'
+  weigth: '0'
+  path: /dashboard
+rid_contributor:
+  weigth: '0'
+  path: ''
+rid_promoter:
+  weigth: '0'
+  path: ''
+rid_frc:
+  weigth: '0'
+  path: ''
+rid_sdlc:
+  weigth: '0'
+  path: ''
+rid_dlc:
+  weigth: '0'
+  path: ''
+rid_slc:
+  weigth: '0'
+  path: ''
+rid_panchayat:
+  weigth: '0'
+  path: ''
+rid_forest:
+  weigth: '0'
+  path: ''
+rid_teo:
+  weigth: '0'
+  path: ''
+rid_tdo:
+  weigth: '0'
+  path: ''
+rid_claimant:
+  weigth: '0'
+  path: ''
+rid_survey:
+  weigth: '0'
+  path: ''
+rid_archives:
+  weigth: '0'
+  path: ''
+rid_super_admin:
+  weigth: '0'
+  path: ''
+rid_la:
+  weigth: '0'
+  path: ''

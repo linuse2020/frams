@@ -1,0 +1,20 @@
+uuid: 564e6a83-a032-4745-8052-f231f65b4f5d
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+_core:
+  default_config_hash: nxsNMIe1nZVoMiqz_P1RgxAbI6FZSOSaQp5H8P2zUso
+name: 'Node form mode example'
+type: node_form_mode_example
+description: 'An demo content type to show Form Mode Manager functionalities.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

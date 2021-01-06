@@ -1,0 +1,10 @@
+uuid: a820ad65-e859-44ab-bedf-5fc70d847c8c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.frc_site_verify
+label: 'FRC Site Verify'
+targetEntityType: node
+cache: true

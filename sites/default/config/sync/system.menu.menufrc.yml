@@ -1,0 +1,8 @@
+uuid: cdc103b8-7eda-40b3-8592-815a5469479e
+langcode: en
+status: true
+dependencies: {  }
+id: menufrc
+label: FRC
+description: ''
+locked: false

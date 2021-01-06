@@ -1,0 +1,51 @@
+uuid: bb1301fc-181b-425d-9156-c4e60fd15f36
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.user.claimant
+    - field.field.user.user.user_picture
+  module:
+    - field_layout
+    - layout_discovery
+    - profile
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+_core:
+  default_config_hash: K-1rBM8mTIkFp9RqOC2tMRUukOQ1xbRCfSKK8dEddnA
+id: user.user.claimant
+targetEntityType: user
+bundle: user
+mode: claimant
+content:
+  account:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  claimant_profiles:
+    type: profile_form
+    weight: 0
+    region: content
+    settings:
+      form_mode: default
+    third_party_settings: {  }
+hidden:
+  contact: true
+  dlc_profiles: true
+  forest_profiles: true
+  frc_profiles: true
+  language: true
+  panchayat_profiles: true
+  promoter_profiles: true
+  sdlc_profiles: true
+  slc_profiles: true
+  survey_profiles: true
+  tdo_profiles: true
+  teo_profiles: true
+  timezone: true
+  user_picture: true

@@ -1,21 +1,21 @@
-uuid: 7a929717-8dbd-4a99-9fdb-5a0a1a7b3af4
+uuid: 610531c5-4fa7-471f-838c-8fc6db179e3a
 langcode: en
 status: true
 dependencies:
   module:
     - field_permissions
     - profile
-    - text
+    - taxonomy
 third_party_settings:
   field_permissions:
     permission_type: public
-id: profile.field_aadhar_number
-field_name: field_aadhar_number
+id: profile.field_forest_circle
+field_name: field_forest_circle
 entity_type: profile
-type: text
+type: entity_reference
 settings:
-  max_length: 255
-module: text
+  target_type: taxonomy_term
+module: core
 locked: false
 cardinality: 1
 translatable: true

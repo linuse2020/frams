@@ -25,15 +25,23 @@ content:
   account:
     weight: -10
     region: content
+    settings: {  }
+    third_party_settings: {  }
   contact:
     weight: 5
     region: content
+    settings: {  }
+    third_party_settings: {  }
   language:
     weight: 0
     region: content
+    settings: {  }
+    third_party_settings: {  }
   timezone:
     weight: 6
     region: content
+    settings: {  }
+    third_party_settings: {  }
   user_picture:
     type: image_image
     settings:
@@ -42,4 +50,14 @@ content:
     third_party_settings: {  }
     weight: -1
     region: content
-hidden: {  }
+hidden:
+  claimant_profiles: true
+  dlc_profiles: true
+  frc_profiles: true
+  panchayat_profiles: true
+  promoter_profiles: true
+  sdlc_profiles: true
+  slc_profiles: true
+  survey_profiles: true
+  tdo_profiles: true
+  teo_profiles: true

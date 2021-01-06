@@ -70,13 +70,12 @@ dependencies:
     - field.field.node.application.field_upload_ration_card_copy
     - field.field.node.application.field_upload_voters_id_copy
     - field.field.node.application.field_vaimozhy
-    - image.style.thumbnail
     - node.type.application
+    - workflows.workflow.frams_applications
   module:
+    - content_moderation
     - field_group
     - field_layout
-    - file
-    - image
     - layout_discovery
 third_party_settings:
   field_layout:
@@ -87,19 +86,19 @@ third_party_settings:
     group_personal_details:
       children:
         - title
-        - field_name_of_other_claimants
         - field_address
+        - field_caste_cert_spouse
+        - field_caste_cert_spouse_
+        - field_cast_cirtificate
         - field_contact_no
         - field_email
-        - field_name_of_the_spouse
+        - field_is_schedules_tribe
+        - field_is_spouse_st
         - field_name_of_father
         - field_name_of_mother
+        - field_name_of_other_claimants
+        - field_name_of_the_spouse
         - field__photo
-        - field_is_schedules_tribe
-        - field_cast_cirtificate
-        - field_caste_cert_spouse_
-        - field_is_spouse_st
-        - field_caste_cert_spouse
       parent_name: ''
       weight: 15
       format_type: fieldset
@@ -112,20 +111,20 @@ third_party_settings:
       label: 'Personal Details'
     group_location_details:
       children:
-        - field_claimant_district
         - field_claimant_constituency
-        - field__claimant_taluk
-        - field_claimant_panchayat
-        - field_claimant_village
-        - field__claimant_range
-        - field_claimant_slc
+        - field_claimant_district
         - field_claimant_dlc
-        - field_claimant_sdlc
         - field_claimant_frc
+        - field_claimant_panchayat
+        - field_claimant_promoter
+        - field_claimant_sdlc
         - field_claimant_settlement
+        - field_claimant_slc
         - field_claimant_tdo
         - field_claimant_teo
-        - field_claimant_promoter
+        - field_claimant_village
+        - field__claimant_range
+        - field__claimant_taluk
       parent_name: ''
       weight: 16
       format_type: fieldset
@@ -151,14 +150,14 @@ third_party_settings:
       label: 'Family Members Details'
     group_nature_of_claim_on_land:
       children:
-        - field_habitation
-        - field_self_cultivation
         - field_disputed_lands
-        - field_pattas
-        - field_rehabilitation
         - field_field_displaced
         - field_field_extent_of_land
+        - field_habitation
         - field_other_traditional_ri
+        - field_pattas
+        - field_rehabilitation
+        - field_self_cultivation
       parent_name: ''
       weight: 14
       format_type: fieldset
@@ -171,16 +170,16 @@ third_party_settings:
       label: 'Nature of claim on land'
     group_evidence_in_support:
       children:
-        - field_submit_adharcard
         - field_adharcard_no
-        - field_upload_adharcard_copy
-        - field_submit_ration_card
         - field_ration_card_no
-        - field_upload_ration_card_copy
+        - field_submit_adharcard
+        - field_submit_ration_card
         - field_submit_voter_id
-        - field__voter_id_card_no
+        - field_upload_adharcard_copy
+        - field_upload_ration_card_copy
         - field_upload_voters_id_copy
         - field_vaimozhy
+        - field__voter_id_card_no
       parent_name: ''
       weight: 13
       format_type: fieldset
@@ -193,11 +192,11 @@ third_party_settings:
       label: 'Evidence in support'
     group_any_other_information:
       children:
-        - field_other_claims
-        - field_number_of_claims_submitted
-        - field_submit_photograph_of_coupl
-        - field_photo_couple
         - field_not_submit_couple_photo
+        - field_number_of_claims_submitted
+        - field_other_claims
+        - field_photo_couple
+        - field_submit_photograph_of_coupl
         - field_survery_conducted
       parent_name: ''
       weight: 9
@@ -309,57 +308,18 @@ targetEntityType: node
 bundle: application
 mode: frc
 content:
-  field__form_appendix2:
-    weight: 42
-    settings:
-      progress_indicator: throbber
-    third_party_settings: {  }
-    type: file_generic
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
     region: content
-  field__frc_secretary_report:
-    weight: 45
-    settings:
-      progress_indicator: throbber
     third_party_settings: {  }
-    type: file_generic
-    region: content
-  field_form_appendix4:
-    weight: 46
-    settings:
-      progress_indicator: throbber
-    third_party_settings: {  }
-    type: file_generic
-    region: content
-  field_frc_meeting_minutes:
-    weight: 47
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_frc_site_map:
-    weight: 44
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
-    region: content
-  field_frc_site_photo:
-    weight: 43
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
-    region: content
 hidden:
   created: true
   field__claimant_range: true
   field__claimant_taluk: true
+  field__form_appendix2: true
+  field__frc_secretary_report: true
   field__photo: true
   field__voter_id_card_no: true
   field_address: true
@@ -389,6 +349,10 @@ hidden:
   field_email: true
   field_field_displaced: true
   field_field_extent_of_land: true
+  field_form_appendix4: true
+  field_frc_meeting_minutes: true
+  field_frc_site_map: true
+  field_frc_site_photo: true
   field_habitation: true
   field_is_schedules_tribe: true
   field_is_spouse_st: true

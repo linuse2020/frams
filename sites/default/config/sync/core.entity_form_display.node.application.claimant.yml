@@ -72,9 +72,11 @@ dependencies:
     - field.field.node.application.field_vaimozhy
     - image.style.thumbnail
     - node.type.application
+    - workflows.workflow.frams_applications
   module:
     - address
     - conditional_fields
+    - content_moderation
     - field_group
     - field_layout
     - image
@@ -227,10 +229,10 @@ third_party_settings:
       label: Declaration
     group_frc_site_verification_:
       children:
-        - field__form_appendix2
-        - field__frc_secretary_report
         - field_frc_site_map
         - field_frc_site_photo
+        - field__form_appendix2
+        - field__frc_secretary_report
       parent_name: ''
       weight: 7
       format_type: fieldset
@@ -974,6 +976,12 @@ content:
       default_paragraph_type: ''
     third_party_settings: {  }
     region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
+    third_party_settings: {  }
   title:
     type: string_textfield
     weight: 7

@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.profile.claimant.field_aadhar_number
+    - field.field.profile.claimant.field_claimant_aadhar_number
     - field.field.profile.claimant.field_district
     - field.field.profile.claimant.field_frc
     - field.field.profile.claimant.field_full_name
@@ -13,7 +13,6 @@ dependencies:
   module:
     - field_layout
     - layout_discovery
-    - text
 third_party_settings:
   field_layout:
     id: layout_onecol
@@ -24,36 +23,28 @@ targetEntityType: profile
 bundle: claimant
 mode: default
 content:
-  field_aadhar_number:
-    weight: 26
+  field_claimant_aadhar_number:
+    weight: 1
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: text_textfield
+    type: string_textfield
     region: content
   field_district:
-    weight: 27
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    weight: 2
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: options_select
     region: content
   field_frc:
-    weight: 28
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    weight: 4
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: options_select
     region: content
   field_full_name:
-    weight: 29
+    weight: 0
     settings:
       size: 60
       placeholder: ''
@@ -61,24 +52,16 @@ content:
     type: string_textfield
     region: content
   field_grama_panchayat:
-    weight: 30
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    weight: 3
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: options_select
     region: content
   field_settlement:
-    weight: 31
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    weight: 5
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: options_select
     region: content
 hidden:
   is_default: true

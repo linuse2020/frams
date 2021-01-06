@@ -1,0 +1,12 @@
+uuid: 384c1e10-4d65-4a4f-a7cc-1def9c1942ac
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: lmzv9u6NzaO_6hwAnDz_dBj5IjMdmLtRoxj0AVghfEw
+id: node.contributor
+label: Contributor
+targetEntityType: node
+cache: true

@@ -44,6 +44,13 @@ content:
       form_mode: default
     third_party_settings: {  }
     region: content
+  forest_profiles:
+    type: profile_form
+    weight: 90
+    settings:
+      form_mode: default
+    third_party_settings: {  }
+    region: content
   frc_profiles:
     type: profile_form
     weight: 90

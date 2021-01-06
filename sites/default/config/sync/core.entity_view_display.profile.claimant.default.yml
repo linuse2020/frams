@@ -3,26 +3,25 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.profile.claimant.field_aadhar_number
+    - field.field.profile.claimant.field_claimant_aadhar_number
     - field.field.profile.claimant.field_district
     - field.field.profile.claimant.field_frc
     - field.field.profile.claimant.field_full_name
     - field.field.profile.claimant.field_grama_panchayat
     - field.field.profile.claimant.field_settlement
     - profile.type.claimant
-  module:
-    - text
 id: profile.claimant.default
 targetEntityType: profile
 bundle: claimant
 mode: default
 content:
-  field_aadhar_number:
-    weight: 0
+  field_claimant_aadhar_number:
+    weight: 6
     label: above
-    settings: {  }
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
-    type: text_default
+    type: string
     region: content
   field_district:
     weight: 1

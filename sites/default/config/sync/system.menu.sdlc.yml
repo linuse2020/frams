@@ -1,0 +1,8 @@
+uuid: a15ae443-7a05-4576-aaf5-fb8e0fccc532
+langcode: en
+status: true
+dependencies: {  }
+id: sdlc
+label: SDLC
+description: ''
+locked: false

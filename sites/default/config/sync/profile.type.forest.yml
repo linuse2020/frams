@@ -1,0 +1,13 @@
+uuid: b1d3e04f-8318-4c16-af29-cc982db2f989
+langcode: en
+status: true
+dependencies: {  }
+id: forest
+label: Forest
+display_label: ''
+multiple: false
+registration: true
+roles:
+  forest: forest
+allow_revisions: false
+new_revision: false

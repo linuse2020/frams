@@ -1,0 +1,51 @@
+uuid: 516460d9-87d4-43ce-975f-d2ce5af42f13
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.user.teo
+    - field.field.user.user.user_picture
+  module:
+    - field_layout
+    - layout_discovery
+    - profile
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+_core:
+  default_config_hash: K-1rBM8mTIkFp9RqOC2tMRUukOQ1xbRCfSKK8dEddnA
+id: user.user.teo
+targetEntityType: user
+bundle: user
+mode: teo
+content:
+  account:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  teo_profiles:
+    type: profile_form
+    weight: 0
+    region: content
+    settings:
+      form_mode: default
+    third_party_settings: {  }
+hidden:
+  claimant_profiles: true
+  contact: true
+  dlc_profiles: true
+  forest_profiles: true
+  frc_profiles: true
+  language: true
+  panchayat_profiles: true
+  promoter_profiles: true
+  sdlc_profiles: true
+  slc_profiles: true
+  survey_profiles: true
+  tdo_profiles: true
+  timezone: true
+  user_picture: true

@@ -1,0 +1,29 @@
+uuid: ff8ec95a-530b-41c9-8e4b-119e26029d30
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_forest_division
+    - profile.type.forest
+    - taxonomy.vocabulary.forest_division
+id: profile.forest.field_forest_division
+field_name: field_forest_division
+entity_type: profile
+bundle: forest
+label: 'Forest Division'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      forest_division: forest_division
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

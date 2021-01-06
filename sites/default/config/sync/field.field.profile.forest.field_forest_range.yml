@@ -1,0 +1,29 @@
+uuid: fe25918d-fb8c-471c-b99e-8ade0d9e8bf0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_forest_range
+    - profile.type.forest
+    - taxonomy.vocabulary.forest_range
+id: profile.forest.field_forest_range
+field_name: field_forest_range
+entity_type: profile
+bundle: forest
+label: 'Forest Range'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      forest_range: forest_range
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

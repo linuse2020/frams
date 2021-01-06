@@ -1,0 +1,56 @@
+uuid: c43b2f7f-3681-4e8d-b021-5979d282714d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.user.government
+    - field.field.user.user.user_picture
+    - image.style.thumbnail
+  module:
+    - field_layout
+    - image
+    - layout_discovery
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+_core:
+  default_config_hash: K-1rBM8mTIkFp9RqOC2tMRUukOQ1xbRCfSKK8dEddnA
+id: user.user.government
+targetEntityType: user
+bundle: user
+mode: government
+content:
+  account:
+    weight: -10
+    region: content
+  contact:
+    weight: 5
+    region: content
+  language:
+    weight: 0
+    region: content
+  timezone:
+    weight: 6
+    region: content
+  user_picture:
+    type: image_image
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    weight: -1
+    region: content
+hidden:
+  claimant_profiles: true
+  dlc_profiles: true
+  frc_profiles: true
+  panchayat_profiles: true
+  promoter_profiles: true
+  sdlc_profiles: true
+  slc_profiles: true
+  survey_profiles: true
+  tdo_profiles: true
+  teo_profiles: true

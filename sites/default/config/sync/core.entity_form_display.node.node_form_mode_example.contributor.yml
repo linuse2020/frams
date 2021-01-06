@@ -1,10 +1,12 @@
-uuid: 9e554fb9-5a69-42e8-b806-90f1a337d034
+uuid: baa435f8-ccf6-4838-a3c8-9addc7d200b7
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.page.body
-    - node.type.page
+    - core.entity_form_mode.node.contributor
+    - field.field.node.node_form_mode_example.body
+    - field.field.node.node_form_mode_example.field_picture
+    - node.type.node_form_mode_example
   module:
     - field_layout
     - layout_discovery
@@ -16,41 +18,40 @@ third_party_settings:
     settings:
       label: ''
 _core:
-  default_config_hash: AD_lefuYmjsKeH3OQApsyP_nLj6ZnGaALznLQSQ0Z_o
-id: node.page.default
+  default_config_hash: 7V2tYrlEFJ0eylVFUwg4UPne_tZBQCNKYYoZ-0Qju0o
+id: node.node_form_mode_example.contributor
 targetEntityType: node
-bundle: page
-mode: default
+bundle: node_form_mode_example
+mode: contributor
 content:
   body:
     type: text_textarea_with_summary
-    weight: 31
-    region: content
+    weight: 1
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
-      show_summary: false
     third_party_settings: {  }
+    region: content
   created:
     type: datetime_timestamp
-    weight: 10
-    region: content
+    weight: 3
     settings: {  }
     third_party_settings: {  }
+    region: content
   path:
     type: path
-    weight: 30
-    region: content
+    weight: 6
     settings: {  }
     third_party_settings: {  }
+    region: content
   promote:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 15
-    region: content
+    weight: 4
     third_party_settings: {  }
+    region: content
   status:
     type: boolean_checkbox
     settings:
@@ -62,25 +63,26 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 16
-    region: content
+    weight: 5
     third_party_settings: {  }
+    region: content
   title:
     type: string_textfield
-    weight: -5
-    region: content
+    weight: 0
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   uid:
     type: entity_reference_autocomplete
-    weight: 5
-    region: content
+    weight: 2
     settings:
       match_operator: CONTAINS
-      match_limit: 10
       size: 60
       placeholder: ''
+      match_limit: 10
     third_party_settings: {  }
-hidden: {  }
+    region: content
+hidden:
+  field_picture: true

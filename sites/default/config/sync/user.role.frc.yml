@@ -6,4 +6,23 @@ id: frc
 label: FRC
 weight: 4
 is_admin: null
-permissions: {  }
+permissions:
+  - 'access workbench'
+  - access_all_form_modes
+  - 'edit any application content'
+  - 'use  The form mode default linked to  node entity( frc )'
+  - 'use frams_applications transition frc_approved'
+  - 'use frams_applications transition frc_document_verification'
+  - 'use frams_applications transition frc_meeting'
+  - 'use frams_applications transition frc_meeting_approval'
+  - 'use frams_applications transition frc_re_examine'
+  - 'use frams_applications transition frc_site_verification'
+  - 'use frams_applications transition sdlc_draft'
+  - 'use frc_document_verification transition'
+  - 'use frc_site_verification transition'
+  - 'use node.default form mode'
+  - 'use node.frc form mode'
+  - 'use node.frc_meeting form mode'
+  - 'use node.frc_site_verify form mode'
+  - 'view any unpublished application content'
+  - 'view moderation states'

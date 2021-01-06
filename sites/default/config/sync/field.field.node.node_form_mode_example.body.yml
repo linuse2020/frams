@@ -1,0 +1,25 @@
+uuid: 5e417fda-5499-4405-b51b-a524dd2f9f3a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.node_form_mode_example
+  module:
+    - text
+_core:
+  default_config_hash: Zuu0CdgEKIGh2LR4CUkxE6VfSIv0YvQG7M_K-srDGZw
+id: node.node_form_mode_example.body
+field_name: body
+entity_type: node
+bundle: node_form_mode_example
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary
