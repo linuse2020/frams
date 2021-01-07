@@ -19,7 +19,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'd58cde34d7395e466da48597e17f457a9c09e74a',
+    'reference' => '37dd490fae4b7ccc430af2e890e02899ca387b8f',
     'name' => 'drupal/legacy-project',
   ),
   'versions' => 
@@ -32,6 +32,15 @@ private static $installed = array (
       array (
       ),
       'reference' => 'b9c31def6a83f84b4d4a40d35996d375755f0e08',
+    ),
+    'aws/aws-sdk-php' => 
+    array (
+      'pretty_version' => '3.171.13',
+      'version' => '3.171.13.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'faa2936a85d83e727e18326a0f036f15855f69bd',
     ),
     'commerceguys/addressing' => 
     array (
@@ -172,6 +181,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '8.x-1.10',
+    ),
+    'drupal/auto_username' => 
+    array (
+      'pretty_version' => '1.1.0',
+      'version' => '1.1.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.1',
     ),
     'drupal/automated_cron' => 
     array (
@@ -662,6 +680,15 @@ private static $installed = array (
       ),
       'reference' => '8.x-2.3',
     ),
+    'drupal/dynamic_entity_reference' => 
+    array (
+      'pretty_version' => '1.11.0',
+      'version' => '1.11.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.11',
+    ),
     'drupal/dynamic_page_cache' => 
     array (
       'replaced' => 
@@ -855,12 +882,12 @@ private static $installed = array (
     ),
     'drupal/form_mode_manager' => 
     array (
-      'pretty_version' => '1.3.0',
-      'version' => '1.3.0.0',
+      'pretty_version' => '2.0.0-rc3',
+      'version' => '2.0.0.0-RC3',
       'aliases' => 
       array (
       ),
-      'reference' => '8.x-1.3',
+      'reference' => '8.x-2.0-rc3',
     ),
     'drupal/forum' => 
     array (
@@ -1072,7 +1099,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'd58cde34d7395e466da48597e17f457a9c09e74a',
+      'reference' => '37dd490fae4b7ccc430af2e890e02899ca387b8f',
     ),
     'drupal/libraries' => 
     array (
@@ -1241,6 +1268,15 @@ private static $installed = array (
         0 => '8.9.11',
       ),
     ),
+    'drupal/mobile_number' => 
+    array (
+      'pretty_version' => '1.0.0-alpha5',
+      'version' => '1.0.0.0-alpha5',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.0-alpha5',
+    ),
     'drupal/multiple_registration' => 
     array (
       'pretty_version' => '2.92.0',
@@ -1344,6 +1380,15 @@ private static $installed = array (
         0 => '8.9.11',
       ),
     ),
+    'drupal/realname' => 
+    array (
+      'pretty_version' => '1.0.0-rc2',
+      'version' => '1.0.0.0-RC2',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.0-rc2',
+    ),
     'drupal/redirect_after_login' => 
     array (
       'pretty_version' => '2.6.0',
@@ -1437,6 +1482,42 @@ private static $installed = array (
       ),
     ),
     'drupal/smart_trim' => 
+    array (
+      'pretty_version' => '1.3.0',
+      'version' => '1.3.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.3',
+    ),
+    'drupal/sms' => 
+    array (
+      'pretty_version' => '1.2.0',
+      'version' => '1.2.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => NULL,
+    ),
+    'drupal/sms_aws_sns' => 
+    array (
+      'pretty_version' => '1.2.0',
+      'version' => '1.2.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.2',
+    ),
+    'drupal/sms_twilio' => 
+    array (
+      'pretty_version' => '1.0.0',
+      'version' => '1.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.0',
+    ),
+    'drupal/smsframework' => 
     array (
       'pretty_version' => '1.3.0',
       'version' => '1.3.0.0',
@@ -1788,6 +1869,24 @@ private static $installed = array (
       array (
       ),
       'reference' => '839475272ef8c7585f5afa31939c95d6d02371a6',
+    ),
+    'giggsey/libphonenumber-for-php' => 
+    array (
+      'pretty_version' => '8.12.15',
+      'version' => '8.12.15.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'c1f328bface2745ff1a292639dd68cafc673a456',
+    ),
+    'giggsey/locale' => 
+    array (
+      'pretty_version' => '1.9',
+      'version' => '1.9.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'b07f1eace8072ccc61445ad8fbd493ff9d783043',
     ),
     'guzzlehttp/guzzle' => 
     array (
@@ -2334,6 +2433,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '87b2ea9d8f6fd014d0621ca089bb1b3769ea3f8e',
+    ),
+    'twilio/sdk' => 
+    array (
+      'pretty_version' => '5.4.2',
+      'version' => '5.4.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '354b5859cc7386642b8842a8b9e3dee01e957235',
     ),
     'twitter/bootstrap' => 
     array (

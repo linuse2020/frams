@@ -19,8 +19,8 @@ class ComposerStaticInit9de9436f91c599173609d35a420479fb
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
         'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
-        'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
+        'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
         '07d7f1a47144818725fd8d91a907ac57' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/create_uploaded_file.php',
         'da94ac5d3ca7d2dbab84ce561ce72bfd' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/marshal_headers_from_sapi.php',
         '3d97c8dcdfba8cb85d3b34f116bb248b' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/marshal_method_from_sapi.php',
@@ -38,6 +38,7 @@ class ComposerStaticInit9de9436f91c599173609d35a420479fb
         '786bf90caabc9e09b6ad4cc5ca8f0e30' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/normalize_uploaded_files.legacy.php',
         '751a5a3f463e4be759be31748b61737c' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/parse_cookie_header.legacy.php',
         'b067bc7112e384b61c701452d53a14a8' => __DIR__ . '/..' . '/mtdowling/jmespath.php/src/JmesPath.php',
+        '8a9dc1de0ca7e01f3e08231539562f61' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/functions.php',
         'e9b046393eb3376a21bcc1a30bd2fe64' => __DIR__ . '/..' . '/querypath/querypath/src/qp_functions.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
     );
@@ -47,8 +48,13 @@ class ComposerStaticInit9de9436f91c599173609d35a420479fb
         array (
             'phpGPX\\' => 7,
         ),
+        'l' => 
+        array (
+            'libphonenumber\\' => 15,
+        ),
         'T' => 
         array (
+            'Twilio\\' => 7,
             'Twig\\' => 5,
             'TijsVerkoyen\\CssToInlineStyles\\' => 31,
             'TYPO3\\PharStreamWrapper\\' => 24,
@@ -115,6 +121,7 @@ class ComposerStaticInit9de9436f91c599173609d35a420479fb
             'GuzzleHttp\\Psr7\\' => 16,
             'GuzzleHttp\\Promise\\' => 19,
             'GuzzleHttp\\' => 11,
+            'Giggsey\\Locale\\' => 15,
         ),
         'E' => 
         array (
@@ -122,6 +129,7 @@ class ComposerStaticInit9de9436f91c599173609d35a420479fb
         ),
         'D' => 
         array (
+            'Drupal\\sms_twilio\\' => 18,
             'Drupal\\Driver\\' => 14,
             'Drupal\\Core\\' => 12,
             'Drupal\\Composer\\Plugin\\VendorHardening\\' => 39,
@@ -143,6 +151,7 @@ class ComposerStaticInit9de9436f91c599173609d35a420479fb
         ),
         'A' => 
         array (
+            'Aws\\' => 4,
             'Asm89\\Stack\\' => 12,
         ),
     );
@@ -151,6 +160,14 @@ class ComposerStaticInit9de9436f91c599173609d35a420479fb
         'phpGPX\\' => 
         array (
             0 => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX',
+        ),
+        'libphonenumber\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src',
+        ),
+        'Twilio\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/twilio/sdk/Twilio',
         ),
         'Twig\\' => 
         array (
@@ -333,9 +350,17 @@ class ComposerStaticInit9de9436f91c599173609d35a420479fb
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
         ),
+        'Giggsey\\Locale\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/giggsey/locale/src',
+        ),
         'Egulias\\EmailValidator\\' => 
         array (
             0 => __DIR__ . '/..' . '/egulias/email-validator/EmailValidator',
+        ),
+        'Drupal\\sms_twilio\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/modules/contrib/sms_twilio/src',
         ),
         'Drupal\\Driver\\' => 
         array (
@@ -396,6 +421,10 @@ class ComposerStaticInit9de9436f91c599173609d35a420479fb
         'CommerceGuys\\Addressing\\' => 
         array (
             0 => __DIR__ . '/..' . '/commerceguys/addressing/src',
+        ),
+        'Aws\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/aws/aws-sdk-php/src',
         ),
         'Asm89\\Stack\\' => 
         array (

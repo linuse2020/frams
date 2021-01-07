@@ -23,46 +23,137 @@ use Drupal\field_collection\Entity\FieldCollectionItem;
 use Drupal\Core\Routing;
 use Drupal\Core\Link;
 use Drupal\Core\Url;
+use Drupal\Core\Entity\EntityTypeInterface;
 
-/**
- * @param \Drupal\Core\Entity\EntityInterface $user
- */
-
-
-function frams_pro_form_alter(&$form, FormStateInterface $form_state, $form_id) {	
+function frams_pro_form_alter(&$form, FormStateInterface $form_state, $form_id) {
 	if ($form_id == 'user_claimant_form') {
-		$form_display = $form_state->get('form_display')->getMode();
-		ddl($form);
+    $form_display = $form_state->getStorage()['form_display']->getMode();
 		if ($form_display == 'claimant') {
-			
-			$form['actions']['submit']['#submit'][]  = 'claimant_user_register_submit';
-			kint($form);
-    	$form['actions']['submit']['#value'] = 'Sign Up';
-
-		}		
+      $curr_time = \Drupal::time()->getCurrentTime();
+      $form['account']['mail']['#access'] = FALSE;
+      $form['account']['name']['#access'] = FALSE;
+      $form['account']['name']['#default_value'] = $curr_time;
+      $form['account']['mail']['#default_value'] = $curr_time . '-claimant@frams.com';
+      $form['actions']['submit']['#submit']   = array_merge(
+        ['claimant_user_register_submit'],
+        $form['actions']['submit']['#submit']
+      );
+      $form['#validate']   = array_merge(
+        ['claimant_user_register_validate'],
+        $form['#validate']
+      );
+    	$form['actions']['submit']['#value'] = t('Sign Up');
+		}
 	}
+  if ($form_id == 'node_application_claimant_form') {
+    // kint($form);
+    $user = User::load(\Drupal::currentUser()->id());
+    $claimant_profile = \Drupal::entityTypeManager()
+      ->getStorage('profile')
+      ->loadByProperties([
+        'uid' => $user->id(),
+        'type' => 'claimant',
+      ]);
+    if (!empty($claimant_profile)) {
+      $claimant = array_shift(array_values($claimant_profile));
+      $name = $user->realname;
+      $aadhar_no = $claimant->field_claimant_aadhar_number->value;
+      $district = $claimant->get('field_district')->entity;
+      $frc = $claimant->get('field_frc')->entity;
+      $grama_panchayat = $claimant->get('field_grama_panchayat')->entity;
+      $settlement = $claimant->get('field_settlement')->entity;
+
+      $form['title']['widget'][0]['value']['#default_value'] = $name;
+      $form['field_claimant_district']['widget'][0]['target_id']['#default_value'] = $district;
+      $form['field_claimant_frc']['widget'][0]['target_id']['#default_value'] = $frc;
+      $form['field_claimant_panchayat']['widget'][0]['target_id']['#default_value'] = $grama_panchayat;
+      $form['field_claimant_settlement']['widget'][0]['target_id']['#default_value'] = $settlement;
+      $form['revision']['#access'] = FALSE;
+      $form['revision_log']['#access'] = FALSE;
+      $form['revision_information']['#access'] = FALSE;
+    }
+
+  }
+}
+
+function claimant_user_register_validate(&$form, FormStateInterface $form_state) {
+  $values = $form_state->getValues();
+  $aadhar = $values['claimant_profiles'][0]['entity']['field_claimant_aadhar_number'][0]['value'];
+  $valid = _isAadharValid($aadhar);
+  if (!empty($aadhar) && _isAadharValid($aadhar)) {
+    $form_state->setValue('name', $aadhar);
+    $form_state->setValue('mail', $aadhar . '@frams.com');
+  }
+  else {
+    $form_state->setErrorByName('claimant_profiles', t('Aadhar number is not valid.'));
+  }
 }
 
 /**
  * Custom submit handler for user registration.
  */
-function contact_user_profile_form_submit(&$form, FormStateInterface $form_state) {
-	global $user;
-	ddl('hh');	
-  $user = \Drupal::currentUser();
-  $uid = $user->id();
-  $roles = $user->getRoles();
-  if(!in_array('administrator', $roles)) {
-    $user->set('langcode', $language);
-    $user->setUsername('name');
-    $user->setPassword($form_state->getValue('password'));
-    $user->activate();
-    $user->save();
-    if (in_array('claimant', $roles)) {
-      $form_state->setRedirect('node.add',['node_type' => 'application']);
-    }
-    else {
-      $form_state->setRedirect('<front>');
+function claimant_user_register_submit(&$form, FormStateInterface $form_state) {
+  $values = $form_state->getValues();
+  $_REQUEST['destination'] = '/node/add/application/claimant';
+  // $response = new RedirectResponse('node/add/application/claimant');
+  // $response->send();
+  // $form_state->setRedirect('node.add',['node_type' => 'application']);
+  // $dest_url = "/node/add/application/claimant";
+  // $url = Url::fromUri('internal:' . $dest_url);
+  // $form_state->setRedirect($url);
+}
+
+
+function frams_pro_entity_bundle_field_info_alter(&$fields, EntityTypeInterface $entity_type, $bundle) {
+  if (!empty($fields['field_claimant_aadhar_number'])) {
+    $current_path = \Drupal::service('path.current')->getPath();
+    if ($current_path == '/claimant/register') {
+      // $fields['field_claimant_aadhar_number']->addConstraint('AadharValid');
     }
   }
+}
+
+/**
+ * Custom function check Aadhar card No.
+ */
+
+function _isAadharValid($num) {
+  settype($num, "string");
+  $expectedDigit = substr($num, -1);
+  $actualDigit = CheckSumAadharDigit(substr($num, 0, -1));
+  return ($expectedDigit == $actualDigit) ? $expectedDigit == $actualDigit : 0;
+}
+
+function CheckSumAadharDigit($partial) {
+  $dihedral = array(
+    array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9),
+    array(1, 2, 3, 4, 0, 6, 7, 8, 9, 5),
+    array(2, 3, 4, 0, 1, 7, 8, 9, 5, 6),
+    array(3, 4, 0, 1, 2, 8, 9, 5, 6, 7),
+    array(4, 0, 1, 2, 3, 9, 5, 6, 7, 8),
+    array(5, 9, 8, 7, 6, 0, 4, 3, 2, 1),
+    array(6, 5, 9, 8, 7, 1, 0, 4, 3, 2),
+    array(7, 6, 5, 9, 8, 2, 1, 0, 4, 3),
+    array(8, 7, 6, 5, 9, 3, 2, 1, 0, 4),
+    array(9, 8, 7, 6, 5, 4, 3, 2, 1, 0)
+  );
+  $permutation = array(
+    array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9),
+    array(1, 5, 7, 6, 2, 8, 3, 0, 9, 4),
+    array(5, 8, 0, 3, 7, 9, 6, 1, 4, 2),
+    array(8, 9, 1, 6, 0, 4, 3, 5, 2, 7),
+    array(9, 4, 5, 3, 1, 2, 6, 8, 7, 0),
+    array(4, 2, 8, 6, 5, 7, 3, 9, 0, 1),
+    array(2, 7, 9, 3, 8, 0, 6, 4, 1, 5),
+    array(7, 0, 4, 6, 9, 1, 3, 2, 5, 8)
+  );
+
+  $inverse = array(0, 4, 3, 2, 1, 5, 6, 7, 8, 9);
+  settype($partial, "string");
+  $partial = strrev($partial);
+  $digitIndex = 0;
+  for ($i = 0; $i < strlen($partial); $i++) {
+      $digitIndex = $dihedral[$digitIndex][$permutation[($i + 1) % 8][$partial[$i]]];
+  }
+  return $inverse[$digitIndex];
 }

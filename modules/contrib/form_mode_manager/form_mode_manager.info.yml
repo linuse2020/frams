@@ -1,14 +1,14 @@
 name: Form Mode Manager
-description: 'Allow use of form mode in all entities'
+description: 'Provide an API to use Form modes.'
 type: module
 # core: 8.x
+package: Fields
 configure: form_mode_manager.admin_settings
 dependencies:
-  - field
-  - field_ui
+  - drupal:field
 
-# Information added by Drupal.org packaging script on 2017-12-22
-version: '8.x-1.3'
+# Information added by Drupal.org packaging script on 2018-11-16
+version: '8.x-2.0-rc3'
 core: '8.x'
 project: 'form_mode_manager'
-datestamp: 1513953582
+datestamp: 1542398010
