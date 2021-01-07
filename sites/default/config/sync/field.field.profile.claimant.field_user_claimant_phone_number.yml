@@ -1,0 +1,25 @@
+uuid: fbf0c54f-5e8d-40ca-a6be-ae7c9639d894
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_user_claimant_phone_number
+    - profile.type.claimant
+  module:
+    - mobile_number
+id: profile.claimant.field_user_claimant_phone_number
+field_name: field_user_claimant_phone_number
+entity_type: profile
+bundle: claimant
+label: 'Phone Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  countries:
+    IN: IN
+  verify: required
+  message: "Your verification code from !site_name:\r\n!code"
+field_type: mobile_number

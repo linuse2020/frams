@@ -1,0 +1,20 @@
+uuid: 0d8581e1-a1aa-49dc-b0a0-e468a5a1a81e
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - frams
+id: messages
+theme: frams
+region: content
+weight: -6
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  provider: system
+  label_display: '0'
+visibility: {  }

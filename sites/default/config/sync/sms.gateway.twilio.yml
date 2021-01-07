@@ -1,0 +1,18 @@
+uuid: 9fe6889a-9c0a-42a5-8676-81541eb6eb49
+langcode: en
+status: true
+dependencies:
+  module:
+    - sms_twilio
+id: twilio
+label: Twilio
+plugin: twilio
+settings:
+  account_sid: AC66006d97b6a3a3c254174b4f5febe036
+  auth_token: e877f24c6df135bfd92bb66124e2ca30
+  from: '+919809033728'
+skip_queue: false
+incoming_push_path: /sms/incoming/receive/Sk-JLlD9i-gQbHM9xaVaSA
+reports_push_path: /sms/delivery-report/receive/k6q66CoEkE0-DlfVfvVXJw
+retention_duration_incoming: 0
+retention_duration_outgoing: 0

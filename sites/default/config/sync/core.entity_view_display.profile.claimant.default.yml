@@ -6,10 +6,12 @@ dependencies:
     - field.field.profile.claimant.field_claimant_aadhar_number
     - field.field.profile.claimant.field_district
     - field.field.profile.claimant.field_frc
-    - field.field.profile.claimant.field_full_name
     - field.field.profile.claimant.field_grama_panchayat
     - field.field.profile.claimant.field_settlement
+    - field.field.profile.claimant.field_user_claimant_phone_number
     - profile.type.claimant
+  module:
+    - mobile_number
 id: profile.claimant.default
 targetEntityType: profile
 bundle: claimant
@@ -39,14 +41,6 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  field_full_name:
-    weight: 3
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
   field_grama_panchayat:
     weight: 4
     label: above
@@ -62,5 +56,13 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_user_claimant_phone_number:
+    weight: 7
+    label: above
+    settings:
+      as_link: false
+    third_party_settings: {  }
+    type: mobile_number_international
     region: content
 hidden: {  }

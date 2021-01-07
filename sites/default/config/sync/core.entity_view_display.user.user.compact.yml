@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.user.compact
+    - field.field.user.user.field_user_full_name
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
@@ -42,6 +43,16 @@ third_party_settings:
                 label: hidden
             additional: {  }
             weight: 0
+          53bc3b39-e6ce-418e-a990-1bb0a4afd93b:
+            uuid: 53bc3b39-e6ce-418e-a990-1bb0a4afd93b
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:user:user:masquerade'
+            additional: {  }
+            weight: 1
         third_party_settings: {  }
 _core:
   default_config_hash: '-cLsS3M3JycipXQt9rEb81_HxKneReoGuRh8ijcOPXs'
@@ -50,6 +61,11 @@ targetEntityType: user
 bundle: user
 mode: compact
 content:
+  masquerade:
+    weight: 50
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   user_picture:
     type: image
     weight: 0
@@ -60,4 +76,16 @@ content:
     third_party_settings: {  }
     label: hidden
 hidden:
+  claimant_profiles: true
+  dlc_profiles: true
+  field_user_full_name: true
+  forest_profiles: true
+  frc_profiles: true
   member_for: true
+  panchayat_profiles: true
+  promoter_profiles: true
+  sdlc_profiles: true
+  slc_profiles: true
+  survey_profiles: true
+  tdo_profiles: true
+  teo_profiles: true

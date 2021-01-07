@@ -1,6 +1,20 @@
 role_to_select:
-  subscriber: subscriber
+  claimant: claimant
   administrator: '0'
+  contributor: '0'
+  promoter: '0'
+  frc: '0'
+  sdlc: '0'
+  dlc: '0'
+  slc: '0'
+  panchayat: '0'
+  forest: '0'
+  teo: '0'
+  tdo: '0'
+  survey: '0'
+  archives: '0'
+  super_admin: '0'
+  la: '0'
 registration_mode: user
 _core:
   default_config_hash: o1wWkhSOJotsHFgvzESaUOiTWhLak62cKBDyEtewAIM

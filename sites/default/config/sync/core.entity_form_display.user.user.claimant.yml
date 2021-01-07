@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.user.claimant
+    - field.field.user.user.field_user_full_name
     - field.field.user.user.user_picture
   module:
     - field_layout
@@ -23,16 +24,24 @@ bundle: user
 mode: claimant
 content:
   account:
-    weight: 1
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
   claimant_profiles:
     type: profile_form
-    weight: 0
+    weight: 1
     region: content
     settings:
       form_mode: default
+    third_party_settings: {  }
+  field_user_full_name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
 hidden:
   contact: true

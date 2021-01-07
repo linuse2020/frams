@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 id: frc
 label: FRC
-display_label: ''
+display_label: 'FRC Details'
 multiple: false
 registration: true
 roles:

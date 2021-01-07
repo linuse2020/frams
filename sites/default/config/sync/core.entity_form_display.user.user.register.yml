@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.user.register
+    - field.field.user.user.field_user_full_name
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
@@ -115,4 +116,5 @@ content:
     weight: -1
     region: content
 hidden:
+  field_user_full_name: true
   survey_profiles: true

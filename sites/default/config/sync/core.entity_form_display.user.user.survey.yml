@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.user.survey
+    - field.field.user.user.field_user_full_name
     - field.field.user.user.user_picture
   module:
     - field_layout
@@ -38,6 +39,7 @@ hidden:
   claimant_profiles: true
   contact: true
   dlc_profiles: true
+  field_user_full_name: true
   forest_profiles: true
   frc_profiles: true
   language: true

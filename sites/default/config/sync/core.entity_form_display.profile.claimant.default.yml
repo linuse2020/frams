@@ -6,13 +6,14 @@ dependencies:
     - field.field.profile.claimant.field_claimant_aadhar_number
     - field.field.profile.claimant.field_district
     - field.field.profile.claimant.field_frc
-    - field.field.profile.claimant.field_full_name
     - field.field.profile.claimant.field_grama_panchayat
     - field.field.profile.claimant.field_settlement
+    - field.field.profile.claimant.field_user_claimant_phone_number
     - profile.type.claimant
   module:
     - field_layout
     - layout_discovery
+    - mobile_number
 third_party_settings:
   field_layout:
     id: layout_onecol
@@ -23,8 +24,14 @@ targetEntityType: profile
 bundle: claimant
 mode: default
 content:
+  '':
+    type: sms_telephone
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   field_claimant_aadhar_number:
-    weight: 1
+    weight: 0
     settings:
       size: 60
       placeholder: ''
@@ -43,14 +50,6 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
-  field_full_name:
-    weight: 0
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_grama_panchayat:
     weight: 3
     settings: {  }
@@ -62,6 +61,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_user_claimant_phone_number:
+    weight: 1
+    settings:
+      default_country: IN
+      placeholder: 'Phone number'
+      countries: {  }
+    third_party_settings: {  }
+    type: mobile_number_default
     region: content
 hidden:
   is_default: true

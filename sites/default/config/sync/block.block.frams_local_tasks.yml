@@ -9,7 +9,7 @@ _core:
 id: frams_local_tasks
 theme: frams
 region: content
-weight: -40
+weight: -5
 provider: null
 plugin: local_tasks_block
 settings:

@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 id: claimant
 label: Claimant
-display_label: ''
+display_label: 'Claimant Details'
 multiple: false
 registration: true
 roles:

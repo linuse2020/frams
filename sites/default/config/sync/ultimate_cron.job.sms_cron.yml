@@ -1,0 +1,17 @@
+uuid: 2c14173d-25fd-4ca9-8021-7a7396fe7b5d
+langcode: en
+status: true
+dependencies:
+  module:
+    - sms
+title: 'Default cron handler'
+id: sms_cron
+weight: 0
+module: sms
+callback: sms_cron
+scheduler:
+  id: simple
+launcher:
+  id: serial
+logger:
+  id: database

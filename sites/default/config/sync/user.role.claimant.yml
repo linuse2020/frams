@@ -6,4 +6,9 @@ id: claimant
 label: CLAIMANT
 weight: 12
 is_admin: null
-permissions: {  }
+permissions:
+  - 'access kint'
+  - 'create application content'
+  - 'use  The form mode claimant linked to  node entity( application )'
+  - 'use node.claimant form mode'
+  - 'view own unpublished content'

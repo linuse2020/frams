@@ -10,8 +10,8 @@ field_name: field_claimant_aadhar_number
 entity_type: profile
 bundle: claimant
 label: 'Aadhar Number'
-description: ''
-required: false
+description: 'This will be your login username '
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''

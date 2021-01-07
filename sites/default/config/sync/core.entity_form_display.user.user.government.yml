@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.user.government
+    - field.field.user.user.field_user_full_name
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
@@ -46,6 +47,8 @@ content:
 hidden:
   claimant_profiles: true
   dlc_profiles: true
+  field_user_full_name: true
+  forest_profiles: true
   frc_profiles: true
   panchayat_profiles: true
   promoter_profiles: true
