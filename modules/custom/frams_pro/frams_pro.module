@@ -48,6 +48,7 @@ function frams_pro_form_alter(&$form, FormStateInterface $form_state, $form_id) 
   if ($form_id == 'node_application_claimant_form') {
     // kint($form);
     $user = User::load(\Drupal::currentUser()->id());
+
     $claimant_profile = \Drupal::entityTypeManager()
       ->getStorage('profile')
       ->loadByProperties([
@@ -58,16 +59,38 @@ function frams_pro_form_alter(&$form, FormStateInterface $form_state, $form_id) 
       $claimant = array_shift(array_values($claimant_profile));
       $name = $user->realname;
       $aadhar_no = $claimant->field_claimant_aadhar_number->value;
+      $contact_no = $claimant->field_user_claimant_phone_number->value;
       $district = $claimant->get('field_district')->entity;
       $frc = $claimant->get('field_frc')->entity;
       $grama_panchayat = $claimant->get('field_grama_panchayat')->entity;
       $settlement = $claimant->get('field_settlement')->entity;
+      $sdlc = $frc->get('field_frc_sdlc')->entity;
+      $dlc = $sdlc->get('field_dlc')->entity;
+      $village = $frc->get('field_frc_village')->entity;
+      $taluk = $village->get('field_taluk')->entity;
+      $constituency = $frc->get('field_frc_constituency')->entity;
+      $range = $frc->get('field_frc_forest_range')->entity;
+      $teo = $frc->get('field_frc_teo')->entity;
+      $tdo = $teo->get('field_tdo')->entity;
+      $promoter = $frc->get('field_frc_promoter')->entity;
 
       $form['title']['widget'][0]['value']['#default_value'] = $name;
+      $form['field_adharcard_no']['widget'][0]['value']['#default_value'] = $aadhar_no;
+      $form['field_contact_no']['widget'][0]['value']['#default_value'] = $contact_no;
       $form['field_claimant_district']['widget'][0]['target_id']['#default_value'] = $district;
       $form['field_claimant_frc']['widget'][0]['target_id']['#default_value'] = $frc;
       $form['field_claimant_panchayat']['widget'][0]['target_id']['#default_value'] = $grama_panchayat;
       $form['field_claimant_settlement']['widget'][0]['target_id']['#default_value'] = $settlement;
+      $form['field_claimant_sdlc']['widget'][0]['target_id']['#default_value'] = $sdlc;
+      $form['field_claimant_dlc']['widget'][0]['target_id']['#default_value'] = $dlc;
+      $form['field_claimant_slc']['widget'][0]['target_id']['#default_value'] = $slc;
+      $form['field_claimant_village']['widget'][0]['target_id']['#default_value'] = $village;
+      $form['field__claimant_taluk']['widget'][0]['target_id']['#default_value'] = $taluk;
+      $form['field_claimant_constituency']['widget'][0]['target_id']['#default_value'] = $constituency;
+      $form['field__claimant_range']['widget'][0]['target_id']['#default_value'] = $range;
+      $form['field_claimant_teo']['widget'][0]['target_id']['#default_value'] = $teo;
+      $form['field_claimant_tdo']['widget'][0]['target_id']['#default_value'] = $tdo;
+      $form['field_claimant_promoter']['widget'][0]['target_id']['#default_value'] = $promoter;
       $form['revision']['#access'] = FALSE;
       $form['revision_log']['#access'] = FALSE;
       $form['revision_information']['#access'] = FALSE;
