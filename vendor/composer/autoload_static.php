@@ -8,8 +8,8 @@ class ComposerStaticInit9de9436f91c599173609d35a420479fb
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
-        '023d27dca8066ef29e6739335ea73bad' => __DIR__ . '/..' . '/symfony/polyfill-php70/bootstrap.php',
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
+        '023d27dca8066ef29e6739335ea73bad' => __DIR__ . '/..' . '/symfony/polyfill-php70/bootstrap.php',
         'bd9634f2d41831496de0d3dfe4c94881' => __DIR__ . '/..' . '/symfony/polyfill-php56/bootstrap.php',
         '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
         '7e9bd612cc444b3eed788ebbe46263a0' => __DIR__ . '/..' . '/laminas/laminas-zendframework-bridge/src/autoload.php',
@@ -38,6 +38,7 @@ class ComposerStaticInit9de9436f91c599173609d35a420479fb
         '786bf90caabc9e09b6ad4cc5ca8f0e30' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/normalize_uploaded_files.legacy.php',
         '751a5a3f463e4be759be31748b61737c' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/parse_cookie_header.legacy.php',
         'b067bc7112e384b61c701452d53a14a8' => __DIR__ . '/..' . '/mtdowling/jmespath.php/src/JmesPath.php',
+        '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '8a9dc1de0ca7e01f3e08231539562f61' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/functions.php',
         'e9b046393eb3376a21bcc1a30bd2fe64' => __DIR__ . '/..' . '/querypath/querypath/src/qp_functions.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
@@ -48,9 +49,19 @@ class ComposerStaticInit9de9436f91c599173609d35a420479fb
         array (
             'phpGPX\\' => 7,
         ),
+        'm' => 
+        array (
+            'mikehaertl\\wkhtmlto\\' => 20,
+            'mikehaertl\\tmp\\' => 15,
+            'mikehaertl\\shellcommand\\' => 24,
+        ),
         'l' => 
         array (
             'libphonenumber\\' => 15,
+        ),
+        'W' => 
+        array (
+            'Wa72\\HtmlPageDom\\' => 17,
         ),
         'T' => 
         array (
@@ -80,6 +91,7 @@ class ComposerStaticInit9de9436f91c599173609d35a420479fb
             'Symfony\\Component\\HttpKernel\\' => 29,
             'Symfony\\Component\\HttpFoundation\\' => 33,
             'Symfony\\Component\\EventDispatcher\\' => 34,
+            'Symfony\\Component\\DomCrawler\\' => 29,
             'Symfony\\Component\\DependencyInjection\\' => 38,
             'Symfony\\Component\\Debug\\' => 24,
             'Symfony\\Component\\CssSelector\\' => 30,
@@ -87,6 +99,7 @@ class ComposerStaticInit9de9436f91c599173609d35a420479fb
             'Symfony\\Component\\ClassLoader\\' => 30,
             'Symfony\\Cmf\\Component\\Routing\\' => 30,
             'Symfony\\Bridge\\PsrHttpMessage\\' => 30,
+            'Svg\\' => 4,
             'Shapefile\\' => 10,
         ),
         'P' => 
@@ -98,6 +111,7 @@ class ComposerStaticInit9de9436f91c599173609d35a420479fb
         ),
         'M' => 
         array (
+            'Mpdf\\' => 5,
             'Masterminds\\' => 12,
         ),
         'L' => 
@@ -123,6 +137,10 @@ class ComposerStaticInit9de9436f91c599173609d35a420479fb
             'GuzzleHttp\\' => 11,
             'Giggsey\\Locale\\' => 15,
         ),
+        'F' => 
+        array (
+            'FontLib\\' => 8,
+        ),
         'E' => 
         array (
             'Egulias\\EmailValidator\\' => 23,
@@ -136,11 +154,13 @@ class ComposerStaticInit9de9436f91c599173609d35a420479fb
             'Drupal\\Composer\\Plugin\\Scaffold\\' => 32,
             'Drupal\\Composer\\Plugin\\ProjectMessage\\' => 38,
             'Drupal\\Component\\' => 17,
+            'Dompdf\\' => 7,
             'Doctrine\\Common\\Lexer\\' => 22,
             'Doctrine\\Common\\Inflector\\' => 26,
             'Doctrine\\Common\\Cache\\' => 22,
             'Doctrine\\Common\\Annotations\\' => 28,
             'Doctrine\\Common\\' => 16,
+            'DeepCopy\\' => 9,
         ),
         'C' => 
         array (
@@ -161,9 +181,25 @@ class ComposerStaticInit9de9436f91c599173609d35a420479fb
         array (
             0 => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX',
         ),
+        'mikehaertl\\wkhtmlto\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mikehaertl/phpwkhtmltopdf/src',
+        ),
+        'mikehaertl\\tmp\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mikehaertl/php-tmpfile/src',
+        ),
+        'mikehaertl\\shellcommand\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mikehaertl/php-shellcommand/src',
+        ),
         'libphonenumber\\' => 
         array (
             0 => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src',
+        ),
+        'Wa72\\HtmlPageDom\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/wa72/htmlpagedom/src',
         ),
         'Twilio\\' => 
         array (
@@ -257,6 +293,10 @@ class ComposerStaticInit9de9436f91c599173609d35a420479fb
         array (
             0 => __DIR__ . '/..' . '/symfony/event-dispatcher',
         ),
+        'Symfony\\Component\\DomCrawler\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/dom-crawler',
+        ),
         'Symfony\\Component\\DependencyInjection\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/dependency-injection',
@@ -285,6 +325,10 @@ class ComposerStaticInit9de9436f91c599173609d35a420479fb
         array (
             0 => __DIR__ . '/..' . '/symfony/psr-http-message-bridge',
         ),
+        'Svg\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phenx/php-svg-lib/src/Svg',
+        ),
         'Shapefile\\' => 
         array (
             0 => __DIR__ . '/..' . '/gasparesganga/php-shapefile/src/Shapefile',
@@ -304,6 +348,10 @@ class ComposerStaticInit9de9436f91c599173609d35a420479fb
         'PHPMailer\\PHPMailer\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
+        ),
+        'Mpdf\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mpdf/mpdf/src',
         ),
         'Masterminds\\' => 
         array (
@@ -354,6 +402,10 @@ class ComposerStaticInit9de9436f91c599173609d35a420479fb
         array (
             0 => __DIR__ . '/..' . '/giggsey/locale/src',
         ),
+        'FontLib\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phenx/php-font-lib/src/FontLib',
+        ),
         'Egulias\\EmailValidator\\' => 
         array (
             0 => __DIR__ . '/..' . '/egulias/email-validator/EmailValidator',
@@ -386,6 +438,10 @@ class ComposerStaticInit9de9436f91c599173609d35a420479fb
         array (
             0 => __DIR__ . '/../..' . '/core/lib/Drupal/Component',
         ),
+        'Dompdf\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/dompdf/dompdf/src',
+        ),
         'Doctrine\\Common\\Lexer\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/lexer/lib/Doctrine/Common/Lexer',
@@ -405,6 +461,10 @@ class ComposerStaticInit9de9436f91c599173609d35a420479fb
         'Doctrine\\Common\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/common/lib/Doctrine/Common',
+        ),
+        'DeepCopy\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy',
         ),
         'CssLint\\' => 
         array (
@@ -445,6 +505,14 @@ class ComposerStaticInit9de9436f91c599173609d35a420479fb
             'Stack' => 
             array (
                 0 => __DIR__ . '/..' . '/stack/builder/src',
+            ),
+            'Smalot\\PdfParser\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/smalot/pdfparser/src',
+            ),
+            'Sabberworm\\CSS' => 
+            array (
+                0 => __DIR__ . '/..' . '/sabberworm/php-css-parser/lib',
             ),
         ),
         'Q' => 
@@ -504,7 +572,9 @@ class ComposerStaticInit9de9436f91c599173609d35a420479fb
         'AssertionError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/AssertionError.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'Datamatrix' => __DIR__ . '/..' . '/tecnickcom/tcpdf/include/barcodes/datamatrix.php',
         'DivisionByZeroError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/DivisionByZeroError.php',
+        'Dompdf\\Cpdf' => __DIR__ . '/..' . '/dompdf/dompdf/lib/Cpdf.php',
         'Drupal' => __DIR__ . '/../..' . '/core/lib/Drupal.php',
         'Drupal\\Component\\Utility\\Timer' => __DIR__ . '/../..' . '/core/lib/Drupal/Component/Utility/Timer.php',
         'Drupal\\Component\\Utility\\Unicode' => __DIR__ . '/../..' . '/core/lib/Drupal/Component/Utility/Unicode.php',
@@ -513,13 +583,38 @@ class ComposerStaticInit9de9436f91c599173609d35a420479fb
         'Drupal\\Core\\DrupalKernelInterface' => __DIR__ . '/../..' . '/core/lib/Drupal/Core/DrupalKernelInterface.php',
         'Drupal\\Core\\Site\\Settings' => __DIR__ . '/../..' . '/core/lib/Drupal/Core/Site/Settings.php',
         'Error' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/Error.php',
+        'FPDF_TPL' => __DIR__ . '/..' . '/setasign/fpdi/fpdf_tpl.php',
+        'FPDI' => __DIR__ . '/..' . '/setasign/fpdi/fpdi.php',
+        'FilterASCII85' => __DIR__ . '/..' . '/setasign/fpdi/filters/FilterASCII85.php',
+        'FilterASCIIHexDecode' => __DIR__ . '/..' . '/setasign/fpdi/filters/FilterASCIIHexDecode.php',
+        'FilterLZW' => __DIR__ . '/..' . '/setasign/fpdi/filters/FilterLZW.php',
+        'HTML5_Data' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/Data.php',
+        'HTML5_InputStream' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/InputStream.php',
+        'HTML5_Parser' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/Parser.php',
+        'HTML5_Tokenizer' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/Tokenizer.php',
+        'HTML5_TreeBuilder' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/TreeBuilder.php',
+        'PDF417' => __DIR__ . '/..' . '/tecnickcom/tcpdf/include/barcodes/pdf417.php',
         'PEAR_Exception' => __DIR__ . '/..' . '/pear/pear_exception/PEAR/Exception.php',
         'ParseError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ParseError.php',
+        'QRcode' => __DIR__ . '/..' . '/tecnickcom/tcpdf/include/barcodes/qrcode.php',
         'SessionUpdateTimestampHandlerInterface' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/SessionUpdateTimestampHandlerInterface.php',
         'Stringable' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
+        'TCPDF' => __DIR__ . '/..' . '/tecnickcom/tcpdf/tcpdf.php',
+        'TCPDF2DBarcode' => __DIR__ . '/..' . '/tecnickcom/tcpdf/tcpdf_barcodes_2d.php',
+        'TCPDFBarcode' => __DIR__ . '/..' . '/tecnickcom/tcpdf/tcpdf_barcodes_1d.php',
+        'TCPDF_COLORS' => __DIR__ . '/..' . '/tecnickcom/tcpdf/include/tcpdf_colors.php',
+        'TCPDF_FILTERS' => __DIR__ . '/..' . '/tecnickcom/tcpdf/include/tcpdf_filters.php',
+        'TCPDF_FONTS' => __DIR__ . '/..' . '/tecnickcom/tcpdf/include/tcpdf_fonts.php',
+        'TCPDF_FONT_DATA' => __DIR__ . '/..' . '/tecnickcom/tcpdf/include/tcpdf_font_data.php',
+        'TCPDF_IMAGES' => __DIR__ . '/..' . '/tecnickcom/tcpdf/include/tcpdf_images.php',
+        'TCPDF_IMPORT' => __DIR__ . '/..' . '/tecnickcom/tcpdf/tcpdf_import.php',
+        'TCPDF_PARSER' => __DIR__ . '/..' . '/tecnickcom/tcpdf/tcpdf_parser.php',
+        'TCPDF_STATIC' => __DIR__ . '/..' . '/tecnickcom/tcpdf/include/tcpdf_static.php',
         'TypeError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/TypeError.php',
         'UnhandledMatchError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php',
         'ValueError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/ValueError.php',
+        'fpdi_pdf_parser' => __DIR__ . '/..' . '/setasign/fpdi/fpdi_pdf_parser.php',
+        'pdf_context' => __DIR__ . '/..' . '/setasign/fpdi/pdf_context.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

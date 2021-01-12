@@ -110,6 +110,7 @@ class HtmlElement extends FieldGroupFormatterBase {
     $form['element'] = [
       '#title' => $this->t('Element'),
       '#type' => 'textfield',
+      '#name' => $this->t('Element'),
       '#default_value' => $this->getSetting('element'),
       '#description' => $this->t('E.g. div, section, aside etc.'),
       '#weight' => 1,

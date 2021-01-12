@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '37dd490fae4b7ccc430af2e890e02899ca387b8f',
+    'reference' => '31fb08f9e4c9d9cfd7d79cac2b08f35fa241324f',
     'name' => 'drupal/legacy-project',
   ),
   'versions' => 
@@ -109,6 +109,15 @@
       array (
       ),
       'reference' => '1febd6c3ef84253d7c815bed85fc622ad207a9f8',
+    ),
+    'dompdf/dompdf' => 
+    array (
+      'pretty_version' => 'v0.8.6',
+      'version' => '0.8.6.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'db91d81866c69a42dad1d2926f61515a1e3f42c5',
     ),
     'drupal/action' => 
     array (
@@ -619,6 +628,15 @@
         0 => '8.9.11',
       ),
     ),
+    'drupal/create_user_permission' => 
+    array (
+      'pretty_version' => '2.0.0',
+      'version' => '2.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '2.0.0',
+    ),
     'drupal/datetime' => 
     array (
       'replaced' => 
@@ -707,6 +725,15 @@
       array (
       ),
       'reference' => '8.x-2.5',
+    ),
+    'drupal/entity_print' => 
+    array (
+      'pretty_version' => '2.2.0',
+      'version' => '2.2.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-2.2',
     ),
     'drupal/entity_reference' => 
     array (
@@ -1086,7 +1113,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '37dd490fae4b7ccc430af2e890e02899ca387b8f',
+      'reference' => '31fb08f9e4c9d9cfd7d79cac2b08f35fa241324f',
     ),
     'drupal/libraries' => 
     array (
@@ -1316,6 +1343,24 @@
       array (
         0 => '8.9.11',
       ),
+    ),
+    'drupal/pdf_api' => 
+    array (
+      'pretty_version' => '2.0.0',
+      'version' => '2.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '2.0.0',
+    ),
+    'drupal/printable' => 
+    array (
+      'pretty_version' => '2.0.1',
+      'version' => '2.0.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '2.0.1',
     ),
     'drupal/private_message' => 
     array (
@@ -1974,6 +2019,42 @@
       ),
       'reference' => '2c37c6c520b995b761674de3be8455a381679067',
     ),
+    'mikehaertl/php-shellcommand' => 
+    array (
+      'pretty_version' => '1.6.3',
+      'version' => '1.6.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'fe86ec847877b83bf61a96719e7f2e3b3e516a6b',
+    ),
+    'mikehaertl/php-tmpfile' => 
+    array (
+      'pretty_version' => '1.1.7',
+      'version' => '1.1.7.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'f162f70b472c3c1bad2b66c5a7922000a8065638',
+    ),
+    'mikehaertl/phpwkhtmltopdf' => 
+    array (
+      'pretty_version' => '2.4.2',
+      'version' => '2.4.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '0e97c2e1eec918fbcd13f5b4b6c9fa476f99e9db',
+    ),
+    'mpdf/mpdf' => 
+    array (
+      'pretty_version' => 'v7.1.9',
+      'version' => '7.1.9.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'a0fc1215d2306aa3b4ba6e97bd6ebe4bab6a88fb',
+    ),
     'mtdowling/jmespath.php' => 
     array (
       'pretty_version' => '2.6.0',
@@ -1982,6 +2063,19 @@
       array (
       ),
       'reference' => '42dae2cbd13154083ca6d70099692fef8ca84bfb',
+    ),
+    'myclabs/deep-copy' => 
+    array (
+      'pretty_version' => '1.10.2',
+      'version' => '1.10.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '776f831124e9c62e1a2c601ecc52e776d8bb7220',
+      'replaced' => 
+      array (
+        0 => '1.10.2',
+      ),
     ),
     'neilime/php-css-lint' => 
     array (
@@ -2036,6 +2130,24 @@
       array (
       ),
       'reference' => 'dbb42a5a0e45f3adcf99babfb2a1ba77b8ac36a7',
+    ),
+    'phenx/php-font-lib' => 
+    array (
+      'pretty_version' => '0.5.2',
+      'version' => '0.5.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'ca6ad461f032145fff5971b5985e5af9e7fa88d8',
+    ),
+    'phenx/php-svg-lib' => 
+    array (
+      'pretty_version' => 'v0.3.3',
+      'version' => '0.3.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '5fa61b65e612ce1ae15f69b3d223cb14ecc60e32',
     ),
     'phpmailer/phpmailer' => 
     array (
@@ -2126,6 +2238,24 @@
         0 => 'v1.10.10',
       ),
     ),
+    'sabberworm/php-css-parser' => 
+    array (
+      'pretty_version' => '8.3.1',
+      'version' => '8.3.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'd217848e1396ef962fb1997cf3e2421acba7f796',
+    ),
+    'setasign/fpdi' => 
+    array (
+      'pretty_version' => '1.6.2',
+      'version' => '1.6.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'a6ad58897a6d97cc2d2cd2adaeda343b25a368ea',
+    ),
     'shama/baton' => 
     array (
       'replaced' => 
@@ -2141,6 +2271,15 @@
       array (
       ),
       'reference' => '9568c3679e4937b18d91a9e41923daa56c694b9a',
+    ),
+    'smalot/pdfparser' => 
+    array (
+      'pretty_version' => 'v0.16.2',
+      'version' => '0.16.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '5faf073f308b084496ed6bd512deabb680ca7128',
     ),
     'stack/builder' => 
     array (
@@ -2213,6 +2352,15 @@
       array (
       ),
       'reference' => 'e39380b7104b0ec538a075ae919f00c7e5267bac',
+    ),
+    'symfony/dom-crawler' => 
+    array (
+      'pretty_version' => 'v4.2.12',
+      'version' => '4.2.12.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'ba1da8fb10291714b8db153fcf7ac515e1a217bb',
     ),
     'symfony/event-dispatcher' => 
     array (
@@ -2394,6 +2542,15 @@
       ),
       'reference' => '7233ac2bfdde24d672f5305f2b3f6b5d741ef8eb',
     ),
+    'tecnickcom/tcpdf' => 
+    array (
+      'pretty_version' => '6.3.5',
+      'version' => '6.3.5.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '19a535eaa7fb1c1cac499109deeb1a7a201b4549',
+    ),
     'tijsverkoyen/css-to-inline-styles' => 
     array (
       'pretty_version' => '2.2.3',
@@ -2445,6 +2602,15 @@
       array (
       ),
       'reference' => 'e0c1b495cfac064f4f5c4bcb6bf67bb7f345ed04',
+    ),
+    'wa72/htmlpagedom' => 
+    array (
+      'pretty_version' => 'v1.3.2',
+      'version' => '1.3.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '4f929791315ee56f7bbe0353c2db67a5235057c1',
     ),
     'zendframework/zend-diactoros' => 
     array (

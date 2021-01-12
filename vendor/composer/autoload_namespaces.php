@@ -8,6 +8,8 @@ $baseDir = dirname($vendorDir);
 return array(
     'Twig_' => array($vendorDir . '/twig/twig/lib'),
     'Stack' => array($vendorDir . '/stack/builder/src'),
+    'Smalot\\PdfParser\\' => array($vendorDir . '/smalot/pdfparser/src'),
+    'Sabberworm\\CSS' => array($vendorDir . '/sabberworm/php-css-parser/lib'),
     'QueryPath' => array($vendorDir . '/querypath/querypath/src'),
     'Flow\\JSONPath\\Test' => array($vendorDir . '/flow/jsonpath/tests'),
     'Flow\\JSONPath' => array($vendorDir . '/flow/jsonpath/src'),

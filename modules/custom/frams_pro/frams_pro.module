@@ -24,27 +24,106 @@ use Drupal\Core\Routing;
 use Drupal\Core\Link;
 use Drupal\Core\Url;
 use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Controller\ControllerBase;
+use Symfony\Component\HttpFoundation\Request;
 
 function frams_pro_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-	if ($form_id == 'user_claimant_form') {
+  /*kint($form_id);*/
+  $form_ids = ['user_frc_form', 'user_promoter_form','user_claimant_form','user_teo_form'];
+  if (in_array($form_id, $form_ids) ) {
+
+    $node_id = \Drupal::request()->query->get('nid');
     $form_display = $form_state->getStorage()['form_display']->getMode();
-		if ($form_display == 'claimant') {
-      $curr_time = \Drupal::time()->getCurrentTime();
-      $form['account']['mail']['#access'] = FALSE;
-      $form['account']['name']['#access'] = FALSE;
-      $form['account']['name']['#default_value'] = $curr_time;
-      $form['account']['mail']['#default_value'] = $curr_time . '-claimant@frams.com';
-      $form['actions']['submit']['#submit']   = array_merge(
-        ['claimant_user_register_submit'],
-        $form['actions']['submit']['#submit']
-      );
-      $form['#validate']   = array_merge(
-        ['claimant_user_register_validate'],
-        $form['#validate']
-      );
-    	$form['actions']['submit']['#value'] = t('Sign Up');
-		}
-	}
+
+    switch ($form_display) {
+      case 'claimant':
+        $curr_time = \Drupal::time()->getCurrentTime();
+        $form['account']['mail']['#access'] = FALSE;
+        $form['account']['name']['#access'] = FALSE;
+        $form['account']['name']['#default_value'] = $curr_time;
+        $form['account']['mail']['#default_value'] = $curr_time . '-claimant@frams.com';
+        $form['actions']['submit']['#submit']   = array_merge(
+          ['claimant_user_register_submit'],
+            $form['actions']['submit']['#submit']
+          );
+        $form['#validate']   = array_merge(
+          ['claimant_user_register_validate'],
+            $form['#validate']
+          );
+        $form['actions']['submit']['#value'] = t('Sign Up');
+
+      break;
+      case 'frc':
+        $node_frc = Node::load($node_id);
+        if(!empty($node_frc)) {
+          $teo = $node_frc->get('field_frc_teo')->entity;
+          $district = $node_frc->get('field_frc_district')->entity;
+          $panchayat = $node_frc->get('field_frc_panchayat')->entity;
+          /*kint($node_frc->get('field_frc_email')->get('0')->getValue());*/
+          $email = $node_frc->get('field_frc_email')->get('0')->getValue();
+          $name = explode(' ', $node_frc->getTitle());
+
+          $form['frc_profiles']['widget']['0']['entity']['field_district']['widget']['0']['target_id']['#default_value'] = $district;
+          $form['frc_profiles']['widget']['0']['entity']['field_grama_panchayat']['widget']['0']['target_id']['#default_value'] = $panchayat;
+          $form['frc_profiles']['widget']['0']['entity']['field_profile_frc']['widget']['0']['target_id']['#default_value'] = $node_frc;
+          $form['account']['name']['#default_value'] = 'frc@'. strtolower($name[count($name)-1]);
+          $form['account']['mail']['#default_value'] = $email;
+          $form['actions']['submit']['#submit']   = array_merge(
+            ['_user_register_submit'],
+            $form['actions']['submit']['#submit']
+          );
+          /*$form['#validate']   = array_merge(
+            ['claimant_user_register_validate'],
+            $form['#validate']
+          );*/
+          $form['actions']['submit']['#value'] = t('Sign Up');
+        }
+        break;
+        case 'promoter':
+          $node_promoter = Node::load($node_id);
+          if(!empty($node_promoter)) {
+            $teo = $node_promoter->get('field_teo')->entity;
+            $name = explode(' ', $node_promoter->getTitle());
+            $email = $node_promoter->get('field_email')->get('0')->getValue();
+            $form['promoter_profiles']['widget']['0']['entity']['field_profile_promoter']['widget']['0']['target_id']['#default_value'] = $node_promoter;
+            $form['promoter_profiles']['widget']['0']['entity']['field_teo']['widget']['0']['target_id']['#default_value'] = $teo;
+            $form['account']['name']['#default_value'] = 'pro@'. strtolower($name[0]);
+            $form['account']['mail']['#default_value'] = $email;
+            $form['actions']['submit']['#submit']   = array_merge(
+              ['_user_register_submit'],
+              $form['actions']['submit']['#submit']
+            );
+            $form['actions']['submit']['#value'] = t('Sign Up');
+        }
+        break;
+        case 'teo':
+          $node_teo = Node::load($node_id);
+          if(!empty($node_teo)) {
+            $tdo = $node_teo ->get('field_tdo')->entity;
+            $name = explode(' ', $node_teo->getTitle());
+            $email = $node_teo->get('field_teo_email')->get('0')->getValue();
+            $form['teo_profiles']['widget']['0']['entity']['field_profile_teo']['widget']['0']['target_id']['#default_value'] = $node_teo;
+            $form['teo_profiles']['widget']['0']['entity']['field_tdo']['widget']['0']['target_id']['#default_value'] = $tdo;
+            $form['account']['name']['#default_value'] = 'teo@'. strtolower($name[count($name)-1]);
+            $form['account']['mail']['#default_value'] = $email;
+            $form['actions']['submit']['#submit']   = array_merge(
+              ['_user_register_submit'],
+              $form['actions']['submit']['#submit']
+            );
+            $form['actions']['submit']['#value'] = t('Sign Up');
+        }
+        break;
+
+
+
+      default:
+
+    }
+
+    if ($form_display == 'frc') {
+
+    }
+  }
   if ($form_id == 'node_application_claimant_form') {
     // kint($form);
     $user = User::load(\Drupal::currentUser()->id());
@@ -55,6 +134,7 @@ function frams_pro_form_alter(&$form, FormStateInterface $form_state, $form_id) 
         'uid' => $user->id(),
         'type' => 'claimant',
       ]);
+     /* kint($claimant_profile);*/
     if (!empty($claimant_profile)) {
       $claimant = array_shift(array_values($claimant_profile));
       $name = $user->realname;
@@ -66,6 +146,7 @@ function frams_pro_form_alter(&$form, FormStateInterface $form_state, $form_id) 
       $settlement = $claimant->get('field_settlement')->entity;
       $sdlc = $frc->get('field_frc_sdlc')->entity;
       $dlc = $sdlc->get('field_dlc')->entity;
+      $slc = $dlc->get('field_slc')->entity;
       $village = $frc->get('field_frc_village')->entity;
       $taluk = $village->get('field_taluk')->entity;
       $constituency = $frc->get('field_frc_constituency')->entity;
@@ -97,6 +178,41 @@ function frams_pro_form_alter(&$form, FormStateInterface $form_state, $form_id) 
     }
 
   }
+  if ($form_id == 'node_teo_form') {
+    $current_user_roles = \Drupal::currentUser()->getRoles();
+    if (in_array('tdo', $current_user_roles)) {
+      $user = User::load(\Drupal::currentUser()->id());
+      $tdo_profile = \Drupal::entityTypeManager()
+        ->getStorage('profile')
+        ->loadByProperties([
+          'uid' => $user->id(),
+          'type' => 'tdo',
+        ]);
+      if (!empty($tdo_profile)) {
+        $tdo_value = array_shift(array_values($tdo_profile));
+        $tdo = $tdo_value->get('field_profile_tdo')->entity;
+        $form['field_tdo']['widget'][0]['target_id']['#default_value'] = $tdo;
+      }
+    }
+  }
+   if ($form_id == 'node_frc_form' || $form_id = 'node_promoters_form') {
+    $current_user_roles = \Drupal::currentUser()->getRoles();
+    if (in_array('teo', $current_user_roles)) {
+      $user = User::load(\Drupal::currentUser()->id());
+      $teo_profile = \Drupal::entityTypeManager()
+        ->getStorage('profile')
+        ->loadByProperties([
+          'uid' => $user->id(),
+          'type' => 'teo',
+        ]);
+      if (!empty($teo_profile)) {
+        $teo_value = array_shift(array_values($teo_profile));
+        $teo = $teo_value->get('field_profile_teo')->entity;
+        $form['field_frc_teo']['widget'][0]['target_id']['#default_value'] = $teo;
+        $form['field_teo']['widget'][0]['target_id']['#default_value'] = $teo;
+      }
+    }
+  }
 }
 
 function claimant_user_register_validate(&$form, FormStateInterface $form_state) {
@@ -125,7 +241,27 @@ function claimant_user_register_submit(&$form, FormStateInterface $form_state) {
   // $url = Url::fromUri('internal:' . $dest_url);
   // $form_state->setRedirect($url);
 }
-
+/**
+ * Custom submit handler for user registration.
+ */
+function _user_register_submit(&$form, FormStateInterface $form_state) {
+  $form_display = $form_state->getStorage()['form_display']->getMode();
+  $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  $current_user = \Drupal::currentUser();
+  $roles = $current_user->getRoles();
+  switch ($form_display) {
+    case 'frc':
+      $form_state->setValue('roles', ['frc']);
+      break;
+    case 'promoter':
+      $form_state->setValue('roles', ['promoter']);
+      break;
+      case 'teo':
+      $form_state->setValue('roles', ['teo']);
+      break;
+    default:
+  }
+}
 
 function frams_pro_entity_bundle_field_info_alter(&$fields, EntityTypeInterface $entity_type, $bundle) {
   if (!empty($fields['field_claimant_aadhar_number'])) {
