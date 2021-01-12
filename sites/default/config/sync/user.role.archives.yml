@@ -20,5 +20,6 @@ permissions:
   - 'use  The form mode register linked to  user entity( user )'
   - 'use  The form mode survey linked to  node entity( application )'
   - 'use node.survey form mode'
+  - 'use private messaging system'
   - 'use user.default form mode'
   - 'view paragraph content _survey_details'

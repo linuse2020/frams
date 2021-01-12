@@ -21,5 +21,6 @@ permissions:
   - 'use frams_applications transition resurvey_completed'
   - 'use node.default form mode'
   - 'use node.survey form mode'
+  - 'use private messaging system'
   - 'use user.default form mode'
   - 'view paragraph content _survey_details'

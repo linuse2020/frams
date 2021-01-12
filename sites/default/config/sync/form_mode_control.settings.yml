@@ -68,3 +68,5 @@
 'use  The form mode frc_meeting linked to  node entity( application )': node.application.frc_meeting
 'use  The form mode panchayat linked to  node entity( application )': node.application.panchayat
 'use  The form mode default linked to  node entity( pachayat_committee_meeting )': node.pachayat_committee_meeting.default
+'use  The form mode default linked to  private_message entity( private_message )': private_message.private_message.default
+'use  The form mode default linked to  private_message_thread entity( private_message_thread )': private_message_thread.private_message_thread.default

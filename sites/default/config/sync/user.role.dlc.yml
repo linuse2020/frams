@@ -25,4 +25,5 @@ permissions:
   - 'use frams_applications transition dlc_re_examine'
   - 'use frams_applications transition ror_generated'
   - 'use node.default form mode'
+  - 'use private messaging system'
   - 'use user.default form mode'

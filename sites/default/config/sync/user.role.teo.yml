@@ -26,6 +26,7 @@ permissions:
   - 'use  The form mode register linked to  user entity( user )'
   - 'use node.frc form mode'
   - 'use node.promoter form mode'
+  - 'use private messaging system'
   - 'use user.default form mode'
   - 'use user.frc form mode'
   - 'use user.promoter form mode'

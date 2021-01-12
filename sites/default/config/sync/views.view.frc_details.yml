@@ -32,6 +32,7 @@ dependencies:
     - user.role.promoter
   module:
     - address
+    - entity_print_views
     - entity_reference_revisions
     - file
     - node
@@ -1049,6 +1050,7 @@ display:
         style: false
         row: false
         header: false
+        footer: false
       style:
         type: flipped_table
         options:
@@ -1158,6 +1160,19 @@ display:
           tokenize: false
           content: '<h3> FRC  Details</h3>'
           plugin_id: text_custom
+      footer:
+        area_entity_print_views:
+          id: area_entity_print_views
+          table: views
+          field: area_entity_print_views
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          export_type: pdf
+          link_text: 'View PDF'
+          display_id: frc_det
+          plugin_id: entity_print_views_link
     cache_metadata:
       max-age: -1
       contexts:

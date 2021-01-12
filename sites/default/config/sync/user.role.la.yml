@@ -10,4 +10,5 @@ permissions:
   - 'administer multiple_registration'
   - 'create users'
   - 'edit any application content'
+  - 'use private messaging system'
   - 'use user.default form mode'

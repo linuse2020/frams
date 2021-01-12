@@ -28,5 +28,6 @@ permissions:
   - 'use frams_applications transition panchayat_committee_approval'
   - 'use node.default form mode'
   - 'use node.panchayat form mode'
+  - 'use private messaging system'
   - 'use user.default form mode'
   - 'use user.panchayat form mode'

@@ -27,4 +27,5 @@ permissions:
   - 'use frams_applications transition sdlc_document_verification'
   - 'use frams_applications transition sdlc_re_examine'
   - 'use node.default form mode'
+  - 'use private messaging system'
   - 'use user.default form mode'

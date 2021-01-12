@@ -18,6 +18,7 @@ permissions:
   - 'use  The form mode register linked to  user entity( user )'
   - 'use  The form mode tdo linked to  user entity( user )'
   - 'use  The form mode teo linked to  user entity( user )'
+  - 'use private messaging system'
   - 'use user.default form mode'
   - 'use user.tdo form mode'
   - 'use user.teo form mode'
