@@ -136,7 +136,7 @@ class PrivateMessageThreadMemberFormatter extends FormatterBase implements Conta
     return [
       'display_type' => 'label',
       'entity_display_mode' => 'private_message_author',
-      'members_prefix' => t('You and'),
+      'members_prefix' => 'You',
     ] + parent::defaultSettings();
   }
 
@@ -249,12 +249,14 @@ class PrivateMessageThreadMemberFormatter extends FormatterBase implements Conta
       '#markup' => '',
     ];
 
+    $separator = $this->getSetting('display_type') === 'label' ? ', ' : '';
+
     $members_prefix = $this->getSetting('members_prefix');
     if (strlen($members_prefix)) {
-      $element['#markup'] .= '<span>' . $members_prefix . ' </span>';
+      $element['#markup'] .= '<span>' . $this->t($members_prefix) . '</span>';
+      $element['#markup'] .= (count($users) > 0) ? $separator : '';
     }
 
-    $separator = $this->getSetting('display_type') == 'label' ? ', ' : '';
     $element['#markup'] .= implode($separator, $users);
 
     return $element;

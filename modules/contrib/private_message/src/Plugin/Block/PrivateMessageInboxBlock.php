@@ -13,6 +13,7 @@ use Drupal\Core\Session\AccountProxyInterface;
 use Drupal\Core\Url;
 use Drupal\private_message\Service\PrivateMessageServiceInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Drupal\Core\Config\ConfigFactoryInterface;
 
 /**
  * Provides the private message inbox block.
@@ -54,6 +55,13 @@ class PrivateMessageInboxBlock extends BlockBase implements BlockPluginInterface
   protected $csrfToken;
 
   /**
+   * The private message configuration.
+   *
+   * @var \Drupal\Core\Config\ConfigFactoryInterface
+   */
+  protected $privateMessageConfig;
+
+  /**
    * Constructs a PrivateMessageForm object.
    *
    * @param array $configuration
@@ -70,14 +78,17 @@ class PrivateMessageInboxBlock extends BlockBase implements BlockPluginInterface
    *   The entity manager service.
    * @param \Drupal\Core\Access\CsrfTokenGenerator $csrfToken
    *   The CSRF token generator service.
+   * @param \Drupal\Core\Config\ConfigFactoryInterface $config
+   *   The config service.
    */
-  public function __construct(array $configuration, $plugin_id, $plugin_definition, AccountProxyInterface $currentUser, PrivateMessageServiceInterface $privateMessageService, EntityManagerInterface $entityManager, CsrfTokenGenerator $csrfToken) {
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, AccountProxyInterface $currentUser, PrivateMessageServiceInterface $privateMessageService, EntityManagerInterface $entityManager, CsrfTokenGenerator $csrfToken, ConfigFactoryInterface $config) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
 
     $this->currentUser = $currentUser;
     $this->privateMessageService = $privateMessageService;
     $this->entityManager = $entityManager;
     $this->csrfToken = $csrfToken;
+    $this->privateMessageConfig = $config->get('private_message.settings');
   }
 
   /**
@@ -91,7 +102,8 @@ class PrivateMessageInboxBlock extends BlockBase implements BlockPluginInterface
       $container->get('current_user'),
       $container->get('private_message.service'),
       $container->get('entity.manager'),
-      $container->get('csrf_token')
+      $container->get('csrf_token'),
+      $container->get('config.factory')
     );
   }
 
@@ -102,6 +114,7 @@ class PrivateMessageInboxBlock extends BlockBase implements BlockPluginInterface
     if ($this->currentUser->isAuthenticated() && $this->currentUser->hasPermission('use private messaging system')) {
       $config = $this->getConfiguration();
       $thread_info = $this->privateMessageService->getThreadsForUser($config['thread_count']);
+      $total_thread = $this->privateMessageService->getCountThreadsForUser();
       if (count($thread_info['threads'])) {
         $view_builder = $this->entityManager->getViewBuilder('private_message_thread');
         $threads = $thread_info['threads'];
@@ -110,7 +123,11 @@ class PrivateMessageInboxBlock extends BlockBase implements BlockPluginInterface
           $block[$thread->id()] = $view_builder->view($thread, 'inbox');
         }
 
-        $block['#attached']['library'][] = 'private_message/inbox_block';
+        $block['#attached']['library'][] = 'private_message/inbox_block_script';
+        $style_disabled = $this->privateMessageConfig->get('remove_css');
+        if (!$style_disabled) {
+          $block['#attached']['library'][] = 'private_message/inbox_block_style';
+        }
         if (count($threads) && $thread_info['next_exists']) {
           $prev_url = Url::fromRoute('private_message.ajax_callback', ['op' => 'get_old_inbox_threads']);
           $prev_token = $this->csrfToken->get($prev_url->getInternalPath());
@@ -150,6 +167,8 @@ class PrivateMessageInboxBlock extends BlockBase implements BlockPluginInterface
 
       $config = $this->getConfiguration();
       $block['#attached']['drupalSettings']['privateMessageInboxBlock']['ajaxRefreshRate'] = $config['ajax_refresh_rate'];
+      $block['#attached']['drupalSettings']['privateMessageInboxBlock']['totalThreads'] = $total_thread;
+      $block['#attached']['drupalSettings']['privateMessageInboxBlock']['itemsToShow'] = $config['thread_count'];
 
       // Add the default classes, as these are not added when the block output
       // is overridden with a template.

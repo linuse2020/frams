@@ -5,11 +5,39 @@ namespace Drupal\private_message\Form;
 use Drupal\Core\Form\ConfirmFormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
+use Drupal\Core\Messenger\MessengerInterface;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Definest he admin uninstall form for the Private Message module.
  */
 class AdminUninstallForm extends ConfirmFormBase {
+
+  /**
+   * The messenger.
+   *
+   * @var \Drupal\Core\Messenger\MessengerInterface
+   */
+  protected $messenger;
+
+  /**
+   * Constructs a new AdminUninstallForm object.
+   *
+   * @param \Drupal\Core\Messenger\MessengerInterface $messenger
+   *   The messenger service.
+   */
+  public function __construct(MessengerInterface $messenger) {
+    $this->messenger = $messenger;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container) {
+    return new static(
+      $container->get('messenger')
+    );
+  }
 
   /**
    * {@inheritdoc}
@@ -78,7 +106,7 @@ class AdminUninstallForm extends ConfirmFormBase {
     ];
     batch_set($batch);
 
-    drupal_set_message($this->t('Private message data has been deleted.'));
+    $this->messenger->addMessage($this->t('Private message data has been deleted.'));
   }
 
   /**

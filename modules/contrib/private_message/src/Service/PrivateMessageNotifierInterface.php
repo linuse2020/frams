@@ -6,9 +6,9 @@ use Drupal\private_message\Entity\PrivateMessageInterface;
 use Drupal\private_message\Entity\PrivateMessageThreadInterface;
 
 /**
- * Interface for the Private Message mail service.
+ * Interface for the Private Message notification service.
  */
-interface PrivateMessageMailerInterface {
+interface PrivateMessageNotifierInterface {
 
   /**
    * Send a private message notification email.
@@ -20,6 +20,6 @@ interface PrivateMessageMailerInterface {
    * @param \Drupal\user\UserInterface[] $members
    *   The message members.
    */
-  public function send(PrivateMessageInterface $message, PrivateMessageThreadInterface $thread, array $members = []);
+  public function notify(PrivateMessageInterface $message, PrivateMessageThreadInterface $thread, array $members = []);
 
 }

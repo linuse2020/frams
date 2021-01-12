@@ -78,7 +78,7 @@
         "drupal/multiple_registration": "^2.92",
         "drupal/paragraphs": "^1.12",
         "drupal/printable": "^2.0",
-        "drupal/private_message": "1.3.0",
+        "drupal/private_message": "2.0-beta16",
         "drupal/profile": "^1.2",
         "drupal/queue_ui": "^2.2",
         "drupal/radix_layouts": "^4.1",

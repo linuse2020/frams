@@ -6,6 +6,9 @@
 /*global jQuery, Drupal, drupalSettings, window*/
 /*jslint white:true, this, browser:true*/
 
+Drupal.PrivateMessageInbox = {};
+Drupal.PrivateMessageInbox.updateInbox = {};
+
 (function ($, Drupal, drupalSettings, window) {
 
   "use strict";
@@ -46,7 +49,9 @@
         success:function (data) {
           loadingNew = false;
           triggerCommands(data);
-          window.setTimeout(updateInbox, updateInterval);
+          if (updateInterval) {
+            window.setTimeout(updateInbox, updateInterval);
+          }
         }
       });
     }
@@ -131,7 +136,7 @@
    */
   function loadOlderThreadWatcher(context) {
     $(context).find("#load-previous-threads-button").once("load-loder-threads-watcher").each(function () {
-      $(this).click(loadOldThreadWatcherHandler);
+      $(this).on('click', loadOldThreadWatcherHandler);
     });
   }
 
@@ -164,7 +169,10 @@
     if (!initialized) {
       initialized = true;
       container = $(".block-private-message-inbox-block:first .content:first");
-      $("<div/>", {id:"load-previous-threads-button-wrapper"}).append($("<a/>", {href:"#", id:"load-previous-threads-button"}).text(Drupal.t("Load Previous"))).insertAfter(container);
+      if (drupalSettings.privateMessageInboxBlock.totalThreads > drupalSettings.privateMessageInboxBlock.itemsToShow) {
+        $("<div/>", {id:"load-previous-threads-button-wrapper"}).append($("<a/>", {href:"#", id:"load-previous-threads-button"}).text(Drupal.t("Load Previous"))).insertAfter(container);
+        loadOlderThreadWatcher(document);
+      }
       updateInterval = drupalSettings.privateMessageInboxBlock.ajaxRefreshRate * 1000;
       if (updateInterval) {
         window.setTimeout(updateInbox, updateInterval);
@@ -182,13 +190,13 @@
         // For jSlint compatibility.
         ajax = ajax;
 
-        if (!response.threads) {
+        if (response.threads) {
+          insertPreviousThreads(response.threads);
+        }
+        if (!response.threads || !response.hasNext) {
           $("#load-previous-threads-button").parent().slideUp(300, function () {
             $(this).remove();
           });
-        }
-        else {
-          insertPreviousThreads(response.threads);
         }
       };
 
@@ -205,6 +213,10 @@
 
       Drupal.PrivateMessages.setActiveThread = function (id) {
         setActiveThread(id);
+      };
+
+      Drupal.PrivateMessageInbox.updateInbox = function () {
+        updateInbox();
       };
     },
     detatch:function (context) {
