@@ -2,6 +2,8 @@ uuid: e4073b08-adc4-4e6d-86bb-4cffdc68e53e
 langcode: en
 status: true
 dependencies:
+  module:
+    - user
   theme:
     - frams
 _core:
@@ -19,4 +21,12 @@ settings:
   label_display: '0'
   primary: true
   secondary: true
-visibility: {  }
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      administrator: administrator
+      super_admin: super_admin
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

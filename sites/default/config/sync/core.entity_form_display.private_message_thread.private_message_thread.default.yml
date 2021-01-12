@@ -1,0 +1,32 @@
+uuid: 87edf97d-6db7-4113-bbec-e2c5c3627a82
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_layout
+    - layout_discovery
+    - private_message
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+_core:
+  default_config_hash: MC8mdpqmm7Ondq2Unne60vCjJD_m-jRjtS18alTkr08
+id: private_message_thread.private_message_thread.default
+targetEntityType: private_message_thread
+bundle: private_message_thread
+mode: default
+content:
+  members:
+    type: private_message_thread_member_widget
+    settings:
+      match_limit: '10'
+      size: 60
+      placeholder: 'Search Users'
+      max_members: '1'
+      match_operator: CONTAINS
+    weight: -3
+    region: content
+    third_party_settings: {  }
+hidden: {  }

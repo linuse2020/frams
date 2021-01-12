@@ -1,0 +1,29 @@
+uuid: b4d19829-cdd3-4765-a997-d30ab7ae3a0d
+langcode: en
+status: false
+dependencies:
+  module:
+    - private_message
+    - system
+  theme:
+    - frams
+id: privatemessageinbox_2
+theme: frams
+region: content
+weight: 0
+provider: null
+plugin: private_message_inbox_block
+settings:
+  id: private_message_inbox_block
+  label: Messages
+  provider: private_message
+  label_display: visible
+  thread_count: 10
+  ajax_load_count: 5
+  ajax_refresh_rate: 15
+visibility:
+  request_path:
+    id: request_path
+    pages: '/user/*'
+    negate: false
+    context_mapping: {  }

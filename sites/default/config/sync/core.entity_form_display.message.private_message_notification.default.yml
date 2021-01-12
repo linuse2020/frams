@@ -1,0 +1,26 @@
+uuid: 29939d7a-b47a-4e69-9aad-6fde1d42047b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.message.private_message_notification.field_message_pm_thread
+    - field.field.message.private_message_notification.field_message_private_message
+    - message.template.private_message_notification
+  module:
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+_core:
+  default_config_hash: skXC_N7Zh2LzNtMeXZJLJLCDJo9w8fH45k9Lk8-E30A
+id: message.private_message_notification.default
+targetEntityType: message
+bundle: private_message_notification
+mode: default
+content: {  }
+hidden:
+  field_message_pm_thread: true
+  field_message_private_message: true

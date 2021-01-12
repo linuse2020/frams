@@ -81,6 +81,8 @@ module:
   menu_link_attributes: 0
   menu_link_content: 0
   menu_ui: 0
+  message: 0
+  message_notify: 0
   mobile_number: 0
   multiple_registration: 0
   node: 0
@@ -92,6 +94,7 @@ module:
   pdf_api: 0
   printable: 0
   printable_pdf: 0
+  private_message: 0
   profile: 0
   queue_ui: 0
   quickedit: 0

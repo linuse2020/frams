@@ -1,0 +1,31 @@
+uuid: 3eed4faa-08e2-4224-b482-93db8a9951b4
+langcode: en
+status: false
+dependencies:
+  module:
+    - private_message
+    - system
+  theme:
+    - bartik
+_core:
+  default_config_hash: DK5-cwFPwkVd_2atQBrYKSXn8zgTuIVCqVf3pASWehA
+id: privatemessageinbox
+theme: bartik
+region: ''
+weight: 0
+provider: null
+plugin: private_message_inbox_block
+settings:
+  id: private_message_inbox_block
+  label: 'Private Message Inbox'
+  provider: private_message
+  label_display: visible
+  thread_count: 5
+  ajax_load_count: 5
+  ajax_refresh_rate: 15
+visibility:
+  request_path:
+    id: request_path
+    pages: "/private-messages\r\n/private-messages/*"
+    negate: false
+    context_mapping: {  }

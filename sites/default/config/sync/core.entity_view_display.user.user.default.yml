@@ -72,6 +72,11 @@ content:
     settings:
       link: true
     third_party_settings: {  }
+  private_message_link:
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   promoter_profiles:
     type: entity_reference_label
     weight: 6
@@ -122,7 +127,11 @@ content:
       link: true
     third_party_settings: {  }
 hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
   field_user_full_name: true
+  linked_username: true
   masquerade: true
   realname: true
   user_picture: true

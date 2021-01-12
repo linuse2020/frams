@@ -1,0 +1,26 @@
+uuid: 7a39eaec-10d6-43a1-bd8a-1fcb1039bb3b
+langcode: en
+status: false
+dependencies:
+  module:
+    - private_message
+    - system
+  theme:
+    - frams
+id: privatemessageactions_2
+theme: frams
+region: content
+weight: 0
+provider: null
+plugin: private_message_actions_block
+settings:
+  id: private_message_actions_block
+  label: 'Private Message Actions'
+  provider: private_message
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '/user/*'
+    negate: false
+    context_mapping: {  }
