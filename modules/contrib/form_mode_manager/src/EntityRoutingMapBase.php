@@ -9,17 +9,8 @@ use Drupal\Core\StringTranslation\StringTranslationTrait;
 
 /**
  * Base class for form mode manager entity routing plugin.
- *
- * This plugin are used to abstract the concepts implemented by EntityPlugin.
- * In Entity API we have possibility to linked entity form 'handlers' to a,
- * specific FormClass, but the operation name and routes linked with her are,
- * very arbitrary and unpredictable specially in custom entities cases.
- * In that plugin you have the possibility to map operation and,
- * others useful information about entity to reduce complexity of,
- * retrieving each possible cases.
  */
 abstract class EntityRoutingMapBase extends PluginBase implements EntityRoutingMapInterface, ContainerFactoryPluginInterface {
-
   use StringTranslationTrait;
 
   /**
@@ -51,13 +42,6 @@ abstract class EntityRoutingMapBase extends PluginBase implements EntityRoutingM
   protected $targetEntityType;
 
   /**
-   * The entity type manager service.
-   *
-   * @var \Drupal\Core\Entity\EntityTypeManagerInterface
-   */
-  protected $entityTypeManager;
-
-  /**
    * Constructs display plugin.
    *
    * @param array $configuration
@@ -69,11 +53,10 @@ abstract class EntityRoutingMapBase extends PluginBase implements EntityRoutingM
    */
   public function __construct(array $configuration, $plugin_id, $plugin_definition) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
-    $this->setTargetEntityType();
     $this->setConfiguration($configuration);
     $this->setDefaultFormClass();
     $this->setEditFormClass();
-    $this->setContextualLinks();
+    $this->setTargetEntityType();
   }
 
   /**
@@ -89,9 +72,6 @@ abstract class EntityRoutingMapBase extends PluginBase implements EntityRoutingM
 
   /**
    * {@inheritdoc}
-   *
-   * @param string $operation_name
-   *   The name of needed operation to retrieve.
    */
   public function getOperation($operation_name) {
     if (isset($this->pluginDefinition['operations'][$operation_name])) {
@@ -126,23 +106,6 @@ abstract class EntityRoutingMapBase extends PluginBase implements EntityRoutingM
    */
   public function getEditFormClass() {
     return $this->editFormClass;
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function getContextualLinks() {
-    return $this->pluginDefinition['contextualLinks'];
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function getContextualLink($operation_name) {
-    if (isset($this->pluginDefinition['contextualLinks'][$operation_name])) {
-      return $this->pluginDefinition['contextualLinks'][$operation_name];
-    }
-    return FALSE;
   }
 
   /**
@@ -183,19 +146,6 @@ abstract class EntityRoutingMapBase extends PluginBase implements EntityRoutingM
   /**
    * {@inheritdoc}
    */
-  public function setContextualLinks() {
-    if ($this->doGenerateContextualLinks()) {
-      $operations = [
-        'edit' => "entity.{$this->targetEntityType}.edit_form",
-      ];
-
-      $this->pluginDefinition['contextualLinks'] += $operations;
-    }
-  }
-
-  /**
-   * {@inheritdoc}
-   */
   public function getTargetEntityType() {
     return $this->targetEntityType;
   }
@@ -230,16 +180,6 @@ abstract class EntityRoutingMapBase extends PluginBase implements EntityRoutingM
    */
   public function defaultConfiguration() {
     return [];
-  }
-
-  /**
-   * Evaluate if current pluginDefinition contextualLink is applicable.
-   *
-   * @return bool
-   *   True if we can generate the plugin definition or False if not.
-   */
-  private function doGenerateContextualLinks() {
-      return is_array($this->pluginDefinition['contextualLinks']) && !isset($this->pluginDefinition['contextualLinks']['edit']);
   }
 
 }

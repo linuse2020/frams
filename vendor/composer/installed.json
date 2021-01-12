@@ -843,38 +843,36 @@
         },
         {
             "name": "dompdf/dompdf",
-            "version": "v0.8.6",
-            "version_normalized": "0.8.6.0",
+            "version": "v0.8.5",
+            "version_normalized": "0.8.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dompdf/dompdf.git",
-                "reference": "db91d81866c69a42dad1d2926f61515a1e3f42c5"
+                "reference": "6782abfc090b132134cd6cea0ec6d76f0fce2c56"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dompdf/dompdf/zipball/db91d81866c69a42dad1d2926f61515a1e3f42c5",
-                "reference": "db91d81866c69a42dad1d2926f61515a1e3f42c5",
+                "url": "https://api.github.com/repos/dompdf/dompdf/zipball/6782abfc090b132134cd6cea0ec6d76f0fce2c56",
+                "reference": "6782abfc090b132134cd6cea0ec6d76f0fce2c56",
                 "shasum": ""
             },
             "require": {
                 "ext-dom": "*",
                 "ext-mbstring": "*",
-                "phenx/php-font-lib": "^0.5.2",
+                "phenx/php-font-lib": "^0.5.1",
                 "phenx/php-svg-lib": "^0.3.3",
                 "php": "^7.1"
             },
             "require-dev": {
-                "mockery/mockery": "^1.3",
                 "phpunit/phpunit": "^7.5",
                 "squizlabs/php_codesniffer": "^3.5"
             },
             "suggest": {
                 "ext-gd": "Needed to process images",
                 "ext-gmagick": "Improves image processing performance",
-                "ext-imagick": "Improves image processing performance",
-                "ext-zlib": "Needed for pdf stream compression"
+                "ext-imagick": "Improves image processing performance"
             },
-            "time": "2020-08-30T22:54:22+00:00",
+            "time": "2020-02-20T03:52:51+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -912,7 +910,7 @@
             "homepage": "https://github.com/dompdf/dompdf",
             "support": {
                 "issues": "https://github.com/dompdf/dompdf/issues",
-                "source": "https://github.com/dompdf/dompdf/tree/master"
+                "source": "https://github.com/dompdf/dompdf/tree/v0.8.5"
             },
             "install-path": "../dompdf/dompdf"
         },
@@ -3814,18 +3812,18 @@
         },
         {
             "name": "drupal/form_mode_manager",
-            "version": "2.0.0-rc3",
-            "version_normalized": "2.0.0.0-RC3",
+            "version": "1.3.0",
+            "version_normalized": "1.3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/form_mode_manager.git",
-                "reference": "8.x-2.0-rc3"
+                "reference": "8.x-1.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/form_mode_manager-8.x-2.0-rc3.zip",
-                "reference": "8.x-2.0-rc3",
-                "shasum": "01fc39ab255dd69efa922f8bf1aeae14871673ba"
+                "url": "https://ftp.drupal.org/files/projects/form_mode_manager-8.x-1.3.zip",
+                "reference": "8.x-1.3",
+                "shasum": "833e9130176eb14ac4286dcf454c5ef9cada0cae"
             },
             "require": {
                 "drupal/core": "^8"
@@ -3833,11 +3831,11 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.0-rc3",
-                    "datestamp": "1542398129",
+                    "version": "8.x-1.3",
+                    "datestamp": "1513953485",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "RC releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 }
             },
@@ -3853,7 +3851,7 @@
                     "role": "Maintainer"
                 }
             ],
-            "description": "Provide an API to use Form modes",
+            "description": "Allow use of form mode in all Content entities",
             "homepage": "https://www.drupal.org/project/image_widget_crop",
             "keywords": [
                 "Drupal",
@@ -7008,6 +7006,53 @@
                 "issues": "https://www.drupal.org/project/issues/vapn"
             },
             "install-path": "../../modules/contrib/vapn"
+        },
+        {
+            "name": "drupal/view_marquee",
+            "version": "1.0.0",
+            "version_normalized": "1.0.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/view_marquee.git",
+                "reference": "8.x-1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/view_marquee-8.x-1.0.zip",
+                "reference": "8.x-1.0",
+                "shasum": "2f761c25c5cee8bd62370bc04ed22e7a93e48599"
+            },
+            "require": {
+                "drupal/core": "^8"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0",
+                    "datestamp": "1570456087",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "installation-source": "dist",
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "radheymkumar",
+                    "homepage": "https://www.drupal.org/user/3069081"
+                }
+            ],
+            "description": "View Marquee Direction",
+            "homepage": "https://www.drupal.org/project/view_marquee",
+            "support": {
+                "source": "https://git.drupalcode.org/project/view_marquee"
+            },
+            "install-path": "../../modules/contrib/view_marquee"
         },
         {
             "name": "drupal/view_unpublished",
@@ -12962,5 +13007,6 @@
             "install-path": "../wa72/htmlpagedom"
         }
     ],
-    "dev": true
+    "dev": true,
+    "dev-package-names": []
 }

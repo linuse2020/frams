@@ -2,9 +2,6 @@
 
 namespace Drupal\Tests\form_mode_manager\Functional;
 
-use Drupal\block_content\Entity\BlockContent;
-use Drupal\block_content\Entity\BlockContentType;
-use Drupal\Component\Utility\Unicode;
 use Drupal\Tests\BrowserTestBase;
 
 /**
@@ -22,12 +19,9 @@ abstract class FormModeManagerBase extends BrowserTestBase {
    * @var string[]
    */
   public static $modules = [
-    'entity_test',
-    'field',
-    'field_ui',
-    'media',
     'block',
-    'block_content',
+    'entity_test',
+    'field_ui',
     'node',
     'user',
     'form_mode_manager',
@@ -94,11 +88,6 @@ abstract class FormModeManagerBase extends BrowserTestBase {
   protected $formModeManager;
 
   /**
-   * @todo Remove the disabled strict config schema checking.
-   */
-  protected $strictConfigSchema = FALSE;
-
-  /**
    * {@inheritdoc}
    */
   protected function setUp() {
@@ -121,8 +110,8 @@ abstract class FormModeManagerBase extends BrowserTestBase {
 
     $this->drupalLogin($this->rootUser);
 
-    $this->setUpFormMode("admin/structure/types/manage/{$this->nodeTypeFmm1->id()}/form-display", $this->nodeFormMode->id());
-    $this->setUpFormMode("admin/config/people/accounts/form-display", $this->userFormMode->id());
+    $this->setUpNodeFormMode();
+    $this->setUpUserFormMode();
     $this->setUpUsers();
   }
 
@@ -154,7 +143,21 @@ abstract class FormModeManagerBase extends BrowserTestBase {
   }
 
   /**
-   * Helper method to configure form display for given form_mode.
+   * Helper method to create Form mode onto Node entity needed for tests.
+   */
+  public function setUpUserFormMode() {
+    $this->setUpFormMode("admin/config/people/accounts/form-display", $this->userFormMode->id());
+  }
+
+  /**
+   * Helper method to create Form mode onto Node entity needed for tests.
+   */
+  public function setUpNodeFormMode() {
+    $this->setUpFormMode("admin/structure/types/manage/{$this->nodeTypeFmm1->id()}/form-display", $this->nodeFormMode->id());
+  }
+
+  /**
+   * Helper method to create all users needed for tests.
    */
   public function setUpFormMode($path, $form_mode_id) {
     $this->drupalGet($path);
@@ -164,75 +167,12 @@ abstract class FormModeManagerBase extends BrowserTestBase {
   }
 
   /**
-   * Helper method to hide field for given entity form path.
-   */
-  public function setHiddenFieldFormMode($path, $field_name) {
-    $this->drupalGet($path);
-    $edit = ["fields[$field_name][region]" => 'hidden'];
-    $this->drupalPostForm($path, $edit, t('Save'));
-  }
-
-  /**
    * Tests the EntityFormMode user interface.
-   *
-   * @throws \Behat\Mink\Exception\ExpectationException
    */
   public function assertLocalTasks($tabs_expected) {
     foreach ($tabs_expected as $link) {
       $this->assertSession()->linkExists($link);
     }
-  }
-
-  /**
-   * Creates a custom block type (bundle).
-   *
-   * @param bool $create_body
-   *   Whether or not to create the body field.
-   *
-   * @return \Drupal\block_content\Entity\BlockContentType
-   *   Created custom block type.
-   */
-  protected function createBlockContentType($create_body = FALSE) {
-    $bundle = BlockContentType::create([
-      'id' => Unicode::strtolower($this->randomMachineName()),
-      'label' => $this->randomString(),
-      'revision' => FALSE,
-    ]);
-    $bundle->save();
-    if ($create_body) {
-      block_content_add_body_field($bundle->id());
-    }
-    return $bundle;
-  }
-
-  /**
-   * Creates a block_content based on default settings.
-   *
-   * @param array $settings
-   *   (optional) An associative array of settings for the node, as used in
-   *   entity_create(). Override the defaults by specifying the key and value
-   *   in the array, for example:.
-   *
-   * @return \Drupal\block_content\BlockContentInterface
-   *   The created block_content entity.
-   */
-  protected function createBlockContent(array $settings = []) {
-    // Populate defaults array.
-    $settings += [
-      'body' => [
-        [
-          'value' => $this->randomMachineName(32),
-          'format' => filter_default_format(),
-        ],
-      ],
-      'info' => $this->randomMachineName(),
-      'type' => 'basic',
-      'langcode' => 'en',
-    ];
-    $block_content = BlockContent::create($settings);
-    $block_content->save();
-
-    return $block_content;
   }
 
 }

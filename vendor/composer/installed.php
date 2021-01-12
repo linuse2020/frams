@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '31fb08f9e4c9d9cfd7d79cac2b08f35fa241324f',
+    'reference' => '0186a25d809a09774b7b72f789013d903d34c515',
     'name' => 'drupal/legacy-project',
   ),
   'versions' => 
@@ -112,12 +112,12 @@
     ),
     'dompdf/dompdf' => 
     array (
-      'pretty_version' => 'v0.8.6',
-      'version' => '0.8.6.0',
+      'pretty_version' => 'v0.8.5',
+      'version' => '0.8.5.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'db91d81866c69a42dad1d2926f61515a1e3f42c5',
+      'reference' => '6782abfc090b132134cd6cea0ec6d76f0fce2c56',
     ),
     'drupal/action' => 
     array (
@@ -896,12 +896,12 @@
     ),
     'drupal/form_mode_manager' => 
     array (
-      'pretty_version' => '2.0.0-rc3',
-      'version' => '2.0.0.0-RC3',
+      'pretty_version' => '1.3.0',
+      'version' => '1.3.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '8.x-2.0-rc3',
+      'reference' => '8.x-1.3',
     ),
     'drupal/forum' => 
     array (
@@ -1113,7 +1113,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '31fb08f9e4c9d9cfd7d79cac2b08f35fa241324f',
+      'reference' => '0186a25d809a09774b7b72f789013d903d34c515',
     ),
     'drupal/libraries' => 
     array (
@@ -1720,6 +1720,15 @@
       array (
       ),
       'reference' => '8.x-1.5',
+    ),
+    'drupal/view_marquee' => 
+    array (
+      'pretty_version' => '1.0.0',
+      'version' => '1.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.0',
     ),
     'drupal/view_unpublished' => 
     array (

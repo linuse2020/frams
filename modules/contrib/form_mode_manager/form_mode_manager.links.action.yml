@@ -1,4 +1,3 @@
-# Form Mode Manager derives action links.
 form_mode_manager.action:
   class: \Drupal\Core\Menu\LocalActionDefault
   deriver: \Drupal\form_mode_manager\Plugin\Derivative\FormModeManagerLocalAction
