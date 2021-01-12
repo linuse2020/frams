@@ -6,4 +6,27 @@ id: panchayat
 label: PANCHAYAT
 weight: 8
 is_admin: null
-permissions: {  }
+permissions:
+  - 'administer multiple_registration'
+  - 'create notice_board content'
+  - 'create pachayat_committee_meeting content'
+  - 'create users'
+  - 'edit any application content'
+  - 'edit any pachayat_committee_meeting content'
+  - 'edit own pachayat_committee_meeting content'
+  - 'use  The form mode default linked to  node entity( application )'
+  - 'use  The form mode default linked to  node entity( notice_board )'
+  - 'use  The form mode default linked to  node entity( pachayat_committee_meeting )'
+  - 'use  The form mode default linked to  profile entity( panchayat )'
+  - 'use  The form mode panchayat linked to  node entity( application )'
+  - 'use  The form mode panchayat linked to  user entity( user )'
+  - 'use  The form mode promoter linked to  user entity( user )'
+  - 'use  The form mode register linked to  user entity( user )'
+  - 'use frams_applications transition frc_meeting'
+  - 'use frams_applications transition frc_meeting_approval'
+  - 'use frams_applications transition panchayat_committee'
+  - 'use frams_applications transition panchayat_committee_approval'
+  - 'use node.default form mode'
+  - 'use node.panchayat form mode'
+  - 'use user.default form mode'
+  - 'use user.panchayat form mode'

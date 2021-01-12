@@ -1,0 +1,19 @@
+uuid: 2d6b4022-b46e-4cae-9523-4f78d52c8fbd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tdo_name
+    - node.type.tdo
+id: node.tdo.field_tdo_name
+field_name: field_tdo_name
+entity_type: node
+bundle: tdo
+label: 'District Officer'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

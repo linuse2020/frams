@@ -1,4 +1,4 @@
-uuid: 2e3896d3-8036-40d8-823e-dc568f512d79
+uuid: 98895494-82d9-4cbb-ab3e-d146054a79cc
 langcode: en
 status: true
 dependencies:
@@ -9,8 +9,8 @@ dependencies:
 third_party_settings:
   field_permissions:
     permission_type: public
-id: node.field_office_category
-field_name: field_office_category
+id: node.field_disctrict_office_category
+field_name: field_disctrict_office_category
 entity_type: node
 type: list_string
 settings:

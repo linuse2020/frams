@@ -9,36 +9,43 @@ dependencies:
     - field.field.paragraph.committee_member_details.field_member_name
     - paragraphs.paragraphs_type.committee_member_details
   module:
+    - layout_builder
     - options
+    - telephone
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
 id: paragraph.committee_member_details.default
 targetEntityType: paragraph
 bundle: committee_member_details
 mode: default
 content:
   field_category:
-    weight: 2
-    label: above
+    weight: 1
+    label: inline
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_contact_number:
-    weight: 0
-    label: above
-    settings: {  }
+    weight: 2
+    label: inline
+    settings:
+      title: ''
     third_party_settings: {  }
-    type: basic_string
+    type: telephone_link
     region: content
   field_email:
-    weight: 1
-    label: above
+    weight: 3
+    label: inline
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_member_name:
-    weight: 3
-    label: above
+    weight: 0
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }

@@ -3,7 +3,6 @@ role_to_select:
   administrator: '0'
   contributor: '0'
   promoter: '0'
-  frc: '0'
   sdlc: '0'
   dlc: '0'
   slc: '0'
@@ -15,6 +14,7 @@ role_to_select:
   archives: '0'
   super_admin: '0'
   la: '0'
+  frc: '0'
 registration_mode: user
 _core:
   default_config_hash: o1wWkhSOJotsHFgvzESaUOiTWhLak62cKBDyEtewAIM

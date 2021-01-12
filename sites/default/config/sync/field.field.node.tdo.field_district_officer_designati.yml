@@ -11,7 +11,7 @@ id: node.tdo.field_district_officer_designati
 field_name: field_district_officer_designati
 entity_type: node
 bundle: tdo
-label: 'District Officer Designation'
+label: Designation
 description: ''
 required: false
 translatable: false

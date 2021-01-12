@@ -1,0 +1,28 @@
+uuid: c165acb4-6ded-4eb8-b805-6a9625ec4b22
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_panchayat_committee_report
+    - node.type.application
+    - node.type.pachayat_committee_meeting
+id: node.application.field_panchayat_committee_report
+field_name: field_panchayat_committee_report
+entity_type: node
+bundle: application
+label: 'Panchayat committee  Report'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      pachayat_committee_meeting: pachayat_committee_meeting
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

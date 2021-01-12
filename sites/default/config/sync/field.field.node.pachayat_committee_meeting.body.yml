@@ -1,0 +1,23 @@
+uuid: b3bc94d1-af37-4bd2-8138-e1c162b22349
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.pachayat_committee_meeting
+  module:
+    - text
+id: node.pachayat_committee_meeting.body
+field_name: body
+entity_type: node
+bundle: pachayat_committee_meeting
+label: 'Meeting minutes'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

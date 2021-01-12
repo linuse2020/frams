@@ -1,0 +1,10 @@
+uuid: 44b1e632-76f3-46a3-9c3a-203158fe0d8e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.panchayat
+label: PANCHAYAT
+targetEntityType: node
+cache: true

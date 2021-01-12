@@ -66,3 +66,5 @@
 'use  The form mode frc_doc_verify linked to  node entity( application )': node.application.frc_doc_verify
 'use  The form mode frc_site_verify linked to  node entity( application )': node.application.frc_site_verify
 'use  The form mode frc_meeting linked to  node entity( application )': node.application.frc_meeting
+'use  The form mode panchayat linked to  node entity( application )': node.application.panchayat
+'use  The form mode default linked to  node entity( pachayat_committee_meeting )': node.pachayat_committee_meeting.default

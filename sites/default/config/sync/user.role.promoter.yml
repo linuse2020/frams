@@ -6,4 +6,17 @@ id: promoter
 label: PROMOTER
 weight: 3
 is_admin: null
-permissions: {  }
+permissions:
+  - 'administer multiple_registration'
+  - 'create committee_meeting content'
+  - 'create paragraph content meeting_members_details'
+  - 'create users'
+  - 'edit any application content'
+  - 'edit any committee_meeting content'
+  - 'edit own committee_meeting content'
+  - 'edit own promoters content'
+  - 'use  The form mode promoter linked to  user entity( user )'
+  - 'use  The form mode register linked to  user entity( user )'
+  - 'use node.promoter form mode'
+  - 'use user.default form mode'
+  - 'use user.promoter form mode'

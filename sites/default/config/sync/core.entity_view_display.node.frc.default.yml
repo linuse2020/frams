@@ -6,15 +6,20 @@ dependencies:
     - field.field.node.frc.body
     - field.field.node.frc.field_frc_constituency
     - field.field.node.frc.field_frc_district
+    - field.field.node.frc.field_frc_email
     - field.field.node.frc.field_frc_forest_range
     - field.field.node.frc.field_frc_members_details
     - field.field.node.frc.field_frc_panchayat
+    - field.field.node.frc.field_frc_promoter
     - field.field.node.frc.field_frc_sdlc
+    - field.field.node.frc.field_frc_teo
     - field.field.node.frc.field_frc_village
     - field.field.node.frc.field_settlement
+    - field.field.node.frc.field_teo_contact
     - node.type.frc
   module:
     - entity_reference_revisions
+    - telephone
     - text
     - user
 id: node.frc.default
@@ -23,31 +28,38 @@ bundle: frc
 mode: default
 content:
   body:
-    label: hidden
+    label: inline
     type: text_default
-    weight: 101
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     region: content
   field_frc_constituency:
-    weight: 102
-    label: above
+    weight: 3
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
   field_frc_district:
-    weight: 103
-    label: above
+    weight: 4
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  field_frc_forest_range:
-    weight: 104
+  field_frc_email:
+    weight: 13
     label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_frc_forest_range:
+    weight: 5
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
@@ -55,7 +67,7 @@ content:
     region: content
   field_frc_members_details:
     type: entity_reference_revisions_entity_view
-    weight: 105
+    weight: 6
     label: above
     settings:
       view_mode: default
@@ -63,7 +75,15 @@ content:
     third_party_settings: {  }
     region: content
   field_frc_panchayat:
-    weight: 106
+    weight: 7
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_frc_promoter:
+    weight: 12
     label: above
     settings:
       link: true
@@ -71,7 +91,15 @@ content:
     type: entity_reference_label
     region: content
   field_frc_sdlc:
-    weight: 107
+    weight: 10
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_frc_teo:
+    weight: 9
     label: above
     settings:
       link: true
@@ -79,24 +107,32 @@ content:
     type: entity_reference_label
     region: content
   field_frc_village:
-    weight: 108
-    label: above
+    weight: 8
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
   field_settlement:
-    weight: 109
-    label: above
+    weight: 11
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
+  field_teo_contact:
+    weight: 2
+    label: inline
+    settings:
+      title: ''
+    third_party_settings: {  }
+    type: telephone_link
+    region: content
   links:
-    weight: 100
+    weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden: {  }

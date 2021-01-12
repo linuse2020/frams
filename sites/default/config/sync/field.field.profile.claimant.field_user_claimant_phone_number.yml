@@ -20,6 +20,6 @@ default_value_callback: ''
 settings:
   countries:
     IN: IN
-  verify: required
+  verify: none
   message: "Your verification code from !site_name:\r\n!code"
 field_type: mobile_number

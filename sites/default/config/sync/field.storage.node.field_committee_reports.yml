@@ -1,4 +1,4 @@
-uuid: 9ddd7c47-8f22-4240-8f7c-96b26a1589e9
+uuid: e96c375f-71d3-4910-aeac-9f0e6720aa6b
 langcode: en
 status: true
 dependencies:
@@ -9,8 +9,8 @@ dependencies:
 third_party_settings:
   field_permissions:
     permission_type: public
-id: node.field_panchayat_report
-field_name: field_panchayat_report
+id: node.field_committee_reports
+field_name: field_committee_reports
 entity_type: node
 type: file
 settings:

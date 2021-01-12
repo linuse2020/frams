@@ -5768,7 +5768,6 @@ display:
           admin_label: ''
           operator: in
           value:
-            frams_applications-rejected: frams_applications-rejected
             frams_applications-dlc_draft: frams_applications-dlc_draft
             frams_applications-dlc_document_verification: frams_applications-dlc_document_verification
             frams_applications-dlc_committee: frams_applications-dlc_committee
@@ -5796,7 +5795,6 @@ display:
               administrator: '0'
               contributor: '0'
               promoter: '0'
-              frc: '0'
               sdlc: '0'
               dlc: '0'
               slc: '0'
@@ -5809,6 +5807,7 @@ display:
               archives: '0'
               super_admin: '0'
               la: '0'
+              frc: '0'
             reduce: true
           is_grouped: false
           group_info:
@@ -6490,6 +6489,16 @@ display:
                 select_all_none: false
                 select_all_none_nested: false
                 display_inline: 1
+              title:
+                plugin_id: default
+                advanced:
+                  collapsible: false
+                  is_secondary: false
+              nid:
+                plugin_id: default
+                advanced:
+                  collapsible: false
+                  is_secondary: false
     cache_metadata:
       max-age: -1
       contexts:

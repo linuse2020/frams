@@ -1,0 +1,18 @@
+uuid: c2dc1044-9e38-4563-9a90-32fa47e034a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.pachayat_committee_meeting
+id: node.pachayat_committee_meeting.title
+field_name: title
+entity_type: node
+bundle: pachayat_committee_meeting
+label: 'Meeting Date'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

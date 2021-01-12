@@ -6,4 +6,16 @@ id: slc
 label: SLC
 weight: 7
 is_admin: null
-permissions: {  }
+permissions:
+  - 'administer multiple_registration'
+  - 'create committee_meeting content'
+  - 'create paragraph content committee_member_details'
+  - 'create paragraph content meeting_members_details'
+  - 'create users'
+  - 'edit any application content'
+  - 'edit any committee_meeting content'
+  - 'edit own committee_meeting content'
+  - 'update paragraph content meeting_members_details'
+  - 'use  The form mode promoter linked to  user entity( user )'
+  - 'use  The form mode register linked to  user entity( user )'
+  - 'use user.default form mode'

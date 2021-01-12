@@ -12,7 +12,12 @@ dependencies:
   module:
     - entity_reference_revisions
     - file
+    - layout_builder
     - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
 id: node.committee_meeting.default
 targetEntityType: node
 bundle: committee_meeting
@@ -20,14 +25,14 @@ mode: default
 content:
   field__venue:
     weight: 105
-    label: above
+    label: inline
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_committee:
     weight: 101
-    label: above
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
@@ -44,7 +49,7 @@ content:
     region: content
   field_meeting_minutes:
     weight: 102
-    label: above
+    label: inline
     settings:
       use_description_as_link_text: true
     third_party_settings: {  }
@@ -52,14 +57,14 @@ content:
     region: content
   field_total_participants:
     weight: 104
-    label: above
+    label: inline
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   links:
     weight: 100
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden: {  }

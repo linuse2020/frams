@@ -1,0 +1,23 @@
+uuid: 01e92002-bfeb-4173-a0bb-62b1fa7cf9b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_add_block_panchayat
+    - node.type.teo
+id: node.teo.field_add_block_panchayat
+field_name: field_add_block_panchayat
+entity_type: node
+bundle: teo
+label: 'Add Block Panchayat'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Block Panchayat'
+  off_label: 'Grama Panchayat'
+field_type: boolean

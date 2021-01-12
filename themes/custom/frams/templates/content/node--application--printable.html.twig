@@ -7,9 +7,9 @@
       <br />Ministry of Tribal Affairs</p></strong>
     </div>
     <div style="text-align: center;">
-      <strong><p>ANNEXURE - II <br>[See rule 8(h)]<p></strong>       
+      <strong><p>ANNEXURE - II <br>[See rule 8(h)]<p></strong>
     </div>
-    <table width="100%">      
+    <table width="100%">
       <tr>
         <td width="70%">
           <table style="padding:10px;">
@@ -42,7 +42,7 @@
                   <tr>
                     <td style="padding: 10px">{{i+1}}</td>
                     <td style="padding: 10px">{{content.field_other_family_members[i]['#paragraph'].field_family_members_name.value}}</td>
-                    <td style="padding: 10px">{{content.field_other_family_members[i]['#paragraph'].field_family_members_relation.value}}</td>                    
+                    <td style="padding: 10px">{{content.field_other_family_members[i]['#paragraph'].field_family_members_relation.value}}</td>
                   </tr>
               {% endfor %}
               </table>
@@ -79,7 +79,7 @@
         <td width="30%" valign="top"><div class="fra_ror_left" style="width:50px;height:50px">{{ content.field_photo_couple }}</div></td>
       </tr>
     </table>
-     <table width="100%">      
+     <table width="100%">
       <tr>
         <td width="70%">
           <table>
@@ -133,22 +133,22 @@
                   </tr>
                    {% for i in 0..content.field_survey_details['#items']|length-1 %}
                     <tr>
-                      <td style="padding: 10px">{{i+1}}</td>                      
+                      <td style="padding: 10px">{{i+1}}</td>
                       <td style="padding: 10px">{{content.field_survey_details[i]['#paragraph'].field_category.value}}</td>
                       <td style="padding: 10px">{{content.field_survey_details[i]['#paragraph'].field_survey_number.value}}</td>
                       <td style="padding: 10px">{{content.field_survey_details[i]['#paragraph'].field_compartment_number.value}}</td>
                       <td style="padding: 10px">{{content.field_survey_details[i]['#paragraph'].field_coupe_num.value}}</td>
-                      td style="padding: 10px">{{content.field_survey_details[i]['#paragraph'].field_geolocation.value}}<nr />{{get_directions }}</td>
-                      td style="padding: 10px">{{content.field_survey_details[i]['#paragraph'].field_survey_map.value}}</td>
+                      <td style="padding: 10px">{{content.field_survey_details[i]['#paragraph'].field_geolocation.value}}<nr />{{get_directions }}</td>
+                      <td style="padding: 10px">{{content.field_survey_details[i]['#paragraph'].field_survey_map.value}}</td>
 
                     </tr>
-                  {% endfor %}                 
+                  {% endfor %}
               </table>
               </td>
             </tr>
             </table>
         </td>
-        
+
       </tr>
 
     </table>
@@ -164,5 +164,3 @@
 
   </div>
 </article>
-
-

@@ -1,0 +1,8 @@
+uuid: 01de48db-f74a-49b4-ae8d-ba55e7abb7e2
+langcode: en
+status: true
+dependencies: {  }
+id: panchayat
+label: Panchayat
+description: ''
+locked: false

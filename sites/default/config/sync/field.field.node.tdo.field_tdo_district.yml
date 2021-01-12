@@ -1,0 +1,83 @@
+uuid: ac008664-e694-4fd2-8a66-4f12087d41f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tdo_district
+    - node.type.tdo
+    - taxonomy.vocabulary.district
+  module:
+    - dynamic_entity_reference
+id: node.tdo.field_tdo_district
+field_name: field_tdo_district
+entity_type: node
+bundle: tdo
+label: District
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  taxonomy_term:
+    handler: 'default:taxonomy_term'
+    handler_settings:
+      target_bundles:
+        district: district
+      sort:
+        field: name
+        direction: asc
+      auto_create: false
+      auto_create_bundle: ''
+  comment:
+    handler: 'default:comment'
+    handler_settings: {  }
+  contact_message:
+    handler: 'default:contact_message'
+    handler_settings: {  }
+  node:
+    handler: 'default:node'
+    handler_settings: {  }
+  content_moderation_state:
+    handler: 'default:content_moderation_state'
+    handler_settings: {  }
+  block_content:
+    handler: 'default:block_content'
+    handler_settings: {  }
+  menu_link_content:
+    handler: 'default:menu_link_content'
+    handler_settings: {  }
+  file:
+    handler: 'default:file'
+    handler_settings: {  }
+  paragraph:
+    handler: 'default:paragraph'
+    handler_settings: {  }
+  sms_phone_number_verification:
+    handler: 'default:sms_phone_number_verification'
+    handler_settings: {  }
+  profile:
+    handler: 'default:profile'
+    handler_settings: {  }
+  sms_report:
+    handler: 'default:sms_report'
+    handler_settings: {  }
+  sms:
+    handler: 'default:sms'
+    handler_settings: {  }
+  sms_result:
+    handler: 'default:sms_result'
+    handler_settings: {  }
+  shortcut:
+    handler: 'default:shortcut'
+    handler_settings: {  }
+  path_alias:
+    handler: 'default:path_alias'
+    handler_settings: {  }
+  user:
+    handler: 'default:user'
+    handler_settings: {  }
+  webform_submission:
+    handler: 'default:webform_submission'
+    handler_settings: {  }
+field_type: dynamic_entity_reference

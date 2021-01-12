@@ -1,17 +1,17 @@
-uuid: 38558d8f-554c-49c3-89b8-a55cb73688ca
+uuid: 48ebf817-798a-465d-98e2-930725486f40
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_panchayat_report
-    - node.type.application
+    - field.storage.node.field_committee_reports
+    - node.type.pachayat_committee_meeting
   module:
     - file
-id: node.application.field_panchayat_report
-field_name: field_panchayat_report
+id: node.pachayat_committee_meeting.field_committee_reports
+field_name: field_committee_reports
 entity_type: node
-bundle: application
-label: 'Panchayat Report'
+bundle: pachayat_committee_meeting
+label: 'Committee Reports'
 description: ''
 required: false
 translatable: false
@@ -19,7 +19,7 @@ default_value: {  }
 default_value_callback: ''
 settings:
   file_directory: '[date:custom:Y]-[date:custom:m]'
-  file_extensions: 'txt pdf jpeg jpg png'
+  file_extensions: 'txt pdf doc docx'
   max_filesize: ''
   description_field: false
   handler: 'default:file'

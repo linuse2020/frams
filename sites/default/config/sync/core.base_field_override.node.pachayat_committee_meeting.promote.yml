@@ -1,0 +1,22 @@
+uuid: e27030dd-7ed4-4ee2-898d-bbd8eeaf7048
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.pachayat_committee_meeting
+id: node.pachayat_committee_meeting.promote
+field_name: promote
+entity_type: node
+bundle: pachayat_committee_meeting
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

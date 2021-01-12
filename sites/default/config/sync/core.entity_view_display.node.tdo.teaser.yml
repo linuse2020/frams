@@ -5,9 +5,12 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.tdo.body
+    - field.field.node.tdo.field_disctrict_office_category
     - field.field.node.tdo.field_district_office_contact
     - field.field.node.tdo.field_district_officer_designati
     - field.field.node.tdo.field_email
+    - field.field.node.tdo.field_tdo_district
+    - field.field.node.tdo.field_tdo_name
     - node.type.tdo
   module:
     - text
@@ -31,6 +34,9 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_disctrict_office_category: true
   field_district_office_contact: true
   field_district_officer_designati: true
   field_email: true
+  field_tdo_district: true
+  field_tdo_name: true

@@ -11,7 +11,7 @@ id: node.frc.body
 field_name: body
 entity_type: node
 bundle: frc
-label: Body
+label: Address
 description: ''
 required: false
 translatable: true

@@ -6,4 +6,23 @@ id: dlc
 label: DLC
 weight: 6
 is_admin: null
-permissions: {  }
+permissions:
+  - 'administer multiple_registration'
+  - 'create committee_meeting content'
+  - 'create paragraph content committee_member_details'
+  - 'create paragraph content meeting_members_details'
+  - 'create users'
+  - 'edit any application content'
+  - 'edit any committee_meeting content'
+  - 'edit own committee_meeting content'
+  - 'entity print access bundle application'
+  - 'update paragraph content meeting_members_details'
+  - 'use  The form mode promoter linked to  user entity( user )'
+  - 'use  The form mode register linked to  user entity( user )'
+  - 'use frams_applications transition dlc_approved'
+  - 'use frams_applications transition dlc_committee'
+  - 'use frams_applications transition dlc_document_verification'
+  - 'use frams_applications transition dlc_re_examine'
+  - 'use frams_applications transition ror_generated'
+  - 'use node.default form mode'
+  - 'use user.default form mode'

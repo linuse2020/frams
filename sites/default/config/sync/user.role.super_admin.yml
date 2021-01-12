@@ -6,4 +6,9 @@ id: super_admin
 label: 'Super Admin'
 weight: 15
 is_admin: null
-permissions: {  }
+permissions:
+  - 'administer multiple_registration'
+  - 'create users'
+  - 'edit any application content'
+  - 'use  The form mode register linked to  user entity( user )'
+  - 'use user.default form mode'

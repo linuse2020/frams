@@ -17,10 +17,10 @@ settings:
   allowed_values:
     -
       value: '1'
-      label: 'Project Office'
+      label: 'Project Officer'
     -
       value: '2'
-      label: 'Tribal Development office'
+      label: 'Tribal Development officer'
   allowed_values_function: ''
 module: options
 locked: false

@@ -6,4 +6,26 @@ id: teo
 label: TEO
 weight: 10
 is_admin: null
-permissions: {  }
+permissions:
+  - 'administer multiple_registration'
+  - 'create frc content'
+  - 'create frc profile'
+  - 'create promoter profile'
+  - 'create promoters content'
+  - 'create users'
+  - 'delete paragraph content frc_members_details'
+  - 'edit any application content'
+  - 'edit any frc content'
+  - 'edit any promoters content'
+  - 'edit own teo content'
+  - 'update paragraph content frc_members_details'
+  - 'use  The form mode default linked to  node entity( promoters )'
+  - 'use  The form mode default linked to  profile entity( promoter )'
+  - 'use  The form mode promoter linked to  node entity( application )'
+  - 'use  The form mode promoter linked to  user entity( user )'
+  - 'use  The form mode register linked to  user entity( user )'
+  - 'use node.frc form mode'
+  - 'use node.promoter form mode'
+  - 'use user.default form mode'
+  - 'use user.frc form mode'
+  - 'use user.promoter form mode'

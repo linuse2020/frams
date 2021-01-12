@@ -6,4 +6,8 @@ id: la
 label: LA
 weight: 16
 is_admin: null
-permissions: {  }
+permissions:
+  - 'administer multiple_registration'
+  - 'create users'
+  - 'edit any application content'
+  - 'use user.default form mode'

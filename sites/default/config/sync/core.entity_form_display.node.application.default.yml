@@ -52,7 +52,7 @@ dependencies:
     - field.field.node.application.field_other_claims
     - field.field.node.application.field_other_family_members
     - field.field.node.application.field_other_traditional_ri
-    - field.field.node.application.field_panchayat_report
+    - field.field.node.application.field_panchayat_committee_report
     - field.field.node.application.field_pattas
     - field.field.node.application.field_photo_couple
     - field.field.node.application.field_ration_card_no
@@ -69,21 +69,13 @@ dependencies:
     - field.field.node.application.field_upload_ration_card_copy
     - field.field.node.application.field_upload_voters_id_copy
     - field.field.node.application.field_vaimozhy
-    - image.style.thumbnail
     - node.type.application
     - workflows.workflow.frams_applications
   module:
-    - address
-    - conditional_fields
     - content_moderation
     - field_group
     - field_layout
-    - file
-    - image
     - layout_discovery
-    - paragraphs
-    - telephone
-    - text
 third_party_settings:
   field_layout:
     id: layout_onecol
@@ -93,19 +85,19 @@ third_party_settings:
     group_personal_details:
       children:
         - title
-        - field_name_of_other_claimants
+        - field__photo
         - field_address
+        - field_cast_cirtificate
+        - field_caste_cert_spouse
+        - field_caste_cert_spouse_
         - field_contact_no
         - field_email
-        - field_name_of_the_spouse
+        - field_is_schedules_tribe
+        - field_is_spouse_st
         - field_name_of_father
         - field_name_of_mother
-        - field__photo
-        - field_is_schedules_tribe
-        - field_cast_cirtificate
-        - field_caste_cert_spouse_
-        - field_is_spouse_st
-        - field_caste_cert_spouse
+        - field_name_of_other_claimants
+        - field_name_of_the_spouse
       parent_name: ''
       weight: 0
       format_type: fieldset
@@ -118,20 +110,20 @@ third_party_settings:
       label: 'Personal Details'
     group_location_details:
       children:
-        - field_claimant_district
-        - field_claimant_constituency
-        - field__claimant_taluk
-        - field_claimant_panchayat
-        - field_claimant_village
         - field__claimant_range
-        - field_claimant_slc
+        - field__claimant_taluk
+        - field_claimant_constituency
+        - field_claimant_district
         - field_claimant_dlc
-        - field_claimant_sdlc
         - field_claimant_frc
+        - field_claimant_panchayat
+        - field_claimant_promoter
+        - field_claimant_sdlc
         - field_claimant_settlement
+        - field_claimant_slc
         - field_claimant_tdo
         - field_claimant_teo
-        - field_claimant_promoter
+        - field_claimant_village
       parent_name: ''
       weight: 1
       format_type: fieldset
@@ -157,14 +149,14 @@ third_party_settings:
       label: 'Family Members Details'
     group_nature_of_claim_on_land:
       children:
-        - field_habitation
-        - field_self_cultivation
         - field_disputed_lands
-        - field_pattas
-        - field_rehabilitation
         - field_field_displaced
         - field_field_extent_of_land
+        - field_habitation
         - field_other_traditional_ri
+        - field_pattas
+        - field_rehabilitation
+        - field_self_cultivation
       parent_name: ''
       weight: 3
       format_type: fieldset
@@ -177,14 +169,14 @@ third_party_settings:
       label: 'Nature of claim on land'
     group_evidence_in_support:
       children:
-        - field_submit_adharcard
-        - field_adharcard_no
-        - field_upload_adharcard_copy
-        - field_submit_ration_card
-        - field_ration_card_no
-        - field_upload_ration_card_copy
-        - field_submit_voter_id
         - field__voter_id_card_no
+        - field_adharcard_no
+        - field_ration_card_no
+        - field_submit_adharcard
+        - field_submit_ration_card
+        - field_submit_voter_id
+        - field_upload_adharcard_copy
+        - field_upload_ration_card_copy
         - field_upload_voters_id_copy
         - field_vaimozhy
       parent_name: ''
@@ -199,11 +191,11 @@ third_party_settings:
       label: 'Evidence in support'
     group_any_other_information:
       children:
-        - field_other_claims
-        - field_number_of_claims_submitted
-        - field_submit_photograph_of_coupl
-        - field_photo_couple
         - field_not_submit_couple_photo
+        - field_number_of_claims_submitted
+        - field_other_claims
+        - field_photo_couple
+        - field_submit_photograph_of_coupl
         - field_survery_conducted
       parent_name: ''
       weight: 5
@@ -231,11 +223,11 @@ third_party_settings:
     group_frc_site_verification_:
       children:
         - field__form_appendix2
-        - field_frc_site_photo
-        - field_frc_site_map
         - field__frc_secretary_report
+        - field_frc_site_map
+        - field_frc_site_photo
       parent_name: ''
-      weight: 20
+      weight: 9
       format_type: fieldset
       region: content
       format_settings:
@@ -249,7 +241,7 @@ third_party_settings:
         - field_form_appendix4
         - field_frc_meeting_minutes
       parent_name: ''
-      weight: 20
+      weight: 8
       format_type: fieldset
       region: content
       format_settings:
@@ -259,10 +251,9 @@ third_party_settings:
         required_fields: true
       label: 'FRC Meeting Documents'
     group_grama_panchayat_:
-      children:
-        - field_panchayat_report
+      children: {  }
       parent_name: ''
-      weight: 20
+      weight: 12
       format_type: fieldset
       region: content
       format_settings:
@@ -275,7 +266,7 @@ third_party_settings:
       children:
         - field_sdlc_meeting_minutes_
       parent_name: ''
-      weight: 20
+      weight: 10
       format_type: fieldset
       region: content
       format_settings:
@@ -288,7 +279,7 @@ third_party_settings:
       children:
         - field_survey_details
       parent_name: ''
-      weight: 20
+      weight: 7
       format_type: fieldset
       region: content
       format_settings:
@@ -299,11 +290,11 @@ third_party_settings:
       label: 'Survey Departent'
     group_divisional_level_committee:
       children:
-        - field_dlc_meeting_minutes
         - field_alloted_land_cultivation
         - field_alloted_land_habitation
+        - field_dlc_meeting_minutes
       parent_name: ''
-      weight: 20
+      weight: 11
       format_type: fieldset
       region: content
       format_settings:
@@ -317,797 +308,83 @@ targetEntityType: node
 bundle: application
 mode: default
 content:
-  field__claimant_range:
-    weight: 32
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field__claimant_taluk:
-    weight: 29
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field__form_appendix2:
-    weight: 42
-    settings:
-      progress_indicator: throbber
-    third_party_settings: {  }
-    type: file_generic
-    region: content
-  field__frc_secretary_report:
-    weight: 45
-    settings:
-      progress_indicator: throbber
-    third_party_settings: {  }
-    type: file_generic
-    region: content
-  field__photo:
-    weight: 15
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
-    region: content
-  field__voter_id_card_no:
-    weight: 17
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings:
-      conditional_fields:
-        ab5ca0c9-b6c1-47cc-87ff-b1a594717e1d:
-          dependee: field_submit_voter_id
-          settings:
-            state: visible
-            condition: checked
-            grouping: AND
-            values_set: 1
-            value: ''
-            values: {  }
-            value_form:
-              value: false
-            effect: show
-            effect_options: {  }
-            selector: ''
-          entity_type: node
-          bundle: application
-    type: string_textfield
-    region: content
-  field_address:
-    weight: 9
-    settings: {  }
-    third_party_settings: {  }
-    type: address_default
-    region: content
-  field_adharcard_no:
-    weight: 11
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings:
-      conditional_fields:
-        1d4ec732-e183-4c47-8a90-d4927b21effd:
-          dependee: field_submit_adharcard
-          settings:
-            state: visible
-            condition: checked
-            grouping: AND
-            values_set: 1
-            value: ''
-            values: {  }
-            value_form:
-              value: false
-            effect: show
-            effect_options: {  }
-            selector: ''
-          entity_type: node
-          bundle: application
-    type: string_textfield
-    region: content
-  field_alloted_land_cultivation:
-    weight: 55
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_alloted_land_habitation:
-    weight: 56
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-      show_summary: false
-    third_party_settings: {  }
-    type: text_textarea_with_summary
-    region: content
-  field_archives:
-    weight: 55
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
-  field_cast_cirtificate:
-    weight: 18
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings:
-      conditional_fields:
-        55131132-2ef3-4950-9801-3e6caff54929:
-          dependee: field_is_schedules_tribe
-          settings:
-            state: visible
-            condition: checked
-            grouping: AND
-            values_set: 1
-            value: ''
-            values: {  }
-            value_form:
-              value: false
-            effect: show
-            effect_options: {  }
-            selector: ''
-          entity_type: node
-          bundle: application
-    type: image_image
-    region: content
-  field_caste_cert_spouse:
-    weight: 21
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
-    region: content
-  field_caste_cert_spouse_:
-    weight: 19
-    settings:
-      display_label: true
-    third_party_settings:
-      conditional_fields:
-        1d884e39-acff-4551-b0ae-6b603d2357f4:
-          dependee: field_is_spouse_st
-          settings:
-            state: visible
-            condition: checked
-            grouping: AND
-            values_set: 1
-            value: ''
-            values: {  }
-            value_form:
-              value: false
-            effect: show
-            effect_options: {  }
-            selector: ''
-          entity_type: node
-          bundle: application
-        af7a6a05-342d-4025-af42-bb6c7264a66f:
-          dependee: field_is_schedules_tribe
-          settings:
-            state: visible
-            condition: '!checked'
-            grouping: AND
-            values_set: 1
-            value: ''
-            values: {  }
-            value_form:
-              value: false
-            effect: show
-            effect_options: {  }
-            selector: ''
-          entity_type: node
-          bundle: application
-    type: boolean_checkbox
-    region: content
-  field_claimant_constituency:
-    weight: 28
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_claimant_district:
-    weight: 27
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_claimant_dlc:
-    weight: 34
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_claimant_frc:
-    weight: 36
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_claimant_panchayat:
-    weight: 30
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_claimant_promoter:
-    weight: 41
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_claimant_sdlc:
-    weight: 35
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_claimant_settlement:
-    weight: 37
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_claimant_slc:
-    weight: 33
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_claimant_tdo:
-    weight: 39
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_claimant_teo:
-    weight: 40
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_claimant_village:
-    weight: 31
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_contact_no:
-    weight: 10
-    settings:
-      placeholder: ''
-    third_party_settings: {  }
-    type: telephone_default
-    region: content
-  field_declaration:
-    weight: 7
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
-  field_disputed_lands:
-    weight: 6
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_dlc_meeting_minutes:
-    weight: 54
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_email:
-    weight: 11
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: email_default
-    region: content
-  field_field_displaced:
-    weight: 10
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_field_extent_of_land:
-    weight: 11
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_form_appendix4:
-    weight: 46
-    settings:
-      progress_indicator: throbber
-    third_party_settings: {  }
-    type: file_generic
-    region: content
-  field_frc_meeting_minutes:
-    weight: 47
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_frc_site_map:
-    weight: 44
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
-    region: content
-  field_frc_site_photo:
-    weight: 43
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
-    region: content
-  field_habitation:
-    weight: 4
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_is_schedules_tribe:
-    weight: 17
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
-  field_is_spouse_st:
-    weight: 20
-    settings:
-      display_label: true
-    third_party_settings:
-      conditional_fields:
-        4adf2cba-124d-458b-9437-03f4674c0ba5:
-          dependee: field_caste_cert_spouse_
-          settings:
-            state: visible
-            condition: checked
-            grouping: AND
-            values_set: 1
-            value: ''
-            values: {  }
-            value_form:
-              value: false
-            effect: show
-            effect_options: {  }
-            selector: ''
-          entity_type: node
-          bundle: application
-    type: boolean_checkbox
-    region: content
-  field_name_of_father:
-    weight: 13
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_name_of_mother:
-    weight: 14
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_name_of_other_claimants:
-    weight: 8
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_name_of_the_spouse:
-    weight: 12
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_not_submit_couple_photo:
-    weight: 11
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_number_of_claims_submitted:
-    weight: 8
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_other_claims:
-    type: entity_reference_paragraphs
-    weight: 7
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
-    third_party_settings: {  }
-    region: content
-  field_other_family_members:
-    type: entity_reference_paragraphs
-    weight: 39
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
-    third_party_settings: {  }
-    region: content
-  field_other_traditional_ri:
-    weight: 12
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_panchayat_report:
-    weight: 48
-    settings:
-      progress_indicator: throbber
-    third_party_settings: {  }
-    type: file_generic
-    region: content
-  field_pattas:
-    weight: 7
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_photo_couple:
-    weight: 10
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
-    region: content
-  field_ration_card_no:
-    weight: 14
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings:
-      conditional_fields:
-        6eb6c591-3bc6-486f-be1d-b74f1c882970:
-          dependee: field_submit_ration_card
-          settings:
-            state: visible
-            condition: checked
-            grouping: AND
-            values_set: 1
-            value: ''
-            values: {  }
-            value_form:
-              value: false
-            effect: show
-            effect_options: {  }
-            selector: ''
-          entity_type: node
-          bundle: application
-    type: string_textfield
-    region: content
-  field_rehabilitation:
-    weight: 8
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_sdlc_meeting_minutes_:
-    weight: 49
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_self_cultivation:
-    weight: 5
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_submit_adharcard:
-    weight: 10
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
-  field_submit_photograph_of_coupl:
-    weight: 9
-    settings:
-      display_label: true
-    third_party_settings:
-      conditional_fields:
-        c6216117-70f5-421d-8433-8f5afe6ff5fe:
-          dependee: field_photo_couple
-          settings:
-            state: visible
-            condition: '!empty'
-            grouping: AND
-            values_set: 1
-            value: ''
-            values: {  }
-            value_form:
-              -
-                fids: {  }
-                display: 1
-                description: ''
-                upload: ''
-                alt: ''
-                title: ''
-            effect: show
-            effect_options: {  }
-            selector: ''
-          entity_type: node
-          bundle: application
-        186e4f42-cab0-4abb-9977-cb077991872f:
-          dependee: field_not_submit_couple_photo
-          settings:
-            state: visible
-            condition: '!checked'
-            grouping: AND
-            values_set: 1
-            value: ''
-            values: {  }
-            value_form:
-              -
-                value: ''
-            effect: show
-            effect_options: {  }
-            selector: ''
-          entity_type: node
-          bundle: application
-    type: boolean_checkbox
-    region: content
-  field_submit_ration_card:
-    weight: 13
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
-  field_submit_voter_id:
-    weight: 16
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
-  field_survery_conducted:
-    weight: 12
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textarea
-    region: content
-  field_survey_details:
-    type: entity_reference_paragraphs
-    weight: 53
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
-    third_party_settings: {  }
-    region: content
-  field_upload_adharcard_copy:
-    weight: 12
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings:
-      conditional_fields:
-        63dd9175-a525-44e6-9f8f-ba14fc94b186:
-          dependee: field_submit_adharcard
-          settings:
-            state: visible
-            condition: checked
-            grouping: AND
-            values_set: 1
-            value: ''
-            values: {  }
-            value_form:
-              value: false
-            effect: show
-            effect_options: {  }
-            selector: ''
-          entity_type: node
-          bundle: application
-    type: image_image
-    region: content
-  field_upload_ration_card_copy:
-    weight: 15
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings:
-      conditional_fields:
-        ad7a644c-195c-40b4-a6e6-9421403ead6a:
-          dependee: field_submit_ration_card
-          settings:
-            state: visible
-            condition: checked
-            grouping: AND
-            values_set: 1
-            value: ''
-            values: {  }
-            value_form:
-              value: false
-            effect: show
-            effect_options: {  }
-            selector: ''
-          entity_type: node
-          bundle: application
-    type: image_image
-    region: content
-  field_upload_voters_id_copy:
-    weight: 18
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings:
-      conditional_fields:
-        991c6fbd-026c-4466-88c2-662c94daf08a:
-          dependee: field_submit_voter_id
-          settings:
-            state: visible
-            condition: checked
-            grouping: AND
-            values_set: 1
-            value: ''
-            values: {  }
-            value_form:
-              value: false
-            effect: show
-            effect_options: {  }
-            selector: ''
-          entity_type: node
-          bundle: application
-    type: image_image
-    region: content
-  field_vaimozhy:
-    type: entity_reference_paragraphs
-    weight: 19
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
-    third_party_settings: {  }
-    region: content
   moderation_state:
     type: moderation_state_default
-    weight: 100
+    weight: 13
     settings: {  }
     region: content
-    third_party_settings: {  }
-  title:
-    type: string_textfield
-    weight: 7
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
 hidden:
   created: true
+  field__claimant_range: true
+  field__claimant_taluk: true
+  field__form_appendix2: true
+  field__frc_secretary_report: true
+  field__photo: true
+  field__voter_id_card_no: true
+  field_address: true
+  field_adharcard_no: true
+  field_alloted_land_cultivation: true
+  field_alloted_land_habitation: true
+  field_archives: true
+  field_cast_cirtificate: true
+  field_caste_cert_spouse: true
+  field_caste_cert_spouse_: true
+  field_claimant_constituency: true
+  field_claimant_district: true
+  field_claimant_dlc: true
+  field_claimant_frc: true
+  field_claimant_panchayat: true
+  field_claimant_promoter: true
+  field_claimant_sdlc: true
+  field_claimant_settlement: true
+  field_claimant_slc: true
+  field_claimant_tdo: true
+  field_claimant_teo: true
+  field_claimant_village: true
+  field_contact_no: true
+  field_declaration: true
+  field_disputed_lands: true
+  field_dlc_meeting_minutes: true
+  field_email: true
+  field_field_displaced: true
+  field_field_extent_of_land: true
+  field_form_appendix4: true
+  field_frc_meeting_minutes: true
+  field_frc_site_map: true
+  field_frc_site_photo: true
+  field_habitation: true
+  field_is_schedules_tribe: true
+  field_is_spouse_st: true
+  field_name_of_father: true
+  field_name_of_mother: true
+  field_name_of_other_claimants: true
+  field_name_of_the_spouse: true
+  field_not_submit_couple_photo: true
+  field_number_of_claims_submitted: true
+  field_other_claims: true
+  field_other_family_members: true
+  field_other_traditional_ri: true
+  field_panchayat_committee_report: true
+  field_pattas: true
+  field_photo_couple: true
+  field_ration_card_no: true
+  field_rehabilitation: true
+  field_sdlc_meeting_minutes_: true
+  field_self_cultivation: true
+  field_submit_adharcard: true
+  field_submit_photograph_of_coupl: true
+  field_submit_ration_card: true
+  field_submit_voter_id: true
+  field_survery_conducted: true
+  field_survey_details: true
+  field_upload_adharcard_copy: true
+  field_upload_ration_card_copy: true
+  field_upload_voters_id_copy: true
+  field_vaimozhy: true
   path: true
   promote: true
   status: true
   sticky: true
+  title: true
   uid: true

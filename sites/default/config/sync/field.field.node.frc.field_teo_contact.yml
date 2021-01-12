@@ -1,0 +1,21 @@
+uuid: fe680bd3-78ad-4eed-adbc-39b51489799e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teo_contact
+    - node.type.frc
+  module:
+    - telephone
+id: node.frc.field_teo_contact
+field_name: field_teo_contact
+entity_type: node
+bundle: frc
+label: 'FRC Contact'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

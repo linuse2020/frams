@@ -8,7 +8,7 @@ id: node.tdo.title
 field_name: title
 entity_type: node
 bundle: tdo
-label: 'District Development Offices'
+label: 'District Development Office'
 description: ''
 required: true
 translatable: true

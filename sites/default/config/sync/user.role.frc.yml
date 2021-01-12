@@ -1,22 +1,50 @@
 uuid: ead4d3aa-4a8c-4b05-a436-a6ed923a7e14
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - user_view_mode
+third_party_settings:
+  user_view_mode:
+    view_mode: full
+    weight: null
 id: frc
 label: FRC
-weight: 4
+weight: 17
 is_admin: null
 permissions:
   - 'access workbench'
-  - access_all_form_modes
+  - 'administer multiple_registration'
+  - 'create committee_meeting content'
+  - 'create frc content'
+  - 'create paragraph content committee_member_details'
+  - 'create paragraph content frc_members_details'
+  - 'create paragraph content meeting_members_details'
+  - 'create users'
+  - 'delete paragraph content frc_members_details'
   - 'edit any application content'
+  - 'edit any committee_meeting content'
+  - 'edit any frc content'
+  - 'edit own committee_meeting content'
+  - 'edit own frc content'
+  - 'update paragraph content frc_members_details'
+  - 'update paragraph content meeting_members_details'
+  - 'use  The form mode default linked to  node entity( committee_meeting )'
   - 'use  The form mode default linked to  node entity( frc )'
+  - 'use  The form mode default linked to  node entity( promoters )'
+  - 'use  The form mode frc linked to  node entity( application )'
+  - 'use  The form mode frc linked to  user entity( user )'
+  - 'use  The form mode frc_meeting linked to  node entity( application )'
+  - 'use  The form mode frc_site_verify linked to  node entity( application )'
+  - 'use  The form mode promoter linked to  node entity( application )'
+  - 'use  The form mode promoter linked to  user entity( user )'
+  - 'use  The form mode register linked to  user entity( user )'
   - 'use frams_applications transition frc_approved'
   - 'use frams_applications transition frc_document_verification'
-  - 'use frams_applications transition frc_meeting'
   - 'use frams_applications transition frc_meeting_approval'
   - 'use frams_applications transition frc_re_examine'
   - 'use frams_applications transition frc_site_verification'
+  - 'use frams_applications transition panchayat_committee'
   - 'use frams_applications transition sdlc_draft'
   - 'use frc_document_verification transition'
   - 'use frc_site_verification transition'
@@ -24,5 +52,8 @@ permissions:
   - 'use node.frc form mode'
   - 'use node.frc_meeting form mode'
   - 'use node.frc_site_verify form mode'
+  - 'use user.default form mode'
+  - 'use user.frc form mode'
+  - 'use user.promoter form mode'
   - 'view any unpublished application content'
   - 'view moderation states'

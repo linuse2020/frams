@@ -53,7 +53,7 @@ dependencies:
     - field.field.node.application.field_other_claims
     - field.field.node.application.field_other_family_members
     - field.field.node.application.field_other_traditional_ri
-    - field.field.node.application.field_panchayat_report
+    - field.field.node.application.field_panchayat_committee_report
     - field.field.node.application.field_pattas
     - field.field.node.application.field_photo_couple
     - field.field.node.application.field_ration_card_no
@@ -1002,7 +1002,7 @@ hidden:
   field_frc_meeting_minutes: true
   field_frc_site_map: true
   field_frc_site_photo: true
-  field_panchayat_report: true
+  field_panchayat_committee_report: true
   field_sdlc_meeting_minutes_: true
   field_survey_details: true
   path: true

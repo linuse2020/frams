@@ -1,0 +1,18 @@
+uuid: 98042322-a04f-4a8d-a0ee-af5e9998a716
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.promoters
+id: node.promoters.title
+field_name: title
+entity_type: node
+bundle: promoters
+label: Promoter
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

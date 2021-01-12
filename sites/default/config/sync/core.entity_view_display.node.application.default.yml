@@ -52,7 +52,7 @@ dependencies:
     - field.field.node.application.field_other_claims
     - field.field.node.application.field_other_family_members
     - field.field.node.application.field_other_traditional_ri
-    - field.field.node.application.field_panchayat_report
+    - field.field.node.application.field_panchayat_committee_report
     - field.field.node.application.field_pattas
     - field.field.node.application.field_photo_couple
     - field.field.node.application.field_ration_card_no
@@ -72,18 +72,29 @@ dependencies:
     - node.type.application
   module:
     - address
+    - entity_print
     - entity_reference_revisions
     - file
     - image
+    - telephone
     - text
     - user
+third_party_settings:
+  entity_print:
+    pdf_label: 'View PDF'
+    epub_label: 'View EPub'
 id: node.application.default
 targetEntityType: node
 bundle: application
 mode: default
 content:
+  content_moderation_control:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field__claimant_range:
-    weight: 121
+    weight: 22
     label: above
     settings:
       link: true
@@ -91,7 +102,7 @@ content:
     type: entity_reference_label
     region: content
   field__claimant_taluk:
-    weight: 118
+    weight: 19
     label: above
     settings:
       link: true
@@ -99,7 +110,7 @@ content:
     type: entity_reference_label
     region: content
   field__form_appendix2:
-    weight: 155
+    weight: 55
     label: above
     settings:
       use_description_as_link_text: true
@@ -107,7 +118,7 @@ content:
     type: file_default
     region: content
   field__frc_secretary_report:
-    weight: 158
+    weight: 58
     label: above
     settings:
       use_description_as_link_text: true
@@ -115,7 +126,7 @@ content:
     type: file_default
     region: content
   field__photo:
-    weight: 108
+    weight: 9
     label: above
     settings:
       image_style: ''
@@ -124,7 +135,7 @@ content:
     type: image
     region: content
   field__voter_id_card_no:
-    weight: 146
+    weight: 46
     label: above
     settings:
       link_to_entity: false
@@ -132,14 +143,14 @@ content:
     type: string
     region: content
   field_address:
-    weight: 102
+    weight: 3
     label: above
     settings: {  }
     third_party_settings: {  }
     type: address_default
     region: content
   field_adharcard_no:
-    weight: 140
+    weight: 40
     label: above
     settings:
       link_to_entity: false
@@ -147,7 +158,7 @@ content:
     type: string
     region: content
   field_alloted_land_cultivation:
-    weight: 169
+    weight: 65
     label: above
     settings:
       link_to_entity: false
@@ -155,14 +166,14 @@ content:
     type: string
     region: content
   field_alloted_land_habitation:
-    weight: 170
+    weight: 66
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_archives:
-    weight: 168
+    weight: 64
     label: above
     settings:
       format: default
@@ -172,7 +183,7 @@ content:
     type: boolean
     region: content
   field_cast_cirtificate:
-    weight: 110
+    weight: 11
     label: above
     settings:
       image_style: ''
@@ -181,7 +192,7 @@ content:
     type: image
     region: content
   field_caste_cert_spouse:
-    weight: 113
+    weight: 14
     label: above
     settings:
       image_style: ''
@@ -190,7 +201,7 @@ content:
     type: image
     region: content
   field_caste_cert_spouse_:
-    weight: 111
+    weight: 12
     label: above
     settings:
       format: default
@@ -200,7 +211,7 @@ content:
     type: boolean
     region: content
   field_claimant_constituency:
-    weight: 117
+    weight: 18
     label: above
     settings:
       link: true
@@ -208,7 +219,7 @@ content:
     type: entity_reference_label
     region: content
   field_claimant_district:
-    weight: 116
+    weight: 17
     label: above
     settings:
       link: true
@@ -216,7 +227,7 @@ content:
     type: entity_reference_label
     region: content
   field_claimant_dlc:
-    weight: 123
+    weight: 24
     label: above
     settings:
       link: true
@@ -224,7 +235,7 @@ content:
     type: entity_reference_label
     region: content
   field_claimant_frc:
-    weight: 125
+    weight: 26
     label: above
     settings:
       link: true
@@ -232,7 +243,7 @@ content:
     type: entity_reference_label
     region: content
   field_claimant_panchayat:
-    weight: 119
+    weight: 20
     label: above
     settings:
       link: true
@@ -240,7 +251,7 @@ content:
     type: entity_reference_label
     region: content
   field_claimant_promoter:
-    weight: 128
+    weight: 29
     label: above
     settings:
       link: true
@@ -248,7 +259,7 @@ content:
     type: entity_reference_label
     region: content
   field_claimant_sdlc:
-    weight: 124
+    weight: 25
     label: above
     settings:
       link: true
@@ -256,7 +267,7 @@ content:
     type: entity_reference_label
     region: content
   field_claimant_settlement:
-    weight: 129
+    weight: 30
     label: above
     settings:
       link: true
@@ -264,7 +275,7 @@ content:
     type: entity_reference_label
     region: content
   field_claimant_slc:
-    weight: 122
+    weight: 23
     label: above
     settings:
       link: true
@@ -272,7 +283,7 @@ content:
     type: entity_reference_label
     region: content
   field_claimant_tdo:
-    weight: 126
+    weight: 27
     label: above
     settings:
       link: true
@@ -280,7 +291,7 @@ content:
     type: entity_reference_label
     region: content
   field_claimant_teo:
-    weight: 127
+    weight: 28
     label: above
     settings:
       link: true
@@ -288,7 +299,7 @@ content:
     type: entity_reference_label
     region: content
   field_claimant_village:
-    weight: 120
+    weight: 21
     label: above
     settings:
       link: true
@@ -296,14 +307,15 @@ content:
     type: entity_reference_label
     region: content
   field_contact_no:
-    weight: 103
+    weight: 4
     label: above
-    settings: {  }
+    settings:
+      title: ''
     third_party_settings: {  }
-    type: basic_string
+    type: telephone_link
     region: content
   field_declaration:
-    weight: 154
+    weight: 54
     label: above
     settings:
       format: default
@@ -313,7 +325,7 @@ content:
     type: boolean
     region: content
   field_disputed_lands:
-    weight: 138
+    weight: 38
     label: above
     settings:
       link_to_entity: false
@@ -321,7 +333,7 @@ content:
     type: string
     region: content
   field_dlc_meeting_minutes:
-    weight: 167
+    weight: 63
     label: above
     settings:
       link: true
@@ -329,14 +341,14 @@ content:
     type: entity_reference_label
     region: content
   field_email:
-    weight: 104
+    weight: 5
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_field_displaced:
-    weight: 135
+    weight: 35
     label: above
     settings:
       link_to_entity: false
@@ -344,7 +356,7 @@ content:
     type: string
     region: content
   field_field_extent_of_land:
-    weight: 136
+    weight: 36
     label: above
     settings:
       link_to_entity: false
@@ -352,7 +364,7 @@ content:
     type: string
     region: content
   field_form_appendix4:
-    weight: 159
+    weight: 59
     label: above
     settings:
       use_description_as_link_text: true
@@ -360,7 +372,7 @@ content:
     type: file_default
     region: content
   field_frc_meeting_minutes:
-    weight: 160
+    weight: 60
     label: above
     settings:
       link: true
@@ -368,7 +380,7 @@ content:
     type: entity_reference_label
     region: content
   field_frc_site_map:
-    weight: 157
+    weight: 57
     label: above
     settings:
       image_style: ''
@@ -377,7 +389,7 @@ content:
     type: image
     region: content
   field_frc_site_photo:
-    weight: 156
+    weight: 56
     label: above
     settings:
       image_style: ''
@@ -386,7 +398,7 @@ content:
     type: image
     region: content
   field_habitation:
-    weight: 130
+    weight: 31
     label: above
     settings:
       link_to_entity: false
@@ -394,7 +406,7 @@ content:
     type: string
     region: content
   field_is_schedules_tribe:
-    weight: 109
+    weight: 10
     label: above
     settings:
       format: default
@@ -404,7 +416,7 @@ content:
     type: boolean
     region: content
   field_is_spouse_st:
-    weight: 112
+    weight: 13
     label: above
     settings:
       format: default
@@ -414,7 +426,7 @@ content:
     type: boolean
     region: content
   field_name_of_father:
-    weight: 106
+    weight: 7
     label: above
     settings:
       link_to_entity: false
@@ -422,7 +434,7 @@ content:
     type: string
     region: content
   field_name_of_mother:
-    weight: 107
+    weight: 8
     label: above
     settings:
       link_to_entity: false
@@ -430,7 +442,7 @@ content:
     type: string
     region: content
   field_name_of_other_claimants:
-    weight: 101
+    weight: 2
     label: above
     settings:
       link_to_entity: false
@@ -438,7 +450,7 @@ content:
     type: string
     region: content
   field_name_of_the_spouse:
-    weight: 105
+    weight: 6
     label: above
     settings:
       link_to_entity: false
@@ -446,7 +458,7 @@ content:
     type: string
     region: content
   field_not_submit_couple_photo:
-    weight: 152
+    weight: 52
     label: above
     settings:
       link_to_entity: false
@@ -454,7 +466,7 @@ content:
     type: string
     region: content
   field_number_of_claims_submitted:
-    weight: 150
+    weight: 50
     label: above
     settings:
       link_to_entity: false
@@ -463,7 +475,7 @@ content:
     region: content
   field_other_claims:
     type: entity_reference_revisions_entity_view
-    weight: 149
+    weight: 49
     label: above
     settings:
       view_mode: default
@@ -472,7 +484,7 @@ content:
     region: content
   field_other_family_members:
     type: entity_reference_revisions_entity_view
-    weight: 115
+    weight: 16
     label: above
     settings:
       view_mode: default
@@ -480,23 +492,23 @@ content:
     third_party_settings: {  }
     region: content
   field_other_traditional_ri:
-    weight: 137
+    weight: 37
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
-  field_panchayat_report:
-    weight: 161
+  field_panchayat_committee_report:
+    weight: 67
     label: above
     settings:
-      use_description_as_link_text: true
+      link: true
     third_party_settings: {  }
-    type: file_default
+    type: entity_reference_label
     region: content
   field_pattas:
-    weight: 133
+    weight: 33
     label: above
     settings:
       link_to_entity: false
@@ -504,7 +516,7 @@ content:
     type: string
     region: content
   field_photo_couple:
-    weight: 114
+    weight: 15
     label: above
     settings:
       image_style: ''
@@ -513,7 +525,7 @@ content:
     type: image
     region: content
   field_ration_card_no:
-    weight: 143
+    weight: 43
     label: above
     settings:
       link_to_entity: false
@@ -521,7 +533,7 @@ content:
     type: string
     region: content
   field_rehabilitation:
-    weight: 134
+    weight: 34
     label: above
     settings:
       link_to_entity: false
@@ -529,7 +541,7 @@ content:
     type: string
     region: content
   field_sdlc_meeting_minutes_:
-    weight: 162
+    weight: 61
     label: above
     settings:
       link: true
@@ -537,7 +549,7 @@ content:
     type: entity_reference_label
     region: content
   field_self_cultivation:
-    weight: 131
+    weight: 32
     label: above
     settings:
       link_to_entity: false
@@ -545,7 +557,7 @@ content:
     type: string
     region: content
   field_submit_adharcard:
-    weight: 139
+    weight: 39
     label: above
     settings:
       format: default
@@ -555,7 +567,7 @@ content:
     type: boolean
     region: content
   field_submit_photograph_of_coupl:
-    weight: 151
+    weight: 51
     label: above
     settings:
       format: default
@@ -565,7 +577,7 @@ content:
     type: boolean
     region: content
   field_submit_ration_card:
-    weight: 142
+    weight: 42
     label: above
     settings:
       format: default
@@ -575,7 +587,7 @@ content:
     type: boolean
     region: content
   field_submit_voter_id:
-    weight: 145
+    weight: 45
     label: above
     settings:
       format: default
@@ -585,7 +597,7 @@ content:
     type: boolean
     region: content
   field_survery_conducted:
-    weight: 153
+    weight: 53
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -593,7 +605,7 @@ content:
     region: content
   field_survey_details:
     type: entity_reference_revisions_entity_view
-    weight: 166
+    weight: 62
     label: above
     settings:
       view_mode: default
@@ -601,7 +613,7 @@ content:
     third_party_settings: {  }
     region: content
   field_upload_adharcard_copy:
-    weight: 141
+    weight: 41
     label: above
     settings:
       image_style: ''
@@ -610,7 +622,7 @@ content:
     type: image
     region: content
   field_upload_ration_card_copy:
-    weight: 144
+    weight: 44
     label: above
     settings:
       image_style: ''
@@ -619,7 +631,7 @@ content:
     type: image
     region: content
   field_upload_voters_id_copy:
-    weight: 147
+    weight: 47
     label: above
     settings:
       image_style: ''
@@ -629,7 +641,7 @@ content:
     region: content
   field_vaimozhy:
     type: entity_reference_revisions_entity_view
-    weight: 148
+    weight: 48
     label: above
     settings:
       view_mode: default
@@ -637,8 +649,11 @@ content:
     third_party_settings: {  }
     region: content
   links:
-    weight: 100
+    weight: 1
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
-hidden: {  }
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true

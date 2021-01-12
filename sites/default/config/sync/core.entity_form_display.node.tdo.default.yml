@@ -4,14 +4,17 @@ status: true
 dependencies:
   config:
     - field.field.node.tdo.body
+    - field.field.node.tdo.field_disctrict_office_category
     - field.field.node.tdo.field_district_office_contact
     - field.field.node.tdo.field_district_officer_designati
     - field.field.node.tdo.field_email
+    - field.field.node.tdo.field_tdo_district
+    - field.field.node.tdo.field_tdo_name
     - node.type.tdo
   module:
+    - dynamic_entity_reference
     - field_layout
     - layout_discovery
-    - path
     - text
 third_party_settings:
   field_layout:
@@ -25,7 +28,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 121
+    weight: 3
     settings:
       rows: 9
       summary_rows: 3
@@ -33,14 +36,14 @@ content:
       show_summary: false
     third_party_settings: {  }
     region: content
-  created:
-    type: datetime_timestamp
-    weight: 10
-    region: content
+  field_disctrict_office_category:
+    weight: 2
     settings: {  }
     third_party_settings: {  }
+    type: options_select
+    region: content
   field_district_office_contact:
-    weight: 122
+    weight: 6
     settings:
       size: 60
       placeholder: ''
@@ -48,62 +51,50 @@ content:
     type: string_textfield
     region: content
   field_district_officer_designati:
-    weight: 123
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_email:
-    weight: 124
+    weight: 7
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: email_default
     region: content
-  path:
-    type: path
-    weight: 30
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  promote:
-    type: boolean_checkbox
-    settings:
-      display_label: true
-    weight: 15
-    region: content
-    third_party_settings: {  }
-  status:
-    type: boolean_checkbox
-    settings:
-      display_label: true
-    weight: 120
-    region: content
-    third_party_settings: {  }
-  sticky:
-    type: boolean_checkbox
-    settings:
-      display_label: true
-    weight: 16
-    region: content
-    third_party_settings: {  }
-  title:
-    type: string_textfield
-    weight: -5
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  uid:
-    type: entity_reference_autocomplete
-    weight: 5
+  field_tdo_district:
+    weight: 1
     settings:
       match_operator: CONTAINS
+      match_limit: 10
+      size: 40
+      placeholder: ''
+    third_party_settings: {  }
+    type: dynamic_entity_reference_default
+    region: content
+  field_tdo_name:
+    weight: 4
+    settings:
       size: 60
       placeholder: ''
-      match_limit: 10
-    region: content
     third_party_settings: {  }
-hidden: {  }
+    type: string_textfield
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  moderation_state: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

@@ -1,16 +1,16 @@
-uuid: 5b3b8949-5318-4ca9-bf7d-a6a987ec94cc
+uuid: 1a03a1da-c416-4ff7-99cc-f3339cd09cde
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.profile.field_tdo
-    - node.type.tdo
-    - profile.type.promoter
-id: profile.promoter.field_tdo
-field_name: field_tdo
-entity_type: profile
-bundle: promoter
-label: 'District Development Offices'
+    - field.storage.node.field_frc_promoter
+    - node.type.frc
+    - node.type.promoters
+id: node.frc.field_frc_promoter
+field_name: field_frc_promoter
+entity_type: node
+bundle: frc
+label: 'frc Promoter'
 description: ''
 required: false
 translatable: false
@@ -20,7 +20,7 @@ settings:
   handler: 'default:node'
   handler_settings:
     target_bundles:
-      tdo: tdo
+      promoters: promoters
     sort:
       field: _none
     auto_create: false

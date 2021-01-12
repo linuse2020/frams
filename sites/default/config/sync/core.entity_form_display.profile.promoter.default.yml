@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.profile.promoter.field_profile_promoter
-    - field.field.profile.promoter.field_tdo
+    - field.field.profile.promoter.field_promoter_frc
     - field.field.profile.promoter.field_teo
     - profile.type.promoter
   module:
@@ -30,8 +30,8 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
-  field_tdo:
-    weight: 27
+  field_promoter_frc:
+    weight: 29
     settings:
       match_operator: CONTAINS
       match_limit: 10

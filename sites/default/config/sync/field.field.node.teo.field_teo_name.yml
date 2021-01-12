@@ -9,7 +9,7 @@ id: node.teo.field_teo_name
 field_name: field_teo_name
 entity_type: node
 bundle: teo
-label: 'TEO Name'
+label: Officer
 description: ''
 required: false
 translatable: false

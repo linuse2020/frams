@@ -53,7 +53,7 @@ dependencies:
     - field.field.node.application.field_other_claims
     - field.field.node.application.field_other_family_members
     - field.field.node.application.field_other_traditional_ri
-    - field.field.node.application.field_panchayat_report
+    - field.field.node.application.field_panchayat_committee_report
     - field.field.node.application.field_pattas
     - field.field.node.application.field_photo_couple
     - field.field.node.application.field_ration_card_no
@@ -396,7 +396,7 @@ hidden:
   field_other_claims: true
   field_other_family_members: true
   field_other_traditional_ri: true
-  field_panchayat_report: true
+  field_panchayat_committee_report: true
   field_pattas: true
   field_photo_couple: true
   field_ration_card_no: true

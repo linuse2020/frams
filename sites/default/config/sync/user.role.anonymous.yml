@@ -19,3 +19,4 @@ permissions:
   - 'use exclude node title'
   - 'use text format restricted_html'
   - 'use user.claimant form mode'
+  - 'view own unpublished content'

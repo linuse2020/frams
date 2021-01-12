@@ -53,7 +53,7 @@ dependencies:
     - field.field.node.application.field_other_claims
     - field.field.node.application.field_other_family_members
     - field.field.node.application.field_other_traditional_ri
-    - field.field.node.application.field_panchayat_report
+    - field.field.node.application.field_panchayat_committee_report
     - field.field.node.application.field_pattas
     - field.field.node.application.field_photo_couple
     - field.field.node.application.field_ration_card_no
@@ -72,7 +72,9 @@ dependencies:
     - field.field.node.application.field_vaimozhy
     - image.style.thumbnail
     - node.type.application
+    - workflows.workflow.frams_applications
   module:
+    - content_moderation
     - field_group
     - field_layout
     - file
@@ -356,6 +358,12 @@ content:
     third_party_settings: {  }
     type: image_image
     region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
+    third_party_settings: {  }
 hidden:
   created: true
   field__claimant_range: true
@@ -401,7 +409,7 @@ hidden:
   field_other_claims: true
   field_other_family_members: true
   field_other_traditional_ri: true
-  field_panchayat_report: true
+  field_panchayat_committee_report: true
   field_pattas: true
   field_photo_couple: true
   field_ration_card_no: true

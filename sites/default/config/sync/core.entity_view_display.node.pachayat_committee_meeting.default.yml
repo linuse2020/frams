@@ -1,0 +1,46 @@
+uuid: a79e0fa2-2d92-4f31-99cc-e6ec76208599
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.pachayat_committee_meeting.body
+    - field.field.node.pachayat_committee_meeting.field_committee_reports
+    - field.field.node.pachayat_committee_meeting.field_coomittee_members_details
+    - node.type.pachayat_committee_meeting
+  module:
+    - file
+    - text
+    - user
+id: node.pachayat_committee_meeting.default
+targetEntityType: node
+bundle: pachayat_committee_meeting
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_committee_reports:
+    weight: 103
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_coomittee_members_details:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

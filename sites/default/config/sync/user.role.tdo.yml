@@ -6,4 +6,19 @@ id: tdo
 label: TDO
 weight: 11
 is_admin: null
-permissions: {  }
+permissions:
+  - 'administer multiple_registration'
+  - 'create teo content'
+  - 'create teo profile'
+  - 'create users'
+  - 'edit any application content'
+  - 'edit any teo content'
+  - 'use  The form mode default linked to  node entity( teo )'
+  - 'use  The form mode default linked to  profile entity( teo )'
+  - 'use  The form mode register linked to  user entity( user )'
+  - 'use  The form mode tdo linked to  user entity( user )'
+  - 'use  The form mode teo linked to  user entity( user )'
+  - 'use user.default form mode'
+  - 'use user.tdo form mode'
+  - 'use user.teo form mode'
+  - 'view any teo profile'

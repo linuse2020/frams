@@ -1,18 +1,22 @@
 uuid: 9af6718f-2bfa-4a01-a4c6-330a5c8c73de
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.frc.body
     - field.field.node.frc.field_frc_constituency
     - field.field.node.frc.field_frc_district
+    - field.field.node.frc.field_frc_email
     - field.field.node.frc.field_frc_forest_range
     - field.field.node.frc.field_frc_members_details
     - field.field.node.frc.field_frc_panchayat
+    - field.field.node.frc.field_frc_promoter
     - field.field.node.frc.field_frc_sdlc
+    - field.field.node.frc.field_frc_teo
     - field.field.node.frc.field_frc_village
     - field.field.node.frc.field_settlement
+    - field.field.node.frc.field_teo_contact
     - node.type.frc
   module:
     - text
@@ -38,9 +42,13 @@ content:
 hidden:
   field_frc_constituency: true
   field_frc_district: true
+  field_frc_email: true
   field_frc_forest_range: true
   field_frc_members_details: true
   field_frc_panchayat: true
+  field_frc_promoter: true
   field_frc_sdlc: true
+  field_frc_teo: true
   field_frc_village: true
   field_settlement: true
+  field_teo_contact: true

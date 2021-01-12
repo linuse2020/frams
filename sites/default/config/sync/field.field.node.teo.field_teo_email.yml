@@ -1,0 +1,19 @@
+uuid: 41820849-e54b-422a-ae57-85e4f1f80093
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teo_email
+    - node.type.teo
+id: node.teo.field_teo_email
+field_name: field_teo_email
+entity_type: node
+bundle: teo
+label: 'TEO Email'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

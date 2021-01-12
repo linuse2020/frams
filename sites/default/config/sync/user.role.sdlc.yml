@@ -6,4 +6,25 @@ id: sdlc
 label: SDLC
 weight: 5
 is_admin: null
-permissions: {  }
+permissions:
+  - 'administer multiple_registration'
+  - 'create committee_meeting content'
+  - 'create notice_board content'
+  - 'create paragraph content committee_member_details'
+  - 'create paragraph content meeting_members_details'
+  - 'create users'
+  - 'edit any application content'
+  - 'edit any committee_meeting content'
+  - 'edit own committee_meeting content'
+  - 'update paragraph content meeting_members_details'
+  - 'use  The form mode promoter linked to  user entity( user )'
+  - 'use  The form mode register linked to  user entity( user )'
+  - 'use frams_applications transition objection'
+  - 'use frams_applications transition publish_to_notice_board'
+  - 'use frams_applications transition resurvey'
+  - 'use frams_applications transition sdlc_approved'
+  - 'use frams_applications transition sdlc_completed'
+  - 'use frams_applications transition sdlc_document_verification'
+  - 'use frams_applications transition sdlc_re_examine'
+  - 'use node.default form mode'
+  - 'use user.default form mode'

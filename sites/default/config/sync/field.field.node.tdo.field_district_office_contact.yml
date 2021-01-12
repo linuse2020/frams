@@ -9,7 +9,7 @@ id: node.tdo.field_district_office_contact
 field_name: field_district_office_contact
 entity_type: node
 bundle: tdo
-label: 'District Office Contact'
+label: Contact
 description: ''
 required: false
 translatable: false

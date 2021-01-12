@@ -25,9 +25,11 @@ module:
   contact: 0
   content_moderation: 0
   contextual: 0
+  create_user_permission: 0
   datetime: 0
   datetime_range: 0
   dblog: 0
+  devel: 0
   dynamic_entity_reference: 0
   dynamic_page_cache: 0
   editor: 0
@@ -35,6 +37,8 @@ module:
   entity_browser: 0
   entity_browser_entity_form: 0
   entity_browser_example: 0
+  entity_print: 0
+  entity_print_views: 0
   entity_reference_revisions: 0
   entity_reference_views_token: 0
   entityreference_filter: 0
@@ -85,6 +89,9 @@ module:
   paragraphs_type_permissions: 0
   path: 0
   path_alias: 0
+  pdf_api: 0
+  printable: 0
+  printable_pdf: 0
   profile: 0
   queue_ui: 0
   quickedit: 0
@@ -115,11 +122,15 @@ module:
   ultimate_cron: 0
   user: 0
   user_view_mode: 0
+  view_marquee: 0
   view_unpublished: 0
+  views_argument_token: 0
   views_bulk_operations: 0
   views_entity_form_field: 0
   views_extras: 0
+  views_flipped_table: 0
   views_layout: 0
+  views_secondary_row: 0
   views_ui: 0
   webform: 0
   webform_ui: 0
