@@ -89,6 +89,9 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
   field__claimant_range: true
   field__claimant_taluk: true
   field__form_appendix2: true
@@ -155,3 +158,4 @@ hidden:
   field_upload_ration_card_copy: true
   field_upload_voters_id_copy: true
   field_vaimozhy: true
+  private_message_link: true

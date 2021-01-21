@@ -77,7 +77,6 @@ dependencies:
     - file
     - image
     - telephone
-    - text
     - user
 third_party_settings:
   entity_print:
@@ -166,11 +165,12 @@ content:
     type: string
     region: content
   field_alloted_land_habitation:
-    weight: 66
+    weight: 68
     label: above
-    settings: {  }
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
-    type: text_default
+    type: string
     region: content
   field_archives:
     weight: 64
@@ -657,3 +657,4 @@ hidden:
   entity_print_view_epub: true
   entity_print_view_pdf: true
   entity_print_view_word_docx: true
+  private_message_link: true

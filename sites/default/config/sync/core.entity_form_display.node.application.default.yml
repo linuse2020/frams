@@ -308,6 +308,14 @@ targetEntityType: node
 bundle: application
 mode: default
 content:
+  field_alloted_land_habitation:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   moderation_state:
     type: moderation_state_default
     weight: 13
@@ -325,7 +333,6 @@ hidden:
   field_address: true
   field_adharcard_no: true
   field_alloted_land_cultivation: true
-  field_alloted_land_habitation: true
   field_archives: true
   field_cast_cirtificate: true
   field_caste_cert_spouse: true

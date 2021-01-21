@@ -1,12 +1,10 @@
-uuid: 6a392847-f54c-4bb6-ac7d-e056c39a1b7e
+uuid: 50d61ded-0bcb-4c44-97ef-4c738acbe66e
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_alloted_land_habitation
     - node.type.application
-  module:
-    - text
 id: node.application.field_alloted_land_habitation
 field_name: field_alloted_land_habitation
 entity_type: node
@@ -17,7 +15,5 @@ required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
-settings:
-  display_summary: false
-  required_summary: false
-field_type: text_with_summary
+settings: {  }
+field_type: string

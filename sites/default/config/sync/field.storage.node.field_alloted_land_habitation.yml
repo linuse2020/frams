@@ -1,20 +1,22 @@
-uuid: 8656529d-bb15-49a0-81f3-23f860b155a5
+uuid: b7373f45-f4a0-450f-a575-c21faaa4acdd
 langcode: en
 status: true
 dependencies:
   module:
     - field_permissions
     - node
-    - text
 third_party_settings:
   field_permissions:
     permission_type: public
 id: node.field_alloted_land_habitation
 field_name: field_alloted_land_habitation
 entity_type: node
-type: text_with_summary
-settings: {  }
-module: text
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
 locked: false
 cardinality: 1
 translatable: true
