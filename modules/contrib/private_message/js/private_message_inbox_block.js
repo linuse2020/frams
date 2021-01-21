@@ -210,10 +210,11 @@ Drupal.PrivateMessageInbox.updateInbox = {};
       Drupal.AjaxCommands.prototype.privateMessageTriggerInboxUpdate = function () {
         updateInbox();
       };
-
-      Drupal.PrivateMessages.setActiveThread = function (id) {
-        setActiveThread(id);
-      };
+      if (Drupal.PrivateMessages) {  //patch added  if (Drupal.PrivateMessages) {
+        Drupal.PrivateMessages.setActiveThread = function (id) {
+          setActiveThread(id);
+        };
+      } // patch closed
 
       Drupal.PrivateMessageInbox.updateInbox = function () {
         updateInbox();

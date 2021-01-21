@@ -7,11 +7,19 @@
   // Store our function as a property of Drupal.behaviors.
   Drupal.behaviors.ClaimantRegister = {
     attach: function (context, settings) {
+      jQuery('#btn-meeting-request').on('click',function(){
+        var id = [];
+        $(".view-display-id-frc_all table input[type=checkbox]:checked").each(function () {
+            var row = $(this).closest("tr")[0];
+            id.push($.trim(row.cells[0].innerHTML));
+        });
+        window.open('/private-message/create?nid=' +  id.filter(Number),'_blank');
+      });
+
       if (window.location.pathname == '/claimant/register') {
         var panchayat_select = '#edit-claimant-profiles-0-entity-field-grama-panchayat';
         var frc_select = '#edit-claimant-profiles-0-entity-field-frc';
         var settlement_select = '#edit-claimant-profiles-0-entity-field-settlement';
-
         $(panchayat_select).empty();
         $(frc_select).empty();
         $(settlement_select).empty();

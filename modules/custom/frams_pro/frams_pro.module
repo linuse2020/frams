@@ -26,10 +26,12 @@ use Drupal\Core\Url;
 use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\Core\Controller\ControllerBase;
 use Symfony\Component\HttpFoundation\Request;
+use \Drupal\views\ViewExecutable;
 
 function frams_pro_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   /*kint($form_id);*/
   $form_ids = ['user_frc_form', 'user_promoter_form','user_claimant_form','user_teo_form'];
+  $node_form_id = ['node_application_archives_form','node_application_claimant_form','node_teo_form'];
   if (in_array($form_id, $form_ids) ) {
 
     $node_id = \Drupal::request()->query->get('nid');
@@ -114,86 +116,95 @@ function frams_pro_form_alter(&$form, FormStateInterface $form_state, $form_id) 
         }
         break;
 
-
-
       default:
 
     }
-
-    if ($form_display == 'frc') {
-
-    }
   }
-  if ($form_id == 'node_application_claimant_form') {
+  switch ($form_id) {
+    case 'node_application_archives_form':
+      $form['field_archives']['widget']['value']['#default_value'] = TRUE;
+      if ( array_key_exists('moderation_state', $form) ) {
+
+        /*$node = $form_state->getFormObject()->getEntity();
+        $moderationState = $node->get('moderation_state')->getValue('state');
+        if (isset($moderationState[0]['value'])) {
+
+        }*/
+        $form['moderation_state']['widget'][0]['state']['#default_value'] = 'ror_issued';
+      }
+    break;
+    case 'node_teo_form':
+      $current_user_roles = \Drupal::currentUser()->getRoles();
+      if (in_array('tdo', $current_user_roles)) {
+        $user = User::load(\Drupal::currentUser()->id());
+        $tdo_profile = \Drupal::entityTypeManager()
+          ->getStorage('profile')
+          ->loadByProperties([
+            'uid' => $user->id(),
+            'type' => 'tdo',
+          ]);
+        if (!empty($tdo_profile)) {
+          $tdo_value = array_shift(array_values($tdo_profile));
+          $tdo = $tdo_value->get('field_profile_tdo')->entity;
+          $form['field_tdo']['widget'][0]['target_id']['#default_value'] = $tdo;
+        }
+      }
+    break;
+    case 'node_application_claimant_form':
     // kint($form);
-    $user = User::load(\Drupal::currentUser()->id());
-
-    $claimant_profile = \Drupal::entityTypeManager()
-      ->getStorage('profile')
-      ->loadByProperties([
-        'uid' => $user->id(),
-        'type' => 'claimant',
-      ]);
-     /* kint($claimant_profile);*/
-    if (!empty($claimant_profile)) {
-      $claimant = array_shift(array_values($claimant_profile));
-      $name = $user->realname;
-      $aadhar_no = $claimant->field_claimant_aadhar_number->value;
-      $contact_no = $claimant->field_user_claimant_phone_number->value;
-      $district = $claimant->get('field_district')->entity;
-      $frc = $claimant->get('field_frc')->entity;
-      $grama_panchayat = $claimant->get('field_grama_panchayat')->entity;
-      $settlement = $claimant->get('field_settlement')->entity;
-      $sdlc = $frc->get('field_frc_sdlc')->entity;
-      $dlc = $sdlc->get('field_dlc')->entity;
-      $slc = $dlc->get('field_slc')->entity;
-      $village = $frc->get('field_frc_village')->entity;
-      $taluk = $village->get('field_taluk')->entity;
-      $constituency = $frc->get('field_frc_constituency')->entity;
-      $range = $frc->get('field_frc_forest_range')->entity;
-      $teo = $frc->get('field_frc_teo')->entity;
-      $tdo = $teo->get('field_tdo')->entity;
-      $promoter = $frc->get('field_frc_promoter')->entity;
-
-      $form['title']['widget'][0]['value']['#default_value'] = $name;
-      $form['field_adharcard_no']['widget'][0]['value']['#default_value'] = $aadhar_no;
-      $form['field_contact_no']['widget'][0]['value']['#default_value'] = $contact_no;
-      $form['field_claimant_district']['widget'][0]['target_id']['#default_value'] = $district;
-      $form['field_claimant_frc']['widget'][0]['target_id']['#default_value'] = $frc;
-      $form['field_claimant_panchayat']['widget'][0]['target_id']['#default_value'] = $grama_panchayat;
-      $form['field_claimant_settlement']['widget'][0]['target_id']['#default_value'] = $settlement;
-      $form['field_claimant_sdlc']['widget'][0]['target_id']['#default_value'] = $sdlc;
-      $form['field_claimant_dlc']['widget'][0]['target_id']['#default_value'] = $dlc;
-      $form['field_claimant_slc']['widget'][0]['target_id']['#default_value'] = $slc;
-      $form['field_claimant_village']['widget'][0]['target_id']['#default_value'] = $village;
-      $form['field__claimant_taluk']['widget'][0]['target_id']['#default_value'] = $taluk;
-      $form['field_claimant_constituency']['widget'][0]['target_id']['#default_value'] = $constituency;
-      $form['field__claimant_range']['widget'][0]['target_id']['#default_value'] = $range;
-      $form['field_claimant_teo']['widget'][0]['target_id']['#default_value'] = $teo;
-      $form['field_claimant_tdo']['widget'][0]['target_id']['#default_value'] = $tdo;
-      $form['field_claimant_promoter']['widget'][0]['target_id']['#default_value'] = $promoter;
-      $form['revision']['#access'] = FALSE;
-      $form['revision_log']['#access'] = FALSE;
-      $form['revision_information']['#access'] = FALSE;
-    }
-
-  }
-  if ($form_id == 'node_teo_form') {
-    $current_user_roles = \Drupal::currentUser()->getRoles();
-    if (in_array('tdo', $current_user_roles)) {
       $user = User::load(\Drupal::currentUser()->id());
-      $tdo_profile = \Drupal::entityTypeManager()
+
+      $claimant_profile = \Drupal::entityTypeManager()
         ->getStorage('profile')
         ->loadByProperties([
           'uid' => $user->id(),
-          'type' => 'tdo',
+          'type' => 'claimant',
         ]);
-      if (!empty($tdo_profile)) {
-        $tdo_value = array_shift(array_values($tdo_profile));
-        $tdo = $tdo_value->get('field_profile_tdo')->entity;
-        $form['field_tdo']['widget'][0]['target_id']['#default_value'] = $tdo;
+       /* kint($claimant_profile);*/
+      if (!empty($claimant_profile)) {
+        $claimant = array_shift(array_values($claimant_profile));
+        $name = $user->realname;
+        $aadhar_no = $claimant->field_claimant_aadhar_number->value;
+        $contact_no = $claimant->field_user_claimant_phone_number->value;
+        $district = $claimant->get('field_district')->entity;
+        $frc = $claimant->get('field_frc')->entity;
+        $grama_panchayat = $claimant->get('field_grama_panchayat')->entity;
+        $settlement = $claimant->get('field_settlement')->entity;
+        $sdlc = $frc->get('field_frc_sdlc')->entity;
+        $dlc = $sdlc->get('field_dlc')->entity;
+        $slc = $dlc->get('field_slc')->entity;
+        $village = $frc->get('field_frc_village')->entity;
+        $taluk = $village->get('field_taluk')->entity;
+        $constituency = $frc->get('field_frc_constituency')->entity;
+        $range = $frc->get('field_frc_forest_range')->entity;
+        $teo = $frc->get('field_frc_teo')->entity;
+        $tdo = $teo->get('field_tdo')->entity;
+        $promoter = $frc->get('field_frc_promoter')->entity;
+
+        $form['title']['widget'][0]['value']['#default_value'] = $name;
+        $form['field_adharcard_no']['widget'][0]['value']['#default_value'] = $aadhar_no;
+        $form['field_contact_no']['widget'][0]['value']['#default_value'] = $contact_no;
+        $form['field_claimant_district']['widget'][0]['target_id']['#default_value'] = $district;
+        $form['field_claimant_frc']['widget'][0]['target_id']['#default_value'] = $frc;
+        $form['field_claimant_panchayat']['widget'][0]['target_id']['#default_value'] = $grama_panchayat;
+        $form['field_claimant_settlement']['widget'][0]['target_id']['#default_value'] = $settlement;
+        $form['field_claimant_sdlc']['widget'][0]['target_id']['#default_value'] = $sdlc;
+        $form['field_claimant_dlc']['widget'][0]['target_id']['#default_value'] = $dlc;
+        $form['field_claimant_slc']['widget'][0]['target_id']['#default_value'] = $slc;
+        $form['field_claimant_village']['widget'][0]['target_id']['#default_value'] = $village;
+        $form['field__claimant_taluk']['widget'][0]['target_id']['#default_value'] = $taluk;
+        $form['field_claimant_constituency']['widget'][0]['target_id']['#default_value'] = $constituency;
+        $form['field__claimant_range']['widget'][0]['target_id']['#default_value'] = $range;
+        $form['field_claimant_teo']['widget'][0]['target_id']['#default_value'] = $teo;
+        $form['field_claimant_tdo']['widget'][0]['target_id']['#default_value'] = $tdo;
+        $form['field_claimant_promoter']['widget'][0]['target_id']['#default_value'] = $promoter;
+        $form['revision']['#access'] = FALSE;
+        $form['revision_log']['#access'] = FALSE;
+        $form['revision_information']['#access'] = FALSE;
       }
-    }
+    break;
+
+    default:
   }
    if ($form_id == 'node_frc_form' || $form_id = 'node_promoters_form') {
     $current_user_roles = \Drupal::currentUser()->getRoles();
