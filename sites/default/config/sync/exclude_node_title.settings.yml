@@ -1,4 +1,5 @@
-nid_list: {  }
+nid_list:
+  - 1
 translation_sync: true
 search: false
 _core:

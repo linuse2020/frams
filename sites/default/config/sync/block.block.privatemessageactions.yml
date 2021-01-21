@@ -14,7 +14,7 @@ _core:
   default_config_hash: BVtNY6MiSaaGLc8lRmOzGpiFNRQE5X7PMHLnmhFYfqM
 id: privatemessageactions
 theme: bartik
-region: ''
+region: header
 weight: 0
 provider: null
 plugin: private_message_actions_block

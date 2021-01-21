@@ -17,13 +17,10 @@ settings:
   allowed_values:
     -
       value: cultivation
-      label: Cultivation
+      label: cultivation
     -
       value: habitation
-      label: Habitation
-    -
-      value: both
-      label: Both
+      label: habitation
   allowed_values_function: ''
 module: options
 locked: false

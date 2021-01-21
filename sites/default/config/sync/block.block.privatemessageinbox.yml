@@ -11,7 +11,7 @@ _core:
   default_config_hash: DK5-cwFPwkVd_2atQBrYKSXn8zgTuIVCqVf3pASWehA
 id: privatemessageinbox
 theme: bartik
-region: ''
+region: header
 weight: 0
 provider: null
 plugin: private_message_inbox_block

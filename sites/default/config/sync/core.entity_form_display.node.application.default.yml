@@ -12,8 +12,7 @@ dependencies:
     - field.field.node.application.field_address
     - field.field.node.application.field_adharcard_no
     - field.field.node.application.field_alloted_land_cultivation
-    - field.field.node.application.field_alloted_land_for_both
-    - field.field.node.application.field_alloted_land_for_habitatio
+    - field.field.node.application.field_alloted_land_habitation
     - field.field.node.application.field_archives
     - field.field.node.application.field_cast_cirtificate
     - field.field.node.application.field_caste_cert_spouse
@@ -309,22 +308,6 @@ targetEntityType: node
 bundle: application
 mode: default
 content:
-  field_alloted_land_for_both:
-    weight: 27
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_alloted_land_for_habitatio:
-    weight: 26
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
   moderation_state:
     type: moderation_state_default
     weight: 13
@@ -342,6 +325,7 @@ hidden:
   field_address: true
   field_adharcard_no: true
   field_alloted_land_cultivation: true
+  field_alloted_land_habitation: true
   field_archives: true
   field_cast_cirtificate: true
   field_caste_cert_spouse: true

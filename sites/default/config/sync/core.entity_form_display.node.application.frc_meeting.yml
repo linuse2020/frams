@@ -13,8 +13,7 @@ dependencies:
     - field.field.node.application.field_address
     - field.field.node.application.field_adharcard_no
     - field.field.node.application.field_alloted_land_cultivation
-    - field.field.node.application.field_alloted_land_for_both
-    - field.field.node.application.field_alloted_land_for_habitatio
+    - field.field.node.application.field_alloted_land_habitation
     - field.field.node.application.field_archives
     - field.field.node.application.field_cast_cirtificate
     - field.field.node.application.field_caste_cert_spouse
@@ -346,8 +345,7 @@ hidden:
   field_address: true
   field_adharcard_no: true
   field_alloted_land_cultivation: true
-  field_alloted_land_for_both: true
-  field_alloted_land_for_habitatio: true
+  field_alloted_land_habitation: true
   field_archives: true
   field_cast_cirtificate: true
   field_caste_cert_spouse: true

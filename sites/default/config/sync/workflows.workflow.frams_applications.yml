@@ -172,12 +172,6 @@ type_settings:
       label: 'SDLC Re-examine'
       weight: 16
   transitions:
-    archives:
-      label: Archives
-      from:
-        - draft
-      to: ror_issued
-      weight: 16
     create_new_draft:
       label: 'Create New Draft'
       to: draft

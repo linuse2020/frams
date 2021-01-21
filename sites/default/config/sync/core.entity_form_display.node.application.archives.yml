@@ -13,8 +13,7 @@ dependencies:
     - field.field.node.application.field_address
     - field.field.node.application.field_adharcard_no
     - field.field.node.application.field_alloted_land_cultivation
-    - field.field.node.application.field_alloted_land_for_both
-    - field.field.node.application.field_alloted_land_for_habitatio
+    - field.field.node.application.field_alloted_land_habitation
     - field.field.node.application.field_archives
     - field.field.node.application.field_cast_cirtificate
     - field.field.node.application.field_caste_cert_spouse
@@ -84,6 +83,7 @@ dependencies:
     - layout_discovery
     - paragraphs
     - telephone
+    - text
 third_party_settings:
   field_layout:
     id: layout_onecol
@@ -232,7 +232,7 @@ third_party_settings:
         - field_frc_site_map
         - field_frc_site_photo
       parent_name: ''
-      weight: 7
+      weight: 20
       format_type: fieldset
       region: content
       format_settings:
@@ -246,7 +246,7 @@ third_party_settings:
         - field_form_appendix4
         - field_frc_meeting_minutes
       parent_name: ''
-      weight: 8
+      weight: 20
       format_type: fieldset
       region: content
       format_settings:
@@ -256,9 +256,10 @@ third_party_settings:
         required_fields: true
       label: 'FRC Meeting Documents'
     group_grama_panchayat_:
-      children: {  }
+      children:
+        - field_panchayat_report
       parent_name: ''
-      weight: 9
+      weight: 20
       format_type: fieldset
       region: content
       format_settings:
@@ -271,7 +272,7 @@ third_party_settings:
       children:
         - field_sdlc_meeting_minutes_
       parent_name: ''
-      weight: 10
+      weight: 20
       format_type: fieldset
       region: content
       format_settings:
@@ -284,7 +285,7 @@ third_party_settings:
       children:
         - field_survey_details
       parent_name: ''
-      weight: 11
+      weight: 20
       format_type: fieldset
       region: content
       format_settings:
@@ -297,7 +298,7 @@ third_party_settings:
       children:
         - field_dlc_meeting_minutes
       parent_name: ''
-      weight: 12
+      weight: 20
       format_type: fieldset
       region: content
       format_settings:
@@ -308,11 +309,10 @@ third_party_settings:
       label: 'Divisional Level Committee'
     group_land_alloted:
       children:
-        - field_alloted_land_for_habitatio
+        - field_alloted_land_habitation
         - field_alloted_land_cultivation
-        - field_alloted_land_for_both
       parent_name: ''
-      weight: 13
+      weight: 20
       format_type: fieldset
       region: content
       format_settings:
@@ -362,14 +362,24 @@ content:
     region: content
   field_alloted_land_cultivation:
     type: string_textfield
-    weight: 25
+    weight: 0
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_alloted_land_habitation:
+    type: text_textarea_with_summary
+    weight: 0
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
   field_archives:
-    weight: 14
+    weight: 55
     settings:
       display_label: true
     third_party_settings: {  }
@@ -723,7 +733,7 @@ content:
     region: content
   moderation_state:
     type: moderation_state_default
-    weight: 15
+    weight: 100
     settings: {  }
     region: content
     third_party_settings: {  }
@@ -741,8 +751,6 @@ hidden:
   field__frc_secretary_report: true
   field__voter_id_card_no: true
   field_adharcard_no: true
-  field_alloted_land_for_both: true
-  field_alloted_land_for_habitatio: true
   field_cast_cirtificate: true
   field_caste_cert_spouse: true
   field_declaration: true

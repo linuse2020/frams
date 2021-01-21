@@ -10,7 +10,7 @@ _core:
   default_config_hash: kGlK7vMEFjd7gCCmqb2stJjkfBfAP5V7X_0wiW-hJOo
 id: privatemessagenotification
 theme: bartik
-region: ''
+region: header
 weight: -3
 provider: null
 plugin: private_message_notification_block
