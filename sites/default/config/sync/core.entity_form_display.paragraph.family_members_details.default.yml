@@ -9,6 +9,7 @@ dependencies:
     - field.field.paragraph.family_members_details.field_relation
     - paragraphs.paragraphs_type.family_members_details
   module:
+    - dynamic_entity_reference
     - field_layout
     - layout_discovery
 third_party_settings:
@@ -48,10 +49,12 @@ content:
   field_relation:
     weight: 3
     settings:
-      size: 60
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 40
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
+    type: dynamic_entity_reference_default
     region: content
 hidden:
   created: true
