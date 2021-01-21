@@ -69,6 +69,7 @@ dependencies:
     - field.field.node.application.field_survey_details
     - field.field.node.application.field_upload_adharcard_copy
     - field.field.node.application.field_upload_ration_card_copy
+    - field.field.node.application.field_upload_ror_issued
     - field.field.node.application.field_upload_voters_id_copy
     - field.field.node.application.field_vaimozhy
     - node.type.application
@@ -77,6 +78,7 @@ dependencies:
     - content_moderation
     - field_group
     - field_layout
+    - file
     - layout_discovery
 third_party_settings:
   field_layout:
@@ -331,6 +333,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_upload_ror_issued:
+    weight: 29
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
     region: content
   moderation_state:
     type: moderation_state_default

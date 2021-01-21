@@ -70,6 +70,7 @@ dependencies:
     - field.field.node.application.field_survey_details
     - field.field.node.application.field_upload_adharcard_copy
     - field.field.node.application.field_upload_ration_card_copy
+    - field.field.node.application.field_upload_ror_issued
     - field.field.node.application.field_upload_voters_id_copy
     - field.field.node.application.field_vaimozhy
     - image.style.thumbnail
@@ -428,6 +429,7 @@ hidden:
   field_survey_details: true
   field_upload_adharcard_copy: true
   field_upload_ration_card_copy: true
+  field_upload_ror_issued: true
   field_upload_voters_id_copy: true
   field_vaimozhy: true
   path: true

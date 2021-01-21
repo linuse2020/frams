@@ -70,6 +70,7 @@ dependencies:
     - field.field.node.application.field_survey_details
     - field.field.node.application.field_upload_adharcard_copy
     - field.field.node.application.field_upload_ration_card_copy
+    - field.field.node.application.field_upload_ror_issued
     - field.field.node.application.field_upload_voters_id_copy
     - field.field.node.application.field_vaimozhy
     - image.style.thumbnail
@@ -1009,6 +1010,7 @@ hidden:
   field_panchayat_committee_report: true
   field_sdlc_meeting_minutes_: true
   field_survey_details: true
+  field_upload_ror_issued: true
   path: true
   promote: true
   status: true

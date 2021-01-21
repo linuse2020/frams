@@ -69,6 +69,7 @@ dependencies:
     - field.field.node.application.field_survey_details
     - field.field.node.application.field_upload_adharcard_copy
     - field.field.node.application.field_upload_ration_card_copy
+    - field.field.node.application.field_upload_ror_issued
     - field.field.node.application.field_upload_voters_id_copy
     - field.field.node.application.field_vaimozhy
     - node.type.application
@@ -647,6 +648,14 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+    region: content
+  field_upload_ror_issued:
+    weight: 71
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
     region: content
   field_upload_voters_id_copy:
     weight: 47
