@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.application.field_address
     - field.field.node.application.field_adharcard_no
     - field.field.node.application.field_alloted_land_cultivation
+    - field.field.node.application.field_alloted_land_for_both
     - field.field.node.application.field_alloted_land_habitation
     - field.field.node.application.field_archives
     - field.field.node.application.field_cast_cirtificate
@@ -35,6 +36,7 @@ dependencies:
     - field.field.node.application.field_disputed_lands
     - field.field.node.application.field_dlc_meeting_minutes
     - field.field.node.application.field_email
+    - field.field.node.application.field_family_category
     - field.field.node.application.field_field_displaced
     - field.field.node.application.field_field_extent_of_land
     - field.field.node.application.field_form_appendix4
@@ -995,9 +997,11 @@ hidden:
   field__form_appendix2: true
   field__frc_secretary_report: true
   field_alloted_land_cultivation: true
+  field_alloted_land_for_both: true
   field_alloted_land_habitation: true
   field_archives: true
   field_dlc_meeting_minutes: true
+  field_family_category: true
   field_form_appendix4: true
   field_frc_meeting_minutes: true
   field_frc_site_map: true

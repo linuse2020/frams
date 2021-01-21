@@ -1,0 +1,23 @@
+uuid: df41e79f-fe6f-40d8-9a19-837540ef9e68
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_family_category
+    - node.type.application
+  module:
+    - options
+id: node.application.field_family_category
+field_name: field_family_category
+entity_type: node
+bundle: application
+label: 'Family Category'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: Couple
+default_value_callback: ''
+settings: {  }
+field_type: list_string

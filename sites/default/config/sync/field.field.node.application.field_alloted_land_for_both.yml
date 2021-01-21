@@ -1,0 +1,19 @@
+uuid: 4fff8f9b-2c90-4810-bfbc-7e5acb6321ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_alloted_land_for_both
+    - node.type.application
+id: node.application.field_alloted_land_for_both
+field_name: field_alloted_land_for_both
+entity_type: node
+bundle: application
+label: 'Alloted land for both'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.application.field_address
     - field.field.node.application.field_adharcard_no
     - field.field.node.application.field_alloted_land_cultivation
+    - field.field.node.application.field_alloted_land_for_both
     - field.field.node.application.field_alloted_land_habitation
     - field.field.node.application.field_archives
     - field.field.node.application.field_cast_cirtificate
@@ -34,6 +35,7 @@ dependencies:
     - field.field.node.application.field_disputed_lands
     - field.field.node.application.field_dlc_meeting_minutes
     - field.field.node.application.field_email
+    - field.field.node.application.field_family_category
     - field.field.node.application.field_field_displaced
     - field.field.node.application.field_field_extent_of_land
     - field.field.node.application.field_form_appendix4
@@ -308,6 +310,14 @@ targetEntityType: node
 bundle: application
 mode: default
 content:
+  field_alloted_land_for_both:
+    weight: 27
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_alloted_land_habitation:
     weight: 26
     settings:
@@ -315,6 +325,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_family_category:
+    weight: 28
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   moderation_state:
     type: moderation_state_default
