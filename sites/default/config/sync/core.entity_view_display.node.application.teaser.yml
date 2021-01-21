@@ -13,7 +13,8 @@ dependencies:
     - field.field.node.application.field_address
     - field.field.node.application.field_adharcard_no
     - field.field.node.application.field_alloted_land_cultivation
-    - field.field.node.application.field_alloted_land_habitation
+    - field.field.node.application.field_alloted_land_for_both
+    - field.field.node.application.field_alloted_land_for_habitatio
     - field.field.node.application.field_archives
     - field.field.node.application.field_cast_cirtificate
     - field.field.node.application.field_caste_cert_spouse
@@ -89,6 +90,9 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
   field__claimant_range: true
   field__claimant_taluk: true
   field__form_appendix2: true
@@ -98,7 +102,8 @@ hidden:
   field_address: true
   field_adharcard_no: true
   field_alloted_land_cultivation: true
-  field_alloted_land_habitation: true
+  field_alloted_land_for_both: true
+  field_alloted_land_for_habitatio: true
   field_archives: true
   field_cast_cirtificate: true
   field_caste_cert_spouse: true
@@ -155,3 +160,4 @@ hidden:
   field_upload_ration_card_copy: true
   field_upload_voters_id_copy: true
   field_vaimozhy: true
+  private_message_link: true

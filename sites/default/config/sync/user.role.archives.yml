@@ -8,6 +8,7 @@ weight: 14
 is_admin: null
 permissions:
   - 'administer multiple_registration'
+  - 'create application content'
   - 'create paragraph content _survey_details'
   - 'create paragraph content other_claims'
   - 'create paragraph content vaimozhy'
@@ -16,9 +17,11 @@ permissions:
   - 'edit any application content'
   - 'update paragraph content _survey_details'
   - 'update paragraph content family_members_details'
+  - 'use  The form mode archives linked to  node entity( application )'
   - 'use  The form mode default linked to  paragraph entity( _survey_details )'
   - 'use  The form mode register linked to  user entity( user )'
   - 'use  The form mode survey linked to  node entity( application )'
+  - 'use node.archives form mode'
   - 'use node.survey form mode'
   - 'use private messaging system'
   - 'use user.default form mode'

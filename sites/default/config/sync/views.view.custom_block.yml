@@ -235,13 +235,48 @@ display:
         options:
           role:
             administrator: administrator
-            frc: frc
             sdlc: sdlc
             dlc: dlc
             claimant: claimant
+            frc: frc
+      defaults:
+        access: false
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - user.roles
+      tags: {  }
+  block_2:
+    display_plugin: block
+    id: block_2
+    display_title: 'Add new Archives'
+    position: 1
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      access:
+        type: role
+        options:
+          role:
             archives: archives
       defaults:
         access: false
+        header: false
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content: '<p><a class="btn btn-md btn-block btn-primary" href="/node/add/application/archives">Add Archives</a></p>'
+          plugin_id: text_custom
+      block_description: 'Add archives'
     cache_metadata:
       max-age: -1
       contexts:

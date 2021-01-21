@@ -12,7 +12,8 @@ dependencies:
     - field.field.node.application.field_address
     - field.field.node.application.field_adharcard_no
     - field.field.node.application.field_alloted_land_cultivation
-    - field.field.node.application.field_alloted_land_habitation
+    - field.field.node.application.field_alloted_land_for_both
+    - field.field.node.application.field_alloted_land_for_habitatio
     - field.field.node.application.field_archives
     - field.field.node.application.field_cast_cirtificate
     - field.field.node.application.field_caste_cert_spouse
@@ -77,7 +78,6 @@ dependencies:
     - file
     - image
     - telephone
-    - text
     - user
 third_party_settings:
   entity_print:
@@ -165,12 +165,21 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-  field_alloted_land_habitation:
-    weight: 66
+  field_alloted_land_for_both:
+    weight: 69
     label: above
-    settings: {  }
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
-    type: text_default
+    type: string
+    region: content
+  field_alloted_land_for_habitatio:
+    weight: 68
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   field_archives:
     weight: 64
@@ -657,3 +666,4 @@ hidden:
   entity_print_view_epub: true
   entity_print_view_pdf: true
   entity_print_view_word_docx: true
+  private_message_link: true
