@@ -72,7 +72,6 @@ dependencies:
     - field.field.node.application.field_upload_ration_card_copy
     - field.field.node.application.field_upload_voters_id_copy
     - field.field.node.application.field_vaimozhy
-    - image.style.thumbnail
     - node.type.application
     - workflows.workflow.frams_applications
   module:
@@ -81,7 +80,6 @@ dependencies:
     - content_moderation
     - field_group
     - field_layout
-    - image
     - layout_discovery
     - paragraphs
     - telephone
@@ -95,14 +93,12 @@ third_party_settings:
       children:
         - title
         - field_name_of_other_claimants
-        - field_address
-        - field_family_category
-        - field_contact_no
-        - field_photo_couple
         - field_name_of_the_spouse
         - field_name_of_father
         - field_name_of_mother
-        - field__photo
+        - field_family_category
+        - field_address
+        - field_contact_no
         - field_is_schedules_tribe
         - field_caste_cert_spouse_
         - field_is_spouse_st
@@ -326,16 +322,8 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
-  field__photo:
-    weight: 16
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
-    region: content
   field_address:
-    weight: 9
+    weight: 13
     settings: {  }
     third_party_settings: {  }
     type: address_default
@@ -532,7 +520,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_contact_no:
-    weight: 11
+    weight: 14
     settings:
       placeholder: ''
     third_party_settings: {  }
@@ -548,7 +536,7 @@ content:
     region: content
   field_family_category:
     type: options_select
-    weight: 10
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -608,7 +596,7 @@ content:
     type: boolean_checkbox
     region: content
   field_name_of_father:
-    weight: 14
+    weight: 10
     settings:
       size: 60
       placeholder: ''
@@ -616,7 +604,7 @@ content:
     type: string_textfield
     region: content
   field_name_of_mother:
-    weight: 15
+    weight: 11
     settings:
       size: 60
       placeholder: ''
@@ -632,7 +620,7 @@ content:
     type: string_textfield
     region: content
   field_name_of_the_spouse:
-    weight: 13
+    weight: 9
     settings:
       size: 60
       placeholder: ''
@@ -666,14 +654,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-    region: content
-  field_photo_couple:
-    weight: 12
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
     region: content
   field_rehabilitation:
     weight: 9
@@ -721,6 +701,7 @@ hidden:
   created: true
   field__form_appendix2: true
   field__frc_secretary_report: true
+  field__photo: true
   field__voter_id_card_no: true
   field_adharcard_no: true
   field_cast_cirtificate: true
@@ -736,6 +717,7 @@ hidden:
   field_number_of_claims_submitted: true
   field_other_claims: true
   field_panchayat_committee_report: true
+  field_photo_couple: true
   field_ration_card_no: true
   field_sdlc_meeting_minutes_: true
   field_submit_adharcard: true
