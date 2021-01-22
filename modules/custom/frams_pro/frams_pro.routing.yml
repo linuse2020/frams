@@ -1,7 +1,0 @@
-frams_profile.user_delete:
-  path: 'user/delete-all'
-  defaults:
-    _controller: '\Drupal\frams_pro\Controller\UserDelete::user_delete'
-    _title: 'User Delete Form'
-  requirements:
-    _permission: 'access content'
