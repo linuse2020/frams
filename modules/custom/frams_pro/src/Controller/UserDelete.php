@@ -31,11 +31,11 @@ use Drupal\Core\Url;
  */
 class UserDelete extends ControllerBase {
   public function user_delete() {
-    $role = 'survey';
+    $role = 'promoter';
     $list = \Drupal::entityTypeManager()
         ->getStorage('profile')
         ->loadByProperties([
-        'type' => 'survey',
+        'type' => 'promoter',
       ]);
     foreach ($list as $profile) {
       $profile->delete();
