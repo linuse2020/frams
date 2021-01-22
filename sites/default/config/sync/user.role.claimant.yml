@@ -26,6 +26,7 @@ permissions:
   - 'use editorial transition create_new_draft'
   - 'use frams_applications transition create_new_draft'
   - 'use node.claimant form mode'
+  - 'use private messaging system'
   - 'use user.default form mode'
   - 'view own teo profile'
   - 'view own unpublished content'

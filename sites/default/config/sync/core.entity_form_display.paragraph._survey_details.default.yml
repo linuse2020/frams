@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph._survey_details.field_area
     - field.field.paragraph._survey_details.field_claim_nature
     - field.field.paragraph._survey_details.field_compartment_number
     - field.field.paragraph._survey_details.field_coupe_number
@@ -26,21 +27,21 @@ targetEntityType: paragraph
 bundle: _survey_details
 mode: default
 content:
-  field_claim_nature:
-    weight: 0
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_compartment_number:
-    weight: 1
+  field_area:
+    weight: 4
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_coupe_number:
+  field_claim_nature:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_compartment_number:
     weight: 2
     settings:
       size: 60
@@ -48,14 +49,22 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_geolocation:
+  field_coupe_number:
     weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_geolocation:
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     type: geolocation_latlng
     region: content
   field_survey_map:
-    weight: 4
+    weight: 6
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -63,7 +72,7 @@ content:
     type: image_image
     region: content
   field_survey_number:
-    weight: 5
+    weight: 0
     settings:
       size: 60
       placeholder: ''

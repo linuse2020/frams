@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph._survey_details.field_area
     - field.field.paragraph._survey_details.field_claim_nature
     - field.field.paragraph._survey_details.field_compartment_number
     - field.field.paragraph._survey_details.field_coupe_number
@@ -19,6 +20,14 @@ targetEntityType: paragraph
 bundle: _survey_details
 mode: default
 content:
+  field_area:
+    weight: 6
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_claim_nature:
     weight: 0
     label: above
@@ -66,4 +75,7 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-hidden: {  }
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true

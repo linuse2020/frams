@@ -8,8 +8,6 @@ dependencies:
     - field.field.paragraph.family_members_details.field_family_members_reason
     - field.field.paragraph.family_members_details.field_relation
     - paragraphs.paragraphs_type.family_members_details
-  module:
-    - dynamic_entity_reference
 id: paragraph.family_members_details.default
 targetEntityType: paragraph
 bundle: family_members_details
@@ -45,7 +43,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    type: dynamic_entity_reference_label
+    type: entity_reference_label
     region: content
 hidden:
   entity_print_view_epub: true
