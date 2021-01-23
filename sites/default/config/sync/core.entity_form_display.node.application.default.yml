@@ -90,11 +90,10 @@ third_party_settings:
     group_personal_details:
       children:
         - title
-        - field__photo
         - field_address
-        - field_cast_cirtificate
         - field_caste_cert_spouse
         - field_caste_cert_spouse_
+        - field_cast_cirtificate
         - field_contact_no
         - field_email
         - field_is_schedules_tribe
@@ -103,8 +102,9 @@ third_party_settings:
         - field_name_of_mother
         - field_name_of_other_claimants
         - field_name_of_the_spouse
+        - field__photo
       parent_name: ''
-      weight: 0
+      weight: 1
       format_type: fieldset
       region: content
       format_settings:
@@ -115,8 +115,6 @@ third_party_settings:
       label: 'Personal Details'
     group_location_details:
       children:
-        - field__claimant_range
-        - field__claimant_taluk
         - field_claimant_constituency
         - field_claimant_district
         - field_claimant_dlc
@@ -129,8 +127,10 @@ third_party_settings:
         - field_claimant_tdo
         - field_claimant_teo
         - field_claimant_village
+        - field__claimant_range
+        - field__claimant_taluk
       parent_name: ''
-      weight: 1
+      weight: 2
       format_type: fieldset
       region: content
       format_settings:
@@ -143,7 +143,7 @@ third_party_settings:
       children:
         - field_other_family_members
       parent_name: ''
-      weight: 2
+      weight: 3
       format_type: fieldset
       region: content
       format_settings:
@@ -163,7 +163,7 @@ third_party_settings:
         - field_rehabilitation
         - field_self_cultivation
       parent_name: ''
-      weight: 3
+      weight: 4
       format_type: fieldset
       region: content
       format_settings:
@@ -174,7 +174,6 @@ third_party_settings:
       label: 'Nature of claim on land'
     group_evidence_in_support:
       children:
-        - field__voter_id_card_no
         - field_adharcard_no
         - field_ration_card_no
         - field_submit_adharcard
@@ -184,8 +183,9 @@ third_party_settings:
         - field_upload_ration_card_copy
         - field_upload_voters_id_copy
         - field_vaimozhy
+        - field__voter_id_card_no
       parent_name: ''
-      weight: 4
+      weight: 5
       format_type: fieldset
       region: content
       format_settings:
@@ -203,7 +203,7 @@ third_party_settings:
         - field_submit_photograph_of_coupl
         - field_survery_conducted
       parent_name: ''
-      weight: 5
+      weight: 6
       format_type: fieldset
       region: content
       format_settings:
@@ -216,7 +216,7 @@ third_party_settings:
       children:
         - field_declaration
       parent_name: ''
-      weight: 6
+      weight: 7
       format_type: fieldset
       region: content
       format_settings:
@@ -227,12 +227,12 @@ third_party_settings:
       label: Declaration
     group_frc_site_verification_:
       children:
-        - field__form_appendix2
-        - field__frc_secretary_report
         - field_frc_site_map
         - field_frc_site_photo
+        - field__form_appendix2
+        - field__frc_secretary_report
       parent_name: ''
-      weight: 9
+      weight: 10
       format_type: fieldset
       region: content
       format_settings:
@@ -246,7 +246,7 @@ third_party_settings:
         - field_form_appendix4
         - field_frc_meeting_minutes
       parent_name: ''
-      weight: 8
+      weight: 9
       format_type: fieldset
       region: content
       format_settings:
@@ -258,7 +258,7 @@ third_party_settings:
     group_grama_panchayat_:
       children: {  }
       parent_name: ''
-      weight: 12
+      weight: 13
       format_type: fieldset
       region: content
       format_settings:
@@ -271,7 +271,7 @@ third_party_settings:
       children:
         - field_sdlc_meeting_minutes_
       parent_name: ''
-      weight: 10
+      weight: 11
       format_type: fieldset
       region: content
       format_settings:
@@ -284,7 +284,7 @@ third_party_settings:
       children:
         - field_survey_details
       parent_name: ''
-      weight: 7
+      weight: 8
       format_type: fieldset
       region: content
       format_settings:
@@ -295,11 +295,11 @@ third_party_settings:
       label: 'Survey Departent'
     group_divisional_level_committee:
       children:
-        - field_alloted_land_cultivation
         - field_alloted_land_habitation
+        - field_alloted_land_cultivation
         - field_dlc_meeting_minutes
       parent_name: ''
-      weight: 11
+      weight: 12
       format_type: fieldset
       region: content
       format_settings:
@@ -314,7 +314,7 @@ bundle: application
 mode: default
 content:
   field_alloted_land_for_both:
-    weight: 27
+    weight: 15
     settings:
       size: 60
       placeholder: ''
@@ -330,7 +330,7 @@ content:
     type: string_textfield
     region: content
   field_application_no:
-    weight: 30
+    weight: 0
     settings:
       size: 60
       placeholder: ''
@@ -338,13 +338,13 @@ content:
     type: string_textfield
     region: content
   field_family_category:
-    weight: 28
+    weight: 16
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_upload_ror_issued:
-    weight: 29
+    weight: 17
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
@@ -352,7 +352,7 @@ content:
     region: content
   moderation_state:
     type: moderation_state_default
-    weight: 13
+    weight: 14
     settings: {  }
     region: content
     third_party_settings: {  }

@@ -1,4 +1,4 @@
-uuid: b6e1135f-f758-4f22-ba87-de06f62d19d3
+uuid: 30e93dc4-a458-4713-8b93-e8cffd6e16c5
 langcode: en
 status: true
 dependencies:
@@ -6,12 +6,13 @@ dependencies:
     - 'block_content:basic:71b614c5-d953-49ab-a7d8-1d1f55ce2c04'
   module:
     - block_content
+    - system
   theme:
     - frams
 id: videobanner
 theme: frams
 region: banner
-weight: -8
+weight: 0
 provider: null
 plugin: 'block_content:71b614c5-d953-49ab-a7d8-1d1f55ce2c04'
 settings:
@@ -22,4 +23,9 @@ settings:
   status: true
   info: ''
   view_mode: full
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
