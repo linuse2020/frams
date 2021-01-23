@@ -10430,3 +10430,75 @@ body.menu-collapse .menu.sidebar-menu a {
      object-fit: cover;
   border-radius: 50%;
 }
+
+.page-front .accordion .card-header {
+  background: #004085;
+  color: while;
+  color: #fff;
+  font-size: 25px;
+  padding: 10px;
+  text-align: center;
+  text-align: center;
+}
+.page-front .block h2 {
+  background: #004085;
+  color: while;
+  color: #fff;
+  font-size: 25px;
+  padding: 10px;
+  text-align: center;
+  text-align: center;
+}
+.page-front .hero-banner.container-fluid {
+  padding: o;
+  padding: 0;
+  margin: 0;
+}
+.page-front .banner-wrapper {
+  position: relative;
+  background-color: black;
+  height: 85vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+.page-front .banner-wrapper video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  transform: translateX(-50%) translateY(-50%);
+}
+.page-front .banner-wrapper .container {
+  position: relative;
+  z-index: 2;
+}
+.page-front .banner-wrapper .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+header .user-menu ul {
+  flex-direction: row;
+}
+header .user-menu ul li {
+  padding-right: 10px;
+}
+
+.node_view ul.pre_links li {
+  display: none;
+}
+
+.application--full .node_view ul.pre_links li {
+  display: block;
+}

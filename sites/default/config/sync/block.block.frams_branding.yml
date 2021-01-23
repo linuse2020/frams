@@ -3,15 +3,19 @@ langcode: en
 status: true
 dependencies:
   module:
+    - block_class
     - system
   theme:
     - frams
+third_party_settings:
+  block_class:
+    classes: 'logo  col-12 col-sm-4 col-md-2'
 _core:
   default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
 id: frams_branding
 theme: frams
 region: header
-weight: -7
+weight: -8
 provider: null
 plugin: system_branding_block
 settings:
@@ -20,6 +24,6 @@ settings:
   provider: system
   label_display: '0'
   use_site_logo: true
-  use_site_name: true
-  use_site_slogan: true
+  use_site_name: false
+  use_site_slogan: false
 visibility: {  }

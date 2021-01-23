@@ -5,15 +5,19 @@ dependencies:
   config:
     - system.menu.main
   module:
+    - block_class
     - system
   theme:
     - frams
+third_party_settings:
+  block_class:
+    classes: 'main-menu col-md-9'
 _core:
   default_config_hash: ChCx7DYNUrPTt5uiRdQAPDKJQMc-_SyAQTrZh8H0o-c
 id: frams_main_menu
 theme: frams
 region: header
-weight: -6
+weight: -7
 provider: null
 plugin: 'system_menu_block:main'
 settings:

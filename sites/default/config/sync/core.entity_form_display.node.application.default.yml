@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.application.field_alloted_land_cultivation
     - field.field.node.application.field_alloted_land_for_both
     - field.field.node.application.field_alloted_land_habitation
+    - field.field.node.application.field_application_no
     - field.field.node.application.field_archives
     - field.field.node.application.field_cast_cirtificate
     - field.field.node.application.field_caste_cert_spouse
@@ -322,6 +323,14 @@ content:
     region: content
   field_alloted_land_habitation:
     weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_application_no:
+    weight: 30
     settings:
       size: 60
       placeholder: ''

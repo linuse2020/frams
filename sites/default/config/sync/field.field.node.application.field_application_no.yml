@@ -1,0 +1,19 @@
+uuid: 1f7f3f2a-2178-4799-80f6-acc020ff9bf7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_application_no
+    - node.type.application
+id: node.application.field_application_no
+field_name: field_application_no
+entity_type: node
+bundle: application
+label: 'Application No'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
