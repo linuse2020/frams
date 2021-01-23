@@ -94,6 +94,7 @@ third_party_settings:
   field_group:
     group_personal_details:
       children:
+        - field_application_no
         - title
         - field_name_of_other_claimants
         - field_name_of_the_spouse
@@ -156,7 +157,6 @@ third_party_settings:
       label: 'Family Members Details'
     group_nature_of_claim_on_land:
       children:
-        - field_application_no
         - field_habitation
         - field_self_cultivation
         - field_disputed_lands
@@ -307,7 +307,7 @@ bundle: application
 mode: archives
 content:
   field__claimant_range:
-    weight: 37
+    weight: 38
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -327,7 +327,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_address:
-    weight: 13
+    weight: 14
     settings: {  }
     third_party_settings: {  }
     type: address_default
@@ -372,7 +372,7 @@ content:
     type: boolean_checkbox
     region: content
   field_caste_cert_spouse_:
-    weight: 18
+    weight: 17
     settings:
       display_label: true
     third_party_settings:
@@ -432,46 +432,6 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_claimant_dlc:
-    weight: 39
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_claimant_frc:
-    weight: 41
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_claimant_panchayat:
-    weight: 35
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_claimant_promoter:
-    weight: 45
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_claimant_sdlc:
     weight: 40
     settings:
       match_operator: CONTAINS
@@ -481,7 +441,7 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
-  field_claimant_settlement:
+  field_claimant_frc:
     weight: 42
     settings:
       match_operator: CONTAINS
@@ -491,37 +451,7 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
-  field_claimant_slc:
-    weight: 38
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_claimant_tdo:
-    weight: 43
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_claimant_teo:
-    weight: 44
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_claimant_village:
+  field_claimant_panchayat:
     weight: 36
     settings:
       match_operator: CONTAINS
@@ -531,8 +461,78 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
+  field_claimant_promoter:
+    weight: 46
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_claimant_sdlc:
+    weight: 41
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_claimant_settlement:
+    weight: 43
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_claimant_slc:
+    weight: 39
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_claimant_tdo:
+    weight: 44
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_claimant_teo:
+    weight: 45
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_claimant_village:
+    weight: 37
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_contact_no:
-    weight: 14
+    weight: 15
     settings:
       placeholder: ''
     third_party_settings: {  }
@@ -548,7 +548,7 @@ content:
     region: content
   field_family_category:
     type: options_select
-    weight: 12
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -577,14 +577,14 @@ content:
     type: string_textfield
     region: content
   field_is_schedules_tribe:
-    weight: 17
+    weight: 16
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
   field_is_spouse_st:
-    weight: 19
+    weight: 18
     settings:
       display_label: true
     third_party_settings:
@@ -616,7 +616,7 @@ content:
     type: string_textfield
     region: content
   field_name_of_mother:
-    weight: 11
+    weight: 12
     settings:
       size: 60
       placeholder: ''
@@ -641,7 +641,7 @@ content:
     region: content
   field_other_family_members:
     type: entity_reference_paragraphs
-    weight: 7
+    weight: 1
     settings:
       title: Paragraph
       title_plural: Paragraphs
