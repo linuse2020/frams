@@ -176,6 +176,7 @@ type_settings:
       label: Archives
       from:
         - draft
+        - ror_issued
       to: ror_issued
       weight: 16
     create_new_draft:
