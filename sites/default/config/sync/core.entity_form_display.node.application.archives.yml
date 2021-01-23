@@ -106,7 +106,7 @@ third_party_settings:
         - field_caste_cert_spouse_
         - field_is_spouse_st
       parent_name: ''
-      weight: 0
+      weight: 1
       format_type: fieldset
       region: content
       format_settings:
@@ -132,7 +132,7 @@ third_party_settings:
         - field_claimant_teo
         - field_claimant_promoter
       parent_name: ''
-      weight: 1
+      weight: 2
       format_type: fieldset
       region: content
       format_settings:
@@ -145,7 +145,7 @@ third_party_settings:
       children:
         - field_other_family_members
       parent_name: ''
-      weight: 2
+      weight: 3
       format_type: fieldset
       region: content
       format_settings:
@@ -156,6 +156,7 @@ third_party_settings:
       label: 'Family Members Details'
     group_nature_of_claim_on_land:
       children:
+        - field_application_no
         - field_habitation
         - field_self_cultivation
         - field_disputed_lands
@@ -165,7 +166,7 @@ third_party_settings:
         - field_field_extent_of_land
         - field_other_traditional_ri
       parent_name: ''
-      weight: 3
+      weight: 4
       format_type: tab
       region: content
       format_settings:
@@ -179,7 +180,7 @@ third_party_settings:
     group_evidence_in_support:
       children: {  }
       parent_name: ''
-      weight: 4
+      weight: 5
       format_type: fieldset
       region: content
       format_settings:
@@ -191,7 +192,7 @@ third_party_settings:
     group_any_other_information:
       children: {  }
       parent_name: ''
-      weight: 6
+      weight: 7
       format_type: fieldset
       region: content
       format_settings:
@@ -203,7 +204,7 @@ third_party_settings:
     group_declaration:
       children: {  }
       parent_name: ''
-      weight: 5
+      weight: 6
       format_type: fieldset
       region: content
       format_settings:
@@ -215,7 +216,7 @@ third_party_settings:
     group_frc_site_verification_:
       children: {  }
       parent_name: ''
-      weight: 7
+      weight: 8
       format_type: fieldset
       region: content
       format_settings:
@@ -227,7 +228,7 @@ third_party_settings:
     group_frc_meeting_documents:
       children: {  }
       parent_name: ''
-      weight: 8
+      weight: 9
       format_type: fieldset
       region: content
       format_settings:
@@ -239,7 +240,7 @@ third_party_settings:
     group_grama_panchayat_:
       children: {  }
       parent_name: ''
-      weight: 9
+      weight: 10
       format_type: fieldset
       region: content
       format_settings:
@@ -251,7 +252,7 @@ third_party_settings:
     group_sub_division_level_committ:
       children: {  }
       parent_name: ''
-      weight: 10
+      weight: 11
       format_type: fieldset
       region: content
       format_settings:
@@ -264,7 +265,7 @@ third_party_settings:
       children:
         - field_survey_details
       parent_name: ''
-      weight: 11
+      weight: 12
       format_type: fieldset
       region: content
       format_settings:
@@ -276,7 +277,7 @@ third_party_settings:
     group_divisional_level_committee:
       children: {  }
       parent_name: ''
-      weight: 12
+      weight: 13
       format_type: fieldset
       region: content
       format_settings:
@@ -291,7 +292,7 @@ third_party_settings:
         - field_alloted_land_habitation
         - field_alloted_land_for_both
       parent_name: ''
-      weight: 13
+      weight: 14
       format_type: fieldset
       region: content
       format_settings:
@@ -355,8 +356,16 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_application_no:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_archives:
-    weight: 15
+    weight: 16
     settings:
       display_label: true
     third_party_settings: {  }
@@ -688,14 +697,14 @@ content:
     region: content
   field_upload_ror_issued:
     type: file_generic
-    weight: 14
+    weight: 15
     region: content
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 16
+    weight: 17
     settings: {  }
     region: content
     third_party_settings: {  }
@@ -714,7 +723,6 @@ hidden:
   field__photo: true
   field__voter_id_card_no: true
   field_adharcard_no: true
-  field_application_no: true
   field_cast_cirtificate: true
   field_caste_cert_spouse: true
   field_declaration: true
