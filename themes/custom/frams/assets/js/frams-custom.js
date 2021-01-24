@@ -7,7 +7,15 @@
   // Store our function as a property of Drupal.behaviors.
   Drupal.behaviors.ClaimantRegister = {
     attach: function (context, settings) {
-      jQuery('#btn-meeting-request').on('click',function(){
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > 100){
+          $('header').addClass("sticky");
+        }
+        else{
+          $('header').removeClass("sticky");
+        }
+      });
+      $('#btn-meeting-request').on('click',function(){
         var id = [];
         $(".view-display-id-frc_all table input[type=checkbox]:checked").each(function () {
             var row = $(this).closest("tr")[0];

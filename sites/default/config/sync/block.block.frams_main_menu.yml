@@ -11,7 +11,7 @@ dependencies:
     - frams
 third_party_settings:
   block_class:
-    classes: 'main-menu col-md-9'
+    classes: 'main-menu col-md-7'
 _core:
   default_config_hash: ChCx7DYNUrPTt5uiRdQAPDKJQMc-_SyAQTrZh8H0o-c
 id: frams_main_menu
