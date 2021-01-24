@@ -10431,6 +10431,16 @@ body.menu-collapse .menu.sidebar-menu a {
   border-radius: 50%;
 }
 
+h1 {
+  font-size: 3.5rem;
+}
+
+.page-front h1.display-3 {
+  font-size: 3.5rem;
+}
+.page-front p.lead {
+  font-size: 1rem;
+}
 .page-front .accordion .card-header {
   background: #004085;
   color: while;
@@ -10454,10 +10464,33 @@ body.menu-collapse .menu.sidebar-menu a {
   padding: 0;
   margin: 0;
 }
+.page-front .region-right {
+  position: relative;
+}
+.page-front .region-right header {
+  z-index: 999;
+  position: absolute;
+  background: transparent;
+}
+.page-front .region-right header .logo img {
+  width: 100%;
+  height: auto;
+}
+.page-front .region-right header.sticky {
+  position: fixed;
+  z-index: 999;
+  transition: 0.2s top cubic-bezier(0.3, 0.73, 0.3, 0.74);
+  background: url(/themes/custom/frams/assets/images/nav.png) center no-repeat;
+  background-size: cover;
+}
+.page-front .region-right header.sticky .logo img {
+  width: 50%;
+  height: auto;
+}
 .page-front .banner-wrapper {
   position: relative;
   background-color: black;
-  height: 85vh;
+  height: 90vh;
   min-height: 25rem;
   width: 100%;
   overflow: hidden;
