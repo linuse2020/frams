@@ -1,6 +1,6 @@
 uuid: 7cf21e09-5971-41b9-9e67-f9884f914a7f
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.main
@@ -11,13 +11,13 @@ dependencies:
     - frams
 third_party_settings:
   block_class:
-    classes: 'main-menu col-md-7'
+    classes: 'main-menu col-md-7 d-none d-sm-block'
 _core:
   default_config_hash: ChCx7DYNUrPTt5uiRdQAPDKJQMc-_SyAQTrZh8H0o-c
 id: frams_main_menu
 theme: frams
 region: header
-weight: -7
+weight: -8
 provider: null
 plugin: 'system_menu_block:main'
 settings:

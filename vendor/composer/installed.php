@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '07c93fc7bfe0d2b3242a5d10b77fedf2ac4dd620',
+    'reference' => '0f483eaf72f97c5943276048f9e329f5fc472340',
     'name' => 'drupal/legacy-project',
   ),
   'versions' => 
@@ -1122,7 +1122,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '07c93fc7bfe0d2b3242a5d10b77fedf2ac4dd620',
+      'reference' => '0f483eaf72f97c5943276048f9e329f5fc472340',
     ),
     'drupal/libraries' => 
     array (
@@ -1615,6 +1615,15 @@
         0 => '8.9.11',
       ),
     ),
+    'drupal/superfish' => 
+    array (
+      'pretty_version' => '1.4.0',
+      'version' => '1.4.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.4',
+    ),
     'drupal/swiftmailer' => 
     array (
       'pretty_version' => '2.0.0',
@@ -2054,6 +2063,15 @@
       array (
       ),
       'reference' => '2c37c6c520b995b761674de3be8455a381679067',
+    ),
+    'mehrpadin/superfish' => 
+    array (
+      'pretty_version' => '2.1',
+      'version' => '2.1.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '80a0a484b727e9fbe6b0ee609f80e10e5e158683',
     ),
     'mikehaertl/php-shellcommand' => 
     array (

@@ -103,6 +103,7 @@ module:
   realname: 0
   redirect_after_login: 0
   registration_role: 0
+  responsive_image: 0
   rest: 0
   search: 0
   serialization: 0
@@ -113,6 +114,7 @@ module:
   sms_sendtophone: 0
   sms_twilio: 0
   sms_user: 0
+  superfish: 0
   swiftmailer: 0
   system: 0
   taxonomy: 0
