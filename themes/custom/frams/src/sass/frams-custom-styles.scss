@@ -1,12 +1,34 @@
 h1 {
   font-size: 3.5rem;
 }
+ul.sf-menu li {
+  float: right;
+ /* @media screen and (max-width: 768px) {
+    float: left;
+  }*/
+}
 .page-front {
   h1.display-3 {
     font-size: 3.5rem;
   }
   p.lead {
     font-size: 1rem;
+  }
+  .user-menu a{
+    padding-left: 0;
+    padding-right: 0;
+  }
+  ul.sf-menu.sf-accordion.sf-expanded {
+    flex-direction: column-reverse;
+    display: flex !important;
+  }
+  .main-menu ul.sf-menu a, .user-menu a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    &:hover {
+      color: #ffc107;
+    }
   }
   .accordion .card-header {
     background: #004085;

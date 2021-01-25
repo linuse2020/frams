@@ -11,13 +11,13 @@ dependencies:
     - frams
 third_party_settings:
   block_class:
-    classes: 'main-menu col-md-7 d-none d-sm-block'
+    classes: 'main-menu col-md-8  flex-row justify-content-end'
 _core:
   default_config_hash: ChCx7DYNUrPTt5uiRdQAPDKJQMc-_SyAQTrZh8H0o-c
 id: frams_main_menu
 theme: frams
 region: header
-weight: -8
+weight: -5
 provider: null
 plugin: 'system_menu_block:main'
 settings:

@@ -12,9 +12,9 @@ definitions:
     expanded: false
     weight: -50
   user__page:
-    menu_name: account
-    parent: ''
     weight: -47
+    parent: ''
+    menu_name: account
     expanded: false
     enabled: true
   user__logout:
@@ -24,10 +24,10 @@ definitions:
     expanded: false
     enabled: true
   standard__front_page:
-    weight: -50
+    weight: -45
     menu_name: main
     parent: ''
-    expanded: false
     enabled: true
+    expanded: false
 _core:
   default_config_hash: o4bYR9ZupWb3AsOIizTUG4g-nu1mdJqA59UB7QT-ifQ

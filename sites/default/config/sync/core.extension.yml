@@ -103,7 +103,6 @@ module:
   realname: 0
   redirect_after_login: 0
   registration_role: 0
-  responsive_image: 0
   rest: 0
   search: 0
   serialization: 0

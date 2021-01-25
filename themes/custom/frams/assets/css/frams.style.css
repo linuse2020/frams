@@ -10435,11 +10435,34 @@ h1 {
   font-size: 3.5rem;
 }
 
+ul.sf-menu li {
+  float: right;
+  /* @media screen and (max-width: 768px) {
+     float: left;
+   }*/
+}
+
 .page-front h1.display-3 {
   font-size: 3.5rem;
 }
 .page-front p.lead {
   font-size: 1rem;
+}
+.page-front .user-menu a {
+  padding-left: 0;
+  padding-right: 0;
+}
+.page-front ul.sf-menu.sf-accordion.sf-expanded {
+  flex-direction: column-reverse;
+  display: flex !important;
+}
+.page-front .main-menu ul.sf-menu a, .page-front .user-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+.page-front .main-menu ul.sf-menu a:hover, .page-front .user-menu a:hover {
+  color: #ffc107;
 }
 .page-front .accordion .card-header {
   background: #004085;

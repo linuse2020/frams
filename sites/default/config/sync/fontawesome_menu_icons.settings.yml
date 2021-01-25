@@ -44,11 +44,6 @@ menu_link_icons:
     prefix: fa
     tag: i
     appearance: before
-  user_logout:
-    icon: fa-sign-out
-    prefix: fa
-    tag: i
-    appearance: before
   'views_view:views_teo_details_page_1':
     icon: ' fa-info-circle'
     prefix: fa
