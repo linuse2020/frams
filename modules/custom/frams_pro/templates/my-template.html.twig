@@ -1,0 +1,49 @@
+{# [module]/templates/my-template.html.twig #}
+<p>Test twig template!</p>
+
+<p>test_var: {{ test_var }}</p>
+
+<table id="individual-hab" class="display" style="width:100%">
+	<thead>
+    <tr>
+      <th rowspan="2">Sl No</th>
+      <th colspan="2">District</th>
+      <th colspan="3">Individual Habitation Rights</th>
+    </tr>
+    <tr>
+      <th>No of Claim Received</th>
+      <th>No Of Rights Recognised</th>
+      <th>No of title demarcated</th>
+      <th>No of Rights Updated in RoR.</th>
+      <th>No of title Issued joinly in the name of both the spouses</th>
+      <th>No of title Issued single women headedhouseholds</th>
+      <th>No of FDST benificiaries</th>
+      <th>No of OTFD benificiaries</th>
+    </tr>
+	</thead>
+	<tbody>
+	   <tr>
+			<td>{{ sl_no }}</td>
+			<td>{{ tot_ind_hab_received }}</td>
+			<td>{{ tot_ind_hab_recognised }}</td>
+			<td>{{ tot_ind_hab_demarcated }}</td>
+			<td>{{ tot_ind_hab_updated }}</td>
+			<td>{{ tot_ind_hab_issue_both }}</td>
+			<td>{{ tot_ind_hab_issue_wom }}</td>
+			<td>{{ tot_ind_hab_fdst }}</td>
+			<td>{{ tot_ind_hab_otfd }}</td>
+	</tr>
+	</tbody>
+	<tfoot>
+    <tr>
+     	<th>No of Claim Received</th>
+      <th>No Of Rights Recognised</th>
+      <th>No of title demarcated</th>
+      <th>No of Rights Updated in RoR.</th>
+      <th>No of title Issued joinly in the name of both the spouses</th>
+      <th>No of title Issued single women headedhouseholds</th>
+      <th>No of FDST benificiaries</th>
+      <th>No of OTFD benificiaries</th>
+    </tr>
+	</tfoot>
+</table>

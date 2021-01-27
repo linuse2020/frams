@@ -1,0 +1,20 @@
+uuid: 36722950-9a6d-43a2-b379-071cccd3ab37
+langcode: en
+status: true
+dependencies:
+  module:
+    - frams_pro
+  theme:
+    - frams
+id: individualhabitationrightsblock
+theme: frams
+region: content
+weight: 0
+provider: null
+plugin: app_block
+settings:
+  id: app_block
+  label: 'Individual Habitation Rights block'
+  provider: frams_pro
+  label_display: '0'
+visibility: {  }
