@@ -37,6 +37,7 @@
         "drupal/core-recommended": "^8.8",
         "drupal/core-vendor-hardening": "^8.8",
         "drupal/create_user_permission": "^2.0",
+        "drupal/datatables": "^2.0",
         "drupal/devel": "2.1.0",
         "drupal/devel_debug_log": "^1.0",
         "drupal/dropzonejs": "^2.3",

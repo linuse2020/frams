@@ -7,6 +7,10 @@
   // Store our function as a property of Drupal.behaviors.
   Drupal.behaviors.ClaimantRegister = {
     attach: function (context, settings) {
+      $(document).ready(function() {
+        $('#individual-hab').DataTable();
+      });
+
       $(window).scroll(function() {
         if ($(this).scrollTop() > 100){
           $('header').addClass("sticky");

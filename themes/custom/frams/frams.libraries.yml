@@ -5,6 +5,7 @@ style:
       assets/css/frams.style.css: {}
   js:
     assets/js/frams.script.js: {}
+
   dependencies:
     - core/jquery
     - core/drupal
