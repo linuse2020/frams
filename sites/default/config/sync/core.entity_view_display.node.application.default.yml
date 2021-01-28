@@ -80,6 +80,7 @@ dependencies:
     - entity_reference_revisions
     - file
     - image
+    - magnific_popup
     - options
     - telephone
     - user
@@ -133,10 +134,11 @@ content:
     weight: 9
     label: above
     settings:
-      image_style: ''
-      image_link: ''
+      thumbnail_image_style: ''
+      popup_image_style: ''
+      gallery_type: all_items
     third_party_settings: {  }
-    type: image
+    type: magnific_popup
     region: content
   field__voter_id_card_no:
     weight: 46
@@ -207,19 +209,21 @@ content:
     weight: 11
     label: above
     settings:
-      image_style: ''
-      image_link: ''
+      thumbnail_image_style: ''
+      popup_image_style: ''
+      gallery_type: all_items
     third_party_settings: {  }
-    type: image
+    type: magnific_popup
     region: content
   field_caste_cert_spouse:
     weight: 14
     label: above
     settings:
-      image_style: ''
-      image_link: ''
+      thumbnail_image_style: ''
+      popup_image_style: ''
+      gallery_type: all_items
     third_party_settings: {  }
-    type: image
+    type: magnific_popup
     region: content
   field_caste_cert_spouse_:
     weight: 12
@@ -547,10 +551,11 @@ content:
     weight: 15
     label: above
     settings:
-      image_style: ''
-      image_link: ''
+      thumbnail_image_style: ''
+      popup_image_style: ''
+      gallery_type: all_items
     third_party_settings: {  }
-    type: image
+    type: magnific_popup
     region: content
   field_ration_card_no:
     weight: 43

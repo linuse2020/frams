@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'f12bc9a427c1722fce82af5cb3c3125796f364d9',
+    'reference' => '72b35f7f788a6a9169b7d6daf13943fba34a9ed9',
     'name' => 'drupal/legacy-project',
   ),
   'versions' => 
@@ -1131,7 +1131,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'f12bc9a427c1722fce82af5cb3c3125796f364d9',
+      'reference' => '72b35f7f788a6a9169b7d6daf13943fba34a9ed9',
     ),
     'drupal/libraries' => 
     array (
@@ -1173,6 +1173,15 @@
       array (
       ),
       'reference' => '8.x-1.0',
+    ),
+    'drupal/magnific_popup' => 
+    array (
+      'pretty_version' => '1.5.0',
+      'version' => '1.5.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.5',
     ),
     'drupal/mail_entity_queue' => 
     array (
@@ -1523,6 +1532,15 @@
       array (
         0 => '8.9.11',
       ),
+    ),
+    'drupal/simple_popup_blocks' => 
+    array (
+      'pretty_version' => '2.6.0',
+      'version' => '2.6.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-2.6',
     ),
     'drupal/simple_popup_views' => 
     array (

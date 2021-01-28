@@ -1,46 +1,36 @@
-<table id="individual-hab" class="display" style="width:100%">
-    <thead>
-    <tr>
-      <th rowspan="2">Sl No</th>
-      <th rowspan="2">District</th>
-      <th colspan="8">Individual Habitation Rights</th>
+<table id="datatable-hub" class="display" style="width:100%">
+  <thead>
+  <tr>
+    <th rowspan="2">Sl No</th>
+    <th rowspan="2">District</th>
+    <th colspan="8">Individual Habitation Rights</th>
+  </tr>
+  <tr>
+    <th>No of Claim Received</th>
+    <th>No Of Rights Recognised</th>
+    <th>No of title demarcated</th>
+    <th>No of Rights Updated in RoR.</th>
+    <th>No of title Issued joinly in the name of both the spouses</th>
+    <th>No of title Issued single woman headedhouseholds</th>
+    <!-- <th>No of title Issued single Male headedhouseholds</th> -->
+    <th>No of FDST benificiaries</th>
+    <th>No of OTFD benificiaries</th>
+  </tr>
+  </thead>
+  <tbody>
+  {% for type, district in ind_hab_data %}
+   <tr>
+      <td>{{ district['sl_no'] }}</td>
+      <td>{{ district['district'] }}</td>
+      <td>{{ district['tot_ind_hab_received'] }}</td>
+      <td>{{ district['tot_ind_hab_recognised'] }}</td>
+      <td>{{ district['tot_ind_hab_demarcated'] }}</td>
+      <td>{{ district['tot_ind_hab_ror_issued'] }}</td>
+      <td>{{ district['tot_ind_hab_issued_couple'] }}</td>
+      <td>{{ district['tot_ind_hab_issue_wom'] }}</td>
+      <td>{{ district['tot_ind_hab_fdst'] }}</td>
+      <td>{{ district['tot_ind_hab_otfd'] }}</td>
     </tr>
-    <tr>
-      <th>No of Claim Received</th>
-      <th>No Of Rights Recognised</th>
-      <th>No of title demarcated</th>
-      <th>No of Rights Updated in RoR.</th>
-      <th>No of title Issued joinly in the name of both the spouses</th>
-      <th>No of title Issued single woman headedhouseholds</th>
-      <!-- <th>No of title Issued single Male headedhouseholds</th> -->
-      <th>No of FDST benificiaries</th>
-      <th>No of OTFD benificiaries</th>
-    </tr>
-    </thead>
-    <tbody>
-       <tr>
-            <td>{{ sl_no }}</td>
-            <td>{{ sl_no }}</td>
-            <td>{{ tot_ind_hab_received }}</td>
-            <td>{{ tot_ind_hab_recognised }}</td>
-            <td>{{ tot_ind_hab_demarcated }}</td>
-            <td>{{ tot_ind_hab_ror_issued }}</td>
-            <td>{{ tot_ind_hab_issued_couple }}</td>
-            <td>{{ tot_ind_hab_issue_wom }}</td>
-            <td>{{ tot_ind_hab_fdst }}</td>
-            <td>{{ tot_ind_hab_otfd }}</td>
-    </tr>
-    </tbody>
-   <!--  <tfoot>
-    <tr>
-        <th>No of Claim Received</th>
-      <th>No Of Rights Recognised</th>
-      <th>No of title demarcated</th>
-      <th>No of Rights Updated in RoR.</th>
-      <th>No of title Issued joinly in the name of both the spouses</th>
-      <th>No of title Issued single women headedhouseholds</th>
-      <th>No of FDST benificiaries</th>
-      <th>No of OTFD benificiaries</th>
-    </tr>
-    </tfoot> -->
+  {% endfor %}
+  </tbody>
 </table>

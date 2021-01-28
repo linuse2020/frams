@@ -3,8 +3,11 @@ style:
   css:
     theme:
       assets/css/frams.style.css: {}
+      assets/css/jquery.dataTables.min.css: {}
   js:
     assets/js/frams.script.js: {}
+    assets/js/jquery.dataTables.min.js: {}
+
 
   dependencies:
     - core/jquery

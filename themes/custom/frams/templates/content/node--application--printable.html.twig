@@ -1,4 +1,7 @@
-<article{{ attributes.addClass(classes) }}>
+    <div class="w-100 region-right show-header-top">
+      <header class="content-header clearfix mb-0 p-3">
+        <div class="layout-container">
+          <article{{ attributes.addClass(classes) }}>
   <div{{ content_attributes.addClass('content fra-ror-content') }}>
     <div class="header-text" style="text-align: right;"><strong>
       <p>The Scheduled Teibes and other Traditional Forest Dwellers
@@ -15,34 +18,38 @@
           <table style="padding:10px;">
             <tr>
               <td style="font-weight:bold" width="5%" valign="top"> 1.</td>
-              <td width="40%"" valign="top" align="left">Name(s) of holder(s):</td>
-              <td width="60%" align="left"><br/> {{ content.field_name_of_other_claimants}}</td>
+              <td width="40%"" valign="top" align="left">Name(s) of holder(s): {{ node.getTitle() }}</td>
+              <td width="60%" align="left"><br/> {{ content.field_name_of_other_claimants.value}}</td>
             </tr>
              <tr>
               <td style="font-weight:bold" width="5%" valign="top"> 2.</td>
               <td width="40%"" valign="top" align="left">Name of the Spouse:<br>(Shri/Smt)</td>
-              <td width="55%" align="left">{{ content.field_name_of_the_spouse }}</td>
+              <td width="55%" align="left">{{ content.field_name_of_the_spouse}}</td>
             </tr>
              <tr>
               <td style="font-weight:bold" width="5%" valign="top"> 3.</td>
               <td width="40%"" valign="top" align="left">Father Name:</td>
-              <td width="55%" align="left">{{ content.field__name_of_father }}</td>
+              <td width="55%" align="left">{{ content.field_name_of_father }}</td>
             </tr>
             <tr>
               <td style="font-weight:bold" width="5%" valign="top"> 4.</td>
               <td width="40%"" valign="top" align="left">Mother Name:</td>
-              <td width="55%" align="left">{{ content.field__name_of_mother }}</td>
+              <td width="55%" align="left">{{ content.field_name_of_mother }}</td>
             </tr>
             <tr>
               <td style="font-weight:bold" width="5%" valign="top"> 5.</td>
               <td width="40%"" valign="top" align="left">Name of Dependents</td>
-              <td width="55%" align="left"> <table>
+              <td width="55%" align="left"> <table><tr>
+                    <th>S.No</th>
+                    <th>Name</th>
+                    <th>Relation</th>
+                  </tr>
                 {% for i in 0..content.field_other_family_members['#items']|length-1 %}
 
                   <tr>
                     <td style="padding: 10px">{{i+1}}</td>
                     <td style="padding: 10px">{{content.field_other_family_members[i]['#paragraph'].field_family_members_name.value}}</td>
-                    <td style="padding: 10px">{{content.field_other_family_members[i]['#paragraph'].field_family_members_relation.value}}</td>
+                    <td style="padding: 10px">{{content.field_other_family_members[i]['#paragraph'].field_relation.value}}</td>
                   </tr>
               {% endfor %}
               </table>
@@ -56,7 +63,7 @@
             <tr>
               <td style="font-weight:bold" width="5%" valign="top"> 7.</td>
               <td width="40%"" valign="top" align="left">Taluk</td>
-              <td width="55%" align="left">{{ content.field_claimant_taluk }}</td>
+              <td width="55%" align="left">{{ content.field__claimant_taluk }}</td>
             </tr>
             <tr>
               <td style="font-weight:bold" width="5%" valign="top"> 8.</td>
@@ -71,7 +78,7 @@
                         <tr>
               <td style="font-weight:bold" width="5%" valign="top"> 10.</td>
               <td width="40%"" valign="top" align="left">Forest Range</td>
-              <td width="55%" align="left">{{ content.field_claimant_range }}</td>
+              <td width="55%" align="left">{{ content.field__claimant_range }}</td>
             </tr>
 
           </table>

@@ -75,6 +75,7 @@ module:
   layout_section_classes: 0
   libraries: 0
   link: 0
+  magnific_popup: 0
   mailsystem: 0
   masquerade: 0
   menu_item_role_access: 0
@@ -107,6 +108,7 @@ module:
   search: 0
   serialization: 0
   shortcut: 0
+  simple_popup_blocks: 0
   simplelogin: 0
   sms: 0
   sms_aws_sns: 0

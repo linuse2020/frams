@@ -286,26 +286,14 @@ function frams_pro_entity_bundle_field_info_alter(&$fields, EntityTypeInterface 
  * Implements hook_theme().
  */
 function frams_pro_theme($existing, $type, $theme, $path) {
-/*  return [
-    'individual_hab' => [
-      'variables' => ['test_var' => NULL,
-      '#sl_no' => NULL,
-      '#tot_ind_hab_received' => NULL
-     ],
-    ],
-  ];*/
   return [
     'individual_hab' => [
-      'variables' => ['test_var' => NULL,
-      'tot_ind_hab_received' => NULL,
-      'tot_ind_hab_recognised' => NULL,
-      'tot_ind_hab_demarcated' => NULL,
-      'tot_ind_hab_ror_issued' => NULL,
-      'tot_ind_hab_issued_couple' => NULL,
-      'tot_ind_hab_issue_wom' => NULL,
-      'tot_ind_hab_fdst' => NULL,
-      'tot_ind_hab_otfd' => NULL,
-      ],
+      'variables' => ['ind_hab_data' => [],
+     ],
+    ],
+    'individual_cul' => [
+      'variables' => ['ind_cul_data' => [],
+     ],
     ],
   ];
 }

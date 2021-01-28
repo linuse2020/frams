@@ -21,5 +21,10 @@
     "sass": "1.25.0",
     "sass-loader": "7.1.0",
     "vue-template-compiler": "2.6.11"
-  }
+  },
+  "version": "1.0.0",
+  "main": "webpack.mix.js",
+  "dependencies": {},
+  "author": "",
+  "license": "ISC"
 }
