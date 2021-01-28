@@ -25,6 +25,7 @@ libraries:
   - frams/fonts
   - frams/star-ratings
   - frams/percircle-progress
+  - frams/datatables
 
 libraries-override:
   radix/bootstrap: false

@@ -51,3 +51,14 @@ percircle-progress:
     assets/js/percircle.js: {}
   dependencies:
     - core/jquery
+
+datatables:
+  css:
+    theme:
+     assets/css/jquery.dataTables.min.css: {}
+  js:
+    assets/js/jquery.dataTables.min.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+
