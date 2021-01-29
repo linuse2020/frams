@@ -1,0 +1,25 @@
+uuid: 33e2d1a7-d7b5-4f86-8662-4976e5912a95
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:50e05c85-f87f-4d28-a3ea-fa5b10999f29'
+  module:
+    - block_content
+  theme:
+    - frams
+id: fraregister
+theme: frams
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:50e05c85-f87f-4d28-a3ea-fa5b10999f29'
+settings:
+  id: 'block_content:50e05c85-f87f-4d28-a3ea-fa5b10999f29'
+  label: FRA-Register
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
