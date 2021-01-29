@@ -10,7 +10,7 @@ dependencies:
 id: privatemessageinbox_2
 theme: frams
 region: content
-weight: -2
+weight: -4
 provider: null
 plugin: private_message_inbox_block
 settings:

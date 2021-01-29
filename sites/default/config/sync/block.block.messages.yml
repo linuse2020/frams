@@ -9,7 +9,7 @@ dependencies:
 id: messages
 theme: frams
 region: content
-weight: -7
+weight: -10
 provider: null
 plugin: system_messages_block
 settings:

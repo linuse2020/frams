@@ -11,7 +11,7 @@ _core:
 id: frams_messages
 theme: frams
 region: sidebar_menu
-weight: -6
+weight: -8
 provider: null
 plugin: system_messages_block
 settings:

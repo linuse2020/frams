@@ -1,4 +1,4 @@
-uuid: 0b64ce12-a398-42c6-bf3f-d7bf192c2f82
+uuid: 43a38cc7-2226-44d5-b06a-f95e90b48fe6
 langcode: en
 status: true
 dependencies:
@@ -8,17 +8,17 @@ dependencies:
     - block_content
   theme:
     - frams
-id: frapopupblock
+id: frapopupblock_2
 theme: frams
 region: sidebar_menu
-weight: -6
+weight: -5
 provider: null
 plugin: 'block_content:394042dd-b732-4f0d-a110-d00fafb88168'
 settings:
   id: 'block_content:394042dd-b732-4f0d-a110-d00fafb88168'
   label: 'fra popup block'
   provider: block_content
-  label_display: '0'
+  label_display: visible
   status: true
   info: ''
   view_mode: full

@@ -9,7 +9,7 @@ dependencies:
 id: individualhabitationrightsblock
 theme: frams
 region: content
-weight: 0
+weight: -2
 provider: null
 plugin: app_block
 settings:

@@ -10558,3 +10558,11 @@ header .user-menu ul li {
 .application--full .node_view ul.pre_links li {
   display: block;
 }
+
+#block-frapopupblock {
+  display: none;
+}
+
+#block-littlepy-search {
+  display: none;
+}
