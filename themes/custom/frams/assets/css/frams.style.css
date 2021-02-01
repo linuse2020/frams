@@ -10467,7 +10467,7 @@ header.sticky .logo img {
   color: #fff;
   text-decoration: none;
   font-size: 1rem;
-  padding: 1rem;
+  padding: 1rem !important;
 }
 .main-menu ul.sf-menu a:hover, .user-menu a:hover {
   color: #ffc107;

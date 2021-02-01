@@ -36,9 +36,9 @@ class IndividualHabController extends ControllerBase {
       $tot_ind_hab_received = \Drupal::entityQuery('node')->condition('type','application')->condition('field_claimant_district',$district->tid,'=')->count()->execute();
       $query = \Drupal::entityQuery('node')->condition('type','application')->condition('field_claimant_district',$district->tid,'=');
       $group = $query->orConditionGroup()->exists('field_alloted_land_for_both')->exists('field_alloted_land_habitation');
-      $query->condition($group);
+      /*$query->condition($group);*/
       $tot_ind_hab_recognised = $query->count()->execute();
-      $tot_ind_hab_demarcated =  \Drupal::entityQuery('node')->condition('type','application')->condition('field_claimant_district',$district->tid,'=')->exists('field_survey_details')->exists('field_habitation')->count()->execute();
+      $tot_ind_hab_demarcated =  \Drupal::entityQuery('node')->condition('type','application')->condition('field_claimant_district',$district->tid,'=')->exists('field_survey_details')->count()->execute();
       $ind_hab_ror_issued =   \Drupal::entityQuery('node')->condition('type','application')->condition('field_claimant_district',$district->tid,'=')->exists('field_upload_ror_issued')->condition($group)->count()->execute();
       $ind_hab_issued_couple =  \Drupal::entityQuery('node')->condition('type','application')->condition('field_claimant_district',$district->tid,'=')->condition('field_family_category','Couple','=')->condition($group)->count()->execute();
       $ind_hab_issued_woman =  \Drupal::entityQuery('node')->condition('type','application')->condition('field_claimant_district',$district->tid,'=')->condition('field_family_category','female','=')->condition($group)->count()->execute();
@@ -83,7 +83,7 @@ class IndividualHabController extends ControllerBase {
       $group = $query->orConditionGroup()->exists('field_alloted_land_for_both')->exists('field_alloted_land_cultivation');
       $query->condition($group);
       $tot_ind_cul_recognised = $query->count()->execute();
-      $tot_ind_cul_demarcated =  \Drupal::entityQuery('node')->condition('type','application')->condition('field_claimant_district',$district->tid,'=')->exists('field_survey_details')->exists('field_self_cultivation')->count()->execute();
+      $tot_ind_cul_demarcated =  \Drupal::entityQuery('node')->condition('type','application')->condition('field_claimant_district',$district->tid,'=')->exists('field_survey_details')->count()->execute();
       $ind_cul_ror_issued =   \Drupal::entityQuery('node')->condition('type','application')->condition('field_claimant_district',$district->tid,'=')->exists('field_upload_ror_issued')->condition($group)->count()->execute();
       $ind_cul_issued_couple =  \Drupal::entityQuery('node')->condition('type','application')->condition('field_claimant_district',$district->tid,'=')->condition('field_family_category','Couple','=')->condition($group)->count()->execute();
       $ind_cul_issued_woman =  \Drupal::entityQuery('node')->condition('type','application')->condition('field_claimant_district',$district->tid,'=')->condition('field_family_category','female','=')->condition($group)->count()->execute();
