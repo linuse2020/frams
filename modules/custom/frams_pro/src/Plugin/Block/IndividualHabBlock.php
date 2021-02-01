@@ -26,7 +26,7 @@ class IndividualHabBlock extends BlockBase {
    */
   public function build() {
      $controller_variable = new IndividualHabController;
-     $rendering_in_block = $controller_variable->individualCultivation();
+     $rendering_in_block = $controller_variable->individualHabitation();
      return $rendering_in_block;
   }
 }

@@ -13,6 +13,11 @@ use Drupal\taxonomy\TermInterface;
 use Drupal\taxonomy\Entity\Term;
 
 class IndividualHabController extends ControllerBase {
+  public function myPage() {
+    return [
+      '#markup' => 'Hello, world',
+    ];
+  }
   public function individualHabitation() {
     $count = 0;
     $district_data = [];
@@ -28,7 +33,7 @@ class IndividualHabController extends ControllerBase {
     foreach ($term_districts as $district) {
       $count ++;
       $dist = $district->name;
-      $tot_ind_hab_received = \Drupal::entityQuery('node')->condition('type','application')->condition('field_claimant_district',$district->tid,'=')->exists('field_habitation')->count()->execute();
+      $tot_ind_hab_received = \Drupal::entityQuery('node')->condition('type','application')->condition('field_claimant_district',$district->tid,'=')->count()->execute();
       $query = \Drupal::entityQuery('node')->condition('type','application')->condition('field_claimant_district',$district->tid,'=');
       $group = $query->orConditionGroup()->exists('field_alloted_land_for_both')->exists('field_alloted_land_habitation');
       $query->condition($group);
@@ -39,7 +44,6 @@ class IndividualHabController extends ControllerBase {
       $ind_hab_issued_woman =  \Drupal::entityQuery('node')->condition('type','application')->condition('field_claimant_district',$district->tid,'=')->condition('field_family_category','female','=')->condition($group)->count()->execute();
       $tot_ind_hab_fdst =   \Drupal::entityQuery('node')->condition('type','application')->condition('field_claimant_district',$district->tid,'=')->condition('field_is_schedules_tribe',TRUE,'=')->condition($group)->count()->execute();
       $tot_ind_hab_otfd =  \Drupal::entityQuery('node')->condition('type','application')->condition('field_claimant_district',$district->tid,'=')->condition('field_caste_cert_spouse_',TRUE,'=')->condition($group)->count()->execute();
-
        $district_data[] = [
         'sl_no' => $count,
         'district' => $district->name,
@@ -74,7 +78,7 @@ class IndividualHabController extends ControllerBase {
     foreach ($term_districts as $district) {
       $count ++;
       $dist = $district->name;
-      $tot_ind_cul_received = \Drupal::entityQuery('node')->condition('type','application')->condition('field_claimant_district',$district->tid,'=')->exists('field_self_cultivation')->count()->execute();
+      $tot_ind_cul_received = \Drupal::entityQuery('node')->condition('type','application')->condition('field_claimant_district',$district->tid,'=')->count()->execute();
       $query = \Drupal::entityQuery('node')->condition('type','application')->condition('field_claimant_district',$district->tid,'=');
       $group = $query->orConditionGroup()->exists('field_alloted_land_for_both')->exists('field_alloted_land_cultivation');
       $query->condition($group);

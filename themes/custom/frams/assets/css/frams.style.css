@@ -10442,6 +10442,37 @@ ul.sf-menu li {
    }*/
 }
 
+header {
+  background: url(/themes/custom/frams/assets/images/nav.png) center no-repeat !important;
+  background-size: cover !important;
+}
+header .logo img {
+  width: 50%;
+  height: auto;
+}
+
+header.sticky {
+  position: fixed !important;
+  z-index: 999;
+  transition: 0.2s top cubic-bezier(0.3, 0.73, 0.3, 0.74) !important;
+  background: url(/themes/custom/frams/assets/images/nav.png) center no-repeat !important;
+  background-size: cover !important;
+}
+header.sticky .logo img {
+  width: 50% !important;
+  height: auto !important;
+}
+
+.main-menu ul.sf-menu a, .user-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 1rem;
+}
+.main-menu ul.sf-menu a:hover, .user-menu a:hover {
+  color: #ffc107;
+}
+
 .page-front h1.display-3 {
   font-size: 3.5rem;
 }
@@ -10455,14 +10486,6 @@ ul.sf-menu li {
 .page-front ul.sf-menu.sf-accordion.sf-expanded {
   flex-direction: column-reverse;
   display: flex !important;
-}
-.page-front .main-menu ul.sf-menu a, .page-front .user-menu a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.1rem;
-}
-.page-front .main-menu ul.sf-menu a:hover, .page-front .user-menu a:hover {
-  color: #ffc107;
 }
 .page-front .accordion .card-header {
   background: #004085;
@@ -10493,22 +10516,22 @@ ul.sf-menu li {
 .page-front .region-right header {
   z-index: 999;
   position: absolute;
-  background: transparent;
+  background: transparent !important;
 }
 .page-front .region-right header .logo img {
   width: 100%;
   height: auto;
 }
 .page-front .region-right header.sticky {
-  position: fixed;
+  position: fixed !important;
   z-index: 999;
-  transition: 0.2s top cubic-bezier(0.3, 0.73, 0.3, 0.74);
-  background: url(/themes/custom/frams/assets/images/nav.png) center no-repeat;
-  background-size: cover;
+  transition: 0.2s top cubic-bezier(0.3, 0.73, 0.3, 0.74) !important;
+  background: url(/themes/custom/frams/assets/images/nav.png) center no-repeat !important;
+  background-size: cover !important;
 }
 .page-front .region-right header.sticky .logo img {
-  width: 50%;
-  height: auto;
+  width: 50% !important;
+  height: auto !important;
 }
 .page-front .banner-wrapper {
   position: relative;
@@ -10560,9 +10583,5 @@ header .user-menu ul li {
 }
 
 #block-frapopupblock {
-  display: none;
-}
-
-#block-littlepy-search {
   display: none;
 }
