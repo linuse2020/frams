@@ -84,10 +84,8 @@ class WkhtmltopdfGenerator extends PdfGeneratorBase implements ContainerFactoryP
     $this->addPage($pdf_content);
     $this->setPageSize($paper_size);
     $this->setPageOrientation($paper_orientation);
-    // Uncomment below line when need to add header and footer to page,
-    // also make changes in the templates too.
-    // $this->setHeader($header_content);
-    // $this->setFooter($footer_content);
+     $this->setHeader($header_content);
+     $this->setFooter($footer_content);
   }
 
   /**

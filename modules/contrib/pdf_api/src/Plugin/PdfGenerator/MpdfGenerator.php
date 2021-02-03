@@ -7,6 +7,7 @@
 
 namespace Drupal\pdf_api\Plugin\PdfGenerator;
 
+use Drupal\Component\Utility\Random;
 use Drupal\pdf_api\Plugin\PdfGeneratorBase;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\pdf_api\Annotation\PdfGenerator;
@@ -14,6 +15,7 @@ use Drupal\Core\Annotation\Translation;
 use Drupal\pdf_api\Plugin\PdfGeneratorInterface;
 use Mpdf\Mpdf;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Symfony\Component\Filesystem\Filesystem;
 
 /**
  * A PDF generator plugin for the mPDF library.
@@ -54,6 +56,13 @@ class MpdfGenerator extends PdfGeneratorBase implements ContainerFactoryPluginIn
    * @var string
    */
   protected $footerContent;
+
+  /**
+   * The temporary directory we created.
+   *
+   * @var string
+   */
+  protected $tmpDir;
 
   /**
    * {@inheritdoc}
@@ -146,7 +155,7 @@ class MpdfGenerator extends PdfGeneratorBase implements ContainerFactoryPluginIn
    * {@inheritdoc}
    */
   public function setFooter($text) {
-    // $this->generator->SetFooter($text);
+     $this->generator->SetFooter($text);
   }
 
   /**
@@ -155,6 +164,7 @@ class MpdfGenerator extends PdfGeneratorBase implements ContainerFactoryPluginIn
   public function save($location) {
     $this->preGenerate();
     $this->generator->Output($location, 'F');
+    $this->postGenerate();
   }
 
   /**
@@ -187,12 +197,18 @@ class MpdfGenerator extends PdfGeneratorBase implements ContainerFactoryPluginIn
      */
     $options = $this->options;
 
-    $config = [ ];
-    $orientation = '';
-
     $orientation = $options['orientation'] ? $options['orientation'] : 'P';
 
-    $config['format'] = $this->isValidPageSize($options['sheet-size']) ? $options['sheet-size'] : 'A4';
+    $filesystem = \Drupal::service('file_system');
+    $random = new Random();
+    $this->tmpDir = $filesystem->getTempDirectory() . '/' . $random->name(16, TRUE);
+    $filesystem->mkdir($this->tmpDir);
+
+    $config = [
+      'format' => $this->isValidPageSize($options['sheet-size']) ? $options['sheet-size'] : 'A4',
+      'tempDir' => $this->tmpDir,
+    ];
+
     if ($orientation == 'L') {
       $config['format'] .= '-' . $orientation;
     }
@@ -210,6 +226,14 @@ class MpdfGenerator extends PdfGeneratorBase implements ContainerFactoryPluginIn
     $stylesheet = '.node_view  { display: none; }';
     $this->generator->WriteHTML($stylesheet, 1);
     $this->generator->WriteHTML(utf8_encode($this->pdfContent), 0);
+  }
+
+  /**
+   * Post generation cleanup.
+   */
+  protected function postGenerate() {
+    $filesystem = \Drupal::service('file_system');
+    $filesystem->deleteRecursive($this->tmpDir);
   }
 
 }
