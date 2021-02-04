@@ -53,7 +53,7 @@ class DownloadReports extends ControllerBase {
 	$dompdf->loadHtml($markup);
 	$dompdf->setPaper('A4', 'landscape');
 	$dompdf->render();
-	$dompdf->stream($filename.'.pdf', array('Attachment' => 0));
+	$dompdf->stream($filename.'.pdf', array('Attachment' => 1));
 	$response = new Response('IndividualHabitation Report', 200, array());
     return $response;
   }
