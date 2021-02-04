@@ -1,0 +1,26 @@
+uuid: bb9f089d-c4b5-4bdc-b5e2-31bffd932171
+langcode: en
+status: false
+dependencies:
+  module:
+    - frams_pro
+    - system
+  theme:
+    - frams
+id: downloadreportblock
+theme: frams
+region: content
+weight: 0
+provider: null
+plugin: download_report
+settings:
+  id: download_report
+  label: 'Download Report block'
+  provider: frams_pro
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: report/
+    negate: false
+    context_mapping: {  }

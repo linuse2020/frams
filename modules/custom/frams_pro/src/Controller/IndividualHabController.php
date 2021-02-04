@@ -29,14 +29,15 @@ class IndividualHabController extends ControllerBase {
     $ind_hab_issued_woman = [];
     $tot_ind_hab_fdst = [];
     $tot_ind_hab_otfd = [];
+    $current_user_roles = \Drupal::currentUser()->getRoles();
     $term_districts =\Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadTree('district');
     foreach ($term_districts as $district) {
       $count ++;
       $dist = $district->name;
-      $tot_ind_hab_received = \Drupal::entityQuery('node')->condition('type','application')->condition('field_claimant_district',$district->tid,'=')->count()->execute();
+      $tot_ind_hab_received = \Drupal::entityQuery('node')->condition('type','application')->condition('field_claimant_district',$district->tid,'=')->exists('field_habitation')->count()->execute();
       $query = \Drupal::entityQuery('node')->condition('type','application')->condition('field_claimant_district',$district->tid,'=');
       $group = $query->orConditionGroup()->exists('field_alloted_land_for_both')->exists('field_alloted_land_habitation');
-      /*$query->condition($group);*/
+      $query->condition($group);
       $tot_ind_hab_recognised = $query->count()->execute();
       $tot_ind_hab_demarcated =  \Drupal::entityQuery('node')->condition('type','application')->condition('field_claimant_district',$district->tid,'=')->exists('field_survey_details')->count()->execute();
       $ind_hab_ror_issued =   \Drupal::entityQuery('node')->condition('type','application')->condition('field_claimant_district',$district->tid,'=')->exists('field_upload_ror_issued')->condition($group)->count()->execute();
