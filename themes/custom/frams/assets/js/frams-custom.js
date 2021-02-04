@@ -9,6 +9,7 @@
     attach: function (context, settings) {
       $('#datatable-cul').DataTable();
       $('#datatable-hub').DataTable();
+      $('#datatable-ind').DataTable();
       $(window).scroll(function() {
         if ($(this).scrollTop() > 100){
           $('header').addClass("sticky");

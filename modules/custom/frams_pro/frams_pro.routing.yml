@@ -45,3 +45,19 @@ frams_pro.individualCultivation_report_csv:
     _title: 'Individual Cultivation Report(csv)'
   requirements:
     _permission: 'access content'
+
+frams_pro.individual_report_pdf:
+  path: 'report/individual-rights/download/pdf'
+  defaults:
+    _controller: '\Drupal\frams_pro\Controller\DownloadReports::individual_report_pdf'
+    _title: 'Individual Report(pdf)'
+  requirements:
+    _permission: 'access content'
+
+frams_pro.individual_report_csv:
+  path: 'report/individual-rights/download/csv'
+  defaults:
+    _controller: '\Drupal\frams_pro\Controller\DownloadReports::individual_report_csv'
+    _title: 'Individual Cultivation Report(csv)'
+  requirements:
+    _permission: 'access content'

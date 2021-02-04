@@ -11,22 +11,23 @@ use Drupal\frams_pro\Controller\IndividualHabController;
 
 
 /**
- * Provides a 'Application' block.
+ * Provides a 'Individual' block.
  *
  * @Block(
  *   id = "app_block",
- *   admin_label = @Translation("Individual Habitation Rights block"),
- *   category = @Translation("Individual Habitation Rights block")
+ *   admin_label = @Translation("Individual Rights block"),
+ *   category = @Translation("Individual Rights block")
  * )
  */
-class IndividualHabBlock extends BlockBase {
+class IndividualBlock extends BlockBase {
 
   /**
    * {@inheritdoc}
    */
   public function build() {
      $controller_variable = new IndividualHabController;
-     $rendering_in_block = $controller_variable->individualHabitation();
+     $rendering_in_block = $controller_variable->individual();
+   /*  kint($rendering_in_block);*/
      return $rendering_in_block;
   }
 }
