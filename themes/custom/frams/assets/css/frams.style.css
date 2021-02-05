@@ -10586,23 +10586,23 @@ header .user-menu ul li {
   display: none;
 }
 
-.page-front .block h2 {
+.spb-popup-main-wrapper .block h2 {
   background: #205431;
   border-radius: 10px;
 }
-.page-front .spb-popup-main-wrapper.spb_center {
+.spb-popup-main-wrapper .spb-popup-main-wrapper.spb_center {
   padding: 0;
   background: #205431;
   border-radius: 10px;
   border: none;
   box-shadow: 3px 3px 5px 6px #0000003d;
 }
-.page-front .spb_close {
+.spb-popup-main-wrapper .spb_close {
   background: none;
   border: none;
   font-size: 30px;
   color: white;
 }
-.page-front .spb_minimize {
+.spb-popup-main-wrapper .spb_minimize {
   display: none;
 }
