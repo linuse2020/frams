@@ -10473,6 +10473,25 @@ header.sticky .logo img {
   color: #ffc107;
 }
 
+header .user-menu ul {
+  flex-direction: row;
+}
+header .user-menu ul li {
+  padding-right: 10px;
+}
+
+.node_view ul.pre_links li {
+  display: none;
+}
+
+.application--full .node_view ul.pre_links li {
+  display: block;
+}
+
+#block-frapopupblock {
+  display: none;
+}
+
 .page-front h1.display-3 {
   font-size: 3.5rem;
 }
@@ -10486,6 +10505,26 @@ header.sticky .logo img {
 .page-front ul.sf-menu.sf-accordion.sf-expanded {
   flex-direction: column-reverse;
   display: flex !important;
+}
+.page-front .spb-popup-main-wrapper {
+  padding: 0;
+  background: #205431;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 3px 3px 5px 6px #0000003d;
+}
+.page-front .spb-popup-main-wrapper .block--fraregister h2 {
+  background: #205431;
+  border-radius: 10px;
+}
+.page-front .spb-popup-main-wrapper .spb_close {
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: white;
+}
+.page-front .spb-popup-main-wrapper .spb_minimize {
+  display: none;
 }
 .page-front .accordion .card-header {
   background: #004085;
@@ -10565,44 +10604,4 @@ header.sticky .logo img {
   background-color: black;
   opacity: 0.5;
   z-index: 1;
-}
-
-header .user-menu ul {
-  flex-direction: row;
-}
-header .user-menu ul li {
-  padding-right: 10px;
-}
-
-.node_view ul.pre_links li {
-  display: none;
-}
-
-.application--full .node_view ul.pre_links li {
-  display: block;
-}
-
-#block-frapopupblock {
-  display: none;
-}
-
-.spb-popup-main-wrapper {
-  padding: 0;
-  background: #205431;
-  border-radius: 10px;
-  border: none;
-  box-shadow: 3px 3px 5px 6px #0000003d;
-}
-.spb-popup-main-wrapper .block h2 {
-  background: #205431;
-  border-radius: 10px;
-}
-.spb-popup-main-wrapper .spb_close {
-  background: none;
-  border: none;
-  font-size: 30px;
-  color: white;
-}
-.spb-popup-main-wrapper .spb_minimize {
-  display: none;
 }

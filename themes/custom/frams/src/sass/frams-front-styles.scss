@@ -1,20 +1,123 @@
-.spb-popup-main-wrapper {
-	 padding: 0;
-   background: #205431;
-   border-radius: 10px;
-   border: none;
-   box-shadow: 3px 3px 5px 6px #0000003d;
-	.block h2 {
-    background: #205431;
-    border-radius: 10px;
+.page-front {
+  h1.display-3 {
+    font-size: 3.5rem;
+  }
+  p.lead {
+    font-size: 1rem;
+  }
+  .user-menu a {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  ul.sf-menu.sf-accordion.sf-expanded {
+    flex-direction: column-reverse;
+    display: flex !important;
+  }
+	.spb-popup-main-wrapper {
+		padding: 0;
+		background: #205431;
+		border-radius: 10px;
+		border: none;
+		box-shadow: 3px 3px 5px 6px #0000003d;
+		.block--fraregister h2 {
+			background: #205431;
+			border-radius: 10px;
+		}
+		.spb_close {
+			background: none;
+			border: none;
+			font-size: 30px;
+			color: white;
+		}
+		.spb_minimize {
+			display: none;
+		}
 	}
-	.spb_close {
-    background: none;
-    border: none;
-    font-size: 30px;
-    color: white;
-	}
-	.spb_minimize {
-		display: none;
-	}
+	
+  .accordion .card-header {
+    background: #004085;
+    color: while;
+    color: #fff;
+    font-size: 25px;
+    padding: 10px;
+    text-align: center;
+    text-align: center
+  }
+  .block  h2 {
+    background: #004085;
+    color: while;
+    color: #fff;
+    font-size: 25px;
+    padding: 10px;
+    text-align: center;
+    text-align: center
+  }
+  .hero-banner.container-fluid {
+    padding: o;
+    padding: 0;
+    margin: 0;
+  }
+  .region-right {
+    position: relative;
+    header {
+      z-index: 999;
+      position: absolute;
+      background: transparent !important;
+      .logo img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    header.sticky {
+      position: fixed !important;
+      z-index: 999;
+      transition: 0.2s top cubic-bezier(.3,.73,.3,.74) !important;
+      background: url(/themes/custom/frams/assets/images/nav.png) center no-repeat !important;
+      background-size: cover !important;
+      .logo img {
+        width: 50% !important;
+        height: auto !important;
+      }
+    }
+  }
+
+  .banner-wrapper {
+    position: relative;
+    background-color: black;
+    height: 90vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+    video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: 0;
+      -ms-transform: translateX(-50%) translateY(-50%);
+      -moz-transform: translateX(-50%) translateY(-50%);
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
+    }
+    .container {
+      position: relative;
+      z-index: 2;
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: black;
+      opacity: 0.5;
+      z-index: 1;
+    }
+  }
 }
+
+
+
