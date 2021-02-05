@@ -33,9 +33,9 @@
 			display: none;
 		}
 	}
-	
+
   .accordion .card-header {
-    background: #004085;
+    background: #205431;
     color: while;
     color: #fff;
     font-size: 25px;
@@ -44,7 +44,7 @@
     text-align: center
   }
   .block  h2 {
-    background: #004085;
+    background: #205431;
     color: while;
     color: #fff;
     font-size: 25px;
@@ -117,6 +117,24 @@
       z-index: 1;
     }
   }
+	.layout__region--second {
+		.notification-view {
+			border: 1px solid black;
+			p {
+				text-align: justify;
+				padding-left: 2rem;
+				padding-right: 2rem;
+			}
+		}
+	}
+	.featured-block {
+		.head-text {
+			font-size: 1.3rem;
+		}
+		.txt-primary {
+    	color: #fed136;
+		}
+	}
 }
 
 
