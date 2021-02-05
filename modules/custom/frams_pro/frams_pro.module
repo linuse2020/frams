@@ -295,6 +295,10 @@ function frams_pro_theme($existing, $type, $theme, $path) {
       'variables' => ['ind_cul_data' => [],
      ],
     ],
+    'individual' => [
+      'variables' => ['ind_data' => [],
+     ],
+    ],
   ];
 }
 

@@ -111,6 +111,7 @@ class ComposerStaticInit9de9436f91c599173609d35a420479fb
             'Psr\\Log\\' => 8,
             'Psr\\Http\\Message\\' => 17,
             'Psr\\Container\\' => 14,
+            'ParseCsv\\' => 9,
             'PHPMailer\\PHPMailer\\' => 20,
         ),
         'M' => 
@@ -352,6 +353,10 @@ class ComposerStaticInit9de9436f91c599173609d35a420479fb
         'Psr\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
+        ),
+        'ParseCsv\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/parsecsv/php-parsecsv/src',
         ),
         'PHPMailer\\PHPMailer\\' => 
         array (

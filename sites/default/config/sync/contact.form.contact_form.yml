@@ -1,0 +1,12 @@
+uuid: 3fcff602-b5b8-4a6a-a1c5-b38053acbdff
+langcode: en
+status: true
+dependencies: {  }
+id: contact_form
+label: 'Contact form'
+recipients:
+  - unnikrishnanchithara04@gmail.com
+reply: ''
+weight: 0
+message: send
+redirect: /contact-us
