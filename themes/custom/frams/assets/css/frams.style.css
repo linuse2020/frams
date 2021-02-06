@@ -10473,6 +10473,103 @@ header.sticky .logo img {
   color: #ffc107;
 }
 
+.page-front h1.display-3 {
+  font-size: 3.5rem;
+}
+.page-front p.lead {
+  font-size: 1rem;
+}
+.page-front .user-menu a {
+  padding-left: 0;
+  padding-right: 0;
+}
+.page-front ul.sf-menu.sf-accordion.sf-expanded {
+  flex-direction: column-reverse;
+  display: flex !important;
+}
+.page-front .accordion .card-header {
+  background: #004085;
+  color: while;
+  color: #fff;
+  font-size: 25px;
+  padding: 10px;
+  text-align: center;
+  text-align: center;
+}
+.page-front .block h2 {
+  background: #004085;
+  color: while;
+  color: #fff;
+  font-size: 25px;
+  padding: 10px;
+  text-align: center;
+  text-align: center;
+}
+.page-front .hero-banner.container-fluid {
+  padding: o;
+  padding: 0;
+  margin: 0;
+}
+.page-front .region-right {
+  position: relative;
+}
+.page-front .region-right .page-content-inner {
+  margin-top: 0;
+}
+.page-front .region-right header {
+  z-index: 999;
+  position: absolute;
+  background: transparent !important;
+}
+.page-front .region-right header .logo img {
+  width: 100%;
+  height: auto;
+}
+.page-front .region-right header.sticky {
+  position: fixed !important;
+  z-index: 999;
+  transition: 0.2s top cubic-bezier(0.3, 0.73, 0.3, 0.74) !important;
+  background: url(/themes/custom/frams/assets/images/nav.png) center no-repeat !important;
+  background-size: cover !important;
+}
+.page-front .region-right header.sticky .logo img {
+  width: 50% !important;
+  height: auto !important;
+}
+.page-front .banner-wrapper {
+  position: relative;
+  background-color: black;
+  height: 90vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+.page-front .banner-wrapper video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  transform: translateX(-50%) translateY(-50%);
+}
+.page-front .banner-wrapper .container {
+  position: relative;
+  z-index: 2;
+}
+.page-front .banner-wrapper .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+
 header .user-menu ul {
   flex-direction: row;
 }
@@ -10551,9 +10648,6 @@ header .user-menu ul li {
 }
 .page-front .region-right {
   position: relative;
-}
-.page-front .region-right .page-content-inner {
-  margin-top: 0;
 }
 .page-front .region-right header {
   z-index: 999;
