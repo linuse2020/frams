@@ -79,6 +79,7 @@ module:
   magnific_popup: 0
   mailsystem: 0
   masquerade: 0
+  menu_block: 0
   menu_item_role_access: 0
   menu_link_attributes: 0
   menu_link_content: 0

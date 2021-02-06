@@ -1,0 +1,11 @@
+uuid: 0c4cad93-ce7a-4428-a387-280f534d5ec1
+langcode: en
+status: true
+dependencies: {  }
+id: notification_view
+label: 'notification view'
+classes: notification-view
+type: component
+weight: 0
+block_restrictions: {  }
+layout_restrictions: {  }

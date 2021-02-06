@@ -1,0 +1,11 @@
+uuid: 689bee50-305b-4b0d-8553-fe7626b01d24
+langcode: en
+status: true
+dependencies: {  }
+id: blog_block
+label: 'blog block'
+classes: blog-block
+type: component
+weight: 0
+block_restrictions: {  }
+layout_restrictions: {  }

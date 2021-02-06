@@ -10,8 +10,8 @@ dependencies:
     - frams
 id: fraregister
 theme: frams
-region: content
-weight: 0
+region: header
+weight: -5
 provider: null
 plugin: 'block_content:50e05c85-f87f-4d28-a3ea-fa5b10999f29'
 settings:

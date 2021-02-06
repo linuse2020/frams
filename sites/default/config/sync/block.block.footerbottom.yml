@@ -1,0 +1,29 @@
+uuid: 644be209-22ea-4cfd-9606-30b986efb882
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:7ec6490e-79af-4714-9dfa-80437c3b9446'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - frams
+third_party_settings:
+  block_class:
+    classes: footer-bottom
+id: footerbottom
+theme: frams
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:7ec6490e-79af-4714-9dfa-80437c3b9446'
+settings:
+  id: 'block_content:7ec6490e-79af-4714-9dfa-80437c3b9446'
+  label: 'footer bottom'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

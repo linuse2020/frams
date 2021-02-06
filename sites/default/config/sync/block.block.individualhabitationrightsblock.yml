@@ -2,8 +2,6 @@ uuid: 36722950-9a6d-43a2-b379-071cccd3ab37
 langcode: en
 status: false
 dependencies:
-  module:
-    - frams_pro
   theme:
     - frams
 id: individualhabitationrightsblock

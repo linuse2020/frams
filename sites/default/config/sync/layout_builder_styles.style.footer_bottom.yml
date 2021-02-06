@@ -1,0 +1,11 @@
+uuid: 30e3394d-8e20-4ebd-b32e-7a19e78520d0
+langcode: en
+status: true
+dependencies: {  }
+id: footer_bottom
+label: 'footer bottom'
+classes: 'footer-bottom '
+type: component
+weight: 0
+block_restrictions: {  }
+layout_restrictions: {  }

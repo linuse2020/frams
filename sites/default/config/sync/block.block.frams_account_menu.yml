@@ -17,7 +17,7 @@ _core:
 id: frams_account_menu
 theme: frams
 region: header
-weight: -6
+weight: -7
 provider: null
 plugin: 'system_menu_block:account'
 settings:

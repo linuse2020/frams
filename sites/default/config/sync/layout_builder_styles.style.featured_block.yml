@@ -1,0 +1,11 @@
+uuid: 3149fb94-c5af-428e-94f2-11321167f3e4
+langcode: en
+status: true
+dependencies: {  }
+id: featured_block
+label: 'featured block'
+classes: 'featured-block pl-3'
+type: component
+weight: 0
+block_restrictions: {  }
+layout_restrictions: {  }
