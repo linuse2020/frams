@@ -10640,3 +10640,9 @@ header .user-menu ul li {
   text-align: center;
   font-size: 0.75rem;
 }
+
+@media screen and (max-width: 990px) {
+  .page-front .layout__region--first {
+    flex: 0 1 100% !important;
+  }
+}
