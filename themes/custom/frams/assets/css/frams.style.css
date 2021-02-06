@@ -10619,3 +10619,20 @@ header .user-menu ul li {
 .page-front .featured-block .txt-primary {
   color: #fed136;
 }
+.page-front .blog-block .image {
+  overflow: hidden;
+  height: 100px;
+}
+.page-front .blog-block .blog-title a {
+  color: black !important;
+  text-decoration: none !important;
+}
+.page-front .footer-bottom {
+  background: #205431;
+  color: white;
+}
+.page-front .footer-bottom p {
+  padding: 0.25rem;
+  text-align: center;
+  font-size: 12px;
+}
