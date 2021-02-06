@@ -10513,6 +10513,9 @@ header.sticky .logo img {
 .page-front .region-right {
   position: relative;
 }
+.page-front .region-right .page-content-inner {
+  margin-top: 0;
+}
 .page-front .region-right header {
   z-index: 999;
   position: absolute;

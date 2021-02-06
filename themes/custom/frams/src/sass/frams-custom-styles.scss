@@ -76,6 +76,9 @@ header.sticky {
   }
   .region-right {
     position: relative;
+    .page-content-inner {
+      margin-top: 0;
+    }
     header {
       z-index: 999;
       position: absolute;

@@ -13,11 +13,6 @@ use Drupal\taxonomy\TermInterface;
 use Drupal\taxonomy\Entity\Term;
 
 class IndividualHabController extends ControllerBase {
-  public function myPage() {
-    return [
-      '#markup' => 'Hello, world',
-    ];
-  }
   public function individualHabitation() {
     $count = 0;
     $district_data = [];
