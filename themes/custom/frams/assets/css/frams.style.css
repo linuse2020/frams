@@ -10622,3 +10622,24 @@ header .user-menu ul li {
 .page-front .featured-block .txt-primary {
   color: #fed136;
 }
+.page-front .blog-block .image {
+  overflow: hidden;
+  height: 100px;
+}
+.page-front .blog-block .blog-title a {
+  color: #000 !important;
+  text-decoration: none !important;
+}
+.page-front .blog-block .blog-text a {
+  color: #000 !important;
+  text-decoration: none !important;
+}
+.page-front .footer-bottom {
+  background: #205431;
+  color: #fff;
+}
+.page-front .footer-bottom p {
+  padding: 0.25rem;
+  text-align: center;
+  font-size: 0.75rem;
+}
