@@ -141,17 +141,21 @@
 			height: 100px;
 		}
 		.blog-title a {
-			color: black !important;
+			color: #000 !important;
+			text-decoration: none !important;
+		}
+		.blog-text a{
+			color: #000 !important;
 			text-decoration: none !important;
 		}
 	}
 	.footer-bottom {
 		background: #205431;
-		color: white;
+		color: #fff;
 		p {
-			padding: .25rem;
+			padding: 0.25rem;
 			text-align: center;
-			font-size: 12px;
+			font-size: 0.75rem;
 		}
 	}
 }

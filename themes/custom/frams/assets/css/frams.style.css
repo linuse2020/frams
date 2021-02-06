@@ -10624,15 +10624,19 @@ header .user-menu ul li {
   height: 100px;
 }
 .page-front .blog-block .blog-title a {
-  color: black !important;
+  color: #000 !important;
+  text-decoration: none !important;
+}
+.page-front .blog-block .blog-text a {
+  color: #000 !important;
   text-decoration: none !important;
 }
 .page-front .footer-bottom {
   background: #205431;
-  color: white;
+  color: #fff;
 }
 .page-front .footer-bottom p {
   padding: 0.25rem;
   text-align: center;
-  font-size: 12px;
+  font-size: 0.75rem;
 }
