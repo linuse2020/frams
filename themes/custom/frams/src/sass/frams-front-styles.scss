@@ -159,5 +159,11 @@
 		}
 	}
 }
-
+@media screen and (max-width: 990px) {
+	.page-front {
+		.layout__region--first {
+			flex: 0 1 100% !important;
+		}
+	}
+}
 
