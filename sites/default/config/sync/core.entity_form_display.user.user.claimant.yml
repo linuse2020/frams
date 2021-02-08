@@ -43,11 +43,17 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  private_messages:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
 hidden:
   contact: true
   dlc_profiles: true
   forest_profiles: true
   frc_profiles: true
+  langcode: true
   language: true
   panchayat_profiles: true
   promoter_profiles: true

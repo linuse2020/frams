@@ -35,12 +35,18 @@ content:
     settings:
       form_mode: default
     third_party_settings: {  }
+  private_messages:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
 hidden:
   claimant_profiles: true
   contact: true
   dlc_profiles: true
   field_user_full_name: true
   forest_profiles: true
+  langcode: true
   language: true
   panchayat_profiles: true
   promoter_profiles: true

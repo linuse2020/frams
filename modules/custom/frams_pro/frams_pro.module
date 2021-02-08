@@ -123,7 +123,7 @@ function frams_pro_form_alter(&$form, FormStateInterface $form_state, $form_id) 
   switch ($form_id) {
     case 'node_application_archives_form':
       $form['field_archives']['widget']['value']['#default_value'] = TRUE;
-      if ( array_key_exists('moderation_state', $form) ) {
+      if (array_key_exists('moderation_state', $form) ) {
 
         /*$node = $form_state->getFormObject()->getEntity();
         $moderationState = $node->get('moderation_state')->getValue('state');
@@ -281,7 +281,20 @@ function frams_pro_entity_bundle_field_info_alter(&$fields, EntityTypeInterface 
     }
   }
 }
-
+/**
+ * Implements hook_entity_presave().
+ */
+function frams_pro_entity_presave(Drupal\Core\Entity\EntityInterface $entity) {
+  if ($entity->getEntityType()->id() == 'node') {
+    switch ($entity->bundle()) {
+      case 'application':
+        if($entity->get('moderation_state')->value == 'ror_issued') {
+          $entity->set('field_ror_issued', TRUE);
+        }
+       break;
+    }
+  }
+}
 /**
  * Implements hook_theme().
  */

@@ -34,9 +34,14 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
   field_disctrict_office_category: true
   field_district_office_contact: true
   field_district_officer_designati: true
   field_email: true
   field_tdo_district: true
   field_tdo_name: true
+  langcode: true
+  private_message_link: true

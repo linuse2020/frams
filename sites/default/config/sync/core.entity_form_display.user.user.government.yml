@@ -33,6 +33,11 @@ content:
   language:
     weight: 0
     region: content
+  private_messages:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   timezone:
     weight: 6
     region: content
@@ -50,6 +55,7 @@ hidden:
   field_user_full_name: true
   forest_profiles: true
   frc_profiles: true
+  langcode: true
   panchayat_profiles: true
   promoter_profiles: true
   sdlc_profiles: true

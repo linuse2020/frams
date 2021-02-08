@@ -32,7 +32,12 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
   field_email: true
   field_frc: true
   field_promoter_contact: true
   field_teo: true
+  langcode: true
+  private_message_link: true

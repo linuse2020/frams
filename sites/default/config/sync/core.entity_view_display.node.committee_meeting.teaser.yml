@@ -23,8 +23,13 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
   field__venue: true
   field_committee: true
   field_meeting_members_details: true
   field_meeting_minutes: true
   field_total_participants: true
+  langcode: true
+  private_message_link: true

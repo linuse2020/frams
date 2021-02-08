@@ -61,6 +61,7 @@ dependencies:
     - field.field.node.application.field_photo_couple
     - field.field.node.application.field_ration_card_no
     - field.field.node.application.field_rehabilitation
+    - field.field.node.application.field_ror_issued
     - field.field.node.application.field_sdlc_meeting_minutes_
     - field.field.node.application.field_self_cultivation
     - field.field.node.application.field_submit_adharcard
@@ -153,6 +154,7 @@ hidden:
   field_photo_couple: true
   field_ration_card_no: true
   field_rehabilitation: true
+  field_ror_issued: true
   field_sdlc_meeting_minutes_: true
   field_self_cultivation: true
   field_submit_adharcard: true
@@ -166,4 +168,5 @@ hidden:
   field_upload_ror_issued: true
   field_upload_voters_id_copy: true
   field_vaimozhy: true
+  langcode: true
   private_message_link: true

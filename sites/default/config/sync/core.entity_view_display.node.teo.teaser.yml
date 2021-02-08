@@ -28,6 +28,9 @@ content:
     region: content
 hidden:
   body: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
   field_add_block_panchayat: true
   field_tdo: true
   field_teo_contact: true
@@ -36,3 +39,5 @@ hidden:
   field_teo_jurisdiction_block: true
   field_teo_jurisdiction_panchayat: true
   field_teo_name: true
+  langcode: true
+  private_message_link: true

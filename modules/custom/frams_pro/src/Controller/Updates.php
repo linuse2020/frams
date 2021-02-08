@@ -68,6 +68,7 @@ class Updates extends ControllerBase {
     foreach ($archives as $archive) {
       $archive->field_habitation = 5;
       $archive->field_self_cultivation = 5;
+      $archive->field_ror_issued = TRUE;
       $archive->save();
     }
      $build = [

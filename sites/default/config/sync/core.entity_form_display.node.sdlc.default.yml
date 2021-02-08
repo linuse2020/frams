@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.sdlc.field_dlc
     - node.type.sdlc
   module:
+    - content_moderation
     - entity_reference_revisions
     - field_layout
     - layout_discovery
@@ -59,6 +60,19 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
+    third_party_settings: {  }
   path:
     type: path
     weight: 30

@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.committee_meeting.field_total_participants
     - node.type.committee_meeting
   module:
+    - content_moderation
     - field_layout
     - file
     - layout_discovery
@@ -72,6 +73,19 @@ content:
     third_party_settings: {  }
     type: string_textarea
     region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
+    third_party_settings: {  }
   path:
     type: path
     weight: 30

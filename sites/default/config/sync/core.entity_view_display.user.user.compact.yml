@@ -78,12 +78,19 @@ content:
 hidden:
   claimant_profiles: true
   dlc_profiles: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
   field_user_full_name: true
   forest_profiles: true
   frc_profiles: true
+  langcode: true
+  linked_username: true
   member_for: true
   panchayat_profiles: true
+  private_message_link: true
   promoter_profiles: true
+  realname: true
   sdlc_profiles: true
   slc_profiles: true
   survey_profiles: true

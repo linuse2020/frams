@@ -69,6 +69,11 @@ content:
       form_mode: default
     third_party_settings: {  }
     region: content
+  private_messages:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   promoter_profiles:
     type: profile_form
     weight: 90
@@ -117,4 +122,5 @@ content:
     region: content
 hidden:
   field_user_full_name: true
+  langcode: true
   survey_profiles: true

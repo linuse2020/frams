@@ -40,6 +40,9 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
   field_frc_constituency: true
   field_frc_district: true
   field_frc_email: true
@@ -52,3 +55,5 @@ hidden:
   field_frc_village: true
   field_settlement: true
   field_teo_contact: true
+  langcode: true
+  private_message_link: true

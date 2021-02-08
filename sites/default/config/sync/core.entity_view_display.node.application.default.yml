@@ -60,6 +60,7 @@ dependencies:
     - field.field.node.application.field_photo_couple
     - field.field.node.application.field_ration_card_no
     - field.field.node.application.field_rehabilitation
+    - field.field.node.application.field_ror_issued
     - field.field.node.application.field_sdlc_meeting_minutes_
     - field.field.node.application.field_self_cultivation
     - field.field.node.application.field_submit_adharcard
@@ -573,6 +574,16 @@ content:
     third_party_settings: {  }
     type: string
     region: content
+  field_ror_issued:
+    weight: 73
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
   field_sdlc_meeting_minutes_:
     weight: 61
     label: above
@@ -698,4 +709,5 @@ hidden:
   entity_print_view_epub: true
   entity_print_view_pdf: true
   entity_print_view_word_docx: true
+  langcode: true
   private_message_link: true

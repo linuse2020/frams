@@ -26,14 +26,49 @@ class ConsolidatedList extends BlockBase {
    * {@inheritdoc}
    */
   public function build() {
-  	$application_received = \Drupal::database()->select('node', 'n')->addField('n', 'nid')->condition('n.type', 'application')->execute()->fetchAll(\PDO::FETCH_ASSOC);
-	$application_inprogress = \Drupal::database()->select('node', 'n')->addField('n', 'nid')->condition('n.type', 'application')->condition('field_family_category','Couple','=')->execute()->fetchAll(\PDO::FETCH_ASSOC);
-	$application_completed = \Drupal::database()->select('node', 'n')->addField('n', 'nid')->condition('n.type', 'application')->condition('field_family_category','Couple','=')->execute()->fetchAll(\PDO::FETCH_ASSOC);
+  	$application_received =  \Drupal::entityQuery('node')
+			->condition('type','application')
+			->count()
+			->accessCheck(FALSE)
+			->execute();
+		$application_issued = \Drupal::entityQuery('node')
+			->condition('type','application')
+			->condition('field_ror_issued',TRUE,'=')
+			->count()
+			->accessCheck(FALSE)
+			->execute();
+		$application_inprogress = \Drupal::entityQuery('node')
+			->condition('type','application')
+			->count()
+			->condition('field_ror_issued',FALSE,'=')
+			->accessCheck(FALSE)
+			->execute();
+		$application_inprogress = \Drupal::entityQuery('node')
+			->condition('type','application')
+			->count()
+			->condition('field_ror_issued',FALSE,'=')
+			->condition('field_family_category','female','=')
+			->accessCheck(FALSE)
+			->execute();
+		$application_inprogress = \Drupal::entityQuery('node')
+			->condition('type','application')
+			->count()
+			->condition('field_ror_issued',FALSE,'=')
+			->condition('field_family_category','couple','=')
+			->accessCheck(FALSE)
+			->execute();
+		$application_inprogress = \Drupal::entityQuery('node')
+			->condition('type','application')
+			->count()
+			->condition('field_ror_issued',FALSE,'=')
+			->condition('field_family_category','male','=')
+			->accessCheck(FALSE)
+			->execute();
 
 
   	return [
   	  '#type' => 'markup',
-      '#markup' =>'<div class="consolidated-wrapper"><div class="d-inline-block"><h3 class="text-success">' . count($application_received) . '</h3><p class="text-success">Received</p></div><div class="d-inline-block"><h3 class="text-success">' . count($application_inprogress) . '</h3><p class="text-success">Inprogress</p></div><div class="d-inline-block"><h3 class="text-success">' . count($application_completed) . '</h3><p class="text-success">Completed</p></div></div>',
+      '#markup' =>'<div class="consolidated-wrapper"><div class="d-inline-block"><h3 class="text-success">' . $application_received. '</h3><p class="text-success">Received</p></div><div class="d-inline-block"><h3 class="text-success">' . $application_inprogress . '</h3><p class="text-success">Inprogress</p></div><div class="d-inline-block"><h3 class="text-success">' . $application_issued . '</h3><p class="text-success">Completed</p></div></div>',
   	];
   }
 }
