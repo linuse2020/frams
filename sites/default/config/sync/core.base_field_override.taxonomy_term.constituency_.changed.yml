@@ -1,0 +1,18 @@
+uuid: a89d10fc-e74e-45e0-b87d-dde3f69904a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.constituency_
+id: taxonomy_term.constituency_.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: constituency_
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

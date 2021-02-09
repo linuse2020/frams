@@ -1,0 +1,20 @@
+uuid: fd197ede-0f8e-4d91-b26d-7b2e1f5abded
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.sdlc
+  module:
+    - path
+id: node.sdlc.path
+field_name: path
+entity_type: node
+bundle: sdlc
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

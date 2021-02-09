@@ -1,0 +1,18 @@
+uuid: 96f1b302-3866-4d71-adb9-f0de105d3a2d
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.committee_meeting
+id: node.committee_meeting.changed
+field_name: changed
+entity_type: node
+bundle: committee_meeting
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

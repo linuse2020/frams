@@ -1,0 +1,18 @@
+uuid: 5257cf10-ece3-4142-9aee-300460c8f0c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.dlc
+id: node.dlc.changed
+field_name: changed
+entity_type: node
+bundle: dlc
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

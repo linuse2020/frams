@@ -1,0 +1,18 @@
+uuid: 6f7b17ab-b3f1-4f54-9d5c-d042a4472be7
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.vaimozhy
+id: paragraph.vaimozhy.created
+field_name: created
+entity_type: paragraph
+bundle: vaimozhy
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

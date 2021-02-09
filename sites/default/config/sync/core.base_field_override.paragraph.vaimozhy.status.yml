@@ -1,0 +1,22 @@
+uuid: 0a9f42e7-a1a3-422d-8b0c-4c878a19a48d
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.vaimozhy
+id: paragraph.vaimozhy.status
+field_name: status
+entity_type: paragraph
+bundle: vaimozhy
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

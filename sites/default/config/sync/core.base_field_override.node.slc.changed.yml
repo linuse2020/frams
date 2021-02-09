@@ -1,0 +1,18 @@
+uuid: 6c901a7d-5391-47fb-ba45-095a516743d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.slc
+id: node.slc.changed
+field_name: changed
+entity_type: node
+bundle: slc
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

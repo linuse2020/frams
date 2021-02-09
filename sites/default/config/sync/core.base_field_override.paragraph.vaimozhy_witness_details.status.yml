@@ -1,0 +1,22 @@
+uuid: 718040aa-e83d-4ead-b8c2-664251b1692e
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.vaimozhy_witness_details
+id: paragraph.vaimozhy_witness_details.status
+field_name: status
+entity_type: paragraph
+bundle: vaimozhy_witness_details
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

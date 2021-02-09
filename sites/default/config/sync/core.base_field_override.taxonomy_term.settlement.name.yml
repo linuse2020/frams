@@ -1,0 +1,18 @@
+uuid: 8e9e812d-f194-4f48-b727-118a40248bc0
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.settlement
+id: taxonomy_term.settlement.name
+field_name: name
+entity_type: taxonomy_term
+bundle: settlement
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

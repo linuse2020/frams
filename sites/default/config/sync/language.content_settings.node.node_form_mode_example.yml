@@ -1,0 +1,18 @@
+uuid: dc4e5c2c-ffd6-494c-a5d3-7f13872bf167
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.node_form_mode_example
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.node_form_mode_example
+target_entity_type_id: node
+target_bundle: node_form_mode_example
+default_langcode: site_default
+language_alterable: false

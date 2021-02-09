@@ -1,0 +1,20 @@
+uuid: 08bb4cc2-c2b7-4d3c-b0a2-8153530a5e66
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.forest_division
+  module:
+    - path
+id: taxonomy_term.forest_division.path
+field_name: path
+entity_type: taxonomy_term
+bundle: forest_division
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

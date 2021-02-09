@@ -1,0 +1,18 @@
+uuid: 61e25f75-9afa-488d-8dd0-dbe0be9777d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.slc
+id: node.slc.title
+field_name: title
+entity_type: node
+bundle: slc
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

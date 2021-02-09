@@ -1,0 +1,20 @@
+uuid: de100c9c-6c36-4c36-bbdd-ac55f606a76c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.dlc
+  module:
+    - path
+id: node.dlc.path
+field_name: path
+entity_type: node
+bundle: dlc
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

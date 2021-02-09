@@ -1,0 +1,18 @@
+uuid: fe016c40-cccb-4790-8a67-d6b6a91977db
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.district
+id: taxonomy_term.district.name
+field_name: name
+entity_type: taxonomy_term
+bundle: district
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

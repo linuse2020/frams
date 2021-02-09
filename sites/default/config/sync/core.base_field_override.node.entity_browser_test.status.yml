@@ -1,0 +1,22 @@
+uuid: be53ea05-dca5-48ee-acf5-755d33b14527
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.entity_browser_test
+id: node.entity_browser_test.status
+field_name: status
+entity_type: node
+bundle: entity_browser_test
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

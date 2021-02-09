@@ -12,7 +12,7 @@ bundle: application
 label: 'Land from where displaced without land compensation: (See Section 4(8) of the Act) '
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

@@ -1,0 +1,20 @@
+uuid: edeef578-67a6-4280-8a48-23902a13b128
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.notifications
+id: node.notifications.uid
+field_name: uid
+entity_type: node
+bundle: notifications
+label: 'Authored by'
+description: 'The username of the content author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getDefaultEntityOwner'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

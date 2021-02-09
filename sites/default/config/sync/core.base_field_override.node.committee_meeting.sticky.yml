@@ -1,0 +1,22 @@
+uuid: 58af5d34-e90e-4bd4-8342-bce6895a7af7
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.committee_meeting
+id: node.committee_meeting.sticky
+field_name: sticky
+entity_type: node
+bundle: committee_meeting
+label: 'Sticky at top of lists'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

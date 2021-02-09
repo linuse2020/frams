@@ -1,0 +1,18 @@
+uuid: faeeea08-39ab-4138-af6d-7148230e68ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.pachayat_committee_meeting
+id: node.pachayat_committee_meeting.created
+field_name: created
+entity_type: node
+bundle: pachayat_committee_meeting
+label: 'Authored on'
+description: 'The time that the node was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

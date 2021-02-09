@@ -1,0 +1,18 @@
+uuid: fa3181aa-96d1-45c1-a56e-5a6a596cd539
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.forest_division
+id: taxonomy_term.forest_division.name
+field_name: name
+entity_type: taxonomy_term
+bundle: forest_division
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

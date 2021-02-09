@@ -1,0 +1,18 @@
+uuid: a1ae12df-60b6-49ac-acfc-ed5bbe2f86df
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.village
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.village
+target_entity_type_id: taxonomy_term
+target_bundle: village
+default_langcode: site_default
+language_alterable: false

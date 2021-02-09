@@ -1,0 +1,18 @@
+uuid: c8afb42d-a827-4145-ad3b-718ccb2a2c17
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.forest_circle
+id: taxonomy_term.forest_circle.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: forest_circle
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

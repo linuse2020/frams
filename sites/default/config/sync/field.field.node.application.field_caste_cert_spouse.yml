@@ -6,7 +6,14 @@ dependencies:
     - field.storage.node.field_caste_cert_spouse
     - node.type.application
   module:
+    - content_translation
     - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
 id: node.application.field_caste_cert_spouse
 field_name: field_caste_cert_spouse
 entity_type: node
@@ -14,7 +21,7 @@ bundle: application
 label: 'Caste Cert spouse'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

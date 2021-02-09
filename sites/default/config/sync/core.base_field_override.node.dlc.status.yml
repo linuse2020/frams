@@ -1,0 +1,22 @@
+uuid: 5cbfe40c-a627-4e10-af29-9cbcf221be77
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.dlc
+id: node.dlc.status
+field_name: status
+entity_type: node
+bundle: dlc
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

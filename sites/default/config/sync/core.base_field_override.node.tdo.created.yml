@@ -1,0 +1,18 @@
+uuid: fb220290-fb14-4d0e-bf0f-2f4713768db7
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.tdo
+id: node.tdo.created
+field_name: created
+entity_type: node
+bundle: tdo
+label: 'Authored on'
+description: 'The time that the node was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

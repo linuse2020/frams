@@ -1,0 +1,18 @@
+uuid: 52a67513-e1ca-4ba2-bdd2-03804eeadbaa
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.family_members_details
+id: paragraph.family_members_details.created
+field_name: created
+entity_type: paragraph
+bundle: family_members_details
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

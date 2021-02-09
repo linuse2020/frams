@@ -1,0 +1,20 @@
+uuid: 6f8738cb-880b-4c14-b2a8-98f663d60247
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.frc
+id: node.frc.uid
+field_name: uid
+entity_type: node
+bundle: frc
+label: 'Authored by'
+description: 'The username of the content author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getDefaultEntityOwner'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

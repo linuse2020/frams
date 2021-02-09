@@ -1,0 +1,20 @@
+uuid: ea604543-ebfe-4a88-9009-8719de27e1aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.district
+  module:
+    - path
+id: taxonomy_term.district.path
+field_name: path
+entity_type: taxonomy_term
+bundle: district
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

@@ -1,0 +1,18 @@
+uuid: ec283f1f-e57e-4307-b084-d586c8d54096
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.notice_board
+id: node.notice_board.title
+field_name: title
+entity_type: node
+bundle: notice_board
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

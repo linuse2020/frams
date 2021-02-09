@@ -1,0 +1,22 @@
+uuid: 8d75487d-c275-4a39-bc6a-383e3249d1f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.committee_meeting
+id: node.committee_meeting.status
+field_name: status
+entity_type: node
+bundle: committee_meeting
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,20 @@
+uuid: bac95e7d-b2db-498f-a034-912532be2bfb
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.notifications
+  module:
+    - path
+id: node.notifications.path
+field_name: path
+entity_type: node
+bundle: notifications
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

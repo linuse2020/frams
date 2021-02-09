@@ -1,0 +1,18 @@
+uuid: 29310e10-f330-489a-b6cc-966120b667d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.frc_members_details
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.frc_members_details
+target_entity_type_id: paragraph
+target_bundle: frc_members_details
+default_langcode: site_default
+language_alterable: false

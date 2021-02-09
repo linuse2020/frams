@@ -1,0 +1,18 @@
+uuid: 3a817f14-2503-47ee-87d7-1b68b0b3489c
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.block_panchayat
+id: taxonomy_term.block_panchayat.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: block_panchayat
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

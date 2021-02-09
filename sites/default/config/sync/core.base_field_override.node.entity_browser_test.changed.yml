@@ -1,0 +1,18 @@
+uuid: ef03f14d-5fb7-4631-9408-12e2df82de6f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.entity_browser_test
+id: node.entity_browser_test.changed
+field_name: changed
+entity_type: node
+bundle: entity_browser_test
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

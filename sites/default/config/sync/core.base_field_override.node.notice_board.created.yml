@@ -1,0 +1,18 @@
+uuid: 913aff45-d7aa-4da6-bb5b-94f02c214e09
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.notice_board
+id: node.notice_board.created
+field_name: created
+entity_type: node
+bundle: notice_board
+label: 'Authored on'
+description: 'The time that the node was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

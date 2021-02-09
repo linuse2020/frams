@@ -1,0 +1,20 @@
+uuid: 5f53dd3f-0966-4521-9809-2aeb1c5d49be
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.frc
+id: node.frc.menu_link
+field_name: menu_link
+entity_type: node
+bundle: frc
+label: 'Menu link'
+description: 'Computed menu link for the node (only available during node saving).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

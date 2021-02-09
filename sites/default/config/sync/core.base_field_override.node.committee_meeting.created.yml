@@ -1,0 +1,18 @@
+uuid: de221c21-ac52-419b-a5c8-77d5b55d2144
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.committee_meeting
+id: node.committee_meeting.created
+field_name: created
+entity_type: node
+bundle: committee_meeting
+label: 'Authored on'
+description: 'The time that the node was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

@@ -15,7 +15,7 @@ bundle: application
 label: 'Name of other members in the family with age: (including children and adult dependents)'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

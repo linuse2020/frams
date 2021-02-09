@@ -1,0 +1,18 @@
+uuid: eef3ee6a-34a2-4e56-827b-3f6e9d2609b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.forest_range
+id: taxonomy_term.forest_range.name
+field_name: name
+entity_type: taxonomy_term
+bundle: forest_range
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

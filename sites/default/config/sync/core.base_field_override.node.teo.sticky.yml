@@ -1,0 +1,22 @@
+uuid: 7e7967f5-7637-4e97-8807-7f0957892f8c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.teo
+id: node.teo.sticky
+field_name: sticky
+entity_type: node
+bundle: teo
+label: 'Sticky at top of lists'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

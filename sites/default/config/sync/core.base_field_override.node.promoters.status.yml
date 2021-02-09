@@ -1,0 +1,22 @@
+uuid: 3387aa96-3865-47be-bc32-37bb79be8693
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.promoters
+id: node.promoters.status
+field_name: status
+entity_type: node
+bundle: promoters
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

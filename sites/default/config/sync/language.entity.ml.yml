@@ -1,0 +1,9 @@
+uuid: 0ef05798-be5a-45bd-89dc-2b6d53649f23
+langcode: ml
+status: true
+dependencies: {  }
+id: ml
+label: Malayalam
+direction: ltr
+weight: 1
+locked: false

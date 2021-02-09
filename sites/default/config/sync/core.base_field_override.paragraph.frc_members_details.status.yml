@@ -1,0 +1,22 @@
+uuid: 3b87825b-5362-424a-8b74-ae647c494e1f
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.frc_members_details
+id: paragraph.frc_members_details.status
+field_name: status
+entity_type: paragraph
+bundle: frc_members_details
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

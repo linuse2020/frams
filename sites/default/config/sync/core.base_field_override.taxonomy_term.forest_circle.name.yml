@@ -1,0 +1,18 @@
+uuid: 350a9020-3aac-478b-bdd4-dc1cae2a6f86
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.forest_circle
+id: taxonomy_term.forest_circle.name
+field_name: name
+entity_type: taxonomy_term
+bundle: forest_circle
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

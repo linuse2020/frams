@@ -1,0 +1,20 @@
+uuid: 41c41c7a-1ba2-43cb-90f1-416a96358842
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.slc
+  module:
+    - path
+id: node.slc.path
+field_name: path
+entity_type: node
+bundle: slc
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

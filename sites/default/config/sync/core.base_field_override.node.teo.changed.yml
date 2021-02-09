@@ -1,0 +1,18 @@
+uuid: a5adc635-3116-4c2f-a3df-1e9e9891f785
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.teo
+id: node.teo.changed
+field_name: changed
+entity_type: node
+bundle: teo
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

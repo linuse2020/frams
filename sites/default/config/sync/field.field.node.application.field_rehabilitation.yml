@@ -12,7 +12,7 @@ bundle: application
 label: 'Land for in situ rehabilitation or alternative land, if any: (See Section 3(1) (m) of the Act) '
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

@@ -1,0 +1,20 @@
+uuid: 7d98e3aa-2013-4fd1-aacf-622db382a47f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.teo
+id: node.teo.menu_link
+field_name: menu_link
+entity_type: node
+bundle: teo
+label: 'Menu link'
+description: 'Computed menu link for the node (only available during node saving).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

@@ -1,0 +1,20 @@
+uuid: 4904baab-17f8-4a4b-a31b-2e83d5c99d5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.frc
+  module:
+    - path
+id: node.frc.path
+field_name: path
+entity_type: node
+bundle: frc
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

@@ -1,0 +1,22 @@
+uuid: bec1b972-1c3a-40f1-a05f-812c8f3deacb
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.notifications
+id: node.notifications.status
+field_name: status
+entity_type: node
+bundle: notifications
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

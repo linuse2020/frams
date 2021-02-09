@@ -1,0 +1,18 @@
+uuid: 2b92952b-f9ba-4816-b0c2-780b5f054d0b
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.forest_range
+id: taxonomy_term.forest_range.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: forest_range
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

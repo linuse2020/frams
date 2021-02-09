@@ -1,0 +1,22 @@
+uuid: bbc773a1-dad5-4f21-803c-6de1f089a118
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type._survey_details
+id: paragraph._survey_details.status
+field_name: status
+entity_type: paragraph
+bundle: _survey_details
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

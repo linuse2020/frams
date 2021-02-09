@@ -12,7 +12,7 @@ bundle: application
 label: 'Other Traditional Forest Dweller: Yes/ No (If a spouse is a Scheduled Tribe (attach authenticated copy of certificate) '
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: 0

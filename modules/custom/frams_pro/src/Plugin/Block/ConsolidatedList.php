@@ -39,36 +39,34 @@ class ConsolidatedList extends BlockBase {
 			->execute();
 		$application_inprogress = \Drupal::entityQuery('node')
 			->condition('type','application')
-			->count()
 			->condition('field_ror_issued',FALSE,'=')
+			->count()
 			->accessCheck(FALSE)
 			->execute();
-		$application_inprogress = \Drupal::entityQuery('node')
+		$issued_female = \Drupal::entityQuery('node')
 			->condition('type','application')
-			->count()
-			->condition('field_ror_issued',FALSE,'=')
+			->condition('field_ror_issued',TRUE,'=')
 			->condition('field_family_category','female','=')
+			->count()
 			->accessCheck(FALSE)
 			->execute();
-		$application_inprogress = \Drupal::entityQuery('node')
+		$issued_Couple = \Drupal::entityQuery('node')
 			->condition('type','application')
-			->count()
-			->condition('field_ror_issued',FALSE,'=')
+			->condition('field_ror_issued',TRUE,'=')
 			->condition('field_family_category','couple','=')
-			->accessCheck(FALSE)
-			->execute();
-		$application_inprogress = \Drupal::entityQuery('node')
-			->condition('type','application')
 			->count()
-			->condition('field_ror_issued',FALSE,'=')
-			->condition('field_family_category','male','=')
 			->accessCheck(FALSE)
 			->execute();
-
-
+		$issued_male = \Drupal::entityQuery('node')
+			->condition('type','application')
+			->condition('field_ror_issued',TRUE,'=')
+			->condition('field_family_category','male','=')
+			->count()
+			->accessCheck(FALSE)
+			->execute();
   	return [
   	  '#type' => 'markup',
-      '#markup' =>'<div class="consolidated-wrapper"><div class="d-inline-block"><h3 class="text-success">' . $application_received. '</h3><p class="text-success">Received</p></div><div class="d-inline-block"><h3 class="text-success">' . $application_inprogress . '</h3><p class="text-success">Inprogress</p></div><div class="d-inline-block"><h3 class="text-success">' . $application_issued . '</h3><p class="text-success">Completed</p></div></div>',
+      '#markup' =>'<div class="consolidated container"><div class="row text-center"><div class="col"><div class="counter"><i class="fa fa-code fa-2x"></i><h4 class="timer count-title count-number" data-to=' . $application_received . ' data-speed="1500"></h4><p class="count-text ">Received</p></div></div><div class="col"><div class="counter"><i class="fa fa-coffee fa-2x"></i><h4 class="timer count-title count-number" data-to=' . $$application_inprogress . ' data-speed="1500"></h4><p class="count-text ">Inprogress</p></div></div><div class="col"><div class="counter"><i class="fa fa-lightbulb-o fa-2x"></i><h4 class="timer count-title count-number" data-to=' . $$application_issued . ' data-speed="1500"></h4><p class="count-text ">Issued</p></div></div><div class="col"><div class="counter"><i class="fa fa-lightbulb-o fa-2x"></i><h4 class="timer count-title count-number" data-to=' . $issued_Couple . ' data-speed="1500"></h4><p class="count-text ">Couple</p></div></div><div class="col"><div class="counter"><i class="fa fa-lightbulb-o fa-2x"></i><h4 class="timer count-title count-number" data-to=' . $issued_female . ' data-speed="1500"></h4><p class="count-text ">Single women</p></div></div><div class="col"><div class="counter"><i class="fa fa-bug fa-2x"></i><h4 class="timer count-title count-number" data-to=' . $issued_male . ' data-speed="1500"></h4><p class="count-text ">Single man</p></div></div></div></div>',
   	];
   }
 }

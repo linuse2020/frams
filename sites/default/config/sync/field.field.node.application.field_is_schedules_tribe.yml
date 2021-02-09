@@ -12,7 +12,7 @@ bundle: application
 label: 'Scheduled Tribe: Yes/No (Attach authenticated copy of Certificate)'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: 0

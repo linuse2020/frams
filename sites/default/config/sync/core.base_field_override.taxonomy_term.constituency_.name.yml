@@ -1,0 +1,18 @@
+uuid: 200d7bf6-f58f-48bd-b697-ffac29cec66a
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.constituency_
+id: taxonomy_term.constituency_.name
+field_name: name
+entity_type: taxonomy_term
+bundle: constituency_
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

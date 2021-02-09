@@ -1,0 +1,18 @@
+uuid: b63741d8-4468-4a65-9bac-1311c267875e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.tdo
+id: node.tdo.changed
+field_name: changed
+entity_type: node
+bundle: tdo
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

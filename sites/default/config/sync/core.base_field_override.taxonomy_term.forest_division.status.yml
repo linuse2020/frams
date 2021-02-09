@@ -1,0 +1,22 @@
+uuid: 2bc55a3a-f25e-4d5f-91ca-edc7bf3dada6
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.forest_division
+id: taxonomy_term.forest_division.status
+field_name: status
+entity_type: taxonomy_term
+bundle: forest_division
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

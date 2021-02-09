@@ -1,0 +1,18 @@
+uuid: 14c3c654-b5ed-455e-835d-7a01860f0740
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.vaimozhy
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.vaimozhy
+target_entity_type_id: paragraph
+target_bundle: vaimozhy
+default_langcode: site_default
+language_alterable: false

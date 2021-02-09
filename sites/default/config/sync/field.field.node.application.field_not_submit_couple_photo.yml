@@ -12,7 +12,7 @@ bundle: application
 label: 'If not submit Photograph of Couple, give reason.'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

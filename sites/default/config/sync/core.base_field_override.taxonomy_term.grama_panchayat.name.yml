@@ -1,0 +1,18 @@
+uuid: 1b261be7-4684-4a79-b56c-547a86fc8647
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.grama_panchayat
+id: taxonomy_term.grama_panchayat.name
+field_name: name
+entity_type: taxonomy_term
+bundle: grama_panchayat
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

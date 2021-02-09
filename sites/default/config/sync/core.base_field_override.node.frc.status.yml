@@ -1,0 +1,22 @@
+uuid: cd8602fd-891d-4fac-9c55-75c6dc63e278
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.frc
+id: node.frc.status
+field_name: status
+entity_type: node
+bundle: frc
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

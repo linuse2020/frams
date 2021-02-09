@@ -1,0 +1,18 @@
+uuid: 9d37d442-a3d0-45c9-9081-7b0fad5a34ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.committee_member_details
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.committee_member_details
+target_entity_type_id: paragraph
+target_bundle: committee_member_details
+default_langcode: site_default
+language_alterable: true

@@ -1,0 +1,20 @@
+uuid: 4476b3c7-cd6a-4131-8216-542e9cafe025
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.constituency_
+  module:
+    - path
+id: taxonomy_term.constituency_.path
+field_name: path
+entity_type: taxonomy_term
+bundle: constituency_
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

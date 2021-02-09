@@ -1,0 +1,22 @@
+uuid: 20040766-d45b-4c97-8525-a7a9eaf61efa
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.slc
+id: node.slc.sticky
+field_name: sticky
+entity_type: node
+bundle: slc
+label: 'Sticky at top of lists'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

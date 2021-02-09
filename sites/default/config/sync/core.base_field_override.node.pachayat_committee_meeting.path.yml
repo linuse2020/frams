@@ -1,0 +1,20 @@
+uuid: 76549547-e124-4248-afac-7db41e9e1533
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.pachayat_committee_meeting
+  module:
+    - path
+id: node.pachayat_committee_meeting.path
+field_name: path
+entity_type: node
+bundle: pachayat_committee_meeting
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

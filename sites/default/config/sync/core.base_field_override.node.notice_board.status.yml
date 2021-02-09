@@ -1,0 +1,22 @@
+uuid: 7ead19fd-031f-4fa0-9b55-c6150090d91d
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.notice_board
+id: node.notice_board.status
+field_name: status
+entity_type: node
+bundle: notice_board
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

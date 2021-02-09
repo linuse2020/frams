@@ -1,0 +1,22 @@
+uuid: 7f5cd0d5-3d56-477c-9257-c0df525fce72
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.other_claims
+id: paragraph.other_claims.status
+field_name: status
+entity_type: paragraph
+bundle: other_claims
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

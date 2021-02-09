@@ -1,0 +1,22 @@
+uuid: e5c084c8-6d4a-4e72-8715-66b55c1c40f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.sdlc
+id: node.sdlc.status
+field_name: status
+entity_type: node
+bundle: sdlc
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

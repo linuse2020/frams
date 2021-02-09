@@ -12,7 +12,7 @@ bundle: application
 label: 'Number of Claims submitted'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

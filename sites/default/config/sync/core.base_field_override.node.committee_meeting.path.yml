@@ -1,0 +1,20 @@
+uuid: 74b2d23e-613f-435d-8c09-93dc04021c9f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.committee_meeting
+  module:
+    - path
+id: node.committee_meeting.path
+field_name: path
+entity_type: node
+bundle: committee_meeting
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

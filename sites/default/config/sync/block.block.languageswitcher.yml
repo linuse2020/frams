@@ -1,0 +1,20 @@
+uuid: a1b55555-5454-420d-8405-2744b6bd6be1
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+  theme:
+    - frams
+id: languageswitcher
+theme: frams
+region: header
+weight: 0
+provider: null
+plugin: 'language_block:language_interface'
+settings:
+  id: 'language_block:language_interface'
+  label: 'Language switcher'
+  provider: language
+  label_display: '0'
+visibility: {  }

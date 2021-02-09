@@ -1,0 +1,18 @@
+uuid: e61a60f9-e66a-4654-a2d4-47ea46c60452
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.taluk
+id: taxonomy_term.taluk.name
+field_name: name
+entity_type: taxonomy_term
+bundle: taluk
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

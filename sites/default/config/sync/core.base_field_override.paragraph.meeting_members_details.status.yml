@@ -1,0 +1,22 @@
+uuid: 399a96a7-00fa-4fa1-a5b4-899a008c9795
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.meeting_members_details
+id: paragraph.meeting_members_details.status
+field_name: status
+entity_type: paragraph
+bundle: meeting_members_details
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

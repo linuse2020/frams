@@ -1,0 +1,18 @@
+uuid: e7201c80-56c3-4acd-a7b1-590e3b3e3fcc
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.committee_member_details
+id: paragraph.committee_member_details.created
+field_name: created
+entity_type: paragraph
+bundle: committee_member_details
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

@@ -1,0 +1,22 @@
+uuid: dd2a8036-52af-4a66-9411-9574311193a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.pachayat_committee_meeting
+id: node.pachayat_committee_meeting.status
+field_name: status
+entity_type: node
+bundle: pachayat_committee_meeting
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

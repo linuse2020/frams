@@ -1,0 +1,20 @@
+uuid: 96f11460-2b72-43dc-ab5b-31793729a8d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.forest_range
+  module:
+    - path
+id: taxonomy_term.forest_range.path
+field_name: path
+entity_type: taxonomy_term
+bundle: forest_range
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

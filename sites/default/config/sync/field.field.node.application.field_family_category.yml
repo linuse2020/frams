@@ -14,7 +14,7 @@ bundle: application
 label: 'Family Category'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: Couple

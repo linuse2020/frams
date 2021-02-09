@@ -1,0 +1,22 @@
+uuid: b8fd441a-cc8d-433c-9821-7883234958b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.teo
+id: node.teo.status
+field_name: status
+entity_type: node
+bundle: teo
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

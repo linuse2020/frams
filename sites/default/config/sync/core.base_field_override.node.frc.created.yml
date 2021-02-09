@@ -1,0 +1,18 @@
+uuid: e8618f89-1bd7-4880-97eb-b0eb68f18c86
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.frc
+id: node.frc.created
+field_name: created
+entity_type: node
+bundle: frc
+label: 'Authored on'
+description: 'The time that the node was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

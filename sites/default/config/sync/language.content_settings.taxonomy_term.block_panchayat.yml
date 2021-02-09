@@ -1,0 +1,18 @@
+uuid: 2fb3cbf5-bb4e-4359-a8e8-e5edd00052e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.block_panchayat
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.block_panchayat
+target_entity_type_id: taxonomy_term
+target_bundle: block_panchayat
+default_langcode: site_default
+language_alterable: false

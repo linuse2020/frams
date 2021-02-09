@@ -1,0 +1,18 @@
+uuid: 6193a349-2083-4e73-a61a-1e0259f3834c
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type._survey_details
+id: paragraph._survey_details.created
+field_name: created
+entity_type: paragraph
+bundle: _survey_details
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

@@ -1,0 +1,18 @@
+uuid: 6d238db9-386a-4c2a-82fd-cc1e73972fb1
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.grama_panchayat
+id: taxonomy_term.grama_panchayat.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: grama_panchayat
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

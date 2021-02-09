@@ -1,0 +1,18 @@
+uuid: 762e049a-35e4-4103-9e65-d11f0c04f1f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.frc
+id: node.frc.changed
+field_name: changed
+entity_type: node
+bundle: frc
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

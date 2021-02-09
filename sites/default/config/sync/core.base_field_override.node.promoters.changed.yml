@@ -1,0 +1,18 @@
+uuid: 3afc9868-e7bb-435e-81bb-66d730c3899e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.promoters
+id: node.promoters.changed
+field_name: changed
+entity_type: node
+bundle: promoters
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

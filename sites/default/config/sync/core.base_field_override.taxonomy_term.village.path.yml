@@ -1,0 +1,20 @@
+uuid: d3facdaf-0aba-41c6-8d25-ee1464a21f3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.village
+  module:
+    - path
+id: taxonomy_term.village.path
+field_name: path
+entity_type: taxonomy_term
+bundle: village
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

@@ -1,0 +1,22 @@
+uuid: fc44e051-efa1-4d60-bdd7-d88e949a41d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.tdo
+id: node.tdo.status
+field_name: status
+entity_type: node
+bundle: tdo
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

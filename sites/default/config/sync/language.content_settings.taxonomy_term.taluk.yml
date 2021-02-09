@@ -1,0 +1,18 @@
+uuid: 55e075f9-9c24-46e7-9d97-b00c5a71e0f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.taluk
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.taluk
+target_entity_type_id: taxonomy_term
+target_bundle: taluk
+default_langcode: site_default
+language_alterable: false

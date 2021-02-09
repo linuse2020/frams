@@ -1,0 +1,22 @@
+uuid: 6e2a1ce8-46e7-4cd6-9ec6-2ad202638aec
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.committee_member_details
+id: paragraph.committee_member_details.status
+field_name: status
+entity_type: paragraph
+bundle: committee_member_details
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

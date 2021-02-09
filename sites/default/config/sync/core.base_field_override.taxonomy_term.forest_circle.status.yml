@@ -1,0 +1,22 @@
+uuid: 9d393eb8-61f6-4479-9967-b195eb581725
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.forest_circle
+id: taxonomy_term.forest_circle.status
+field_name: status
+entity_type: taxonomy_term
+bundle: forest_circle
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

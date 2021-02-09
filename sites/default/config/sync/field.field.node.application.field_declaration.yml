@@ -12,7 +12,7 @@ bundle: application
 label: ' I, hereby, declare that, the entries made by me in the Application Form are complete and true to the Best of my knowledge'
 description: ''
 required: true
-translatable: false
+translatable: true
 default_value:
   -
     value: 0

@@ -1,0 +1,18 @@
+uuid: cd5a0d8d-ce87-4c5d-ba42-bca96b3c21ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.village
+id: taxonomy_term.village.name
+field_name: name
+entity_type: taxonomy_term
+bundle: village
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

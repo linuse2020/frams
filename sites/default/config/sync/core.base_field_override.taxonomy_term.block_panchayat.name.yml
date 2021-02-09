@@ -1,0 +1,18 @@
+uuid: 85ec4931-b92f-423f-a976-11386c5cd7ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.block_panchayat
+id: taxonomy_term.block_panchayat.name
+field_name: name
+entity_type: taxonomy_term
+bundle: block_panchayat
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

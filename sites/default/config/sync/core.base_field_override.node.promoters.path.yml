@@ -1,0 +1,20 @@
+uuid: 4adcb786-275e-40aa-81d2-ca575cc80931
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.promoters
+  module:
+    - path
+id: node.promoters.path
+field_name: path
+entity_type: node
+bundle: promoters
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path
