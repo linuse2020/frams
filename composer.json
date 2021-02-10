@@ -102,6 +102,7 @@
         "drupal/tamper": "^1.0@alpha",
         "drupal/token": "^1.9",
         "drupal/token_views_filter": "^1.5",
+        "drupal/twig_tweak": "^2.9",
         "drupal/ultimate_cron": "^2.0@alpha",
         "drupal/user_view_mode": "^1.0",
         "drupal/vapn": "^1.5",

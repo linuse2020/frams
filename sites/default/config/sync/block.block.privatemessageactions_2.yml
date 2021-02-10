@@ -10,7 +10,7 @@ dependencies:
 id: privatemessageactions_2
 theme: frams
 region: content
-weight: -3
+weight: -4
 provider: null
 plugin: private_message_actions_block
 settings:

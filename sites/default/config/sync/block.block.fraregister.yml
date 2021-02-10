@@ -5,13 +5,17 @@ dependencies:
   content:
     - 'block_content:basic:50e05c85-f87f-4d28-a3ea-fa5b10999f29'
   module:
+    - block_class
     - block_content
   theme:
     - frams
+third_party_settings:
+  block_class:
+    classes: fra-register-block
 id: fraregister
 theme: frams
-region: navbar_branding
-weight: -11
+region: content
+weight: -6
 provider: null
 plugin: 'block_content:50e05c85-f87f-4d28-a3ea-fa5b10999f29'
 settings:
