@@ -10697,10 +10697,6 @@ header .user-menu ul li {
   }
 }
 @media screen and (max-width: 575px) {
-  body {
-    background-color: red !important;
-  }
-
   .banner-wrapper {
     height: auto !important;
   }
