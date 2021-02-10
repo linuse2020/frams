@@ -10691,6 +10691,34 @@ header .user-menu ul li {
   font-size: 0.75rem;
 }
 
+header .sf-style-black {
+  float: right;
+}
+header .sf-style-black span {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  header .main-menu {
+    flex: unset;
+    max-width: 100%;
+  }
+  header .main-menu ul.sf-menu a {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+}
+@media screen and (min-width: 991px) {
+  header ul.sf-menu.sf-style-black li {
+    background: none;
+  }
+  header ul.sf-menu.sf-style-black {
+    float: right;
+  }
+  header ul.sf-menu.sf-style-black li:hover, header ul.sf-menu.sf-style-black a.is-active, header ul.sf-menu.sf-style-black a:hover {
+    background: none;
+  }
+}
 @media screen and (max-width: 990px) {
   .page-front .layout__region--first {
     flex: 0 1 100% !important;
