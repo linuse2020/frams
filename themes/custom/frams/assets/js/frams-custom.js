@@ -1,3 +1,4 @@
+
 /*
  *  Custom JS
  *
@@ -95,5 +96,25 @@
     }
   };
 
+  Drupal.behaviors.ReplaceCustomLanguageLinksOfArchives = {
+    attach: function (context, settings) {
+      var lang = $('html').attr('lang');
+      if (lang === 'ml') {
+      	var link = $('.archives-btn').attr('href');
+      	var newlink = '/ml'+link;
+      	$('.archives-btn', context).attr('href',newlink);
+      } 
+    }
+  };
 
+  Drupal.behaviors.ReplaceCustomLanguageLinksOfApplications = {
+    attach: function (context, settings) {
+      var lang = $('html').attr('lang');
+      if (lang === 'ml') {
+      	var link = $('.application-btn').attr('href');
+      	var newlink = '/ml'+link;
+      	$('.application-btn', context).attr('href',newlink);
+      } 
+    }
+  };
 }(jQuery));
