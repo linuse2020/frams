@@ -20,3 +20,14 @@ function frams_preprocess_html(&$variables) {
     $variables['attributes']['class'][] = 'page-node-' . $node->bundle();
   }
 }
+
+function frams_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  // Add content type suggestions.
+  if ($node = \Drupal::request()->attributes->get('node')) {
+	  $current_path = \Drupal::service('path.current')->getPath();
+	  $result = \Drupal::service('path.alias_manager')->getAliasByPath($current_path);
+	  $path_alias = trim($result, '/');
+	  $path_alias = str_replace('/', '-', $path_alias);
+	  $suggestions[] = 'page__'.$path_alias;
+  }
+}
