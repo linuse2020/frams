@@ -10473,32 +10473,6 @@ header.sticky .logo img {
   color: #ffc107;
 }
 
-.consolidated .counter {
-  background-color: #f5f5f5;
-  padding: 20px 0;
-  border-radius: 5px;
-}
-.consolidated .count-title {
-  font-size: 40px;
-  font-weight: normal;
-  margin-top: 10px;
-  margin-bottom: 0;
-  text-align: center;
-}
-.consolidated .count-text {
-  font-size: 13px;
-  font-weight: normal;
-  margin-top: 10px;
-  margin-bottom: 0;
-  text-align: center;
-}
-.consolidated .fa-2x {
-  margin: 0 auto;
-  float: none;
-  display: table;
-  color: #4ad1e5;
-}
-
 .page-front h1.display-3 {
   font-size: 3.5rem;
 }
@@ -10767,5 +10741,33 @@ header .user-menu ul li {
 @media screen and (max-width: 990px) {
   .page-front .layout__region--first {
     flex: 0 1 100% !important;
+  }
+}
+header .sf-style-black {
+  float: right;
+}
+header .sf-style-black span {
+  display: none;
+}
+
+@media screen and (max-width: 1293px) {
+  header .main-menu {
+    flex: unset;
+    max-width: 100%;
+  }
+  header .main-menu ul.sf-menu a {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+}
+@media screen and (min-width: 991px) {
+  header ul.sf-menu.sf-style-black li {
+    background: none;
+  }
+  header ul.sf-menu.sf-style-black {
+    float: right;
+  }
+  header ul.sf-menu.sf-style-black li:hover, header ul.sf-menu.sf-style-black a.is-active, header ul.sf-menu.sf-style-black a:hover {
+    background: none;
   }
 }
