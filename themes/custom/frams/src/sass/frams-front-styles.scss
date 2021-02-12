@@ -182,6 +182,39 @@
 		background:#205431;
 	}
 }
+header {
+	.sf-style-black {
+		float: right;
+		span {
+			display: none;
+		}
+	}
+}
+@media screen and (max-width: 1200px) {
+	header {
+		.main-menu {
+			flex: unset;
+			max-width: 100%;
+			ul.sf-menu a {
+				padding-left: 0.5rem !important;
+				padding-right: 0.5rem !important;
+			}
+		}
+	}
+}
+@media screen and (min-width: 991px) {
+	header {
+		ul.sf-menu.sf-style-black li {
+    	background: none;
+		}
+		ul.sf-menu.sf-style-black {
+			float: right;
+		}
+		ul.sf-menu.sf-style-black li:hover, ul.sf-menu.sf-style-black a.is-active, ul.sf-menu.sf-style-black a:hover {
+    	background: none;
+		}
+	}
+}
 @media screen and (max-width: 990px) {
 	.page-front {
 		.layout__region--first {
