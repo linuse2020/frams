@@ -53,10 +53,27 @@
 		text-align: center
 	}
 	.hero-banner.container-fluid {
-		padding: o;
-		padding: 0;
-		margin: 0;
-	}
+    padding: 0;
+    padding: 0;
+    margin: 0;
+    position: relative;
+  }
+  .block--consolidatedlistblock {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+    .counter {
+      background-color: transparent;
+      .count-number {
+        color: #fff;
+      }
+      .count-text {
+        color: #fff;
+        font-size: 20px;
+      }
+    }
+  }
 	.region-right {
 		position: relative;
 		header {
@@ -84,11 +101,11 @@
 	.banner-wrapper {
 		position: relative;
 		background-color: black;
-		height: 90vh;
+		height: 100vh;
 		min-height: 25rem;
 		width: 100%;
 		overflow: hidden;
-		video {
+		video{
 			position: absolute;
 			top: 50%;
 			left: 50%;
@@ -115,6 +132,9 @@
 			background-color: black;
 			opacity: 0.5;
 			z-index: 1;
+		}
+		.banner-image-mobile {
+			position: relative;
 		}
 	}
 	.layout__region--second {
@@ -158,6 +178,9 @@
 			font-size: 0.75rem;
 		}
 	}
+	.footer-bg {
+		background:#205431;
+	}
 }
 @media screen and (max-width: 990px) {
 	.page-front {
@@ -166,4 +189,27 @@
 		}
 	}
 }
+@media screen and (max-width: 575px) {
+	.banner-wrapper {
+		height: auto !important;
+	}
+	.banner-image-mobile {
+		position: relative;
+	}
+	.fra-text {
+		position: absolute;
+		bottom: 0;
+	}
 
+}
+
+@media screen and (max-width: 768px) {
+	.block.block--consolidatedlistblock {
+		position: relative;
+		.counter {
+			.count-number, .count-text {
+				color: #000;
+			}
+		}
+	}
+}

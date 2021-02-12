@@ -40,11 +40,11 @@
  */
 #}
 
-  <div class="d-flex menu-content-container">
-    <div class="layout-container layout-sidebar-menu user-left-menu m-0 p-0 region-left ">
-      <div class="toggle-menu float-right d-inline-block">
+  <div class="d-flex menu-content-container dashboard">
+    <div class="layout-container layout-sidebar-menu user-left-menu d-none d-md-block m-0 p-0 region-left ">
+      <!---<div class="toggle-menu float-right d-inline-block">
         <i class="fas fa-bars"></i>
-      </div>
+      </div>-->
       <div class="header-logo header-logo text-center mt-5 pt-5 pb-5">
         <div class="full-logo">
           <a href="/"><img src="/themes/custom/frams/assets/images/frams-logo.png" width="150"/></a>
@@ -53,7 +53,7 @@
           <a href="/"><img src="/{{ directory }}/mobile-logo.png" width="50"/></a>
         </div>
       </div>
-     <!--  {{ page.Sidebar}} -->
+    {{ page.left_sidebar}}
     </div>
 
     <div class="w-100 region-right show-header-top">

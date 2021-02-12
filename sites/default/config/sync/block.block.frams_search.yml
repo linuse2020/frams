@@ -11,7 +11,7 @@ _core:
 id: frams_search
 theme: frams
 region: sidebar_menu
-weight: -11
+weight: -13
 provider: null
 plugin: search_form_block
 settings:

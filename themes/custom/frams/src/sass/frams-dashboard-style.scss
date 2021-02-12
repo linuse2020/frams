@@ -1,0 +1,55 @@
+.dashboard {
+	.nav-item {
+				
+				a {
+				color: #fff !important;
+				}
+				a:hover {
+    		color: #b9b9b9 !important;
+				}
+	}
+	.dropdown-menu {
+			background: #000;
+			a:hover {
+				background: #000;
+			}
+		}
+	.layout-sidebar-menu {
+		background-color: #1a5838;
+		.left-side-block {
+			.nav-item {
+				padding-right: 3rem;
+				a {
+				color: #fff !important;
+				}
+				a:hover {
+    		color: #b9b9b9 !important;
+				}
+			}
+		}
+	}
+	.region-right {
+		padding-left: 14rem;
+	}
+	header .content-header {
+		display: none;
+	}
+	.block--useraccountmenu-2 {
+		padding-left: 1rem;
+		.dropdown-menu {
+			background: none;
+			border: none;
+			a:hover {
+				background: none;
+			}
+		}
+	}
+
+}
+@media screen and (max-width: 767px) {
+	.dashboard {
+		.region-right {
+			padding-left: 0!important;
+		}
+	}
+}

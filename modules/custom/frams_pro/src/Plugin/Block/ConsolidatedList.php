@@ -33,7 +33,6 @@ class ConsolidatedList extends BlockBase {
 			->execute();
 		$application_issued = \Drupal::entityQuery('node')
 			->condition('type','application')
-			->condition('field_ror_issued',TRUE,'=')
 			->count()
 			->accessCheck(FALSE)
 			->execute();
@@ -66,7 +65,7 @@ class ConsolidatedList extends BlockBase {
 			->execute();
   	return [
   	  '#type' => 'markup',
-      '#markup' =>'<div class="consolidated container"><div class="row text-center"><div class="col"><div class="counter"><i class="fa fa-code fa-2x"></i><h4 class="timer count-title count-number" data-to=' . $application_received . ' data-speed="1500"></h4><p class="count-text ">Received</p></div></div><div class="col"><div class="counter"><i class="fa fa-coffee fa-2x"></i><h4 class="timer count-title count-number" data-to=' . $$application_inprogress . ' data-speed="1500"></h4><p class="count-text ">Inprogress</p></div></div><div class="col"><div class="counter"><i class="fa fa-lightbulb-o fa-2x"></i><h4 class="timer count-title count-number" data-to=' . $$application_issued . ' data-speed="1500"></h4><p class="count-text ">Issued</p></div></div><div class="col"><div class="counter"><i class="fa fa-lightbulb-o fa-2x"></i><h4 class="timer count-title count-number" data-to=' . $issued_Couple . ' data-speed="1500"></h4><p class="count-text ">Couple</p></div></div><div class="col"><div class="counter"><i class="fa fa-lightbulb-o fa-2x"></i><h4 class="timer count-title count-number" data-to=' . $issued_female . ' data-speed="1500"></h4><p class="count-text ">Single women</p></div></div><div class="col"><div class="counter"><i class="fa fa-bug fa-2x"></i><h4 class="timer count-title count-number" data-to=' . $issued_male . ' data-speed="1500"></h4><p class="count-text ">Single man</p></div></div></div></div>',
+      '#markup' =>'<div class="consolidated container"><div class="row text-center"><div class="col"><div class="counter"><h4 class="timer count-title count-number" data-to=' . $application_received . ' data-speed="1500"></h4><p class="count-text ">Received</p></div></div><div class="col"><div class="counter"><h4 class="timer count-title count-number" data-to=' . $application_inprogress . ' data-speed="1500"></h4><p class="count-text ">Inprogress</p></div></div><div class="col"><div class="counter"><h4 class="timer count-title count-number" data-to=' . $application_issued . ' data-speed="1500"></h4><p class="count-text ">Issued</p></div></div><div class="col"><div class="counter"><h4 class="timer count-title count-number" data-to=' . $issued_Couple . ' data-speed="1500"></h4><p class="count-text ">Couple</p></div></div><div class="col"><div class="counter"><h4 class="timer count-title count-number" data-to=' . $issued_female . ' data-speed="1500"></h4><p class="count-text ">Female headed</p></div></div><div class="col"><div class="counter"><h4 class="timer count-title count-number" data-to=' . $issued_male . ' data-speed="1500"></h4><p class="count-text ">Male headed</p></div></div></div></div>',
   	];
   }
 }

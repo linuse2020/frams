@@ -1,0 +1,25 @@
+uuid: c9b17aa1-bc58-464a-9da8-1dd16b58f191
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:a617618b-55fd-4464-920c-6dc33aa64e32'
+  module:
+    - block_content
+  theme:
+    - frams
+id: videobanner
+theme: frams
+region: banner
+weight: -12
+provider: null
+plugin: 'block_content:a617618b-55fd-4464-920c-6dc33aa64e32'
+settings:
+  id: 'block_content:a617618b-55fd-4464-920c-6dc33aa64e32'
+  label: 'Video Banner'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

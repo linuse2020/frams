@@ -6,6 +6,7 @@ style:
       assets/css/jquery.dataTables.min.css: {}
   js:
     assets/js/frams.script.js: {}
+    assets/js/counter.js: {}
     assets/js/jquery.dataTables.min.js: {}
 
 

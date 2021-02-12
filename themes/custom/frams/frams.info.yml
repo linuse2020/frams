@@ -12,6 +12,8 @@ regions:
   navbar_branding: Navbar branding
   navbar_left:  Navbar left
   navbar_right: Navbar right
+  left_sidebar: Left Sidebar
+  page_top: Page Top
   header: Header
   banner: Banner
   content: Content

@@ -1,0 +1,20 @@
+uuid: 1c121fea-fbc6-4e3c-bb48-ef67a8f5158d
+langcode: en
+status: true
+dependencies:
+  module:
+    - frams_pro
+  theme:
+    - frams
+id: consolidatedlistblock
+theme: frams
+region: banner
+weight: -11
+provider: null
+plugin: consolidated_list
+settings:
+  id: consolidated_list
+  label: 'Consolidated List block'
+  provider: frams_pro
+  label_display: '0'
+visibility: {  }
