@@ -3012,7 +3012,7 @@ display:
         type: fields
         options: {  }
       header: {  }
-      path: tdo/details
+      path: view/tdo/details
       menu:
         type: normal
         title: Details
@@ -3674,7 +3674,7 @@ display:
           tokenize: false
           content: '<h3> Promoters Details</h3>'
           plugin_id: text_custom
-      path: promoters/list
+      path: view/promoters/list
       menu:
         type: none
         title: Promoters

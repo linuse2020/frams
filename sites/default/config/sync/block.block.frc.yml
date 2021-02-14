@@ -1,0 +1,33 @@
+uuid: 8de42d01-5b10-4f4e-bcf8-5c4c6a006542
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.menufrc
+  module:
+    - block_class
+    - menu_block
+  theme:
+    - frams
+third_party_settings:
+  block_class:
+    classes: left-side-block
+id: frc
+theme: frams
+region: left_sidebar
+weight: -16
+provider: null
+plugin: 'menu_block:menufrc'
+settings:
+  id: 'menu_block:menufrc'
+  label: FRC
+  provider: menu_block
+  label_display: '0'
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 0
+  expand: false
+  parent: 'menufrc:'
+  suggestion: menufrc
+visibility: {  }

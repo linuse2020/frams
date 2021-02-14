@@ -24,7 +24,7 @@ bundle: vaimozhy
 mode: default
 content:
   field_oorumooppan_age:
-    weight: 0
+    weight: 1
     settings:
       size: 60
       placeholder: ''
@@ -32,13 +32,15 @@ content:
     type: string_textfield
     region: content
   field_oorumooppan_name:
-    weight: 1
-    settings: {  }
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: options_select
+    type: string_textfield
     region: content
   field_oorumooppan_vaimozhy:
-    weight: 4
+    weight: 3
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
@@ -46,7 +48,7 @@ content:
     region: content
   field_vaimozhy_witness_details:
     type: entity_reference_paragraphs
-    weight: 3
+    weight: 2
     settings:
       title: Paragraph
       title_plural: Paragraphs

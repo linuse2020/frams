@@ -1,0 +1,25 @@
+uuid: edb18dbe-6fd0-4338-b97d-de95daae1642
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:a612fa0c-c8a7-4de1-83b2-c5b4cf38f218'
+  module:
+    - block_content
+  theme:
+    - frams
+id: frontpagevideobanner
+theme: frams
+region: banner
+weight: -18
+provider: null
+plugin: 'block_content:a612fa0c-c8a7-4de1-83b2-c5b4cf38f218'
+settings:
+  id: 'block_content:a612fa0c-c8a7-4de1-83b2-c5b4cf38f218'
+  label: 'Front Page Video Banner'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

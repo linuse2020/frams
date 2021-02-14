@@ -1,0 +1,33 @@
+uuid: 53919d2b-0a3c-4ac3-a29c-372f4b5d6afc
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.tdo
+  module:
+    - block_class
+    - menu_block
+  theme:
+    - frams
+third_party_settings:
+  block_class:
+    classes: left-side-block
+id: tdo
+theme: frams
+region: left_sidebar
+weight: -14
+provider: null
+plugin: 'menu_block:tdo'
+settings:
+  id: 'menu_block:tdo'
+  label: TDO
+  provider: menu_block
+  label_display: '0'
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 0
+  expand: false
+  parent: 'tdo:'
+  suggestion: tdo
+visibility: {  }
