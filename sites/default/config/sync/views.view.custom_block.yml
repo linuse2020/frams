@@ -208,7 +208,7 @@ display:
           admin_label: ''
           empty: true
           tokenize: false
-          content: '<p><a class="btn btn-md btn-block btn-primary" href="/node/add/application/archives">Add Archive</a></p>'
+          content: '<p><a class="px-3 btn btn-md btn-block btn-success" href="/node/add/application/archives">Add Archive</a></p>'
           plugin_id: text_custom
       footer: {  }
       empty: {  }
@@ -252,7 +252,7 @@ display:
           admin_label: ''
           empty: true
           tokenize: false
-          content: '<p><a class="btn btn-md btn-block btn-primary" href="/node/add/application/claimant">Add New Application</a></p>'
+          content: '<p><a class="btn btn-md btn-block btn-success" href="/node/add/application/claimant">Add New Application</a></p>'
           plugin_id: text_custom
       block_description: 'Add New Application'
     cache_metadata:

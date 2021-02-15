@@ -3409,7 +3409,7 @@ display:
           content: '<p><a class="btn btn-md btn-block btn-primary col-md-3 col-6 " href="/node/add/notice_board" target="_blank">Announce FRC  Meeting </a></p>'
           plugin_id: text_custom
       use_ajax: true
-      path: panchayats/secretary
+      path: view/panchayats/secretary
       menu:
         type: normal
         title: 'FRC Meeting'
@@ -4044,7 +4044,7 @@ display:
             format: basic_html
           plugin_id: text
       use_ajax: true
-      path: panchayat/committee
+      path: view/panchayat/committee
       menu:
         type: normal
         title: 'Committee Meeting'
@@ -4754,7 +4754,7 @@ display:
           admin_label: 'Claimant Panchayat'
           required: false
           plugin_id: standard
-      path: panchayat/approved
+      path: view/panchayat/approved
       menu:
         type: normal
         title: Approved

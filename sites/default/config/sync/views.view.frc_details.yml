@@ -2301,7 +2301,7 @@ display:
           tokenize: false
           content: '<h3> FRC  Meeting Details</h3>'
           plugin_id: text_custom
-      path: frc/meetings
+      path: view/frc/meetings
       menu:
         type: normal
         title: Meetings
@@ -3079,7 +3079,7 @@ display:
           tokenize: false
           content: '<h3> FRC  Details</h3>'
           plugin_id: text_custom
-      path: frc/details
+      path: view/frc/details
       menu:
         type: normal
         title: Details
@@ -3635,7 +3635,7 @@ display:
           tokenize: false
           content: '<h3> Promoters Details</h3>'
           plugin_id: text_custom
-      path: promoters
+      path: view/promoters
       menu:
         type: normal
         title: Promoters
@@ -4240,7 +4240,7 @@ display:
         operator: AND
         groups:
           1: AND
-      path: frc/members
+      path: view/frc/members
       menu:
         type: normal
         title: Members
@@ -4637,7 +4637,7 @@ display:
         operator: AND
         groups:
           1: AND
-      path: frc/minutes
+      path: view/frc/minutes
       menu:
         type: normal
         title: Minutes

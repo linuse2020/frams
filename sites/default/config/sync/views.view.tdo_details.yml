@@ -2150,7 +2150,7 @@ display:
           tokenize: false
           content: '<p><a class="btn btn-md btn-block btn-primary col-md-3 col-6 " href="/node/add/teo" target="_blank">Add TEO</a></p>'
           plugin_id: text_custom
-      path: teo/list
+      path: view/teo/list
       menu:
         type: normal
         title: TEOs
@@ -3012,7 +3012,7 @@ display:
         type: fields
         options: {  }
       header: {  }
-      path: tdo/details
+      path: view/tdo/details
       menu:
         type: normal
         title: Details
@@ -3674,7 +3674,7 @@ display:
           tokenize: false
           content: '<h3> Promoters Details</h3>'
           plugin_id: text_custom
-      path: promoters/list
+      path: view/promoters/list
       menu:
         type: none
         title: Promoters

@@ -8764,7 +8764,7 @@ display:
             format: basic_html
           plugin_id: text
       use_ajax: true
-      path: frc/new
+      path: view/frc/new
       menu:
         type: normal
         title: New
@@ -9451,7 +9451,7 @@ display:
             format: basic_html
           plugin_id: text
       use_ajax: true
-      path: frc/doc-verification
+      path: view/frc/doc-verification
       menu:
         type: normal
         title: 'Document Verification'
@@ -10138,7 +10138,7 @@ display:
             format: basic_html
           plugin_id: text
       use_ajax: true
-      path: frc/site-verification
+      path: view/frc/site-verification
       menu:
         type: normal
         title: 'Site Verification'
@@ -10825,7 +10825,7 @@ display:
             format: basic_html
           plugin_id: text
       use_ajax: true
-      path: frc/panchayats/secretary
+      path: view/frc/panchayats/secretary
       menu:
         type: normal
         title: 'Panchayat Secretary'
@@ -11470,7 +11470,7 @@ display:
           content: '<p><a class="btn btn-md btn-block btn-primary col-md-3 col-6 " href="/node/add/committee_meeting" target="_blank">Add FRC Meeting</a></p>'
           plugin_id: text_custom
       use_ajax: true
-      path: frc/meeting
+      path: view/frc/meeting
       menu:
         type: normal
         title: ' FRC Meeting'
@@ -12104,7 +12104,7 @@ display:
             format: basic_html
           plugin_id: text
       use_ajax: true
-      path: frc/approved
+      path: view/frc/approved
       menu:
         type: normal
         title: Approved
@@ -12791,7 +12791,7 @@ display:
             format: basic_html
           plugin_id: text
       use_ajax: true
-      path: frc/panchayat/committee
+      path: view/frc/panchayat/committee
       menu:
         type: normal
         title: 'Panchayat Committee'
@@ -13425,7 +13425,7 @@ display:
             format: basic_html
           plugin_id: text
       use_ajax: true
-      path: frc/panchayat/approved
+      path: view/frc/panchayat/approved
       menu:
         type: normal
         title: 'Panchayat Committee Approved'

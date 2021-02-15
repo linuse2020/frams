@@ -2128,7 +2128,7 @@ display:
           tokenize: true
           content: '<h3> {{ title }} </h3>'
           plugin_id: text_custom
-      path: teo/details
+      path: view/teo/details
       menu:
         type: normal
         title: Details
@@ -2810,7 +2810,7 @@ display:
           tokenize: false
           content: '<p><a class="btn btn-md btn-block btn-primary p-2 co-6 col-md-3" href="/node/add/frc" >Add New FRC</a></p>'
           plugin_id: text_custom
-      path: teo/frc
+      path: view/teo/frc
       menu:
         type: normal
         title: FRCs
@@ -3587,7 +3587,7 @@ display:
           tokenize: false
           content: '<p><a class="btn btn-md btn-block btn-primary p-2 co-6 col-md-3" href="/node/add/promoters" >Add New Promoter</a></p>'
           plugin_id: text_custom
-      path: teo/promoters
+      path: view/teo/promoters
       menu:
         type: normal
         title: Promoters

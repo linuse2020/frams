@@ -1,0 +1,29 @@
+uuid: c88efe00-4509-4f2f-8611-dd981031dac1
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - menu_block
+  theme:
+    - frams
+id: useraccountmenu_2
+theme: frams
+region: left_sidebar
+weight: -12
+provider: null
+plugin: 'menu_block:account'
+settings:
+  id: 'menu_block:account'
+  label: 'User account menu'
+  provider: menu_block
+  label_display: '0'
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 0
+  expand: false
+  parent: 'account:'
+  suggestion: account
+visibility: {  }
