@@ -96,6 +96,7 @@ third_party_settings:
   field_group:
     group_personal_details:
       children:
+        - field_application_no
         - title
         - field_name_of_other_claimants
         - field_address
@@ -104,6 +105,7 @@ third_party_settings:
         - field_name_of_the_spouse
         - field_name_of_father
         - field_name_of_mother
+        - field_family_category
         - field__photo
         - field_is_schedules_tribe
         - field_cast_cirtificate
@@ -279,6 +281,9 @@ third_party_settings:
     group_sub_division_level_committ:
       children:
         - field_sdlc_meeting_minutes_
+        - field_alloted_land_habitation
+        - field_alloted_land_cultivation
+        - field_alloted_land_for_both
       parent_name: ''
       weight: 9
       format_type: fieldset
@@ -304,7 +309,7 @@ third_party_settings:
       label: 'Survey Departent'
     group_divisional_level_committee:
       children:
-        - field_alloted_land_habitation
+        - field_dlc_meeting_minutes
       parent_name: ''
       weight: 11
       format_type: fieldset
@@ -356,7 +361,7 @@ content:
     third_party_settings: {  }
   field__photo:
     type: image_image
-    weight: 35
+    weight: 22
     region: content
     settings:
       progress_indicator: throbber
@@ -388,7 +393,7 @@ content:
     region: content
   field_address:
     type: address_default
-    weight: 29
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -418,14 +423,14 @@ content:
     region: content
   field_alloted_land_cultivation:
     type: string_textfield
-    weight: 20
+    weight: 23
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
   field_alloted_land_for_both:
-    weight: 16
+    weight: 24
     settings:
       size: 60
       placeholder: ''
@@ -466,7 +471,7 @@ content:
             selector: ''
           entity_type: node
           bundle: application
-    weight: 37
+    weight: 24
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -490,7 +495,7 @@ content:
             selector: ''
           entity_type: node
           bundle: application
-    weight: 40
+    weight: 27
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -514,7 +519,7 @@ content:
             selector: ''
           entity_type: node
           bundle: application
-    weight: 38
+    weight: 25
     settings:
       display_label: true
     type: boolean_checkbox
@@ -641,7 +646,7 @@ content:
     third_party_settings: {  }
   field_contact_no:
     type: telephone_default
-    weight: 30
+    weight: 16
     region: content
     settings:
       placeholder: ''
@@ -663,7 +668,7 @@ content:
     third_party_settings: {  }
   field_dlc_meeting_minutes:
     type: entity_reference_autocomplete
-    weight: 21
+    weight: 17
     region: content
     settings:
       match_operator: CONTAINS
@@ -673,14 +678,14 @@ content:
     third_party_settings: {  }
   field_email:
     type: email_default
-    weight: 31
+    weight: 17
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
   field_family_category:
-    weight: 17
+    weight: 21
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -744,7 +749,7 @@ content:
     third_party_settings: {  }
   field_is_schedules_tribe:
     type: boolean_checkbox
-    weight: 36
+    weight: 23
     region: content
     settings:
       display_label: true
@@ -767,14 +772,14 @@ content:
             selector: ''
           entity_type: node
           bundle: application
-    weight: 39
+    weight: 26
     settings:
       display_label: true
     type: boolean_checkbox
     region: content
   field_name_of_father:
     type: string_textfield
-    weight: 33
+    weight: 19
     region: content
     settings:
       size: 60
@@ -782,7 +787,7 @@ content:
     third_party_settings: {  }
   field_name_of_mother:
     type: string_textfield
-    weight: 34
+    weight: 20
     region: content
     settings:
       size: 60
@@ -790,7 +795,7 @@ content:
     third_party_settings: {  }
   field_name_of_other_claimants:
     type: string_textfield
-    weight: 28
+    weight: 14
     region: content
     settings:
       size: 60
@@ -798,7 +803,7 @@ content:
     third_party_settings: {  }
   field_name_of_the_spouse:
     type: string_textfield
-    weight: 32
+    weight: 18
     region: content
     settings:
       size: 60
@@ -872,7 +877,7 @@ content:
     third_party_settings: {  }
   field_photo_couple:
     type: image_image
-    weight: 41
+    weight: 28
     region: content
     settings:
       progress_indicator: throbber
@@ -989,7 +994,7 @@ content:
     third_party_settings: {  }
   field_survey_details:
     type: entity_reference_paragraphs
-    weight: 15
+    weight: 18
     region: content
     settings:
       title: Paragraph
@@ -1151,7 +1156,7 @@ content:
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 27
+    weight: 13
     region: content
     settings:
       size: 60

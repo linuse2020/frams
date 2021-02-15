@@ -15,7 +15,7 @@ third_party_settings:
 id: teo
 theme: frams
 region: left_sidebar
-weight: -13
+weight: -15
 provider: null
 plugin: 'menu_block:teo'
 settings:
