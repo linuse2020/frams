@@ -10827,6 +10827,12 @@ header .sf-accordion-toggle a {
   padding-left: 1rem;
 }
 
+.menu-collapse .dashboard .region-right .content-header {
+  left: 4rem !important;
+}
+.menu-collapse .dashboard .region-right .page-content-inner {
+  padding-left: 6rem !important;
+}
 .menu-collapse .region-left {
   width: 4rem;
 }
@@ -10846,12 +10852,6 @@ header .sf-accordion-toggle a {
 }
 .menu-collapse .region-left .link-text {
   display: none;
-}
-.menu-collapse .region-right .content-header {
-  left: 4rem !important;
-}
-.menu-collapse .region-right .page-content-inner {
-  padding-left: 6rem !important;
 }
 
 @media screen and (max-width: 767px) {
