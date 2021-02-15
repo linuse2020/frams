@@ -5,9 +5,12 @@ header {
 			display: none;
 		}
 	}
+	.sf-accordion-toggle a {
+		right: 3rem;
+	}
 }
 
-@media screen and (max-width: 1293px) {
+@media screen and (max-width: 1200px) {
 	header {
 		.main-menu {
 			flex: unset;
@@ -19,7 +22,7 @@ header {
 		}
 	}
 }
-@media screen and (min-width: 991px) {
+@media screen and (min-width: 990px) {
 	header {
 		ul.sf-menu.sf-style-black li {
     	background: none;

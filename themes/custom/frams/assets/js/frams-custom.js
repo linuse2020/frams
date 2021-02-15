@@ -117,4 +117,30 @@
       } 
     }
   };
+
+
+  Drupal.behaviors.menutoggle = {
+    attach: function (context, settings) {
+      if ($(window).width() < 1025) {
+        if (!Cookies.get('mobilemenu')) {
+          Cookies.set('mobilemenu', 'true');
+        }
+      }
+      console.log(Cookies.get());
+      if (Cookies.get('mobilemenu')) {
+        $('body').addClass('menu-collapse');
+      }
+      $('.toggle-menu', context).on('click', function() {
+        if ($('body').hasClass('menu-collapse')) {
+          $('body').removeClass('menu-collapse');
+          Cookies.remove('mobilemenu');
+        }
+        else {
+          $('body').addClass('menu-collapse');
+          Cookies.set('mobilemenu', 'true');
+        }
+      });
+    }
+  };
+
 }(jQuery));

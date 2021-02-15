@@ -62,4 +62,10 @@ datatables:
   dependencies:
     - core/jquery
     - core/jquery.once
+    
+cookies:
+  js:
+    assets/js/js.cookie.min.js: {}
+  dependencies:
+    - core/jquery
 

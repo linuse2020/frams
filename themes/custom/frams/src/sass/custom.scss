@@ -623,19 +623,7 @@ body.menu-collapse {
       width: 50px;
       height: 50px;
     }
-    .toggle-menu {
-      width: 100%;
-      height: 60px;
-      text-align: center;
-      background: #4036ad;
-      border-radius: 6px 0 0 0;
-      i {
-        margin-right: 0;
-        &:before {
-          content: "\f00d";
-        }
-      }
-    }
+
     .menu--user-menu {
       display: none;
     }

@@ -1,55 +1,120 @@
 .dashboard {
-	.nav-item {
-				
-				a {
-				color: #fff !important;
-				}
-				a:hover {
-    		color: #b9b9b9 !important;
-				}
+	.nav-item {				
+		a {
+		color: #fff !important;
+		}
+		&:hover {
+		color: #b9b9b9 !important;
+		}
 	}
 	.dropdown-menu {
+		background: #000;
+		a:hover {
 			background: #000;
-			a:hover {
-				background: #000;
-			}
 		}
+	}
 	.layout-sidebar-menu {
 		background-color: #1a5838;
+		padding-top: 2rem !important;
+		padding-right: 1rem !important;
 		.left-side-block {
 			.nav-item {
 				padding-right: 3rem;
+				padding-left: 0.75rem;
 				a {
-				color: #fff !important;
+					color: #fff !important;
 				}
-				a:hover {
-    		color: #b9b9b9 !important;
+				&:hover {
+    			color: #b9b9b9 !important;
+				}
+				.link-text {
+					padding-left: 1rem;
+					font-weight: bold;
 				}
 			}
+		}
+		.left-side-menu {
+			padding-top: 8rem;
+		}
+		.toggle-menu {
+			background: #019701;
+			color: white;
+			width: 30px;
+			height: 30px;
+			text-align: center;
+			font-size: 20px;
+			border-radius: 6px;
+			cursor: pointer;
 		}
 	}
 	.region-right {
-		padding-left: 14rem;
-	}
-	header .content-header {
-		display: none;
+		.content-header {
+			transition: 0.6s;
+			left: 16rem;
+			padding-left: 0rem;			
+		}
+		.page-content-inner {
+			padding-left: 20rem;
+			transition: 0.6s;
+		}
+		header {
+			ul.sf-menu.sf-style-black {
+				float: left;
+			}
+		}																		
 	}
 	.block--useraccountmenu-2 {
 		padding-left: 1rem;
-		.dropdown-menu {
-			background: none;
-			border: none;
-			a:hover {
-				background: none;
-			}
+	}
+}
+.menu-collapse {
+	.region-left {
+		width: 4rem;
+		.toggle-menu {
+			background: #019701;
+			color: white;
+			width: 30px;
+			height: 30px;
+			text-align: center;
+			font-size: 20px;
+			border-radius: 6px;
+			cursor: pointer;
+			margin-top: 2rem;
+		}
+		.nav-item {
+			font-size: 1.25rem !important;
+		}
+		.link-text {
+			display: none;
 		}
 	}
-
+	.region-right {
+			.content-header {
+				left: 4rem !important;
+			}
+		.page-content-inner {
+			padding-left: 6rem !important;
+		}
+	}
 }
 @media screen and (max-width: 767px) {
 	.dashboard {
 		.region-right {
-			padding-left: 0!important;
+			.page-content-inner {
+				padding-left: 6rem !important;
+			}
+		}
+	}
+}
+@media screen and (max-width: 990px) {
+	.dashboard {
+		.region-right {
+			.content-header {
+				left: 4rem !important;
+			}
+			.page-content-inner {
+				padding-left: 6rem !important;
+			}
 		}
 	}
 }
