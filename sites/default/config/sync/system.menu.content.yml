@@ -1,0 +1,8 @@
+uuid: 45c3539a-22ab-4295-a9d6-bfbaae20ae0e
+langcode: en
+status: true
+dependencies: {  }
+id: content
+label: Content
+description: ''
+locked: false

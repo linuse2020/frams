@@ -15,7 +15,7 @@ third_party_settings:
 id: tdo
 theme: frams
 region: left_sidebar
-weight: -16
+weight: -17
 provider: null
 plugin: 'menu_block:tdo'
 settings:

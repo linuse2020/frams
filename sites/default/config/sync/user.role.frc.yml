@@ -13,8 +13,10 @@ label: FRC
 weight: 17
 is_admin: null
 permissions:
+  - 'access taxonomy overview'
   - 'access workbench'
   - 'administer multiple_registration'
+  - 'administer taxonomy'
   - 'create committee_meeting content'
   - 'create frc content'
   - 'create paragraph content committee_member_details'
@@ -27,6 +29,7 @@ permissions:
   - 'edit any frc content'
   - 'edit own committee_meeting content'
   - 'edit own frc content'
+  - 'edit terms in relation'
   - 'entity print views access'
   - 'update paragraph content frc_members_details'
   - 'update paragraph content meeting_members_details'

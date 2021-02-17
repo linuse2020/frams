@@ -1,0 +1,8 @@
+uuid: 2c2dcc84-24f8-4153-b932-fbf7ba3401db
+langcode: en
+status: true
+dependencies: {  }
+id: taxonomy
+label: Taxonomy
+description: ''
+locked: false

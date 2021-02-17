@@ -1,9 +1,9 @@
-uuid: 2ea55762-c40e-49b6-8f95-cd4ef5c1edd0
+uuid: ea7dc13c-3ce3-4cef-b394-f38ac17fdb3e
 langcode: en
 status: true
 dependencies:
   config:
-    - system.menu.teo
+    - system.menu.content
   module:
     - block_class
     - menu_block
@@ -12,15 +12,15 @@ dependencies:
 third_party_settings:
   block_class:
     classes: left-side-block
-id: teo
+id: content
 theme: frams
 region: left_sidebar
-weight: -16
+weight: -14
 provider: null
-plugin: 'menu_block:teo'
+plugin: 'menu_block:content'
 settings:
-  id: 'menu_block:teo'
-  label: TEO
+  id: 'menu_block:content'
+  label: Content
   provider: menu_block
   label_display: '0'
   follow: false
@@ -28,6 +28,6 @@ settings:
   level: 1
   depth: 0
   expand: false
-  parent: 'teo:'
-  suggestion: teo
+  parent: 'content:'
+  suggestion: content
 visibility: {  }

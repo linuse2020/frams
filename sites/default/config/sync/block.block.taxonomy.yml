@@ -1,9 +1,9 @@
-uuid: 2ea55762-c40e-49b6-8f95-cd4ef5c1edd0
+uuid: 53f5afed-b97f-4b3e-be8c-ab899bebe197
 langcode: en
 status: true
 dependencies:
   config:
-    - system.menu.teo
+    - system.menu.taxonomy
   module:
     - block_class
     - menu_block
@@ -12,15 +12,15 @@ dependencies:
 third_party_settings:
   block_class:
     classes: left-side-block
-id: teo
+id: taxonomy
 theme: frams
 region: left_sidebar
-weight: -16
+weight: -15
 provider: null
-plugin: 'menu_block:teo'
+plugin: 'menu_block:taxonomy'
 settings:
-  id: 'menu_block:teo'
-  label: TEO
+  id: 'menu_block:taxonomy'
+  label: Taxonomy
   provider: menu_block
   label_display: '0'
   follow: false
@@ -28,6 +28,6 @@ settings:
   level: 1
   depth: 0
   expand: false
-  parent: 'teo:'
-  suggestion: teo
+  parent: 'taxonomy:'
+  suggestion: taxonomy
 visibility: {  }

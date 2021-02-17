@@ -5,13 +5,17 @@ dependencies:
   config:
     - system.menu.account
   module:
+    - block_class
     - menu_block
   theme:
     - frams
+third_party_settings:
+  block_class:
+    classes: left-side-block
 id: useraccountmenu_2
 theme: frams
 region: left_sidebar
-weight: -12
+weight: -11
 provider: null
 plugin: 'menu_block:account'
 settings:

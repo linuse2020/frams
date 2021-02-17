@@ -1,0 +1,49 @@
+uuid: 8f0dddff-49eb-40b7-9c8e-b629311a074a
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.relation
+  module:
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: taxonomy_term.relation.default
+targetEntityType: taxonomy_term
+bundle: relation
+mode: default
+content:
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 3
+    region: content
+    third_party_settings: {  }
+  translation:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true

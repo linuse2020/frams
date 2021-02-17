@@ -1,0 +1,1696 @@
+uuid: f7b79fb8-12d7-4c9b-b899-064c76006d64
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.block_panchayat
+    - taxonomy.vocabulary.constituency_
+    - taxonomy.vocabulary.department
+    - taxonomy.vocabulary.district
+    - taxonomy.vocabulary.forest_circle
+    - taxonomy.vocabulary.forest_division
+    - taxonomy.vocabulary.forest_range
+    - taxonomy.vocabulary.grama_panchayat
+    - taxonomy.vocabulary.settlement
+    - taxonomy.vocabulary.taluk
+    - taxonomy.vocabulary.village
+    - user.role.super_admin
+  module:
+    - taxonomy
+    - user
+id: super_dashboard
+label: 'super dashboard'
+module: views
+description: ''
+tag: ''
+base_table: taxonomy_term_field_data
+base_field: tid
+display:
+  default:
+    display_plugin: default
+    id: default
+    display_title: Master
+    position: 0
+    display_options:
+      access:
+        type: role
+        options:
+          role:
+            super_admin: super_admin
+      cache:
+        type: tag
+        options: {  }
+      query:
+        type: views_query
+        options:
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_comment: ''
+          query_tags: {  }
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      pager:
+        type: mini
+        options:
+          items_per_page: 10
+          offset: 0
+          id: 0
+          total_pages: null
+          tags:
+            previous: ‹‹
+            next: ››
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+      style:
+        type: table
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          override: true
+          sticky: false
+          caption: ''
+          summary: ''
+          description: ''
+          columns:
+            name: name
+            edit_taxonomy_term: edit_taxonomy_term
+            view_taxonomy_term: view_taxonomy_term
+            nothing: nothing
+          info:
+            name:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            edit_taxonomy_term:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            view_taxonomy_term:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            nothing:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+          default: '-1'
+          empty_table: false
+      row:
+        type: fields
+        options:
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: false
+      fields:
+        name:
+          id: name
+          table: taxonomy_term_field_data
+          field: name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: false
+            ellipsis: false
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          convert_spaces: false
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: term_name
+        edit_taxonomy_term:
+          id: edit_taxonomy_term
+          table: taxonomy_term_data
+          field: edit_taxonomy_term
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          text: edit
+          output_url_as_text: false
+          absolute: false
+          entity_type: taxonomy_term
+          plugin_id: entity_link_edit
+      filters:
+        status:
+          id: status
+          table: taxonomy_term_field_data
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: Published
+            description: null
+            use_operator: false
+            operator: status_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: status
+            required: true
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: boolean
+          entity_type: taxonomy_term
+          entity_field: status
+        vid:
+          id: vid
+          table: taxonomy_term_field_data
+          field: vid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            district: district
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: taxonomy_term
+          entity_field: vid
+          plugin_id: bundle
+      sorts: {  }
+      title: Village
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content: '<p><a class="btn btn-primary"  href="/admin/structure/taxonomy/manage/taluk/add?destination=/view/taxonomy/taluk" >Add Taluk</a></p>'
+          plugin_id: text_custom
+      footer: {  }
+      empty: {  }
+      relationships: {  }
+      arguments: {  }
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - user.roles
+      tags: {  }
+  page_1:
+    display_plugin: page
+    id: page_1
+    display_title: 'Block Panchayat'
+    position: 2
+    display_options:
+      display_extenders: {  }
+      path: view/taxonomy/block_panchayat
+      filters:
+        status:
+          id: status
+          table: taxonomy_term_field_data
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: Published
+            description: null
+            use_operator: false
+            operator: status_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: status
+            required: true
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: boolean
+          entity_type: taxonomy_term
+          entity_field: status
+        vid:
+          id: vid
+          table: taxonomy_term_field_data
+          field: vid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            block_panchayat: block_panchayat
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: taxonomy_term
+          entity_field: vid
+          plugin_id: bundle
+      defaults:
+        filters: false
+        filter_groups: false
+        title: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      display_description: ''
+      title: 'Block Panchyat'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - user.roles
+      tags: {  }
+  page_10:
+    display_plugin: page
+    id: page_10
+    display_title: Taluk
+    position: 10
+    display_options:
+      display_extenders: {  }
+      path: view/taxonomy/taluk
+      display_description: ''
+      title: Taluk
+      defaults:
+        title: false
+        filters: false
+        filter_groups: false
+        header: false
+      filters:
+        status:
+          id: status
+          table: taxonomy_term_field_data
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: Published
+            description: null
+            use_operator: false
+            operator: status_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: status
+            required: true
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: boolean
+          entity_type: taxonomy_term
+          entity_field: status
+        vid:
+          id: vid
+          table: taxonomy_term_field_data
+          field: vid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            taluk: taluk
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: taxonomy_term
+          entity_field: vid
+          plugin_id: bundle
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content: '<p><a class="btn btn-primary"  href="/admin/structure/taxonomy/manage/taluk/add?destination=/view/taxonomy/taluk" >Add Taluk</a></p>'
+          plugin_id: text_custom
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - user.roles
+      tags: {  }
+  page_11:
+    display_plugin: page
+    id: page_11
+    display_title: Village
+    position: 11
+    display_options:
+      display_extenders: {  }
+      path: view/taxonomy/village
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content: '<p><a class="btn btn-primary"  href="/admin/structure/taxonomy/manage/village/add?destination=/view/taxonomy/village" >Add Village</a></p>'
+          plugin_id: text_custom
+      defaults:
+        header: false
+        filters: false
+        filter_groups: false
+      filters:
+        status:
+          id: status
+          table: taxonomy_term_field_data
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: Published
+            description: null
+            use_operator: false
+            operator: status_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: status
+            required: true
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: boolean
+          entity_type: taxonomy_term
+          entity_field: status
+        vid:
+          id: vid
+          table: taxonomy_term_field_data
+          field: vid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            village: village
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: taxonomy_term
+          entity_field: vid
+          plugin_id: bundle
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      display_description: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - user.roles
+      tags: {  }
+  page_2:
+    display_plugin: page
+    id: page_2
+    display_title: Constituency
+    position: 2
+    display_options:
+      display_extenders: {  }
+      filters:
+        status:
+          id: status
+          table: taxonomy_term_field_data
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: Published
+            description: null
+            use_operator: false
+            operator: status_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: status
+            required: true
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: boolean
+          entity_type: taxonomy_term
+          entity_field: status
+        vid:
+          id: vid
+          table: taxonomy_term_field_data
+          field: vid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            constituency_: constituency_
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: taxonomy_term
+          entity_field: vid
+          plugin_id: bundle
+      defaults:
+        filters: false
+        filter_groups: false
+        title: false
+        header: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      path: view/taxonomy/constituency
+      display_description: ''
+      title: Constituency
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content: '<p><a class="btn btn-primary"  href="/admin/structure/taxonomy/manage/constituency_/add?destination=/view/taxonomy/constituency" >Add Constituency</a></p>'
+          plugin_id: text_custom
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - user.roles
+      tags: {  }
+  page_3:
+    display_plugin: page
+    id: page_3
+    display_title: District
+    position: 4
+    display_options:
+      display_extenders: {  }
+      path: view/taxonomy/district
+      display_description: ''
+      filters:
+        status:
+          id: status
+          table: taxonomy_term_field_data
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: Published
+            description: null
+            use_operator: false
+            operator: status_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: status
+            required: true
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: boolean
+          entity_type: taxonomy_term
+          entity_field: status
+        vid:
+          id: vid
+          table: taxonomy_term_field_data
+          field: vid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            district: district
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: taxonomy_term
+          entity_field: vid
+          plugin_id: bundle
+      defaults:
+        filters: false
+        filter_groups: false
+        header: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content: '<p><a class="btn btn-primary"  href="/admin/structure/taxonomy/manage/district/add?destination=/view/taxonomy/district" >Add District</a></p>'
+          plugin_id: text_custom
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - user.roles
+      tags: {  }
+  page_4:
+    display_plugin: page
+    id: page_4
+    display_title: Department
+    position: 4
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      title: Department
+      defaults:
+        title: false
+        filters: false
+        filter_groups: false
+        header: false
+      path: view/taxonomy/department
+      menu:
+        type: none
+        title: department
+        description: ''
+        expanded: false
+        parent: ''
+        weight: 0
+        context: '0'
+        menu_name: main
+      filters:
+        status:
+          id: status
+          table: taxonomy_term_field_data
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: Published
+            description: null
+            use_operator: false
+            operator: status_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: status
+            required: true
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: boolean
+          entity_type: taxonomy_term
+          entity_field: status
+        vid:
+          id: vid
+          table: taxonomy_term_field_data
+          field: vid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            department: department
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: taxonomy_term
+          entity_field: vid
+          plugin_id: bundle
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content: '<p><a class="btn btn-primary"  href="/admin/structure/taxonomy/manage/department/add?destination=/view/taxonomy/department" >Add Department</a></p>'
+          plugin_id: text_custom
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - user.roles
+      tags: {  }
+  page_5:
+    display_plugin: page
+    id: page_5
+    display_title: 'Forest Circle'
+    position: 5
+    display_options:
+      display_extenders: {  }
+      path: view/taxonomy/forest_circle
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content: '<p><a class="btn btn-primary"  href="/admin/structure/taxonomy/manage/forest_circle/add?destination=/view/taxonomy/forest_circle" >Add Forest Circle</a></p>'
+          plugin_id: text_custom
+      defaults:
+        header: false
+        filters: false
+        filter_groups: false
+        title: false
+      filters:
+        status:
+          id: status
+          table: taxonomy_term_field_data
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: Published
+            description: null
+            use_operator: false
+            operator: status_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: status
+            required: true
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: boolean
+          entity_type: taxonomy_term
+          entity_field: status
+        vid:
+          id: vid
+          table: taxonomy_term_field_data
+          field: vid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            forest_circle: forest_circle
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: taxonomy_term
+          entity_field: vid
+          plugin_id: bundle
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      display_description: ''
+      title: 'Forest Circle'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - user.roles
+      tags: {  }
+  page_6:
+    display_plugin: page
+    id: page_6
+    display_title: 'Forest Division'
+    position: 6
+    display_options:
+      display_extenders: {  }
+      path: view/taxonomy/forest_division
+      display_description: ''
+      title: 'Forest Division'
+      defaults:
+        title: false
+        filters: false
+        filter_groups: false
+        header: false
+      filters:
+        status:
+          id: status
+          table: taxonomy_term_field_data
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: Published
+            description: null
+            use_operator: false
+            operator: status_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: status
+            required: true
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: boolean
+          entity_type: taxonomy_term
+          entity_field: status
+        vid:
+          id: vid
+          table: taxonomy_term_field_data
+          field: vid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            forest_division: forest_division
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: taxonomy_term
+          entity_field: vid
+          plugin_id: bundle
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content: '<p><a class="btn btn-primary"  href="/admin/structure/taxonomy/manage/forest_division/add?destination=/view/taxonomy/forest_division" >Add Forest Division</a></p>'
+          plugin_id: text_custom
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - user.roles
+      tags: {  }
+  page_7:
+    display_plugin: page
+    id: page_7
+    display_title: 'Forest Range'
+    position: 7
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      title: 'Forest Range'
+      defaults:
+        title: false
+        filters: false
+        filter_groups: false
+        header: false
+      path: view/taxonomy/forest_range
+      filters:
+        status:
+          id: status
+          table: taxonomy_term_field_data
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: Published
+            description: null
+            use_operator: false
+            operator: status_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: status
+            required: true
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: boolean
+          entity_type: taxonomy_term
+          entity_field: status
+        vid:
+          id: vid
+          table: taxonomy_term_field_data
+          field: vid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            forest_range: forest_range
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: taxonomy_term
+          entity_field: vid
+          plugin_id: bundle
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content: '<p><a class="btn btn-primary"  href="/admin/structure/taxonomy/manage/forest_range/add?destination=/view/taxonomy/forest_range" >Add Forest Range</a></p>'
+          plugin_id: text_custom
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - user.roles
+      tags: {  }
+  page_8:
+    display_plugin: page
+    id: page_8
+    display_title: 'Grama Panchayat'
+    position: 8
+    display_options:
+      display_extenders: {  }
+      path: view/taxonomy/grama_panchayat
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content: '<p><a class="btn btn-primary"  href="/admin/structure/taxonomy/manage/grama_panchayat/add?destination=/view/taxonomy/grama_panchayat" >Add Grama Panchayat</a></p>'
+          plugin_id: text_custom
+      defaults:
+        header: false
+        filters: false
+        filter_groups: false
+        title: false
+      filters:
+        status:
+          id: status
+          table: taxonomy_term_field_data
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: Published
+            description: null
+            use_operator: false
+            operator: status_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: status
+            required: true
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: boolean
+          entity_type: taxonomy_term
+          entity_field: status
+        vid:
+          id: vid
+          table: taxonomy_term_field_data
+          field: vid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            grama_panchayat: grama_panchayat
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: taxonomy_term
+          entity_field: vid
+          plugin_id: bundle
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      display_description: ''
+      title: 'Grama Panchayat'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - user.roles
+      tags: {  }
+  page_9:
+    display_plugin: page
+    id: page_9
+    display_title: Settlement
+    position: 9
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      title: Settlement
+      defaults:
+        title: false
+        filters: false
+        filter_groups: false
+        header: false
+      filters:
+        status:
+          id: status
+          table: taxonomy_term_field_data
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: Published
+            description: null
+            use_operator: false
+            operator: status_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: status
+            required: true
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: boolean
+          entity_type: taxonomy_term
+          entity_field: status
+        vid:
+          id: vid
+          table: taxonomy_term_field_data
+          field: vid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            settlement: settlement
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: taxonomy_term
+          entity_field: vid
+          plugin_id: bundle
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      path: view/taxonomy/settlement
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content: '<p><a class="btn btn-primary"  href="/admin/structure/taxonomy/manage/settlement/add?destination=/view/taxonomy/settlement" >Add Settlement</a></p>'
+          plugin_id: text_custom
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - user.roles
+      tags: {  }

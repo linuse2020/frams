@@ -73,3 +73,4 @@
 'use  The form mode default linked to  message entity( private_message_notification )': message.private_message_notification.default
 'use  The form mode default linked to  contact_message entity( contact_form )': contact_message.contact_form.default
 'use  The form mode default linked to  node entity( blog )': node.blog.default
+'use  The form mode default linked to  taxonomy_term entity( relation )': taxonomy_term.relation.default
