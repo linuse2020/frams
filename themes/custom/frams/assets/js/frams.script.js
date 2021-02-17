@@ -17847,8 +17847,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/god/public_html/frams/themes/custom/frams/src/js/frams.script.js */"./src/js/frams.script.js");
-module.exports = __webpack_require__(/*! /home/god/public_html/frams/themes/custom/frams/src/sass/frams.style.scss */"./src/sass/frams.style.scss");
+__webpack_require__(/*! /home/kala/webapps/frams-new/frams/themes/custom/frams/src/js/frams.script.js */"./src/js/frams.script.js");
+module.exports = __webpack_require__(/*! /home/kala/webapps/frams-new/frams/themes/custom/frams/src/sass/frams.style.scss */"./src/sass/frams.style.scss");
 
 
 /***/ })

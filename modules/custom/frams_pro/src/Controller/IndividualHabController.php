@@ -42,6 +42,7 @@ class IndividualHabController extends ControllerBase {
       $tot_ind_hab_otfd =  \Drupal::entityQuery('node')->condition('type','application')->condition('field_claimant_district',$district->tid,'=')->condition('field_caste_cert_spouse_',TRUE,'=')->condition($group)->count()->execute();
        $district_data[] = [
         'sl_no' => $count,
+        'district_id' => $district->tid,
         'district' => $district->name,
         'tot_ind_hab_received' => $tot_ind_hab_received,
         'tot_ind_hab_recognised' => $tot_ind_hab_recognised,
