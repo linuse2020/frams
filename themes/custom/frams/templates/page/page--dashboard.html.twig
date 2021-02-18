@@ -41,41 +41,41 @@
 #}
 
   <div class="d-flex menu-content-container dashboard">
-	<div class="layout-container layout-sidebar-menu user-left-menu m-0 p-0 region-left ">
-	  <div class="toggle-menu float-right d-inline-block">
-			<i class="fas fa-bars"></i>
-	  </div>
-	 <!--- <div class="header-logo header-logo text-center mt-5 pt-5 pb-5">
-		<div class="full-logo">
-		  <a href="/"><img src="/themes/custom/frams/assets/images/frams-logo.png" width="150"/></a>
-		</div>
-		<div class="mobile-logo hidden">
-		  <a href="/"><img src="/{{ directory }}/mobile-logo.png" width="50"/></a>
-		</div>
-	  </div>-->
-	  <div class="left-side-menu">
-			{{ page.left_sidebar}}
-		</div>
-	</div>
+    <div class="layout-container layout-sidebar-menu user-left-menu m-0 p-0 region-left ">
+      <div class="toggle-menu float-right d-inline-block">
+        <i class="fas fa-bars"></i>
+      </div>
+      <div class="header-logo header-logo text-center mt-2 pt-3 pb-2">
+        <div class="full-logo">
+          <a href="/"><img src="/themes/custom/frams/assets/images/frams-logo.png" width="150"/></a>
+        </div>
+        <div class="mobile-logo hidden">
+          <a href="/"><img src="/{{ directory }}/mobile-logo.png" width="50"/></a>
+        </div>
+      </div>
+    <div class="left-side-menu">
+      {{ page.left_sidebar}}
+    </div>
+  </div>
 
-	<div class="w-100 region-right show-header-top">
-	  <header class="content-header clearfix mb-0 p-3">
-		<div class="layout-container hidden">
-		  {{ page.header }}
-		</div>
-	  </header>
-	  <div class="page-content-inner pb-5 pt-3">
-		{{ page.pre_content }}
-		<main class="page-content clearfix" role="main">
-		  <div class="visually-hidden"><a id="main-content" tabindex="-1"></a></div>
-		  {{ page.highlighted }}
-		  {% if page.help %}
-		  <div class="help">
-			{{ page.help }}
-		  </div>
-		  {% endif %}
-		  {{ page.content }}
-		</main>
-	  </div>
-	</div>
+    <div class="w-100 region-right show-header-top">
+      <header class="content-header clearfix mb-0 p-3">
+        <div class="layout-container hidden">
+          {{ page.header }}
+        </div>
+      </header>
+      <div class="page-content-inner pb-5 pt-3">
+        {{ page.pre_content }}
+        <main class="page-content clearfix" role="main">
+          <div class="visually-hidden"><a id="main-content" tabindex="-1"></a></div>
+          {{ page.highlighted }}
+          {% if page.help %}
+          <div class="help">
+            {{ page.help }}
+          </div>
+          {% endif %}
+          {{ page.content }}
+        </main>
+      </div>
+    </div>
   </div>

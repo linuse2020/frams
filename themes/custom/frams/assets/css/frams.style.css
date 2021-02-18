@@ -10780,12 +10780,13 @@ header .sf-accordion-toggle a {
   background: #000;
 }
 .dashboard .layout-sidebar-menu {
+  overflow-y: scroll;
   background-color: #1a5838;
   padding-top: 2rem !important;
-  padding-right: 1rem !important;
+  padding-right: 0.75rem !important;
 }
 .dashboard .layout-sidebar-menu .left-side-block .nav-item {
-  padding-right: 3rem;
+  padding-right: 1rem;
   padding-left: 0.75rem;
 }
 .dashboard .layout-sidebar-menu .left-side-block .nav-item a {
@@ -10799,7 +10800,7 @@ header .sf-accordion-toggle a {
   font-weight: bold;
 }
 .dashboard .layout-sidebar-menu .left-side-menu {
-  padding-top: 8rem;
+  padding-top: 2rem;
 }
 .dashboard .layout-sidebar-menu .toggle-menu {
   background: #019701;
@@ -10812,11 +10813,13 @@ header .sf-accordion-toggle a {
   cursor: pointer;
 }
 .dashboard .region-right .content-header {
+  display: none;
   transition: 0.6s;
   left: 16rem;
   padding-left: 0rem;
 }
 .dashboard .region-right .page-content-inner {
+  margin-top: 2rem !important;
   padding-left: 20rem;
   transition: 0.6s;
 }
@@ -10839,7 +10842,7 @@ header .sf-accordion-toggle a {
   font-size: 20px;
   border-radius: 6px;
   cursor: pointer;
-  margin-top: 2rem;
+  margin-top: 0;
 }
 .menu-collapse .region-left .nav-item {
   font-size: 1.25rem !important;
@@ -10847,10 +10850,13 @@ header .sf-accordion-toggle a {
 .menu-collapse .region-left .link-text {
   display: none;
 }
-.menu-collapse .region-right .content-header {
+.menu-collapse .region-left .header-logo {
+  display: none;
+}
+.menu-collapse .dashboard .region-right .content-header {
   left: 4rem !important;
 }
-.menu-collapse .region-right .page-content-inner {
+.menu-collapse .dashboard .region-right .page-content-inner {
   padding-left: 6rem !important;
 }
 
