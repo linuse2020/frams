@@ -10830,6 +10830,12 @@ header .sf-accordion-toggle a {
   padding-left: 1rem;
 }
 
+.menu-collapse .dashboard .region-right .content-header {
+  left: 4rem !important;
+}
+.menu-collapse .dashboard .region-right .page-content-inner {
+  padding-left: 6rem !important;
+}
 .menu-collapse .region-left {
   width: 4rem;
 }

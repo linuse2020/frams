@@ -22,8 +22,8 @@
    <tr>
       <td>{{ district['sl_no'] }}</td>
       <td>{{ district['district'] }}</td>
-      <td>{{ district['tot_ind_hab_received'] }}</td>
-      <td>{{ district['tot_ind_hab_recognised'] }}</td>
+      <td><a href="/detailed-list-view/{{district['district_id']}}">{{ district['tot_ind_hab_received'] }}</a></td>
+      <td><a href="/rights-recognised/{{district['district_id']}}">{{ district['tot_ind_hab_recognised'] }}</a></td>
       <td>{{ district['tot_ind_hab_demarcated'] }}</td>
       <td>{{ district['tot_ind_hab_ror_issued'] }}</td>
       <td>{{ district['tot_ind_hab_issued_couple'] }}</td>
