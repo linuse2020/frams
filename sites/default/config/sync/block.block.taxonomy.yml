@@ -15,7 +15,7 @@ third_party_settings:
 id: taxonomy
 theme: frams
 region: left_sidebar
-weight: -13
+weight: -15
 provider: null
 plugin: 'menu_block:taxonomy'
 settings:

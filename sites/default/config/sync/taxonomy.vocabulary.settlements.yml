@@ -1,0 +1,8 @@
+uuid: ad0d28e0-452e-4f9a-9e0a-c77f2075784a
+langcode: en
+status: true
+dependencies: {  }
+name: Settlements
+vid: settlements
+description: null
+weight: 0

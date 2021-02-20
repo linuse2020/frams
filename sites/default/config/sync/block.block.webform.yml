@@ -1,0 +1,31 @@
+uuid: dcf12973-29c9-4a40-9b06-9dacab595925
+langcode: en
+status: true
+dependencies:
+  config:
+    - webform.webform.email
+  module:
+    - system
+    - webform
+  theme:
+    - frams
+id: webform
+theme: frams
+region: content
+weight: 0
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: Webform
+  provider: webform
+  label_display: '0'
+  webform_id: email
+  default_data: ''
+  redirect: false
+visibility:
+  request_path:
+    id: request_path
+    pages: /view/email
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,33 @@
+uuid: c01e4e1c-28ca-4545-90ba-c6e352f16233
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - private_message
+    - system
+  theme:
+    - frams
+third_party_settings:
+  block_class:
+    classes: 'shadow p-3 bg-white rounded mb-5 text-center w-70'
+id: privatemessageinbox_3
+theme: frams
+region: content
+weight: 0
+provider: null
+plugin: private_message_inbox_block
+settings:
+  id: private_message_inbox_block
+  label: Inbox
+  provider: private_message
+  label_display: visible
+  thread_count: 5
+  ajax_load_count: 5
+  ajax_refresh_rate: 15
+visibility:
+  request_path:
+    id: request_path
+    pages: /view/private-message
+    negate: false
+    context_mapping: {  }

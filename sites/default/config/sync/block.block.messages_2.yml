@@ -1,0 +1,24 @@
+uuid: 1dafbb26-fb21-49ac-93a4-1710add55d2d
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - system
+  theme:
+    - frams
+third_party_settings:
+  block_class:
+    classes: left-side-block
+id: messages_2
+theme: frams
+region: left_sidebar
+weight: -12
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  provider: system
+  label_display: '0'
+visibility: {  }

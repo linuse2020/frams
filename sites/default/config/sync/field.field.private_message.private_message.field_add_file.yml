@@ -1,0 +1,27 @@
+uuid: 3bb72c9f-c5ff-4e60-bad4-8f1c1d46724b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.private_message.field_add_file
+  module:
+    - file
+    - private_message
+id: private_message.private_message.field_add_file
+field_name: field_add_file
+entity_type: private_message
+bundle: private_message
+label: 'Add File'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf jpg png'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

@@ -10,6 +10,7 @@ permissions:
   - 'administer multiple_registration'
   - 'create users'
   - 'edit any application content'
+  - 'entity print views access'
   - 'use  The form mode register linked to  user entity( user )'
   - 'use private messaging system'
   - 'use user.default form mode'

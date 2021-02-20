@@ -15,7 +15,7 @@ third_party_settings:
 id: frc
 theme: frams
 region: left_sidebar
-weight: -19
+weight: -21
 provider: null
 plugin: 'menu_block:menufrc'
 settings:

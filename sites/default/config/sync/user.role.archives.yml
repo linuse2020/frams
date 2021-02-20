@@ -35,6 +35,7 @@ permissions:
   - 'edit own field_claimant_panchayat'
   - 'edit own field_claimant_promoter'
   - 'edit own field_other_traditional_ri'
+  - 'entity print views access'
   - 'update paragraph content _survey_details'
   - 'update paragraph content family_members_details'
   - 'use  The form mode archives linked to  node entity( application )'
