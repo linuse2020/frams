@@ -15,7 +15,7 @@ third_party_settings:
 id: sdlc
 theme: frams
 region: left_sidebar
-weight: -15
+weight: -17
 provider: null
 plugin: 'menu_block:sdlc'
 settings:

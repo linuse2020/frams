@@ -15,6 +15,7 @@ permissions:
   - 'edit any committee_meeting content'
   - 'edit own committee_meeting content'
   - 'edit own promoters content'
+  - 'entity print views access'
   - 'use  The form mode promoter linked to  user entity( user )'
   - 'use  The form mode register linked to  user entity( user )'
   - 'use node.promoter form mode'

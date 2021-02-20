@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.private_message.inbox
+    - field.field.private_message.private_message.field_add_file
   module:
     - private_message
     - text
@@ -45,3 +46,4 @@ hidden:
   entity_print_view_epub: true
   entity_print_view_pdf: true
   entity_print_view_word_docx: true
+  field_add_file: true

@@ -18,6 +18,7 @@ permissions:
   - 'edit any frc content'
   - 'edit any promoters content'
   - 'edit own teo content'
+  - 'entity print views access'
   - 'update paragraph content frc_members_details'
   - 'use  The form mode default linked to  node entity( promoters )'
   - 'use  The form mode default linked to  profile entity( promoter )'

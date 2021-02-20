@@ -19,7 +19,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'ff2ac66eeec9e63fad21e625ee9e65731712f71e',
+    'reference' => '48cc7ce6c917cbc0db1f2833bdf4848b9c23739e',
     'name' => 'drupal/legacy-project',
   ),
   'versions' => 
@@ -1153,7 +1153,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'ff2ac66eeec9e63fad21e625ee9e65731712f71e',
+      'reference' => '48cc7ce6c917cbc0db1f2833bdf4848b9c23739e',
     ),
     'drupal/libraries' => 
     array (
@@ -1712,6 +1712,15 @@ private static $installed = array (
       array (
         0 => '8.9.13',
       ),
+    ),
+    'drupal/taxonomy_import' => 
+    array (
+      'pretty_version' => '2.0.0-alpha3',
+      'version' => '2.0.0.0-alpha3',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '2.0.0-alpha3',
     ),
     'drupal/telephone' => 
     array (

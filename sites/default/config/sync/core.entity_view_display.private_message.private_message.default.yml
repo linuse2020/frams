@@ -2,7 +2,10 @@ uuid: 82ed13c5-0e83-4ec9-b27d-29f24929836d
 langcode: en
 status: true
 dependencies:
+  config:
+    - field.field.private_message.private_message.field_add_file
   module:
+    - file
     - private_message
     - text
 _core:
@@ -22,6 +25,14 @@ content:
       timezone: ''
     third_party_settings: {  }
     type: timestamp
+  field_add_file:
+    weight: 3
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
   message:
     label: hidden
     type: text_default

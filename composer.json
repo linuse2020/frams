@@ -100,6 +100,7 @@
         "drupal/superfish": "^1.4",
         "drupal/swiftmailer": "^2.0@beta",
         "drupal/tamper": "^1.0@alpha",
+        "drupal/taxonomy_import": "^2.0@alpha",
         "drupal/token": "^1.9",
         "drupal/token_views_filter": "^1.5",
         "drupal/twig_tweak": "^2.9",

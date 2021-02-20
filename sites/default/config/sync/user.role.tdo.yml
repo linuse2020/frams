@@ -13,6 +13,7 @@ permissions:
   - 'create users'
   - 'edit any application content'
   - 'edit any teo content'
+  - 'entity print views access'
   - 'use  The form mode default linked to  node entity( teo )'
   - 'use  The form mode default linked to  profile entity( teo )'
   - 'use  The form mode register linked to  user entity( user )'

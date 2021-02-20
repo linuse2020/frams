@@ -7199,6 +7199,75 @@
             "install-path": "../../modules/contrib/tamper"
         },
         {
+            "name": "drupal/taxonomy_import",
+            "version": "2.0.0-alpha3",
+            "version_normalized": "2.0.0.0-alpha3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/taxonomy_import.git",
+                "reference": "2.0.0-alpha3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/taxonomy_import-2.0.0-alpha3.zip",
+                "reference": "2.0.0-alpha3",
+                "shasum": "c9015a42a29f96d90a10b496f0f42a7c7335bc0a"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0-alpha3",
+                    "datestamp": "1611400629",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "installation-source": "dist",
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "AswathyAjish",
+                    "homepage": "https://www.drupal.org/user/2584696"
+                },
+                {
+                    "name": "colan",
+                    "homepage": "https://www.drupal.org/user/58704"
+                },
+                {
+                    "name": "neethups",
+                    "homepage": "https://www.drupal.org/user/3516137"
+                },
+                {
+                    "name": "sajiniantony",
+                    "homepage": "https://www.drupal.org/user/2603884"
+                },
+                {
+                    "name": "vuil",
+                    "homepage": "https://www.drupal.org/user/3568458"
+                }
+            ],
+            "description": "A module to import taxonomy using CSV or XML file to a user defined vocabulary.",
+            "homepage": "https://www.drupal.org/project/taxonomy_import",
+            "keywords": [
+                "Drupal",
+                "taxonomy_import"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/taxonomy_import",
+                "issues": "https://www.drupal.org/project/issues/taxonomy_import",
+                "documentation": "https://www.drupal.org/project/taxonomy_import"
+            },
+            "install-path": "../../modules/contrib/taxonomy_import"
+        },
+        {
             "name": "drupal/token",
             "version": "1.9.0",
             "version_normalized": "1.9.0.0",
@@ -13639,5 +13708,6 @@
             "install-path": "../wa72/htmlpagedom"
         }
     ],
-    "dev": true
+    "dev": true,
+    "dev-package-names": []
 }

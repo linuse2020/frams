@@ -380,7 +380,19 @@ display:
           tokenize: false
           content: '<h3> FRC  Meeting Details</h3>'
           plugin_id: text_custom
-      footer: {  }
+      footer:
+        area_entity_print_views:
+          id: area_entity_print_views
+          table: views
+          field: area_entity_print_views
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          export_type: pdf
+          link_text: 'View PDF'
+          display_id: page_1
+          plugin_id: entity_print_views_link
       empty:
         area_text_custom:
           id: area_text_custom
@@ -1050,7 +1062,7 @@ display:
         style: false
         row: false
         header: false
-        footer: false
+        footer: true
       style:
         type: flipped_table
         options:
@@ -1160,19 +1172,6 @@ display:
           tokenize: false
           content: '<h3> FRC  Details</h3>'
           plugin_id: text_custom
-      footer:
-        area_entity_print_views:
-          id: area_entity_print_views
-          table: views
-          field: area_entity_print_views
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          export_type: pdf
-          link_text: 'View PDF'
-          display_id: frc_det
-          plugin_id: entity_print_views_link
     cache_metadata:
       max-age: -1
       contexts:
@@ -1642,6 +1641,7 @@ display:
         header: false
         filters: false
         filter_groups: false
+        footer: false
       display_description: ''
       block_description: 'FRC Members Details'
       relationships:
@@ -1773,6 +1773,19 @@ display:
         operator: AND
         groups:
           1: AND
+      footer:
+        area_entity_print_views:
+          id: area_entity_print_views
+          table: views
+          field: area_entity_print_views
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          export_type: pdf
+          link_text: 'View PDF'
+          display_id: frc_mem
+          plugin_id: entity_print_views_link
     cache_metadata:
       max-age: -1
       contexts:
@@ -1902,6 +1915,7 @@ display:
         filter_groups: false
         fields: false
         header: false
+        footer: false
       filter_groups:
         operator: AND
         groups:
@@ -2312,6 +2326,19 @@ display:
         context: '0'
         menu_name: menufrc
         enabled: true
+      footer:
+        area_entity_print_views:
+          id: area_entity_print_views
+          table: views
+          field: area_entity_print_views
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          export_type: pdf
+          link_text: 'View PDF'
+          display_id: page_1
+          plugin_id: entity_print_views_link
     cache_metadata:
       max-age: -1
       contexts:
@@ -3506,6 +3533,7 @@ display:
         filters: false
         filter_groups: false
         header: false
+        footer: false
       relationships:
         field_frc:
           id: field_frc
@@ -3646,6 +3674,19 @@ display:
         context: '0'
         menu_name: menufrc
         enabled: true
+      footer:
+        area_entity_print_views:
+          id: area_entity_print_views
+          table: views
+          field: area_entity_print_views
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          export_type: pdf
+          link_text: 'View PDF'
+          display_id: promo_det
+          plugin_id: entity_print_views_link
     cache_metadata:
       max-age: -1
       contexts:
@@ -4110,6 +4151,7 @@ display:
         header: false
         filters: false
         filter_groups: false
+        footer: false
       display_description: ''
       relationships:
         field_frc_members_details:
@@ -4251,6 +4293,19 @@ display:
         context: '0'
         menu_name: menufrc
         enabled: true
+      footer:
+        area_entity_print_views:
+          id: area_entity_print_views
+          table: views
+          field: area_entity_print_views
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          export_type: pdf
+          link_text: 'View PDF'
+          display_id: frc_mem
+          plugin_id: entity_print_views_link
     cache_metadata:
       max-age: -1
       contexts:
@@ -4473,6 +4528,7 @@ display:
         header: false
         filters: false
         filter_groups: false
+        footer: false
       header:
         area_text_custom:
           id: area_text_custom
@@ -4648,6 +4704,19 @@ display:
         context: '0'
         menu_name: menufrc
         enabled: true
+      footer:
+        area_entity_print_views:
+          id: area_entity_print_views
+          table: views
+          field: area_entity_print_views
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          export_type: pdf
+          link_text: 'View PDF'
+          display_id: page_1
+          plugin_id: entity_print_views_link
     cache_metadata:
       max-age: -1
       contexts:
@@ -5451,6 +5520,7 @@ display:
         filters: false
         filter_groups: false
         header: false
+        footer: false
       relationships:
         field_frc:
           id: field_frc
@@ -5580,6 +5650,19 @@ display:
           tokenize: false
           content: '<h3> Promoters Details</h3>'
           plugin_id: text_custom
+      footer:
+        area_entity_print_views:
+          id: area_entity_print_views
+          table: views
+          field: area_entity_print_views
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          export_type: pdf
+          link_text: 'View PDF'
+          display_id: promo_det
+          plugin_id: entity_print_views_link
     cache_metadata:
       max-age: -1
       contexts:

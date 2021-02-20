@@ -38,6 +38,7 @@ permissions:
   - 'edit own field_claimant_panchayat'
   - 'edit own field_claimant_promoter'
   - 'edit own field_other_traditional_ri'
+  - 'entity print views access'
   - 'update paragraph content family_members_details'
   - 'update paragraph content vaimozhy'
   - 'update paragraph content vaimozhy_witness_details'
