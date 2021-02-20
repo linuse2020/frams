@@ -28,6 +28,7 @@ use Drupal\Core\Controller\ControllerBase;
 use Symfony\Component\HttpFoundation\Request;
 use \Drupal\views\ViewExecutable;
 
+
 function frams_pro_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   /*kint($form_id);*/
   $form_ids = ['user_frc_form', 'user_promoter_form','user_claimant_form','user_teo_form'];
@@ -203,6 +204,9 @@ function frams_pro_form_alter(&$form, FormStateInterface $form_state, $form_id) 
         $form['revision_log']['#access'] = FALSE;
         $form['revision_information']['#access'] = FALSE;
       }
+    break;
+    case 'views_form_dashboard_applications_dash_frc_new':
+      $form['#action'] = '';
     break;
 
     default:

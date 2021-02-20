@@ -13,7 +13,7 @@ use Drupal\Core\Entity\ContentEntityInterface;
  *
  * @Action(
  *   id = "frams_pro_request_meeting_action",
- *   label = @Translation("Request meeting (moderation_state)"),
+ *   label = @Translation("Document Verification"),
  *   type = "node",
  *   confirm = TRUE
  * )
@@ -27,6 +27,8 @@ class RequestMeetingAction extends ViewsBulkOperationsActionBase {
    * {@inheritdoc}
    */
   public function execute(ContentEntityInterface $entity = NULL) {
+    /*kint($state);
+    exit();*/
     if (!$state = $entity->get('moderation_state')->getString()) {
       return $this->t(':title  - can\'t change state',
         [
@@ -36,9 +38,8 @@ class RequestMeetingAction extends ViewsBulkOperationsActionBase {
     }
 
     switch ($state) {
-      case 'archived':
       case 'draft':
-        $entity->set('moderation_state', 'published');
+        $entity->set('moderation_state', 'frc_document_verification');
         $entity->save();
         break;
     }
@@ -55,6 +56,7 @@ class RequestMeetingAction extends ViewsBulkOperationsActionBase {
    * {@inheritdoc}
    */
   public function access($object, AccountInterface $account = NULL, $return_as_object = FALSE) {
+    return TRUE;
     if ($object instanceof Node) {
       $can_update = $object->access('update', $account, TRUE);
       $can_edit = $object->access('edit', $account, TRUE);
