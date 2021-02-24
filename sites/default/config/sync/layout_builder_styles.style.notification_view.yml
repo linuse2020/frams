@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 id: notification_view
 label: 'notification view'
-classes: notification-view
+classes: 'notification-view mb-5 bg-white shadow'
 type: component
 weight: 0
 block_restrictions: {  }

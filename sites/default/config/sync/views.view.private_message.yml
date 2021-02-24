@@ -125,7 +125,7 @@ display:
           view_mode: default
       filters: {  }
       sorts: {  }
-      title: ' Message'
+      title: ' Messages'
       header: {  }
       footer: {  }
       empty: {  }
@@ -288,14 +288,13 @@ display:
         fields: false
       menu:
         type: normal
-        title: Message
+        title: Messages
         description: ''
         expanded: false
         parent: ''
         weight: 0
         context: '0'
         menu_name: messages
-        enabled: true
     cache_metadata:
       max-age: -1
       contexts:

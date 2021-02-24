@@ -74,12 +74,14 @@ module:
   language: 0
   layout_builder: 0
   layout_builder_component_attributes: 0
+  layout_builder_st: 0
   layout_builder_styles: 0
   layout_discovery: 0
   layout_section_classes: 0
   libraries: 0
   link: 0
   locale: 0
+  lupus_taxonomy_import: 0
   magnific_popup: 0
   mailsystem: 0
   masquerade: 0

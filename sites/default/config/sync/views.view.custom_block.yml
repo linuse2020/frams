@@ -234,11 +234,7 @@ display:
         type: role
         options:
           role:
-            administrator: administrator
-            sdlc: sdlc
-            dlc: dlc
             claimant: claimant
-            frc: frc
       defaults:
         access: false
         header: false
@@ -252,7 +248,7 @@ display:
           admin_label: ''
           empty: true
           tokenize: false
-          content: '<p><a class="btn btn-md btn-block btn-success" href="/node/add/application/claimant">Add New Application</a></p>'
+          content: '<p><a class="btn btn-md btn-success" href="/node/add/application/claimant">Add New Application</a></p>'
           plugin_id: text_custom
       block_description: 'Add New Application'
     cache_metadata:

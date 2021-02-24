@@ -10523,6 +10523,14 @@ header .user-menu ul li {
   flex-direction: column-reverse;
   display: flex !important;
 }
+.page-front .block--fraregister h2 {
+  background: #205431;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
 .page-front .spb-popup-main-wrapper {
   padding: 0;
   background: #205431;
@@ -10552,7 +10560,15 @@ header .user-menu ul li {
   text-align: center;
   text-align: center;
 }
-.page-front .block h2 {
+.page-front .notification-view {
+  border: 1px solid black;
+}
+.page-front .notification-view p {
+  text-align: justify;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.page-front .notification-view h2 {
   background: #205431;
   color: while;
   color: #fff;
@@ -10642,19 +10658,16 @@ header .user-menu ul li {
 .page-front .banner-wrapper .banner-image-mobile {
   position: relative;
 }
-.page-front .layout__region--second .notification-view {
-  border: 1px solid black;
-}
-.page-front .layout__region--second .notification-view p {
-  text-align: justify;
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
 .page-front .featured-block .head-text {
   font-size: 1.3rem;
 }
 .page-front .featured-block .txt-primary {
   color: #fed136;
+}
+.page-front .blog-block h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 .page-front .blog-block .image {
   overflow: hidden;

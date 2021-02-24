@@ -13,6 +13,17 @@
 		flex-direction: column-reverse;
 		display: flex !important;
 	}
+	.block--fraregister {
+		h2 {
+			background: #205431;
+			border-radius: 10px;
+			color: white;
+			text-align: center;
+			font-size: 1.5rem;
+			padding: 1rem;
+		}
+	}
+
 	.spb-popup-main-wrapper {
 		padding: 0;
 		background: #205431;
@@ -43,14 +54,22 @@
 		text-align: center;
 		text-align: center
 	}
-	.block  h2 {
-		background: #205431;
-		color: while;
-		color: #fff;
-		font-size: 25px;
-		padding: 10px;
-		text-align: center;
-		text-align: center
+	.notification-view {
+		border: 1px solid black;
+		p {
+			text-align: justify;
+			padding-left: 2rem;
+			padding-right: 2rem;
+		}
+		h2 {
+			background: #205431;
+			color: while;
+			color: #fff;
+			font-size: 25px;
+			padding: 10px;
+			text-align: center;
+			text-align: center
+		}
 	}
 	.hero-banner.container-fluid {
     padding: 0;
@@ -137,16 +156,6 @@
 			position: relative;
 		}
 	}
-	.layout__region--second {
-		.notification-view {
-			border: 1px solid black;
-			p {
-				text-align: justify;
-				padding-left: 2rem;
-				padding-right: 2rem;
-			}
-		}
-	}
 	.featured-block {
 		.head-text {
 			font-size: 1.3rem;
@@ -156,6 +165,12 @@
 		}
 	}
 	.blog-block {
+		h2 {
+			text-align: center;
+			text-transform: uppercase;
+			font-weight: 500;
+			
+		}
 		.image {
 			overflow: hidden;
 			height: 100px;

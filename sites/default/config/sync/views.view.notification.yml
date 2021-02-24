@@ -11,7 +11,7 @@ dependencies:
     - user
     - view_marquee
 id: notification
-label: notification
+label: 'notice board'
 module: views
 description: ''
 tag: ''
@@ -74,8 +74,8 @@ display:
           row_class: marquee-row
           direction: up
           behavior: scroll
-          speed: '10'
-          delay: '200'
+          speed: '2'
+          delay: '0'
           mouseover: 1
       row:
         type: fields
@@ -339,7 +339,7 @@ display:
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
-      title: Notifications
+      title: 'Notice Board'
     cache_metadata:
       max-age: -1
       contexts:
@@ -376,7 +376,7 @@ display:
     position: 2
     display_options:
       display_extenders: {  }
-      path: notifications
+      path: notice-board
       style:
         type: default
         options:
