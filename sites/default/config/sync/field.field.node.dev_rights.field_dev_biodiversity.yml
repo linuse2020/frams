@@ -1,0 +1,19 @@
+uuid: 20c292a8-0b4a-48de-a735-a0ca604b1a18
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dev_biodiversity
+    - node.type.dev_rights
+id: node.dev_rights.field_dev_biodiversity
+field_name: field_dev_biodiversity
+entity_type: node
+bundle: dev_rights
+label: 'Right to access biodiversity, intellectual Property and traditional knowledge, if any : [See Section 3(1)(k) of the act ]'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

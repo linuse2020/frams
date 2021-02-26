@@ -1,0 +1,19 @@
+uuid: 44eb26bd-c67e-48a9-a56d-b36d633597ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dev_other_trd_ri
+    - node.type.dev_rights
+id: node.dev_rights.field_dev_other_trd_ri
+field_name: field_dev_other_trd_ri
+entity_type: node
+bundle: dev_rights
+label: 'Other traditional right, if any : [ See Section 3(1)(1) of the Act ]'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

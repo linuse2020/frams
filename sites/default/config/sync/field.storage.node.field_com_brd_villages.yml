@@ -1,0 +1,24 @@
+uuid: 10108756-4dca-42b3-a4c0-421054f9d440
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - taxonomy
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_com_brd_villages
+field_name: field_com_brd_villages
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 3
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

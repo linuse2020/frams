@@ -1,0 +1,19 @@
+uuid: 944f61c1-21a7-44a0-82c4-d9f345af264c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dev_traditional
+    - node.type.dev_rights
+id: node.dev_rights.field_dev_traditional
+field_name: field_dev_traditional
+entity_type: node
+bundle: dev_rights
+label: 'Community Rights Traditional resource access for nomadic and pastoralist, if any : [ See Section 3(1)(g) of the act ])'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

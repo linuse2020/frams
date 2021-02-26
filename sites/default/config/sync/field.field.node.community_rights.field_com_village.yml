@@ -1,0 +1,29 @@
+uuid: dd23ba96-f5b0-4a60-98e2-5f56bb1122c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_com_village
+    - node.type.community_rights
+    - taxonomy.vocabulary.village
+id: node.community_rights.field_com_village
+field_name: field_com_village
+entity_type: node
+bundle: community_rights
+label: Village
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      village: village
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

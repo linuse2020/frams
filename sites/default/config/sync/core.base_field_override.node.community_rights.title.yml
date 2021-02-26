@@ -1,0 +1,18 @@
+uuid: f0cf9d68-2c84-4900-a6e3-f540e3af37dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.community_rights
+id: node.community_rights.title
+field_name: title
+entity_type: node
+bundle: community_rights
+label: title
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -358,7 +358,7 @@ display:
           admin_label: ''
           operator: in
           value:
-            en: en
+            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
           group: 1
           exposed: false
           expose:
@@ -718,7 +718,7 @@ display:
           admin_label: ''
           operator: in
           value:
-            en: en
+            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
           group: 1
           exposed: false
           expose:
@@ -755,7 +755,7 @@ display:
         operator: AND
         groups:
           1: AND
-      rendering_language: en
+      rendering_language: '***LANGUAGE_language_interface***'
     cache_metadata:
       max-age: -1
       contexts:
@@ -1117,7 +1117,7 @@ display:
       defaults:
         filters: true
         filter_groups: true
-      rendering_language: en
+      rendering_language: '***LANGUAGE_language_interface***'
     cache_metadata:
       max-age: -1
       contexts:

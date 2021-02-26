@@ -1,0 +1,22 @@
+uuid: 1e9f50b9-2f74-48a8-bac2-86929ab0cb02
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.community_rights
+id: node.community_rights.promote
+field_name: promote
+entity_type: node
+bundle: community_rights
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,18 @@
+uuid: 71f976c4-08b0-4cbe-9984-3de850ab13f6
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Community Rights'
+type: community_rights
+description: ''
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

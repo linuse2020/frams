@@ -1,0 +1,19 @@
+uuid: 14eebcdc-18ea-4141-b535-144637aac975
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dev_grazing
+    - node.type.dev_rights
+id: node.dev_rights.field_dev_grazing
+field_name: field_dev_grazing
+entity_type: node
+bundle: dev_rights
+label: 'Community rights Grazing, if any : '
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -12,7 +12,7 @@ entity_type: taxonomy_term
 bundle: taluk
 label: District
 description: ''
-required: false
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''

@@ -1,0 +1,19 @@
+uuid: 75af0cb5-09a8-4a77-ac2c-7940d9a6b4f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dev_forest
+    - node.type.dev_rights
+id: node.dev_rights.field_dev_forest
+field_name: field_dev_forest
+entity_type: node
+bundle: dev_rights
+label: 'Rights over minor forest produce, if any : [See Section 3(1)(c) of the Act] '
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

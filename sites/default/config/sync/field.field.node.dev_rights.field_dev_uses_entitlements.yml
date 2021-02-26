@@ -1,0 +1,19 @@
+uuid: c1cbabc8-f064-4cef-b2ad-4b52934e7e1d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dev_uses_entitlements
+    - node.type.dev_rights
+id: node.dev_rights.field_dev_uses_entitlements
+field_name: field_dev_uses_entitlements
+entity_type: node
+bundle: dev_rights
+label: 'Community Rights  uses or entitlements (fish, water bodies), if any :'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

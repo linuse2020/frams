@@ -1,0 +1,18 @@
+uuid: 236c47fa-f9b3-45ce-8d66-8675c5109f68
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.dev_rights
+id: node.dev_rights.title
+field_name: title
+entity_type: node
+bundle: dev_rights
+label: ' Name of the claimant'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

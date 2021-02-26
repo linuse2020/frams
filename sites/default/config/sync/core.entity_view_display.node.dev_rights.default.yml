@@ -1,0 +1,155 @@
+uuid: 1e124691-6f24-435d-9be2-55c48d1dbb08
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.dev_rights.body
+    - field.field.node.dev_rights.field_dev_biodiversity
+    - field.field.node.dev_rights.field_dev_community_tenures
+    - field.field.node.dev_rights.field_dev_evidence
+    - field.field.node.dev_rights.field_dev_fdst_community
+    - field.field.node.dev_rights.field_dev_forest
+    - field.field.node.dev_rights.field_dev_frc
+    - field.field.node.dev_rights.field_dev_grazing
+    - field.field.node.dev_rights.field_dev_nistar
+    - field.field.node.dev_rights.field_dev_otfd_community
+    - field.field.node.dev_rights.field_dev_oth_info
+    - field.field.node.dev_rights.field_dev_other_trd_ri
+    - field.field.node.dev_rights.field_dev_traditional
+    - field.field.node.dev_rights.field_dev_uses_entitlements
+    - node.type.dev_rights
+  module:
+    - file
+    - text
+    - user
+id: node.dev_rights.default
+targetEntityType: node
+bundle: dev_rights
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_dev_biodiversity:
+    weight: 112
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dev_community_tenures:
+    weight: 111
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dev_evidence:
+    weight: 115
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_dev_fdst_community:
+    weight: 102
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_dev_forest:
+    weight: 107
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dev_frc:
+    weight: 105
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_dev_grazing:
+    weight: 109
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dev_nistar:
+    weight: 106
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dev_otfd_community:
+    weight: 104
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_dev_oth_info:
+    weight: 116
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dev_other_trd_ri:
+    weight: 114
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dev_traditional:
+    weight: 110
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dev_uses_entitlements:
+    weight: 108
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  langcode: true
+  private_message_link: true

@@ -1,0 +1,27 @@
+uuid: 992d9a02-452c-4f65-bd1e-1be4ee3c6689
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_com_map
+    - node.type.community_rights
+  module:
+    - file
+id: node.community_rights.field_com_map
+field_name: field_com_map
+entity_type: node
+bundle: community_rights
+label: 'Attach map'
+description: "We, the undersigned residents of this Gram Sabha hereby resolve that the area detailed below and in the attached map comprises our Community Forest Resource over which we are claiming recognition of our forest rights under section 3(1)(i).\r\n[Attach a map of the community forest resource, showing location, landmarks within the traditional or customary boundaries of the village or seasonal use of landscape in the case of pastoral communities to which the community had conserving and managing for sustainable use. please not that this need to correspond to existing legal boundaries]"
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf jpg png'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

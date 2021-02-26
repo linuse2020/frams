@@ -1,0 +1,23 @@
+uuid: 62efb8f6-f92e-419a-8b31-fa6fcc75eea4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dev_fdst_community
+    - node.type.dev_rights
+id: node.dev_rights.field_dev_fdst_community
+field_name: field_dev_fdst_community
+entity_type: node
+bundle: dev_rights
+label: 'FDST community'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

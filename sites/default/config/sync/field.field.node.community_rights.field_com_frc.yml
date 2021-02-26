@@ -1,0 +1,28 @@
+uuid: 08e0bb14-7fe6-4320-a597-afe0bde53778
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_com_frc
+    - node.type.community_rights
+    - node.type.frc
+id: node.community_rights.field_com_frc
+field_name: field_com_frc
+entity_type: node
+bundle: community_rights
+label: FRC
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      frc: frc
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

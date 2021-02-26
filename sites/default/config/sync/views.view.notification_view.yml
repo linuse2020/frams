@@ -467,6 +467,7 @@ display:
     display_options:
       display_extenders: {  }
       path: notifications
+      rendering_language: '***LANGUAGE_entity_translation***'
     cache_metadata:
       max-age: -1
       contexts:

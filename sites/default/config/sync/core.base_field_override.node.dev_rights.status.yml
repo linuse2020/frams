@@ -1,0 +1,22 @@
+uuid: 623a86ec-0c6a-4f65-a134-1f5e6721a5b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.dev_rights
+id: node.dev_rights.status
+field_name: status
+entity_type: node
+bundle: dev_rights
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

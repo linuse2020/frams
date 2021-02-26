@@ -1,0 +1,19 @@
+uuid: 5f966bbc-78c4-4290-8188-a4d7ac5af7cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_com_name
+    - node.type.community_rights
+id: node.community_rights.field_com_name
+field_name: field_com_name
+entity_type: node
+bundle: community_rights
+label: 'Name(s) of members of the gram sabha'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
