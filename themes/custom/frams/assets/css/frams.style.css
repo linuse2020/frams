@@ -10438,6 +10438,10 @@ header .logo img {
   height: auto;
 }
 
+.page {
+  height: auto !important;
+}
+
 header.sticky {
   position: fixed !important;
   z-index: 999;

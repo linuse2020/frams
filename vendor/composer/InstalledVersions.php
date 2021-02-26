@@ -19,7 +19,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '48cc7ce6c917cbc0db1f2833bdf4848b9c23739e',
+    'reference' => '23c3e57876c61922b852d741e633d1567c9af7be',
     'name' => 'drupal/legacy-project',
   ),
   'versions' => 
@@ -314,6 +314,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '8.x-1.5',
+    ),
+    'drupal/captcha' => 
+    array (
+      'pretty_version' => '1.1.0',
+      'version' => '1.1.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.1',
     ),
     'drupal/chosen' => 
     array (
@@ -1094,6 +1103,15 @@ private static $installed = array (
         0 => '8.9.13',
       ),
     ),
+    'drupal/layout_builder_at' => 
+    array (
+      'pretty_version' => '2.11.0',
+      'version' => '2.11.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-2.11',
+    ),
     'drupal/layout_builder_component_attributes' => 
     array (
       'pretty_version' => '1.1.1',
@@ -1102,6 +1120,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '1.1.1',
+    ),
+    'drupal/layout_builder_st' => 
+    array (
+      'pretty_version' => '1.0.0-alpha2',
+      'version' => '1.0.0.0-alpha2',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.0-alpha2',
     ),
     'drupal/layout_builder_styles' => 
     array (
@@ -1153,7 +1180,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '48cc7ce6c917cbc0db1f2833bdf4848b9c23739e',
+      'reference' => '23c3e57876c61922b852d741e633d1567c9af7be',
     ),
     'drupal/libraries' => 
     array (
@@ -1188,6 +1215,15 @@ private static $installed = array (
       ),
     ),
     'drupal/login_history' => 
+    array (
+      'pretty_version' => '1.0.0',
+      'version' => '1.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.0',
+    ),
+    'drupal/lupus_taxonomy_import' => 
     array (
       'pretty_version' => '1.0.0',
       'version' => '1.0.0.0',
@@ -1358,6 +1394,15 @@ private static $installed = array (
       ),
       'reference' => '8.x-1.0-alpha5',
     ),
+    'drupal/multilingual_google_web_translator' => 
+    array (
+      'pretty_version' => '9.0.8',
+      'version' => '9.0.8.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '9.0.8',
+    ),
     'drupal/multiple_registration' => 
     array (
       'pretty_version' => '2.99.0',
@@ -1488,6 +1533,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '8.x-1.0-rc2',
+    ),
+    'drupal/recaptcha' => 
+    array (
+      'pretty_version' => '3.0.0',
+      'version' => '3.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-3.0',
     ),
     'drupal/redirect_after_login' => 
     array (
@@ -2032,6 +2086,15 @@ private static $installed = array (
       array (
       ),
       'reference' => 'b07f1eace8072ccc61445ad8fbd493ff9d783043',
+    ),
+    'google/recaptcha' => 
+    array (
+      'pretty_version' => '1.2.4',
+      'version' => '1.2.4.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '614f25a9038be4f3f2da7cbfd778dc5b357d2419',
     ),
     'guzzlehttp/guzzle' => 
     array (

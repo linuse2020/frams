@@ -16,6 +16,9 @@ header {
   }
 
 }
+.page {
+  height: auto !important;
+}
 header.sticky {
   position: fixed !important;
   z-index: 999;
