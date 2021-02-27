@@ -1,0 +1,106 @@
+uuid: 951ef5c0-1d02-4266-9895-d8886231966c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.community_rights.body
+    - field.field.node.community_rights.field_com_brd_villages
+    - field.field.node.community_rights.field_com_evidence
+    - field.field.node.community_rights.field_com_frc
+    - field.field.node.community_rights.field_com_khasra_no
+    - field.field.node.community_rights.field_com_map
+    - field.field.node.community_rights.field_com_name
+    - field.field.node.community_rights.field_com_sheet
+    - field.field.node.community_rights.field_com_village
+    - node.type.community_rights
+  module:
+    - file
+    - text
+    - user
+id: node.community_rights.default
+targetEntityType: node
+bundle: community_rights
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_com_brd_villages:
+    weight: 105
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_com_evidence:
+    weight: 106
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_com_frc:
+    weight: 103
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_com_khasra_no:
+    weight: 104
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_com_map:
+    weight: 109
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_com_name:
+    weight: 107
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_com_sheet:
+    weight: 108
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_com_village:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  langcode: true
+  private_message_link: true

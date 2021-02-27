@@ -1,0 +1,7 @@
+uuid: 6a3aa882-c872-455f-80ee-9bc10d19f016
+langcode: en
+status: false
+dependencies: {  }
+formId: node_teo_form
+captchaType: default
+label: null

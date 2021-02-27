@@ -1,0 +1,19 @@
+uuid: 018f9907-3617-4674-b4e7-91b738d6c83c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dev_community_tenures
+    - node.type.dev_rights
+id: node.dev_rights.field_dev_community_tenures
+field_name: field_dev_community_tenures
+entity_type: node
+bundle: dev_rights
+label: 'Community tenures of habitat and habitation for PTGs and pre-agricultural communities, if any : [ See Section3(1)(e) of the Act '
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

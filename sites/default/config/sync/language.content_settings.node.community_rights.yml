@@ -1,0 +1,18 @@
+uuid: 76c3755c-99e5-49a5-9153-f62689688868
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.community_rights
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.community_rights
+target_entity_type_id: node
+target_bundle: community_rights
+default_langcode: site_default
+language_alterable: true

@@ -1,0 +1,27 @@
+uuid: 80c37078-f39a-4c43-8e56-90373f6cb987
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dev_evidence
+    - node.type.dev_rights
+  module:
+    - file
+id: node.dev_rights.field_dev_evidence
+field_name: field_dev_evidence
+entity_type: node
+bundle: dev_rights
+label: Evidence
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf jpg png'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

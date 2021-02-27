@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "656039c5e79975b9abb08a32a94ebc98",
+    "content-hash": "cd567c625970dda6b29a6a99b381d420",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1574,6 +1574,78 @@
                 "source": "http://cgit.drupalcode.org/bs_tour",
                 "issues": "http://drupal.org/project/issues/bs_tour",
                 "email": "mqanneh@gmail.com"
+            }
+        },
+        {
+            "name": "drupal/captcha",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/captcha.git",
+                "reference": "8.x-1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/captcha-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "2eaf6f00ea256652c09f785b26dc933cc5b3dd26"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.1",
+                    "datestamp": "1591160977",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "branch-alias": {
+                    "dev-8.x-1.x": "1.x-dev"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "RobLoach",
+                    "homepage": "https://www.drupal.org/user/61114"
+                },
+                {
+                    "name": "elachlan",
+                    "homepage": "https://www.drupal.org/user/1021502"
+                },
+                {
+                    "name": "japerry",
+                    "homepage": "https://www.drupal.org/user/45640"
+                },
+                {
+                    "name": "naveenvalecha",
+                    "homepage": "https://www.drupal.org/user/2665733"
+                },
+                {
+                    "name": "podarok",
+                    "homepage": "https://www.drupal.org/user/116002"
+                },
+                {
+                    "name": "soxofaan",
+                    "homepage": "https://www.drupal.org/user/41478"
+                },
+                {
+                    "name": "wundo",
+                    "homepage": "https://www.drupal.org/user/25523"
+                }
+            ],
+            "description": "The CAPTCHA module provides this feature to virtually any user facing web form on a Drupal site.",
+            "homepage": "https://www.drupal.org/project/captcha",
+            "support": {
+                "source": "https://git.drupalcode.org/project/captcha",
+                "issues": "https://www.drupal.org/project/issues/captcha"
             }
         },
         {
@@ -4421,6 +4493,53 @@
             }
         },
         {
+            "name": "drupal/layout_builder_at",
+            "version": "2.11.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/layout_builder_at.git",
+                "reference": "8.x-2.11"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/layout_builder_at-8.x-2.11.zip",
+                "reference": "8.x-2.11",
+                "shasum": "3aa3ed6cd6d025ddd1cd3ad4b981d78828e6c8fa"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.11",
+                    "datestamp": "1593435870",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Kristof De Jaeger (swentel)",
+                    "homepage": "https://www.drupal.org/u/swentel",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Layout Builder Asymmetric Translation",
+            "homepage": "https://www.drupal.org/project/layout_builder_at",
+            "support": {
+                "source": "https://git.drupalcode.org/project/layout_builder_at",
+                "issues": "https://www.drupal.org/project/issues/layout_builder_at",
+                "irc": "irc://irc.freenode.org/drupal-contribute"
+            }
+        },
+        {
             "name": "drupal/layout_builder_component_attributes",
             "version": "1.1.1",
             "source": {
@@ -4464,6 +4583,58 @@
             "support": {
                 "source": "https://cgit.drupalcode.org/layout_builder_component_attributes",
                 "issues": "https://drupal.org/project/issues/layout_builder_component_attributes"
+            }
+        },
+        {
+            "name": "drupal/layout_builder_st",
+            "version": "1.0.0-alpha2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/layout_builder_st.git",
+                "reference": "8.x-1.0-alpha2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/layout_builder_st-8.x-1.0-alpha2.zip",
+                "reference": "8.x-1.0-alpha2",
+                "shasum": "23e5d369c39bfeaf482a40b59a16a5cbbdb5b858"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0-alpha2",
+                    "datestamp": "1582916647",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "phenaproxima",
+                    "homepage": "https://www.drupal.org/user/205645"
+                },
+                {
+                    "name": "tedbow",
+                    "homepage": "https://www.drupal.org/user/240860"
+                },
+                {
+                    "name": "tim.plunkett",
+                    "homepage": "https://www.drupal.org/user/241634"
+                }
+            ],
+            "description": "Allows translating Layout overrides",
+            "homepage": "https://www.drupal.org/project/layout_builder_st",
+            "support": {
+                "source": "https://git.drupalcode.org/project/layout_builder_st"
             }
         },
         {
@@ -4844,6 +5015,54 @@
             "homepage": "https://www.drupal.org/project/login_history",
             "support": {
                 "source": "https://git.drupalcode.org/project/login_history"
+            }
+        },
+        {
+            "name": "drupal/lupus_taxonomy_import",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/lupus_taxonomy_import.git",
+                "reference": "8.x-1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/lupus_taxonomy_import-8.x-1.0.zip",
+                "reference": "8.x-1.0",
+                "shasum": "fcb0b4547808717a30002b5e83a185dc8e2c3b8c"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0",
+                    "datestamp": "1551877087",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "fago",
+                    "homepage": "https://www.drupal.org/user/16747"
+                },
+                {
+                    "name": "mbm80",
+                    "homepage": "https://www.drupal.org/user/3464809"
+                }
+            ],
+            "description": "Import taxonomy terms via csv.",
+            "homepage": "https://www.drupal.org/project/lupus_taxonomy_import",
+            "support": {
+                "source": "https://git.drupalcode.org/project/lupus_taxonomy_import"
             }
         },
         {
@@ -5489,6 +5708,50 @@
             }
         },
         {
+            "name": "drupal/multilingual_google_web_translator",
+            "version": "9.0.8",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/multilingual_google_web_translator.git",
+                "reference": "9.0.8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/multilingual_google_web_translator-9.0.8.zip",
+                "reference": "9.0.8",
+                "shasum": "3f8623744e564d77371d08230f0fc649b2d41c12"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "9.0.8",
+                    "datestamp": "1602718595",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Kushal Bansal",
+                    "homepage": "https://www.drupal.org/user/3478917"
+                }
+            ],
+            "description": "Provides Multilingual Google Select Box Block on Webpage and helps in translating the webpage to selected language.",
+            "homepage": "https://www.drupal.org/project/multilingual_google_web_translator",
+            "support": {
+                "source": "https://git.drupalcode.org/project/multilingual_google_web_translator"
+            }
+        },
+        {
             "name": "drupal/multiple_registration",
             "version": "2.99.0",
             "source": {
@@ -6073,6 +6336,89 @@
             "support": {
                 "source": "https://git.drupal.org/project/realname.git",
                 "issues": "https://www.drupal.org/project/issues/realname"
+            }
+        },
+        {
+            "name": "drupal/recaptcha",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/recaptcha.git",
+                "reference": "8.x-3.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/recaptcha-8.x-3.0.zip",
+                "reference": "8.x-3.0",
+                "shasum": "5f1b179184b105ad6c121ab5505054e1e99331b9"
+            },
+            "require": {
+                "drupal/captcha": "^1.0.0-alpha1",
+                "drupal/core": "^8 || ^9",
+                "google/recaptcha": "^1.2"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-3.0",
+                    "datestamp": "1591216085",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "hass",
+                    "homepage": "https://www.drupal.org/u/hass"
+                },
+                {
+                    "name": "See other contributors",
+                    "homepage": "https://www.drupal.org/node/147903/committers"
+                },
+                {
+                    "name": "amykhailova",
+                    "homepage": "https://www.drupal.org/user/2892725"
+                },
+                {
+                    "name": "diolan",
+                    "homepage": "https://www.drupal.org/user/2336786"
+                },
+                {
+                    "name": "hass",
+                    "homepage": "https://www.drupal.org/user/85918"
+                },
+                {
+                    "name": "id.medion",
+                    "homepage": "https://www.drupal.org/user/2542592"
+                },
+                {
+                    "name": "kim.pepper",
+                    "homepage": "https://www.drupal.org/user/370574"
+                },
+                {
+                    "name": "rfay",
+                    "homepage": "https://www.drupal.org/user/30906"
+                },
+                {
+                    "name": "soxofaan",
+                    "homepage": "https://www.drupal.org/user/41478"
+                },
+                {
+                    "name": "wundo",
+                    "homepage": "https://www.drupal.org/user/25523"
+                }
+            ],
+            "description": "Protect your website from spam and abuse while letting real people pass through with ease.",
+            "homepage": "https://www.drupal.org/project/recaptcha",
+            "support": {
+                "source": "https://git.drupal.org/project/recaptcha.git",
+                "issues": "https://www.drupal.org/project/issues/recaptcha"
             }
         },
         {
@@ -8513,6 +8859,58 @@
                 "source": "https://github.com/giggsey/Locale/tree/master"
             },
             "time": "2020-07-07T11:16:24+00:00"
+        },
+        {
+            "name": "google/recaptcha",
+            "version": "1.2.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/google/recaptcha.git",
+                "reference": "614f25a9038be4f3f2da7cbfd778dc5b357d2419"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/google/recaptcha/zipball/614f25a9038be4f3f2da7cbfd778dc5b357d2419",
+                "reference": "614f25a9038be4f3f2da7cbfd778dc5b357d2419",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.2.20|^2.15",
+                "php-coveralls/php-coveralls": "^2.1",
+                "phpunit/phpunit": "^4.8.36|^5.7.27|^6.59|^7.5.11"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ReCaptcha\\": "src/ReCaptcha"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Client library for reCAPTCHA, a free service that protects websites from spam and abuse.",
+            "homepage": "https://www.google.com/recaptcha/",
+            "keywords": [
+                "Abuse",
+                "captcha",
+                "recaptcha",
+                "spam"
+            ],
+            "support": {
+                "forum": "https://groups.google.com/forum/#!forum/recaptcha",
+                "issues": "https://github.com/google/recaptcha/issues",
+                "source": "https://github.com/google/recaptcha"
+            },
+            "time": "2020-03-31T17:50:54+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -13108,6 +13506,7 @@
         "drupal/form_mode_control": 5,
         "drupal/front": 10,
         "drupal/inline_entity_form": 5,
+        "drupal/layout_builder_st": 15,
         "drupal/layout_builder_styles": 10,
         "drupal/layout_section_classes": 5,
         "drupal/libraries": 15,

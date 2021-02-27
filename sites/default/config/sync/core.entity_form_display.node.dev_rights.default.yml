@@ -1,0 +1,218 @@
+uuid: e7494734-e1ad-403b-8a68-3c817a779413
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.dev_rights.body
+    - field.field.node.dev_rights.field_dev_biodiversity
+    - field.field.node.dev_rights.field_dev_community_tenures
+    - field.field.node.dev_rights.field_dev_evidence
+    - field.field.node.dev_rights.field_dev_fdst_community
+    - field.field.node.dev_rights.field_dev_forest
+    - field.field.node.dev_rights.field_dev_frc
+    - field.field.node.dev_rights.field_dev_grazing
+    - field.field.node.dev_rights.field_dev_nistar
+    - field.field.node.dev_rights.field_dev_otfd_community
+    - field.field.node.dev_rights.field_dev_oth_info
+    - field.field.node.dev_rights.field_dev_other_trd_ri
+    - field.field.node.dev_rights.field_dev_traditional
+    - field.field.node.dev_rights.field_dev_uses_entitlements
+    - node.type.dev_rights
+  module:
+    - content_moderation
+    - field_group
+    - field_layout
+    - file
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+  field_group:
+    group_dev_personal_details:
+      children:
+        - title
+        - field_dev_fdst_community
+        - field_dev_otfd_community
+        - field_dev_frc
+      parent_name: ''
+      weight: 0
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: dev_personal_details
+        classes: personal-details
+        description: ''
+        required_fields: true
+      label: 'Personal Details'
+    group_nature_of_community_rights:
+      children:
+        - field_dev_nistar
+        - field_dev_forest
+        - field_dev_uses_entitlements
+        - field_dev_grazing
+        - field_dev_traditional
+        - field_dev_community_tenures
+        - field_dev_biodiversity
+        - field_dev_other_trd_ri
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: nature_of_community
+        classes: nature-of-comm
+        description: ''
+        required_fields: true
+      label: 'Nature of community rights enjoyed'
+    group_dev_evidence:
+      children:
+        - field_dev_evidence
+      parent_name: ''
+      weight: 20
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: dev_evidence
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Evidence in support'
+id: node.dev_rights.default
+targetEntityType: node
+bundle: dev_rights
+mode: default
+content:
+  field_dev_biodiversity:
+    weight: 17
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dev_community_tenures:
+    weight: 16
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dev_evidence:
+    weight: 26
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  field_dev_fdst_community:
+    weight: 2
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_dev_forest:
+    weight: 12
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dev_frc:
+    weight: 4
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_dev_grazing:
+    weight: 14
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dev_nistar:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dev_otfd_community:
+    weight: 3
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_dev_oth_info:
+    weight: 27
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dev_other_trd_ri:
+    weight: 18
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dev_traditional:
+    weight: 15
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dev_uses_entitlements:
+    weight: 13
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 3
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  body: true
+  created: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

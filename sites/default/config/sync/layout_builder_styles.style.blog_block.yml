@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 id: blog_block
 label: 'blog block'
-classes: blog-block
+classes: 'blog-block pr-lg-5'
 type: component
 weight: 0
 block_restrictions: {  }

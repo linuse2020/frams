@@ -1,0 +1,28 @@
+uuid: cc5becce-708b-4514-ad48-cad4d3975f60
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dev_frc
+    - node.type.dev_rights
+    - node.type.frc
+id: node.dev_rights.field_dev_frc
+field_name: field_dev_frc
+entity_type: node
+bundle: dev_rights
+label: FRC
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      frc: frc
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

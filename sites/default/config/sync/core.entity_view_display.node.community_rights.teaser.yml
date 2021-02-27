@@ -1,0 +1,51 @@
+uuid: cc1bec3d-1ac3-446d-9f89-489ef1c024ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.community_rights.body
+    - field.field.node.community_rights.field_com_brd_villages
+    - field.field.node.community_rights.field_com_evidence
+    - field.field.node.community_rights.field_com_frc
+    - field.field.node.community_rights.field_com_khasra_no
+    - field.field.node.community_rights.field_com_map
+    - field.field.node.community_rights.field_com_name
+    - field.field.node.community_rights.field_com_sheet
+    - field.field.node.community_rights.field_com_village
+    - node.type.community_rights
+  module:
+    - text
+    - user
+id: node.community_rights.teaser
+targetEntityType: node
+bundle: community_rights
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_com_brd_villages: true
+  field_com_evidence: true
+  field_com_frc: true
+  field_com_khasra_no: true
+  field_com_map: true
+  field_com_name: true
+  field_com_sheet: true
+  field_com_village: true
+  langcode: true
+  private_message_link: true

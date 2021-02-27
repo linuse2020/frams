@@ -1,0 +1,61 @@
+uuid: 31bf2937-8214-4b66-97c6-11afde193023
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.dev_rights.body
+    - field.field.node.dev_rights.field_dev_biodiversity
+    - field.field.node.dev_rights.field_dev_community_tenures
+    - field.field.node.dev_rights.field_dev_evidence
+    - field.field.node.dev_rights.field_dev_fdst_community
+    - field.field.node.dev_rights.field_dev_forest
+    - field.field.node.dev_rights.field_dev_frc
+    - field.field.node.dev_rights.field_dev_grazing
+    - field.field.node.dev_rights.field_dev_nistar
+    - field.field.node.dev_rights.field_dev_otfd_community
+    - field.field.node.dev_rights.field_dev_oth_info
+    - field.field.node.dev_rights.field_dev_other_trd_ri
+    - field.field.node.dev_rights.field_dev_traditional
+    - field.field.node.dev_rights.field_dev_uses_entitlements
+    - node.type.dev_rights
+  module:
+    - text
+    - user
+id: node.dev_rights.teaser
+targetEntityType: node
+bundle: dev_rights
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_dev_biodiversity: true
+  field_dev_community_tenures: true
+  field_dev_evidence: true
+  field_dev_fdst_community: true
+  field_dev_forest: true
+  field_dev_frc: true
+  field_dev_grazing: true
+  field_dev_nistar: true
+  field_dev_otfd_community: true
+  field_dev_oth_info: true
+  field_dev_other_trd_ri: true
+  field_dev_traditional: true
+  field_dev_uses_entitlements: true
+  langcode: true
+  private_message_link: true

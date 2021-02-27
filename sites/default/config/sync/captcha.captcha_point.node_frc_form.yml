@@ -1,0 +1,7 @@
+uuid: 2934cb8b-e6c5-42be-a47b-7145dda918e9
+langcode: en
+status: false
+dependencies: {  }
+formId: node_frc_form
+captchaType: default
+label: null

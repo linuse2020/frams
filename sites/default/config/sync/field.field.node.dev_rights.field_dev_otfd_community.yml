@@ -1,0 +1,23 @@
+uuid: b3aa2b2c-6d5f-48b3-b6b5-60ca0269e9e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dev_otfd_community
+    - node.type.dev_rights
+id: node.dev_rights.field_dev_otfd_community
+field_name: field_dev_otfd_community
+entity_type: node
+bundle: dev_rights
+label: 'OTFD Community'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

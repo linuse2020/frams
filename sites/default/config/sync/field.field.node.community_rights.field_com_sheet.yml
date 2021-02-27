@@ -1,0 +1,27 @@
+uuid: 3170a3ec-1b27-422f-81c7-91504d429cc5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_com_sheet
+    - node.type.community_rights
+  module:
+    - file
+id: node.community_rights.field_com_sheet
+field_name: field_com_sheet
+entity_type: node
+bundle: community_rights
+label: 'Attach as separate sheet,with status of Sheduled Tribes/Other Traditional Forest Dwellers indicated next to each member'
+description: 'Presence of few Scheduled Tribes/Other Traditional Forest Dwellers is sufficient to make the claim'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf jpg png'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

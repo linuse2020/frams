@@ -1,0 +1,22 @@
+uuid: 644e1c2c-df79-4c95-b467-b4ab4dcaf688
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.community_rights
+id: node.community_rights.status
+field_name: status
+entity_type: node
+bundle: community_rights
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

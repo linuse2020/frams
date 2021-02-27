@@ -1,0 +1,18 @@
+uuid: 94f126d3-e55b-4665-86b6-a494f243a17f
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Development Rights'
+type: dev_rights
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

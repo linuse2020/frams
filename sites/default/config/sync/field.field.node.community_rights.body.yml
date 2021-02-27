@@ -1,0 +1,23 @@
+uuid: d9f60ffb-ccdc-487a-b8a5-8b177963a0ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.community_rights
+  module:
+    - text
+id: node.community_rights.body
+field_name: body
+entity_type: node
+bundle: community_rights
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary
