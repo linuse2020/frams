@@ -106,10 +106,6 @@ class ComposerStaticInit9de9436f91c599173609d35a420479fb
             'Svg\\' => 4,
             'Shapefile\\' => 10,
         ),
-        'R' => 
-        array (
-            'ReCaptcha\\' => 10,
-        ),
         'P' => 
         array (
             'Psr\\Log\\' => 8,
@@ -345,10 +341,6 @@ class ComposerStaticInit9de9436f91c599173609d35a420479fb
         'Shapefile\\' => 
         array (
             0 => __DIR__ . '/..' . '/gasparesganga/php-shapefile/src/Shapefile',
-        ),
-        'ReCaptcha\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha',
         ),
         'Psr\\Log\\' => 
         array (

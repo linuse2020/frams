@@ -13,7 +13,7 @@ use Drupal\Core\Entity\ContentEntityInterface;
  *
  * @Action(
  *   id = "frams_pro_request_meeting_action",
- *   label = @Translation("Document Verification"),
+ *   label = @Translation("Request for FRC Committee Meeting"),
  *   type = "node",
  *   confirm = TRUE
  * )
@@ -27,42 +27,14 @@ class RequestMeetingAction extends ViewsBulkOperationsActionBase {
    * {@inheritdoc}
    */
   public function execute(ContentEntityInterface $entity = NULL) {
-    /*kint($state);
-    exit();*/
-    if (!$state = $entity->get('moderation_state')->getString()) {
-      return $this->t(':title  - can\'t change state',
-        [
-          ':title' => $entity->getTitle(),
-        ]
-      );
-    }
 
-    switch ($state) {
-      case 'draft':
-        $entity->set('moderation_state', 'frc_document_verification');
-        $entity->save();
-        break;
-    }
-
-    return $this->t(':title state changed to :state',
-      [
-        ':title' => $entity->getTitle(),
-        ':state' => $entity->get('moderation_state')->getString(),
-      ]
-    );
+    return $this->t('Click Send Button to send request to Panchayat Secretary for FRC Committee Meeting.');
   }
 
   /**
    * {@inheritdoc}
    */
   public function access($object, AccountInterface $account = NULL, $return_as_object = FALSE) {
-    return TRUE;
-    if ($object instanceof Node) {
-      $can_update = $object->access('update', $account, TRUE);
-      $can_edit = $object->access('edit', $account, TRUE);
-
-      return $can_edit->andIf($can_update)->isAllowed();
-    }
     return FALSE;
   }
 }

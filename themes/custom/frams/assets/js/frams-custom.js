@@ -19,14 +19,7 @@
           $('header').removeClass("sticky");
         }
       });
-      $('#btn-meeting-request').on('click',function(){
-        var id = [];
-        $(".view-display-id-frc_all table input[type=checkbox]:checked").each(function () {
-            var row = $(this).closest("tr")[0];
-            id.push($.trim(row.cells[0].innerHTML));
-        });
-        window.open('/private-message/create?nid=' +  id.filter(Number),'_blank');
-      });
+      jQuery("#views-form-dashboard-panchayat-applications-page-pan-sec th.select-all").attr("checked","checked");
 
       if (window.location.pathname == '/claimant/register') {
         var panchayat_select = '#edit-claimant-profiles-0-entity-field-grama-panchayat';
@@ -103,7 +96,7 @@
       	var link = $('.archives-btn').attr('href');
       	var newlink = '/ml'+link;
       	$('.archives-btn', context).attr('href',newlink);
-      } 
+      }
     }
   };
 
@@ -114,7 +107,7 @@
       	var link = $('.application-btn').attr('href');
       	var newlink = '/ml'+link;
       	$('.application-btn', context).attr('href',newlink);
-      } 
+      }
     }
   };
 

@@ -28,13 +28,13 @@ use Drupal\Core\Controller\ControllerBase;
 use Symfony\Component\HttpFoundation\Request;
 use \Drupal\views\ViewExecutable;
 
+use Drupal\private_message\Entity\PrivateMessage;
+
 
 function frams_pro_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  /*kint($form_id);*/
   $form_ids = ['user_frc_form', 'user_promoter_form','user_claimant_form','user_teo_form'];
   $node_form_id = ['node_application_archives_form','node_application_claimant_form','node_teo_form'];
   if (in_array($form_id, $form_ids) ) {
-
     $node_id = \Drupal::request()->query->get('nid');
     $form_display = $form_state->getStorage()['form_display']->getMode();
 
@@ -123,9 +123,9 @@ function frams_pro_form_alter(&$form, FormStateInterface $form_state, $form_id) 
   }
   switch ($form_id) {
     case 'node_application_archives_form':
+      $form['field_archives']['widget']['#required'] = TRUE;
       $form['field_archives']['widget']['value']['#default_value'] = TRUE;
       if (array_key_exists('moderation_state', $form) ) {
-
         /*$node = $form_state->getFormObject()->getEntity();
         $moderationState = $node->get('moderation_state')->getValue('state');
         if (isset($moderationState[0]['value'])) {
@@ -207,6 +207,74 @@ function frams_pro_form_alter(&$form, FormStateInterface $form_state, $form_id) 
     break;
     case 'views_form_dashboard_applications_dash_frc_new':
       $form['#action'] = '';
+    break;
+    /*case 'views_form_dashboard_applications_page_panchat_sec':
+      $form['#action'] = '/private-message/create';
+    break;*/
+    case 'views_bulk_operations_confirm_action':
+      $current_path = \Drupal::service('path.current')->getPath();
+      $user = User::load(\Drupal::currentUser()->id());
+      switch ($current_path) {
+        case '/views-bulk-operations/confirm/dashboard_applications/page_panchat_sec':
+          $node_list = $form_state->getStorage()['views_bulk_operations']['list'];
+          $params = [];
+          $recipient = 0;
+          foreach ($node_list as $nids) {
+            $params[] = $nids[0];
+          }
+          if (isset($params) && !empty($params)) {
+            $node = Node::load($params[0]);
+            $panchayat = $node->get('field_claimant_panchayat')->entity;
+            $panchayat_id = $panchayat->get('tid')->getValue();
+            $panchayat_profile = \Drupal::entityTypeManager()
+            ->getStorage('profile')
+            ->loadByProperties([
+              'type' => 'panchayat',
+              'field_grama_panchayat' => $panchayat_id[0]['value']
+            ]);
+            $panchayat_value = array_shift(array_values($panchayat_profile));
+            $panchayat_uid = $panchayat_value->get('uid')->getValue();
+            $form['#action'] = '/private-message/create?nids='. implode(',', $params) . '&recipient=' . $panchayat_uid[0]['target_id'];
+          }
+          else {
+            $form['#action'] = '/private-message/create';
+          }
+        break;
+        /*case '/views-bulk-operations/confirm/dashboard_panchayat_applications/page_pan_sec':
+          $form['#action'] = '/node/add/notice_board?meeting=1';
+        break;*/
+      }
+    break;
+    case 'node_notice_board_form':
+      $params = \Drupal::request()->query->get('meeting');
+      if (isset($params) && !empty($params) && $params == 1) {
+        /*kint($form);*/
+       $form['title']['widget'][0]['value']['#default_value'] = "Notice to Conduct Frc Meeting  on dt-";
+       $form['body']['widget'][0]['#default_value'] = "<p>Notice is hereby given that the FRC MEETING of (frc name); Will be held on (Tuesday) the (21st March 2021) at (11.30 A.M) at (Darbar Hall, Amboori)</p><p>By Order</p><p>(Name).<br />panchayat Secretary,<br />";
+      }
+      /*$form['#action'] = '/node/add/notice_board?meeting=1';*/
+    break;
+    case 'private_message_add_form':
+      $params = \Drupal::request()->query->get('nids');
+      $user = User::load(\Drupal::currentUser()->id());
+      $user_name = $user->getUsername();
+      $msg = NULL;
+      $count = 0;
+      if (isset($params) && !empty($params)) {
+        $nids = explode(",",$params);
+        $msg = "<p>Sir,<br> we are request you to conducting the FRC Meeting to give the approval for following applications </p>";
+        foreach ($nids as $nid) {
+          $count ++;
+          $node = Node::load($nid);
+          if(!empty($node)) {
+            $msg .= $count . '&nbsp;&nbsp;' . $nid . '&nbsp;&nbsp;' . $node->getTitle() . '<br>';
+          }
+        }
+      }
+
+      $msg .= 'Thanks & regards <br>' . $user_name;
+      $form['members']['widget'][0]['#default_value'] = $user;
+      $form['message']['widget'][0]['#default_value'] = $msg;
     break;
 
     default:
@@ -300,6 +368,7 @@ function frams_pro_entity_presave(Drupal\Core\Entity\EntityInterface $entity) {
     }
   }
 }
+
 /**
  * Implements hook_theme().
  */
