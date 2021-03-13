@@ -22,8 +22,9 @@
 			.nav-item {
 				padding-right: 1rem;
 				padding-left: 0.75rem;
-				a {
+				a.nav-link {
 					color: #fff !important;
+					padding: 0.5rem 0.7rem;
 				}
 				&:hover {
     			color: #b9b9b9 !important;
@@ -67,9 +68,7 @@
 			}
 		}
 	}
-	.block--useraccountmenu-2 {
-		padding-left: 1rem;
-	}
+
 }
 .menu-collapse {
 	.dashboard {

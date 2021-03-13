@@ -31,6 +31,7 @@ permissions:
   - 'edit own frc content'
   - 'edit terms in relation'
   - 'entity print views access'
+  - 'execute frams_Send_to_doc_verification node'
   - 'update paragraph content frc_members_details'
   - 'update paragraph content meeting_members_details'
   - 'use  The form mode default linked to  node entity( committee_meeting )'

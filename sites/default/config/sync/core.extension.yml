@@ -1,4 +1,5 @@
 module:
+  actions_permissions: 0
   address: 0
   admin_toolbar: 0
   admin_toolbar_tools: 0
@@ -7,6 +8,7 @@ module:
   audiofield: 0
   auto_username: 0
   automated_cron: 0
+  backup_migrate: 0
   better_exposed_filters: 0
   big_pipe: 0
   block: 0
@@ -83,7 +85,6 @@ module:
   libraries: 0
   link: 0
   locale: 0
-  magnific_popup: 0
   mailsystem: 0
   masquerade: 0
   menu_block: 0
@@ -111,7 +112,6 @@ module:
   radix_layouts: 0
   rdf: 0
   realname: 0
-  recaptcha: 0
   redirect_after_login: 0
   registration_role: 0
   rest: 0

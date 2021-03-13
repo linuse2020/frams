@@ -1,0 +1,23 @@
+display:
+  default:
+    display_options:
+      fields:
+        view_webform_submission:
+          label: പ്രവര്‍ത്തനങ്ങള്‍
+  embed_administer:
+    display_options:
+      fields:
+        operations:
+          label: പ്രവര്‍ത്തനങ്ങള്‍
+  embed_manage:
+    display_options:
+      fields:
+        view_webform_submission:
+          label: പ്രവര്‍ത്തനങ്ങള്‍
+        edit_webform_submission:
+          label: പ്രവര്‍ത്തനങ്ങള്‍
+  embed_review:
+    display_options:
+      fields:
+        view_webform_submission:
+          label: പ്രവര്‍ത്തനങ്ങള്‍

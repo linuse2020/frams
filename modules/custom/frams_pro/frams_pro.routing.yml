@@ -23,7 +23,7 @@ frams_pro.individualHabitation_report_pdf:
     _permission: 'access content'
 
 frams_pro.individualHabitation_report_csv:
-  path: 'report/individual-habitation-rights/download/csv'
+  path: 'reports/individual-habitation-rights/download/csv'
   defaults:
     _controller: '\Drupal\frams_pro\Controller\DownloadReports::individualHabitation_report_csv'
     _title: 'Individual Habitation Report(csv)'
@@ -31,7 +31,7 @@ frams_pro.individualHabitation_report_csv:
     _permission: 'access content'
 
 frams_pro.individualCultivation_report_pdf:
-  path: 'report/individual-cultivation-rights/download/pdf'
+  path: 'reports/individual-cultivation-rights/download/pdf'
   defaults:
     _controller: '\Drupal\frams_pro\Controller\DownloadReports::individualCultivation_report_pdf'
     _title: 'Individual Cultivation Report(pdf)'
@@ -39,7 +39,7 @@ frams_pro.individualCultivation_report_pdf:
     _permission: 'access content'
 
 frams_pro.individualCultivation_report_csv:
-  path: 'report/individual-cultivation-rights/download/csv'
+  path: 'reports/individual-cultivation-rights/download/csv'
   defaults:
     _controller: '\Drupal\frams_pro\Controller\DownloadReports::individualCultivation_report_csv'
     _title: 'Individual Cultivation Report(csv)'
@@ -47,7 +47,7 @@ frams_pro.individualCultivation_report_csv:
     _permission: 'access content'
 
 frams_pro.individual_report_pdf:
-  path: 'report/individual-rights/download/pdf'
+  path: 'reports/individual-rights/download/pdf'
   defaults:
     _controller: '\Drupal\frams_pro\Controller\DownloadReports::individual_report_pdf'
     _title: 'Individual Report(pdf)'
@@ -55,7 +55,7 @@ frams_pro.individual_report_pdf:
     _permission: 'access content'
 
 frams_pro.individual_report_csv:
-  path: 'report/individual-rights/download/csv'
+  path: 'reports/individual-rights/download/csv'
   defaults:
     _controller: '\Drupal\frams_pro\Controller\DownloadReports::individual_report_csv'
     _title: 'Individual Cultivation Report(csv)'

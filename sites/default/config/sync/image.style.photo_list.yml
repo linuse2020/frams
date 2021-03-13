@@ -1,0 +1,14 @@
+uuid: 3da9b807-dace-4308-bc2a-bd8bb1c20aeb
+langcode: en
+status: true
+dependencies: {  }
+name: photo_list
+label: photo(50x50)
+effects:
+  509982c0-be10-4480-9875-8df92cf58d62:
+    uuid: 509982c0-be10-4480-9875-8df92cf58d62
+    id: image_resize
+    weight: 1
+    data:
+      width: 50
+      height: 50

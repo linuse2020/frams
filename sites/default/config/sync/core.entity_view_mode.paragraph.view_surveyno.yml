@@ -1,0 +1,10 @@
+uuid: dbaadcbb-46c6-4212-94b7-6f5f5ddb394a
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.view_surveyno
+label: 'View SurveyNo'
+targetEntityType: paragraph
+cache: true

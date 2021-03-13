@@ -1,0 +1,43 @@
+uuid: 07265f87-115a-49f3-94f7-e493691eed95
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.view_surveyno
+    - field.field.paragraph._survey_details.field_area
+    - field.field.paragraph._survey_details.field_claim_nature
+    - field.field.paragraph._survey_details.field_compartment_number
+    - field.field.paragraph._survey_details.field_coupe_number
+    - field.field.paragraph._survey_details.field_geolocation
+    - field.field.paragraph._survey_details.field_survey_map
+    - field.field.paragraph._survey_details.field_survey_number
+    - paragraphs.paragraphs_type._survey_details
+  module:
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: paragraph._survey_details.view_surveyno
+targetEntityType: paragraph
+bundle: _survey_details
+mode: view_surveyno
+content:
+  field_survey_number:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_area: true
+  field_claim_nature: true
+  field_compartment_number: true
+  field_coupe_number: true
+  field_geolocation: true
+  field_survey_map: true

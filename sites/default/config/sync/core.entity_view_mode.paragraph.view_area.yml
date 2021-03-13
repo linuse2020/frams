@@ -1,0 +1,10 @@
+uuid: a5725052-00fc-42ed-99e2-59b2abefedee
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.view_area
+label: 'View Area'
+targetEntityType: paragraph
+cache: true

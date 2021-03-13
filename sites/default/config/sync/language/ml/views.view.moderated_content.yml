@@ -1,0 +1,6 @@
+display:
+  default:
+    display_options:
+      fields:
+        operations:
+          label: പ്രവര്‍ത്തനങ്ങള്‍

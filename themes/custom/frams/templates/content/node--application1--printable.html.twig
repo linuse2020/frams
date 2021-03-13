@@ -1,0 +1,173 @@
+    <div class="w-100 region-right show-header-top">
+      <header class="content-header clearfix mb-0 p-3">
+        <div class="layout-container">
+          <article{{ attributes.addClass(classes) }}>
+  <div{{ content_attributes.addClass('content fra-ror-content') }}>
+    <div class="header-text" style="text-align: right;"><strong>
+      <p>The Scheduled Teibes and other Traditional Forest Dwellers
+      <br />(Recognition of Forest Rights) Rules,2007
+      <br />Government of India
+      <br />Ministry of Tribal Affairs</p></strong>
+    </div>
+    <div style="text-align: center;">
+      <strong><p>ANNEXURE - II <br>[See rule 8(h)]<p></strong>
+    </div>
+    <table width="100%">
+      <tr>
+        <td width="70%">
+          <table style="padding:10px;">
+            <tr>
+              <td style="font-weight:bold" width="5%" valign="top"> 1.</td>
+              <td width="40%"" valign="top" align="left">Name(s) of holder(s): {{ node.getTitle() }}</td>
+              <td width="60%" align="left"><br/> {{ content.field_name_of_other_claimants.value}}</td>
+            </tr>
+             <tr>
+              <td style="font-weight:bold" width="5%" valign="top"> 2.</td>
+              <td width="40%"" valign="top" align="left">Name of the Spouse:<br>(Shri/Smt)</td>
+              <td width="55%" align="left">{{ content.field_name_of_the_spouse}}</td>
+            </tr>
+             <tr>
+              <td style="font-weight:bold" width="5%" valign="top"> 3.</td>
+              <td width="40%"" valign="top" align="left">Father Name:</td>
+              <td width="55%" align="left">{{ content.field_name_of_father }}</td>
+            </tr>
+            <tr>
+              <td style="font-weight:bold" width="5%" valign="top"> 4.</td>
+              <td width="40%"" valign="top" align="left">Mother Name:</td>
+              <td width="55%" align="left">{{ content.field_name_of_mother }}</td>
+            </tr>
+            <tr>
+              <td style="font-weight:bold" width="5%" valign="top"> 5.</td>
+              <td width="40%"" valign="top" align="left">Name of Dependents</td>
+              <td width="55%" align="left"> <table><tr>
+                    <th>S.No</th>
+                    <th>Name</th>
+                    <th>Relation</th>
+                  </tr>
+                {% for i in 0..content.field_other_family_members['#items']|length-1 %}
+
+                  <tr>
+                    <td style="padding: 10px">{{i+1}}</td>
+                    <td style="padding: 10px">{{content.field_other_family_members[i]['#paragraph'].field_family_members_name.value}}</td>
+                    <td style="padding: 10px">{{content.field_other_family_members[i]['#paragraph'].field_relation.value}}</td>
+                  </tr>
+              {% endfor %}
+              </table>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:bold" width="5%" valign="top"> 6.</td>
+              <td width="40%"" valign="top" align="left">District</td>
+              <td width="55%" align="left">{{ content.field_claimant_district }}</td>
+            </tr>
+            <tr>
+              <td style="font-weight:bold" width="5%" valign="top"> 7.</td>
+              <td width="40%"" valign="top" align="left">Taluk</td>
+              <td width="55%" align="left">{{ content.field__claimant_taluk }}</td>
+            </tr>
+            <tr>
+              <td style="font-weight:bold" width="5%" valign="top"> 8.</td>
+              <td width="40%"" valign="top" align="left">Grama Panchayat</td>
+              <td width="55%" align="left">{{ content.field_claimant_panchayat }}</td>
+            </tr>
+            <tr>
+              <td style="font-weight:bold" width="5%" valign="top"> 9.</td>
+              <td width="40%"" valign="top" align="left">Village</td>
+              <td width="55%" align="left">{{ content.field_claimant_village }}</td>
+            </tr>
+                        <tr>
+              <td style="font-weight:bold" width="5%" valign="top"> 10.</td>
+              <td width="40%"" valign="top" align="left">Forest Range</td>
+              <td width="55%" align="left">{{ content.field__claimant_range }}</td>
+            </tr>
+
+          </table>
+        </td>
+        <td width="30%" valign="top"><div class="fra_ror_left" style="width:50px;height:50px">{{ content.field_photo_couple }}</div></td>
+      </tr>
+    </table>
+     <table width="100%">
+      <tr>
+        <td width="70%">
+          <table>
+            <tr>
+              <td style="font-weight:bold" width="5%" valign="top"> 11.</td>
+              <td width="40%"" valign="top" align="left">Whether Scheduled tribe or other Traditional Forest Dweller</td>
+              <td width="55%" align="left">{% if content.field_is_schedules_tribe  %}
+                  <span>Scheduled Tribe</span>
+                {% else %}
+                  <span>Other Traditional Forest Dweller</span>
+                {% endif %}</td>
+            </tr>
+            <tr>
+              <td style="font-weight:bold" width="5%" valign="top"> 12.</td>
+              <td width="40%"" valign="top" align="left">Area</td>
+            </tr>
+            <tr>
+              <td colspan="3"><table>
+                <tr>
+                    <th>S.No</th>
+                    <th>Claim Nature</th>
+                    <th>Area</th>
+                  </tr>
+                  <tr>
+                    <td style="padding: 10px">1</td>
+                    <td style="padding: 10px">Self Cultivation</td>
+                    <td style="padding: 10px">{{content.field_self_cultivation }}</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 10px">2</td>
+                    <td style="padding: 10px">Habitation</td>
+                    <td style="padding: 10px">{{content.field_habitation }}</td>
+                  </tr>
+
+              </table></td>
+            </tr>
+            <tr>
+              <td style="font-weight:bold" width="5%" valign="top"> 13.</td>
+              <td colspan="2" width="40%"" valign="top" align="left">Description of boundaries by perminent landmark including khasra/compartent No</td>
+            </tr>
+            <tr>
+              <td colspan="3">
+                 <table>
+                  <tr>
+                    <th>S.No</th>
+                    <th>Claim Nature</th>
+                    <th>Survey No</th>
+                    <th>Compartment No</th>
+                    <th>Coupe No</th>
+                    <th>Map</th>
+                  </tr>
+                   {% for i in 0..content.field_survey_details['#items']|length-1 %}
+                    <tr>
+                      <td style="padding: 10px">{{i+1}}</td>
+                      <td style="padding: 10px">{{content.field_survey_details[i]['#paragraph'].field_category.value}}</td>
+                      <td style="padding: 10px">{{content.field_survey_details[i]['#paragraph'].field_survey_number.value}}</td>
+                      <td style="padding: 10px">{{content.field_survey_details[i]['#paragraph'].field_compartment_number.value}}</td>
+                      <td style="padding: 10px">{{content.field_survey_details[i]['#paragraph'].field_coupe_num.value}}</td>
+                      <td style="padding: 10px">{{content.field_survey_details[i]['#paragraph'].field_geolocation.value}}<nr />{{get_directions }}</td>
+                      <td style="padding: 10px">{{content.field_survey_details[i]['#paragraph'].field_survey_map.value}}</td>
+
+                    </tr>
+                  {% endfor %}
+              </table>
+              </td>
+            </tr>
+            </table>
+        </td>
+
+      </tr>
+
+    </table>
+     <b><p>This title is heritable, but not alienable or transferable under subsection(4) of section 4 of the Act</p>
+    <p>We, undersigned, hereby for and on behalf of the Government of KERALA affix our signature to confirm the above forest right.</p>
+    <table>
+      <tr>
+        <td style="padding-right:7px">Divisional Forest Officer/<br> Deputy Conservator of Forest<br>Date:{{ "now"|date("m/d/Y") }}</td>
+        <td  style="padding-right:7px">District Tribal Welfare Officer<br />({{ district|upper }})<br>Date:{{ "now"|date("m/d/Y") }}</td>
+        <td style="padding-right:7px">District Collector/<br> Deputy Commissioner<br>Date:{{ "now"|date("m/d/Y") }}</td>
+      </tr>
+    </table>
+
+  </div>
+</article>

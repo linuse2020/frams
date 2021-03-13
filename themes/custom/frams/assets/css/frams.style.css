@@ -10094,7 +10094,7 @@ center .view-homepage-subscriber-job-list tr.job-listings-row:nth-child(odd):foc
   z-index: 6;
   height: 100%;
   position: fixed;
-  width: 16rem;
+  width: 18rem;
   background-color: #251f71;
   transition: 0.6s;
   touch-action: none;
@@ -10806,8 +10806,9 @@ header .sf-accordion-toggle a {
   padding-right: 1rem;
   padding-left: 0.75rem;
 }
-.dashboard .layout-sidebar-menu .left-side-block .nav-item a {
+.dashboard .layout-sidebar-menu .left-side-block .nav-item a.nav-link {
   color: #fff !important;
+  padding: 0.5rem 0.7rem;
 }
 .dashboard .layout-sidebar-menu .left-side-block .nav-item:hover {
   color: #b9b9b9 !important;
@@ -10842,9 +10843,6 @@ header .sf-accordion-toggle a {
 }
 .dashboard .region-right header ul.sf-menu.sf-style-black {
   float: left;
-}
-.dashboard .block--useraccountmenu-2 {
-  padding-left: 1rem;
 }
 
 .menu-collapse .dashboard .region-right .content-header {

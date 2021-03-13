@@ -81,7 +81,6 @@ dependencies:
     - entity_reference_revisions
     - file
     - image
-    - magnific_popup
     - options
     - telephone
     - user
@@ -95,12 +94,12 @@ bundle: application
 mode: default
 content:
   content_moderation_control:
-    weight: 0
+    weight: 72
     region: content
     settings: {  }
     third_party_settings: {  }
   field__claimant_range:
-    weight: 22
+    weight: 17
     label: above
     settings:
       link: true
@@ -108,7 +107,7 @@ content:
     type: entity_reference_label
     region: content
   field__claimant_taluk:
-    weight: 19
+    weight: 14
     label: above
     settings:
       link: true
@@ -116,7 +115,7 @@ content:
     type: entity_reference_label
     region: content
   field__form_appendix2:
-    weight: 55
+    weight: 50
     label: above
     settings:
       use_description_as_link_text: true
@@ -124,7 +123,7 @@ content:
     type: file_default
     region: content
   field__frc_secretary_report:
-    weight: 58
+    weight: 53
     label: above
     settings:
       use_description_as_link_text: true
@@ -132,17 +131,16 @@ content:
     type: file_default
     region: content
   field__photo:
-    weight: 9
+    weight: 68
     label: above
     settings:
-      thumbnail_image_style: ''
-      popup_image_style: ''
-      gallery_type: all_items
+      image_style: ''
+      image_link: ''
     third_party_settings: {  }
-    type: magnific_popup
+    type: image
     region: content
   field__voter_id_card_no:
-    weight: 46
+    weight: 41
     label: above
     settings:
       link_to_entity: false
@@ -150,14 +148,14 @@ content:
     type: string
     region: content
   field_address:
-    weight: 3
+    weight: 2
     label: above
     settings: {  }
     third_party_settings: {  }
     type: address_default
     region: content
   field_adharcard_no:
-    weight: 40
+    weight: 35
     label: above
     settings:
       link_to_entity: false
@@ -165,7 +163,7 @@ content:
     type: string
     region: content
   field_alloted_land_cultivation:
-    weight: 65
+    weight: 60
     label: above
     settings:
       link_to_entity: false
@@ -173,7 +171,7 @@ content:
     type: string
     region: content
   field_alloted_land_for_both:
-    weight: 69
+    weight: 63
     label: above
     settings:
       link_to_entity: false
@@ -181,7 +179,7 @@ content:
     type: string
     region: content
   field_alloted_land_habitation:
-    weight: 68
+    weight: 62
     label: above
     settings:
       link_to_entity: false
@@ -189,7 +187,7 @@ content:
     type: string
     region: content
   field_application_no:
-    weight: 72
+    weight: 66
     label: above
     settings:
       link_to_entity: false
@@ -197,7 +195,7 @@ content:
     type: string
     region: content
   field_archives:
-    weight: 64
+    weight: 59
     label: above
     settings:
       format: default
@@ -207,27 +205,25 @@ content:
     type: boolean
     region: content
   field_cast_cirtificate:
-    weight: 11
+    weight: 69
     label: above
     settings:
-      thumbnail_image_style: ''
-      popup_image_style: ''
-      gallery_type: all_items
+      image_style: ''
+      image_link: ''
     third_party_settings: {  }
-    type: magnific_popup
+    type: image
     region: content
   field_caste_cert_spouse:
-    weight: 14
+    weight: 70
     label: above
     settings:
-      thumbnail_image_style: ''
-      popup_image_style: ''
-      gallery_type: all_items
+      image_style: ''
+      image_link: ''
     third_party_settings: {  }
-    type: magnific_popup
+    type: image
     region: content
   field_caste_cert_spouse_:
-    weight: 12
+    weight: 9
     label: above
     settings:
       format: default
@@ -237,7 +233,7 @@ content:
     type: boolean
     region: content
   field_claimant_constituency:
-    weight: 18
+    weight: 13
     label: above
     settings:
       link: true
@@ -245,7 +241,7 @@ content:
     type: entity_reference_label
     region: content
   field_claimant_district:
-    weight: 17
+    weight: 12
     label: above
     settings:
       link: true
@@ -253,7 +249,7 @@ content:
     type: entity_reference_label
     region: content
   field_claimant_dlc:
-    weight: 24
+    weight: 19
     label: above
     settings:
       link: true
@@ -261,70 +257,6 @@ content:
     type: entity_reference_label
     region: content
   field_claimant_frc:
-    weight: 26
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_claimant_panchayat:
-    weight: 20
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_claimant_promoter:
-    weight: 29
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_claimant_sdlc:
-    weight: 25
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_claimant_settlement:
-    weight: 30
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_claimant_slc:
-    weight: 23
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_claimant_tdo:
-    weight: 27
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_claimant_teo:
-    weight: 28
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_claimant_village:
     weight: 21
     label: above
     settings:
@@ -332,8 +264,72 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
+  field_claimant_panchayat:
+    weight: 15
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_claimant_promoter:
+    weight: 24
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_claimant_sdlc:
+    weight: 20
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_claimant_settlement:
+    weight: 25
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_claimant_slc:
+    weight: 18
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_claimant_tdo:
+    weight: 22
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_claimant_teo:
+    weight: 23
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_claimant_village:
+    weight: 16
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
   field_contact_no:
-    weight: 4
+    weight: 3
     label: above
     settings:
       title: ''
@@ -341,7 +337,7 @@ content:
     type: telephone_link
     region: content
   field_declaration:
-    weight: 54
+    weight: 49
     label: above
     settings:
       format: default
@@ -351,7 +347,7 @@ content:
     type: boolean
     region: content
   field_disputed_lands:
-    weight: 38
+    weight: 33
     label: above
     settings:
       link_to_entity: false
@@ -359,7 +355,7 @@ content:
     type: string
     region: content
   field_dlc_meeting_minutes:
-    weight: 63
+    weight: 58
     label: above
     settings:
       link: true
@@ -367,21 +363,21 @@ content:
     type: entity_reference_label
     region: content
   field_email:
-    weight: 5
+    weight: 4
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_family_category:
-    weight: 70
+    weight: 64
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_field_displaced:
-    weight: 35
+    weight: 30
     label: above
     settings:
       link_to_entity: false
@@ -389,7 +385,7 @@ content:
     type: string
     region: content
   field_field_extent_of_land:
-    weight: 36
+    weight: 31
     label: above
     settings:
       link_to_entity: false
@@ -397,7 +393,7 @@ content:
     type: string
     region: content
   field_form_appendix4:
-    weight: 59
+    weight: 54
     label: above
     settings:
       use_description_as_link_text: true
@@ -405,7 +401,7 @@ content:
     type: file_default
     region: content
   field_frc_meeting_minutes:
-    weight: 60
+    weight: 55
     label: above
     settings:
       link: true
@@ -413,7 +409,7 @@ content:
     type: entity_reference_label
     region: content
   field_frc_site_map:
-    weight: 57
+    weight: 52
     label: above
     settings:
       image_style: ''
@@ -422,7 +418,7 @@ content:
     type: image
     region: content
   field_frc_site_photo:
-    weight: 56
+    weight: 51
     label: above
     settings:
       image_style: ''
@@ -431,7 +427,7 @@ content:
     type: image
     region: content
   field_habitation:
-    weight: 31
+    weight: 26
     label: above
     settings:
       link_to_entity: false
@@ -439,7 +435,7 @@ content:
     type: string
     region: content
   field_is_schedules_tribe:
-    weight: 10
+    weight: 8
     label: above
     settings:
       format: default
@@ -449,7 +445,7 @@ content:
     type: boolean
     region: content
   field_is_spouse_st:
-    weight: 13
+    weight: 10
     label: above
     settings:
       format: default
@@ -459,30 +455,6 @@ content:
     type: boolean
     region: content
   field_name_of_father:
-    weight: 7
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_name_of_mother:
-    weight: 8
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_name_of_other_claimants:
-    weight: 2
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_name_of_the_spouse:
     weight: 6
     label: above
     settings:
@@ -490,8 +462,32 @@ content:
     third_party_settings: {  }
     type: string
     region: content
+  field_name_of_mother:
+    weight: 7
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_name_of_other_claimants:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_name_of_the_spouse:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_not_submit_couple_photo:
-    weight: 52
+    weight: 47
     label: above
     settings:
       link_to_entity: false
@@ -499,7 +495,7 @@ content:
     type: string
     region: content
   field_number_of_claims_submitted:
-    weight: 50
+    weight: 45
     label: above
     settings:
       link_to_entity: false
@@ -508,7 +504,7 @@ content:
     region: content
   field_other_claims:
     type: entity_reference_revisions_entity_view
-    weight: 49
+    weight: 44
     label: above
     settings:
       view_mode: default
@@ -517,7 +513,7 @@ content:
     region: content
   field_other_family_members:
     type: entity_reference_revisions_entity_view
-    weight: 16
+    weight: 11
     label: above
     settings:
       view_mode: default
@@ -525,7 +521,7 @@ content:
     third_party_settings: {  }
     region: content
   field_other_traditional_ri:
-    weight: 37
+    weight: 32
     label: above
     settings:
       link_to_entity: false
@@ -533,7 +529,7 @@ content:
     type: string
     region: content
   field_panchayat_committee_report:
-    weight: 67
+    weight: 61
     label: above
     settings:
       link: true
@@ -541,7 +537,7 @@ content:
     type: entity_reference_label
     region: content
   field_pattas:
-    weight: 33
+    weight: 28
     label: above
     settings:
       link_to_entity: false
@@ -549,17 +545,16 @@ content:
     type: string
     region: content
   field_photo_couple:
-    weight: 15
+    weight: 71
     label: above
     settings:
-      thumbnail_image_style: ''
-      popup_image_style: ''
-      gallery_type: all_items
+      image_style: ''
+      image_link: ''
     third_party_settings: {  }
-    type: magnific_popup
+    type: image
     region: content
   field_ration_card_no:
-    weight: 43
+    weight: 38
     label: above
     settings:
       link_to_entity: false
@@ -567,7 +562,7 @@ content:
     type: string
     region: content
   field_rehabilitation:
-    weight: 34
+    weight: 29
     label: above
     settings:
       link_to_entity: false
@@ -575,7 +570,7 @@ content:
     type: string
     region: content
   field_ror_issued:
-    weight: 73
+    weight: 67
     label: above
     settings:
       format: default
@@ -585,7 +580,7 @@ content:
     type: boolean
     region: content
   field_sdlc_meeting_minutes_:
-    weight: 61
+    weight: 56
     label: above
     settings:
       link: true
@@ -593,7 +588,7 @@ content:
     type: entity_reference_label
     region: content
   field_self_cultivation:
-    weight: 32
+    weight: 27
     label: above
     settings:
       link_to_entity: false
@@ -601,7 +596,7 @@ content:
     type: string
     region: content
   field_submit_adharcard:
-    weight: 39
+    weight: 34
     label: above
     settings:
       format: default
@@ -611,7 +606,7 @@ content:
     type: boolean
     region: content
   field_submit_photograph_of_coupl:
-    weight: 51
+    weight: 46
     label: above
     settings:
       format: default
@@ -621,7 +616,7 @@ content:
     type: boolean
     region: content
   field_submit_ration_card:
-    weight: 42
+    weight: 37
     label: above
     settings:
       format: default
@@ -631,7 +626,7 @@ content:
     type: boolean
     region: content
   field_submit_voter_id:
-    weight: 45
+    weight: 40
     label: above
     settings:
       format: default
@@ -641,7 +636,7 @@ content:
     type: boolean
     region: content
   field_survery_conducted:
-    weight: 53
+    weight: 48
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -649,7 +644,7 @@ content:
     region: content
   field_survey_details:
     type: entity_reference_revisions_entity_view
-    weight: 62
+    weight: 57
     label: above
     settings:
       view_mode: default
@@ -657,7 +652,7 @@ content:
     third_party_settings: {  }
     region: content
   field_upload_adharcard_copy:
-    weight: 41
+    weight: 36
     label: above
     settings:
       image_style: ''
@@ -666,7 +661,7 @@ content:
     type: image
     region: content
   field_upload_ration_card_copy:
-    weight: 44
+    weight: 39
     label: above
     settings:
       image_style: ''
@@ -675,7 +670,7 @@ content:
     type: image
     region: content
   field_upload_ror_issued:
-    weight: 71
+    weight: 65
     label: above
     settings:
       use_description_as_link_text: true
@@ -683,7 +678,7 @@ content:
     type: file_default
     region: content
   field_upload_voters_id_copy:
-    weight: 47
+    weight: 42
     label: above
     settings:
       image_style: ''
@@ -693,7 +688,7 @@ content:
     region: content
   field_vaimozhy:
     type: entity_reference_revisions_entity_view
-    weight: 48
+    weight: 43
     label: above
     settings:
       view_mode: default
@@ -701,7 +696,7 @@ content:
     third_party_settings: {  }
     region: content
   links:
-    weight: 1
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
