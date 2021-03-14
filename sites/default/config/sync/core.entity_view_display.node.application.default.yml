@@ -31,6 +31,7 @@ dependencies:
     - field.field.node.application.field_claimant_tdo
     - field.field.node.application.field_claimant_teo
     - field.field.node.application.field_claimant_village
+    - field.field.node.application.field_community
     - field.field.node.application.field_contact_no
     - field.field.node.application.field_declaration
     - field.field.node.application.field_disputed_lands
@@ -322,6 +323,14 @@ content:
     region: content
   field_claimant_village:
     weight: 16
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_community:
+    weight: 73
     label: above
     settings:
       link: true

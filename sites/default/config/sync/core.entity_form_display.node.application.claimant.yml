@@ -32,6 +32,7 @@ dependencies:
     - field.field.node.application.field_claimant_tdo
     - field.field.node.application.field_claimant_teo
     - field.field.node.application.field_claimant_village
+    - field.field.node.application.field_community
     - field.field.node.application.field_contact_no
     - field.field.node.application.field_declaration
     - field.field.node.application.field_disputed_lands
@@ -77,11 +78,9 @@ dependencies:
     - field.field.node.application.field_vaimozhy
     - image.style.thumbnail
     - node.type.application
-    - workflows.workflow.frams_applications
   module:
     - address
     - conditional_fields
-    - content_moderation
     - field_group
     - field_layout
     - image
@@ -104,12 +103,17 @@ third_party_settings:
         - field_name_of_the_spouse
         - field_name_of_father
         - field_name_of_mother
-        - field__photo
+        - field_family_category
         - field_is_schedules_tribe
+        - field_community
         - field_cast_cirtificate
         - field_caste_cert_spouse_
         - field_is_spouse_st
         - field_caste_cert_spouse
+        - field_submit_photograph_of_coupl
+        - field_photo_couple
+        - field_not_submit_couple_photo
+        - field__photo
       parent_name: ''
       weight: 0
       format_type: fieldset
@@ -150,7 +154,7 @@ third_party_settings:
       children:
         - field_other_family_members
       parent_name: ''
-      weight: 2
+      weight: 3
       format_type: fieldset
       region: content
       format_settings:
@@ -170,7 +174,7 @@ third_party_settings:
         - field_field_extent_of_land
         - field_other_traditional_ri
       parent_name: ''
-      weight: 3
+      weight: 4
       format_type: fieldset
       region: content
       format_settings:
@@ -192,7 +196,7 @@ third_party_settings:
         - field_upload_voters_id_copy
         - field_vaimozhy
       parent_name: ''
-      weight: 4
+      weight: 5
       format_type: fieldset
       region: content
       format_settings:
@@ -205,12 +209,9 @@ third_party_settings:
       children:
         - field_other_claims
         - field_number_of_claims_submitted
-        - field_submit_photograph_of_coupl
-        - field_photo_couple
-        - field_not_submit_couple_photo
         - field_survery_conducted
       parent_name: ''
-      weight: 5
+      weight: 6
       format_type: fieldset
       region: content
       format_settings:
@@ -223,7 +224,7 @@ third_party_settings:
       children:
         - field_declaration
       parent_name: ''
-      weight: 6
+      weight: 7
       format_type: fieldset
       region: content
       format_settings:
@@ -233,13 +234,9 @@ third_party_settings:
         required_fields: true
       label: Declaration
     group_frc_site_verification_:
-      children:
-        - field_frc_site_map
-        - field_frc_site_photo
-        - field__form_appendix2
-        - field__frc_secretary_report
+      children: {  }
       parent_name: ''
-      weight: 7
+      weight: 8
       format_type: fieldset
       region: content
       format_settings:
@@ -249,11 +246,9 @@ third_party_settings:
         required_fields: true
       label: 'FRC Site Verification '
     group_frc_meeting_documents:
-      children:
-        - field_form_appendix4
-        - field_frc_meeting_minutes
+      children: {  }
       parent_name: ''
-      weight: 8
+      weight: 9
       format_type: fieldset
       region: content
       format_settings:
@@ -263,10 +258,9 @@ third_party_settings:
         required_fields: true
       label: 'FRC Meeting Documents'
     group_grama_panchayat_:
-      children:
-        - field_panchayat_report
+      children: {  }
       parent_name: ''
-      weight: 9
+      weight: 10
       format_type: fieldset
       region: content
       format_settings:
@@ -276,10 +270,9 @@ third_party_settings:
         required_fields: true
       label: 'Grama Panchayat '
     group_sub_division_level_committ:
-      children:
-        - field_sdlc_meeting_minutes_
+      children: {  }
       parent_name: ''
-      weight: 10
+      weight: 13
       format_type: fieldset
       region: content
       format_settings:
@@ -289,10 +282,9 @@ third_party_settings:
         required_fields: true
       label: 'Sub Division Level Committee'
     group_survey_departent:
-      children:
-        - field_survey_details
+      children: {  }
       parent_name: ''
-      weight: 11
+      weight: 14
       format_type: fieldset
       region: content
       format_settings:
@@ -302,10 +294,9 @@ third_party_settings:
         required_fields: true
       label: 'Survey Departent'
     group_divisional_level_committee:
-      children:
-        - field_dlc_meeting_minutes
+      children: {  }
       parent_name: ''
-      weight: 12
+      weight: 15
       format_type: fieldset
       region: content
       format_settings:
@@ -320,7 +311,7 @@ bundle: application
 mode: claimant
 content:
   field__claimant_range:
-    weight: 32
+    weight: 33
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -340,7 +331,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field__photo:
-    weight: 15
+    weight: 25
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -348,7 +339,7 @@ content:
     type: image_image
     region: content
   field__voter_id_card_no:
-    weight: 17
+    weight: 18
     settings:
       size: 60
       placeholder: ''
@@ -497,7 +488,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_claimant_dlc:
-    weight: 34
+    weight: 35
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -507,7 +498,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_claimant_frc:
-    weight: 36
+    weight: 37
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -537,7 +528,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_claimant_sdlc:
-    weight: 35
+    weight: 36
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -547,7 +538,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_claimant_settlement:
-    weight: 37
+    weight: 38
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -557,7 +548,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_claimant_slc:
-    weight: 33
+    weight: 34
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -587,7 +578,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_claimant_village:
-    weight: 31
+    weight: 32
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -596,6 +587,16 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
+  field_community:
+    type: entity_reference_autocomplete
+    weight: 17
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_contact_no:
     weight: 10
     settings:
@@ -604,14 +605,14 @@ content:
     type: telephone_default
     region: content
   field_declaration:
-    weight: 7
+    weight: 13
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
   field_disputed_lands:
-    weight: 6
+    weight: 7
     settings:
       size: 60
       placeholder: ''
@@ -626,6 +627,12 @@ content:
     third_party_settings: {  }
     type: email_default
     region: content
+  field_family_category:
+    type: options_select
+    weight: 15
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_field_displaced:
     weight: 10
     settings:
@@ -651,7 +658,7 @@ content:
     type: string_textfield
     region: content
   field_is_schedules_tribe:
-    weight: 17
+    weight: 16
     settings:
       display_label: true
     third_party_settings: {  }
@@ -714,7 +721,7 @@ content:
     type: string_textfield
     region: content
   field_not_submit_couple_photo:
-    weight: 11
+    weight: 24
     settings:
       size: 60
       placeholder: ''
@@ -762,7 +769,7 @@ content:
     type: string_textfield
     region: content
   field_pattas:
-    weight: 7
+    weight: 8
     settings:
       size: 60
       placeholder: ''
@@ -770,7 +777,7 @@ content:
     type: string_textfield
     region: content
   field_photo_couple:
-    weight: 10
+    weight: 23
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -803,7 +810,7 @@ content:
     type: string_textfield
     region: content
   field_rehabilitation:
-    weight: 8
+    weight: 9
     settings:
       size: 60
       placeholder: ''
@@ -826,7 +833,7 @@ content:
     type: boolean_checkbox
     region: content
   field_submit_photograph_of_coupl:
-    weight: 9
+    weight: 22
     settings:
       display_label: true
     third_party_settings:
@@ -880,7 +887,7 @@ content:
     type: boolean_checkbox
     region: content
   field_submit_voter_id:
-    weight: 16
+    weight: 17
     settings:
       display_label: true
     third_party_settings: {  }
@@ -920,7 +927,7 @@ content:
     type: image_image
     region: content
   field_upload_ration_card_copy:
-    weight: 15
+    weight: 16
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -945,7 +952,7 @@ content:
     type: image_image
     region: content
   field_upload_voters_id_copy:
-    weight: 18
+    weight: 19
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -971,7 +978,7 @@ content:
     region: content
   field_vaimozhy:
     type: entity_reference_paragraphs
-    weight: 19
+    weight: 20
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -988,12 +995,6 @@ content:
     settings:
       include_locked: true
     third_party_settings: {  }
-  moderation_state:
-    type: moderation_state_default
-    weight: 100
-    settings: {  }
-    region: content
-    third_party_settings: {  }
   title:
     type: string_textfield
     weight: 7
@@ -1001,6 +1002,11 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 11
+    region: content
+    settings: {  }
     third_party_settings: {  }
 hidden:
   created: true
@@ -1012,7 +1018,6 @@ hidden:
   field_application_no: true
   field_archives: true
   field_dlc_meeting_minutes: true
-  field_family_category: true
   field_form_appendix4: true
   field_frc_meeting_minutes: true
   field_frc_site_map: true
@@ -1022,6 +1027,7 @@ hidden:
   field_sdlc_meeting_minutes_: true
   field_survey_details: true
   field_upload_ror_issued: true
+  moderation_state: true
   path: true
   promote: true
   status: true

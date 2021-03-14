@@ -32,6 +32,7 @@ dependencies:
     - field.field.node.application.field_claimant_tdo
     - field.field.node.application.field_claimant_teo
     - field.field.node.application.field_claimant_village
+    - field.field.node.application.field_community
     - field.field.node.application.field_contact_no
     - field.field.node.application.field_declaration
     - field.field.node.application.field_disputed_lands
@@ -336,6 +337,11 @@ content:
     settings: {  }
     region: content
     third_party_settings: {  }
+  translation:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
 hidden:
   created: true
   field__claimant_range: true
@@ -366,6 +372,7 @@ hidden:
   field_claimant_tdo: true
   field_claimant_teo: true
   field_claimant_village: true
+  field_community: true
   field_contact_no: true
   field_declaration: true
   field_disputed_lands: true

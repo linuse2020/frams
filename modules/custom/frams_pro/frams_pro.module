@@ -29,11 +29,15 @@ use Symfony\Component\HttpFoundation\Request;
 use \Drupal\views\ViewExecutable;
 
 use Drupal\private_message\Entity\PrivateMessage;
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
 
-
+/**
+ * Implements hook_form_alter().
+ */
 function frams_pro_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+
   $form_ids = ['user_frc_form', 'user_promoter_form','user_claimant_form','user_teo_form'];
-  $node_form_id = ['node_application_archives_form','node_application_claimant_form','node_teo_form'];
+  $node_form_id = ['node_application_archives_form','node_application_claimant_form','node_teo_form','content_moderation_entity_moderation_form'];
   if (in_array($form_id, $form_ids) ) {
     $node_id = \Drupal::request()->query->get('nid');
     $form_display = $form_state->getStorage()['form_display']->getMode();
@@ -152,8 +156,13 @@ function frams_pro_form_alter(&$form, FormStateInterface $form_state, $form_id) 
       }
     break;
     case 'node_application_claimant_form':
-    // kint($form);
-      $user = User::load(\Drupal::currentUser()->id());
+    if ($form['field_family_category']['widget']['#default_value'][0] == 'Couple'){
+      $form['field_submit_photograph_of_coupl']['widget']['value']['#default_value'] = TRUE;
+    }
+    else {
+      $form['field_submit_photograph_of_coupl']['widget']['value']['#default_value'] = FALSE;
+    }
+    $user = User::load(\Drupal::currentUser()->id());
 
       $claimant_profile = \Drupal::entityTypeManager()
         ->getStorage('profile')
@@ -161,7 +170,6 @@ function frams_pro_form_alter(&$form, FormStateInterface $form_state, $form_id) 
           'uid' => $user->id(),
           'type' => 'claimant',
         ]);
-     /*   kint($claimant_profile);*/
       if (!empty($claimant_profile)) {
         $claimant = array_shift(array_values($claimant_profile));
         $name = isset($name) && !empty($name) ? $name : ''; $user->realname;
@@ -248,7 +256,6 @@ function frams_pro_form_alter(&$form, FormStateInterface $form_state, $form_id) 
     case 'node_notice_board_form':
       $params = \Drupal::request()->query->get('meeting');
       if (isset($params) && !empty($params) && $params == 1) {
-        /*kint($form);*/
        $form['title']['widget'][0]['value']['#default_value'] = "Notice to Conduct Frc Meeting  on dt-";
        $form['body']['widget'][0]['#default_value'] = "<p>Notice is hereby given that the FRC MEETING of (frc name); Will be held on (Tuesday) the (21st March 2021) at (11.30 A.M) at (Darbar Hall, Amboori)</p><p>By Order</p><p>(Name).<br />panchayat Secretary,<br />";
       }
@@ -276,7 +283,24 @@ function frams_pro_form_alter(&$form, FormStateInterface $form_state, $form_id) 
       $form['members']['widget'][0]['#default_value'] = $user;
       $form['message']['widget'][0]['#default_value'] = $msg;
     break;
+    case 'content_moderation_entity_moderation_form':
+      $form['#attributes']['class'][] = 'd-none';
 
+      $node = \Drupal::routeMatch()->getParameter('node');
+      if ($node instanceof \Drupal\node\NodeInterface) {
+        // You can get nid and anything else you need from the node object.
+        $nid = $node->id();
+        $node_vid = \Drupal::entityManager()->getStorage('node')->revisionIds($node);
+        $latest_revision_id = array_pop((array_slice($node_vid, -1)));
+        $current_state = node_revision_load($latest_revision_id)->get('moderation_state')->getValue()[0]['value'];
+        if ($current_state == 'frc_document_verification') {
+          $classes = &$form['#attributes']['class'];
+          $classes = array_filter($classes , function($e){
+            return $e != 'd-none';
+          });
+          $form['#attributes']['class'][] = 'd-block';
+        }
+      }
     default:
   }
    if ($form_id == 'node_frc_form' || $form_id = 'node_promoters_form') {
@@ -297,7 +321,23 @@ function frams_pro_form_alter(&$form, FormStateInterface $form_state, $form_id) 
       }
     }
   }
+ /* if ($form_id == 'content_moderation_entity_moderation_form') {
+    if (array_key_exists('moderation_state', $form) ) {
+      $node = $form_state->getFormObject()->getEntity();
+      $moderationState = $node->get('moderation_state')->getValue('state');
+      kint('kk');
+      kint($moderationState);
+      if (isset($moderationState[0]['value'])) {
+
+      }
+
+    }
+  }*/
 }
+
+/**
+ * Custom validate handler for user registration.
+ */
 function claimant_user_register_validate(&$form, FormStateInterface $form_state) {
   $values = $form_state->getValues();
   $aadhar = $values['claimant_profiles'][0]['entity']['field_claimant_aadhar_number'][0]['value'];
@@ -346,14 +386,7 @@ function _user_register_submit(&$form, FormStateInterface $form_state) {
   }
 }
 
-function frams_pro_entity_bundle_field_info_alter(&$fields, EntityTypeInterface $entity_type, $bundle) {
-  if (!empty($fields['field_claimant_aadhar_number'])) {
-    $current_path = \Drupal::service('path.current')->getPath();
-    if ($current_path == '/claimant/register') {
-      // $fields['field_claimant_aadhar_number']->addConstraint('AadharValid');
-    }
-  }
-}
+
 /**
  * Implements hook_entity_presave().
  */

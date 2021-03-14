@@ -10513,6 +10513,10 @@ header .user-menu ul li {
   display: none;
 }
 
+.view-detailed-list td {
+  font-size: 0.8rem;
+}
+
 .page-front h1.display-3 {
   font-size: 3.5rem;
 }

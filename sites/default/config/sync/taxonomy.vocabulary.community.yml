@@ -1,0 +1,8 @@
+uuid: c85971b3-c1ea-47c6-a88a-7767afe3cedc
+langcode: en
+status: true
+dependencies: {  }
+name: Community
+vid: community
+description: ''
+weight: 0

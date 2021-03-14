@@ -31,6 +31,7 @@ dependencies:
     - field.field.node.application.field_claimant_tdo
     - field.field.node.application.field_claimant_teo
     - field.field.node.application.field_claimant_village
+    - field.field.node.application.field_community
     - field.field.node.application.field_contact_no
     - field.field.node.application.field_declaration
     - field.field.node.application.field_disputed_lands
@@ -366,7 +367,24 @@ content:
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
-    third_party_settings: {  }
+    third_party_settings:
+      conditional_fields:
+        1ab92509-1cc0-458e-bfc4-50f52ae60d0f:
+          dependee: field_submit_photograph_of_coupl
+          settings:
+            state: visible
+            condition: '!checked'
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: false
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: application
   field__voter_id_card_no:
     third_party_settings:
       conditional_fields:
@@ -644,6 +662,16 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_community:
+    weight: 48
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_contact_no:
     type: telephone_default
     weight: 16
@@ -816,7 +844,24 @@ content:
     settings:
       size: 60
       placeholder: ''
-    third_party_settings: {  }
+    third_party_settings:
+      conditional_fields:
+        4bfbf58a-690b-4e6d-ab28-540187a5e0a3:
+          dependee: field_submit_photograph_of_coupl
+          settings:
+            state: visible
+            condition: '!checked'
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: false
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: application
   field_number_of_claims_submitted:
     type: string_textfield
     weight: 35
@@ -882,7 +927,24 @@ content:
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
-    third_party_settings: {  }
+    third_party_settings:
+      conditional_fields:
+        249d49a4-2c1e-4357-9901-603297ae7cfe:
+          dependee: field_submit_photograph_of_coupl
+          settings:
+            state: visible
+            condition: checked
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: false
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: application
   field_ration_card_no:
     third_party_settings:
       conditional_fields:
@@ -949,22 +1011,7 @@ content:
     third_party_settings: {  }
   field_submit_photograph_of_coupl:
     third_party_settings:
-      conditional_fields:
-        1e7ef1a7-b661-47c7-9258-04a78dcfe07e:
-          dependee: field_photo_couple
-          settings:
-            state: visible
-            condition: checked
-            grouping: AND
-            values_set: 1
-            value: ''
-            values: {  }
-            value_form: {  }
-            effect: show
-            effect_options: {  }
-            selector: ''
-          entity_type: node
-          bundle: application
+      conditional_fields: {  }
     weight: 36
     settings:
       display_label: true

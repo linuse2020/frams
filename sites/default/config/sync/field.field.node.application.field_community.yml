@@ -1,0 +1,29 @@
+uuid: e01b4007-ffc3-496b-9815-427e9973ccc1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_community
+    - node.type.application
+    - taxonomy.vocabulary.community
+id: node.application.field_community
+field_name: field_community
+entity_type: node
+bundle: application
+label: Community
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      community: community
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

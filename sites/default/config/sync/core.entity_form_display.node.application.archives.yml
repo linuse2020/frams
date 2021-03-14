@@ -32,6 +32,7 @@ dependencies:
     - field.field.node.application.field_claimant_tdo
     - field.field.node.application.field_claimant_teo
     - field.field.node.application.field_claimant_village
+    - field.field.node.application.field_community
     - field.field.node.application.field_contact_no
     - field.field.node.application.field_declaration
     - field.field.node.application.field_disputed_lands
@@ -75,15 +76,16 @@ dependencies:
     - field.field.node.application.field_upload_ror_issued
     - field.field.node.application.field_upload_voters_id_copy
     - field.field.node.application.field_vaimozhy
+    - image.style.thumbnail
     - node.type.application
     - workflows.workflow.frams_applications
   module:
     - address
-    - conditional_fields
     - content_moderation
     - field_group
     - field_layout
     - file
+    - image
     - layout_discovery
     - paragraphs
     - telephone
@@ -101,14 +103,18 @@ third_party_settings:
         - field_name_of_the_spouse
         - field_name_of_father
         - field_name_of_mother
-        - field_family_category
         - field_address
         - field_contact_no
         - field_is_schedules_tribe
         - field_caste_cert_spouse_
         - field_is_spouse_st
+        - field_community
+        - field_family_category
+        - field_submit_photograph_of_coupl
+        - field_photo_couple
+        - field__photo
       parent_name: ''
-      weight: 1
+      weight: 0
       format_type: fieldset
       region: content
       format_settings:
@@ -134,7 +140,7 @@ third_party_settings:
         - field_claimant_teo
         - field_claimant_promoter
       parent_name: ''
-      weight: 2
+      weight: 3
       format_type: fieldset
       region: content
       format_settings:
@@ -147,7 +153,7 @@ third_party_settings:
       children:
         - field_other_family_members
       parent_name: ''
-      weight: 3
+      weight: 4
       format_type: fieldset
       region: content
       format_settings:
@@ -167,7 +173,7 @@ third_party_settings:
         - field_field_extent_of_land
         - field_other_traditional_ri
       parent_name: ''
-      weight: 4
+      weight: 5
       format_type: tab
       region: content
       format_settings:
@@ -181,7 +187,7 @@ third_party_settings:
     group_evidence_in_support:
       children: {  }
       parent_name: ''
-      weight: 5
+      weight: 6
       format_type: fieldset
       region: content
       format_settings:
@@ -193,7 +199,7 @@ third_party_settings:
     group_any_other_information:
       children: {  }
       parent_name: ''
-      weight: 7
+      weight: 8
       format_type: fieldset
       region: content
       format_settings:
@@ -205,7 +211,7 @@ third_party_settings:
     group_declaration:
       children: {  }
       parent_name: ''
-      weight: 6
+      weight: 7
       format_type: fieldset
       region: content
       format_settings:
@@ -217,7 +223,7 @@ third_party_settings:
     group_frc_site_verification_:
       children: {  }
       parent_name: ''
-      weight: 8
+      weight: 9
       format_type: fieldset
       region: content
       format_settings:
@@ -229,7 +235,7 @@ third_party_settings:
     group_frc_meeting_documents:
       children: {  }
       parent_name: ''
-      weight: 9
+      weight: 10
       format_type: fieldset
       region: content
       format_settings:
@@ -241,7 +247,7 @@ third_party_settings:
     group_grama_panchayat_:
       children: {  }
       parent_name: ''
-      weight: 10
+      weight: 12
       format_type: fieldset
       region: content
       format_settings:
@@ -253,7 +259,7 @@ third_party_settings:
     group_sub_division_level_committ:
       children: {  }
       parent_name: ''
-      weight: 11
+      weight: 13
       format_type: fieldset
       region: content
       format_settings:
@@ -266,7 +272,7 @@ third_party_settings:
       children:
         - field_survey_details
       parent_name: ''
-      weight: 12
+      weight: 14
       format_type: fieldset
       region: content
       format_settings:
@@ -278,7 +284,7 @@ third_party_settings:
     group_divisional_level_committee:
       children: {  }
       parent_name: ''
-      weight: 13
+      weight: 15
       format_type: fieldset
       region: content
       format_settings:
@@ -293,7 +299,7 @@ third_party_settings:
         - field_alloted_land_habitation
         - field_alloted_land_for_both
       parent_name: ''
-      weight: 14
+      weight: 16
       format_type: fieldset
       region: content
       format_settings:
@@ -318,7 +324,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field__claimant_taluk:
-    weight: 34
+    weight: 35
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -327,8 +333,16 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
+  field__photo:
+    type: image_image
+    weight: 15
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
   field_address:
-    weight: 14
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: address_default
@@ -366,14 +380,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_archives:
-    weight: 16
+    weight: 18
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
   field_caste_cert_spouse_:
-    weight: 17
+    weight: 9
     settings:
       display_label: true
     third_party_settings:
@@ -532,15 +546,25 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
+  field_community:
+    type: entity_reference_autocomplete
+    weight: 11
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_contact_no:
-    weight: 15
+    weight: 7
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: telephone_default
     region: content
   field_disputed_lands:
-    weight: 7
+    weight: 6
     settings:
       size: 60
       placeholder: ''
@@ -549,7 +573,7 @@ content:
     region: content
   field_family_category:
     type: options_select
-    weight: 13
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -578,14 +602,14 @@ content:
     type: string_textfield
     region: content
   field_is_schedules_tribe:
-    weight: 16
+    weight: 8
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
   field_is_spouse_st:
-    weight: 18
+    weight: 10
     settings:
       display_label: true
     third_party_settings:
@@ -609,7 +633,7 @@ content:
     type: boolean_checkbox
     region: content
   field_name_of_father:
-    weight: 10
+    weight: 4
     settings:
       size: 60
       placeholder: ''
@@ -617,7 +641,7 @@ content:
     type: string_textfield
     region: content
   field_name_of_mother:
-    weight: 12
+    weight: 5
     settings:
       size: 60
       placeholder: ''
@@ -625,7 +649,7 @@ content:
     type: string_textfield
     region: content
   field_name_of_other_claimants:
-    weight: 8
+    weight: 2
     settings:
       size: 60
       placeholder: ''
@@ -633,7 +657,7 @@ content:
     type: string_textfield
     region: content
   field_name_of_the_spouse:
-    weight: 9
+    weight: 3
     settings:
       size: 60
       placeholder: ''
@@ -661,15 +685,23 @@ content:
     type: string_textfield
     region: content
   field_pattas:
-    weight: 8
+    weight: 7
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_photo_couple:
+    type: image_image
+    weight: 14
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
   field_rehabilitation:
-    weight: 9
+    weight: 8
     settings:
       size: 60
       placeholder: ''
@@ -684,6 +716,13 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_submit_photograph_of_coupl:
+    type: boolean_checkbox
+    weight: 13
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
   field_survey_details:
     type: entity_reference_paragraphs
     weight: 53
@@ -698,37 +737,41 @@ content:
     region: content
   field_upload_ror_issued:
     type: file_generic
-    weight: 15
+    weight: 17
     region: content
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 2
+    weight: 1
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 17
+    weight: 19
     settings: {  }
     region: content
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 7
+    weight: 1
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  translation:
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   created: true
   field__form_appendix2: true
   field__frc_secretary_report: true
-  field__photo: true
   field__voter_id_card_no: true
   field_adharcard_no: true
   field_cast_cirtificate: true
@@ -744,12 +787,10 @@ hidden:
   field_number_of_claims_submitted: true
   field_other_claims: true
   field_panchayat_committee_report: true
-  field_photo_couple: true
   field_ration_card_no: true
   field_ror_issued: true
   field_sdlc_meeting_minutes_: true
   field_submit_adharcard: true
-  field_submit_photograph_of_coupl: true
   field_submit_ration_card: true
   field_submit_voter_id: true
   field_survery_conducted: true
