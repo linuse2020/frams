@@ -32,10 +32,11 @@ class IndividualHabController extends ControllerBase {
       $tot_ind_hab_received = \Drupal::entityQuery('node')->condition('type','application')->condition('field_claimant_district',$district->tid,'=')->exists('field_habitation')->count()->execute();
       $query = \Drupal::entityQuery('node')->condition('type','application')->condition('field_claimant_district',$district->tid,'=');
       $group = $query->orConditionGroup()->exists('field_alloted_land_for_both')->exists('field_alloted_land_habitation');
+      $group_ror_issued = $query->orConditionGroup()->exists('field_upload_ror_issued')->condition('field_ror_issued',TRUE,'=');
       $query->condition($group);
       $tot_ind_hab_recognised = $query->count()->execute();
       $tot_ind_hab_demarcated =  \Drupal::entityQuery('node')->condition('type','application')->condition('field_claimant_district',$district->tid,'=')->exists('field_survey_details')->count()->execute();
-      $ind_hab_ror_issued =   \Drupal::entityQuery('node')->condition('type','application')->condition('field_claimant_district',$district->tid,'=')->exists('field_upload_ror_issued')->condition($group)->count()->execute();
+      $ind_hab_ror_issued =   \Drupal::entityQuery('node')->condition('type','application')->condition('field_claimant_district',$district->tid,'=')->condition('field_ror_issued',TRUE,'=')->condition($group)->count()->execute();
       $ind_hab_issued_couple =  \Drupal::entityQuery('node')->condition('type','application')->condition('field_claimant_district',$district->tid,'=')->condition('field_family_category','Couple','=')->condition($group)->count()->execute();
       $ind_hab_issued_woman =  \Drupal::entityQuery('node')->condition('type','application')->condition('field_claimant_district',$district->tid,'=')->condition('field_family_category','female','=')->condition($group)->count()->execute();
       $tot_ind_hab_fdst =   \Drupal::entityQuery('node')->condition('type','application')->condition('field_claimant_district',$district->tid,'=')->condition('field_is_schedules_tribe',TRUE,'=')->condition($group)->count()->execute();
@@ -88,6 +89,7 @@ class IndividualHabController extends ControllerBase {
 
        $district_data[] = [
         'sl_no' => $count,
+        'district_id' => $district->tid,
         'district' => $district->name,
         'tot_ind_cul_received' => $tot_ind_cul_received,
         'tot_ind_cul_recognised' => $tot_ind_cul_recognised,
@@ -121,7 +123,7 @@ class IndividualHabController extends ControllerBase {
       $dist = $district->name;
       $tot_ind_cul_received = \Drupal::entityQuery('node')->condition('type','application')->condition('field_claimant_district',$district->tid,'=')->count()->execute();
       $query = \Drupal::entityQuery('node')->condition('type','application')->condition('field_claimant_district',$district->tid,'=');
-      $group = $query->orConditionGroup()->exists('field_alloted_land_for_both')->exists('field_alloted_land_cultivation');
+      $group = $query->orConditionGroup()->exists('field_alloted_land_for_both')->exists('field_alloted_land_cultivation')->exists('field_alloted_land_habitation');
       $query->condition($group);
       $tot_ind_cul_recognised = $query->count()->execute();
       $tot_ind_cul_demarcated =  \Drupal::entityQuery('node')->condition('type','application')->condition('field_claimant_district',$district->tid,'=')->exists('field_survey_details')->count()->execute();
@@ -133,6 +135,7 @@ class IndividualHabController extends ControllerBase {
 
        $district_data[] = [
         'sl_no' => $count,
+        'district_id' => $district->tid,
         'district' => $district->name,
         'tot_ind_cul_received' => $tot_ind_cul_received,
         'tot_ind_cul_recognised' => $tot_ind_cul_recognised,

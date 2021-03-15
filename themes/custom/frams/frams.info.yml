@@ -24,11 +24,11 @@ libraries:
   - radix/style
   - frams/style
   - frams/cookies
-  - frams/custom
+  - frams/datatables
   - frams/fonts
   - frams/star-ratings
   - frams/percircle-progress
-  - frams/datatables
+  - frams/custom
 
 libraries-override:
   radix/bootstrap: false

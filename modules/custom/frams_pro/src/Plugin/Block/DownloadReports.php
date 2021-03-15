@@ -24,17 +24,17 @@ class DownloadReports extends BlockBase {
    * {@inheritdoc}
    */
 
-	public function build()	{
-		$current_path = \Drupal::request()->getRequestUri();
-		$split = explode("/", $current_path);
-		$filename = $split[count($split)-1];		/*kint($filename);
-  	kint($split);
-  	kint($current_path);*/
+  public function build() {
+    $current_path = \Drupal::request()->getRequestUri();
+    $split = explode("/", $current_path);
+    $filename = $split[count($split)-1];    /*kint($filename);
+    kint($split);
+    kint($current_path);*/
 
 
     return [
-    	'#type' => 'markup',
+      '#type' => 'markup',
       '#markup' => "<a class='btn btn-primary pl-5 pr-5 m-3' href='".$current_path."/download/pdf'>PDF</a><a class='btn btn-primary pl-5 pr-5 m-3' href='".$current_path."/download/csv'>Excel</a>",
     ];
-	}
+  }
 }

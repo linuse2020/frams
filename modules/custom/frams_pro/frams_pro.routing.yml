@@ -15,7 +15,7 @@ frams_pro.archives-updat:
     _permission: 'access content'
 
 frams_pro.individualHabitation_report_pdf:
-  path: 'report/individual-habitation-rights/download/pdf'
+  path: 'reports/individual-habitation-rights/download/pdf'
   defaults:
     _controller: '\Drupal\frams_pro\Controller\DownloadReports::individualHabitation_report_pdf'
     _title: 'Individual Habitation Report(pdf)'

@@ -26,7 +26,7 @@ extract_links: '0'
 save_pdf: false
 pdf_tool: dompdf
 paper_size: A4
-page_orientation: portrait
+page_orientation: landscape
 path_to_binary: ''
 pdf_location: ''
 send_to_printer: false

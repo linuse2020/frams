@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '89b692bf05d4ef947c3416b71bf3cb618126ff75',
+    'reference' => '2c45fedacb92bf55a215857053943aae6261af54',
     'name' => 'drupal/legacy-project',
   ),
   'versions' => 
@@ -664,6 +664,15 @@
       ),
       'reference' => '2.0.0',
     ),
+    'drupal/csv_serialization' => 
+    array (
+      'pretty_version' => '2.0.0',
+      'version' => '2.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-2.0',
+    ),
     'drupal/datatables' => 
     array (
       'pretty_version' => '2.0.0',
@@ -777,6 +786,15 @@
       array (
         0 => '8.9.13',
       ),
+    ),
+    'drupal/entity_reference_exposed_filters' => 
+    array (
+      'pretty_version' => '1.0.0-alpha3',
+      'version' => '1.0.0.0-alpha3',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.0-alpha3',
     ),
     'drupal/entity_reference_revisions' => 
     array (
@@ -1167,7 +1185,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '89b692bf05d4ef947c3416b71bf3cb618126ff75',
+      'reference' => '2c45fedacb92bf55a215857053943aae6261af54',
     ),
     'drupal/libraries' => 
     array (
@@ -1909,6 +1927,15 @@
       ),
       'reference' => '8.x-3.10',
     ),
+    'drupal/views_data_export' => 
+    array (
+      'pretty_version' => '1.0.0',
+      'version' => '1.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.0',
+    ),
     'drupal/views_entity_form_field' => 
     array (
       'pretty_version' => '1.0.0-beta9',
@@ -2172,6 +2199,15 @@
       array (
       ),
       'reference' => 'fcd87520e4943d968557803919523772475e8ea3',
+    ),
+    'league/csv' => 
+    array (
+      'pretty_version' => '9.6.2',
+      'version' => '9.6.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'f28da6e483bf979bac10e2add384c90ae9983e4e',
     ),
     'masterminds/html5' => 
     array (

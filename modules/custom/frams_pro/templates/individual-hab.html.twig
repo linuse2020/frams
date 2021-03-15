@@ -24,12 +24,12 @@
       <td>{{ district['district'] }}</td>
       <td><a href="/detailed-list-view/{{district['district_id']}}">{{ district['tot_ind_hab_received'] }}</a></td>
       <td><a href="/rights-recognised/{{district['district_id']}}">{{ district['tot_ind_hab_recognised'] }}</a></td>
-      <td>{{ district['tot_ind_hab_demarcated'] }}</td>
-      <td>{{ district['tot_ind_hab_ror_issued'] }}</td>
-      <td>{{ district['tot_ind_hab_issued_couple'] }}</td>
-      <td>{{ district['tot_ind_hab_issue_wom'] }}</td>
-      <td>{{ district['tot_ind_hab_fdst'] }}</td>
-      <td>{{ district['tot_ind_hab_otfd'] }}</td>
+      <td><a href="/demarcated/{{district['district_id']}}">{{ district['tot_ind_hab_demarcated'] }}</a></td>
+      <td><a href="/ror_issued/{{district['district_id']}}">{{ district['tot_ind_hab_ror_issued'] }}</td>
+      <td><a href="/issued-couple/{{district['district_id']}}">{{ district['tot_ind_hab_issued_couple'] }}</a></td>
+      <td><a href="/issued-women/{{district['district_id']}}">{{ district['tot_ind_hab_issue_wom'] }}</a></td>
+      <td><a href="/fdst/{{district['district_id']}}">{{ district['tot_ind_hab_fdst'] }}</a></td>
+      <td><a href="/otfd/{{district['district_id']}}">{{ district['tot_ind_hab_otfd'] }}</a></td>
     </tr>
   {% endfor %}
   </tbody>

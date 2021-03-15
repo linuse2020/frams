@@ -31,6 +31,7 @@ module:
   content_moderation: 0
   contextual: 0
   create_user_permission: 0
+  csv_serialization: 0
   datetime: 0
   datetime_range: 0
   dblog: 0
@@ -45,6 +46,7 @@ module:
   entity_browser_example: 0
   entity_print: 0
   entity_print_views: 0
+  entity_reference_exposed_filters: 0
   entity_reference_revisions: 0
   entity_reference_views_token: 0
   entityreference_filter: 0
@@ -144,6 +146,7 @@ module:
   view_unpublished: 0
   views_argument_token: 0
   views_bulk_operations: 0
+  views_data_export: 0
   views_entity_form_field: 0
   views_extras: 0
   views_flipped_table: 0

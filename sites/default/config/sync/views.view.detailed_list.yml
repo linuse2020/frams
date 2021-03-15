@@ -16,16 +16,24 @@ dependencies:
     - image.style.photo_list
     - node.type.application
     - taxonomy.vocabulary.constituency_
+    - taxonomy.vocabulary.forest_range
     - taxonomy.vocabulary.grama_panchayat
+    - taxonomy.vocabulary.taluk
+    - taxonomy.vocabulary.village
   module:
     - address
     - better_exposed_filters
+    - entity_print_views
+    - entity_reference_exposed_filters
     - entity_reference_revisions
     - image
     - node
     - options
+    - rest
+    - serialization
     - taxonomy
     - user
+    - views_data_export
 id: detailed_list
 label: 'Detailed List'
 module: views
@@ -77,8 +85,69 @@ display:
               allow_secondary: false
               secondary_label: 'Advanced options'
               secondary_open: false
+            filter:
+              field_claimant_constituency_target_id:
+                plugin_id: default
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: ''
+                  collapsible: false
+                  is_secondary: false
+              nid:
+                plugin_id: default
+                advanced:
+                  collapsible: false
+                  is_secondary: false
+              field_claimant_panchayat_target_id:
+                plugin_id: default
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: ''
+                  collapsible: false
+                  is_secondary: false
+              field__claimant_taluk_target_id:
+                plugin_id: default
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: ''
+                  collapsible: false
+                  is_secondary: false
+              field_claimant_village_target_id:
+                plugin_id: default
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: ''
+                  collapsible: false
+                  is_secondary: false
+              field__claimant_range_target_id:
+                plugin_id: default
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: ''
+                  collapsible: false
+                  is_secondary: false
+              field_claimant_frc_target_id:
+                plugin_id: default
+                advanced:
+                  collapsible: false
+                  is_secondary: false
+              field_claimant_tdo_target_id:
+                plugin_id: default
+                advanced:
+                  collapsible: false
+                  is_secondary: false
+              field_claimant_teo_target_id:
+                plugin_id: default
+                advanced:
+                  collapsible: false
+                  is_secondary: false
+              field_claimant_sdlc_target_id:
+                plugin_id: default
+                advanced:
+                  collapsible: false
+                  is_secondary: false
       pager:
-        type: mini
+        type: full
         options:
           items_per_page: 50
           offset: 0
@@ -87,6 +156,8 @@ display:
           tags:
             previous: ‹‹
             next: ››
+            first: '« First'
+            last: 'Last »'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -95,6 +166,7 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
+          quantity: 9
       style:
         type: table
       row:
@@ -1291,6 +1363,46 @@ display:
           hierarchy: false
           error_message: true
           plugin_id: taxonomy_index_tid
+        field_habitation_value:
+          id: field_habitation_value
+          table: node__field_habitation
+          field: field_habitation_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: 'not empty'
+          value: ''
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          use_tokens: 0
+          plugin_id: string
       sorts:
         created:
           id: created
@@ -1307,11 +1419,44 @@ display:
           expose:
             label: ''
           granularity: second
+        field_alloted_land_habitation_value:
+          id: field_alloted_land_habitation_value
+          table: node__field_alloted_land_habitation
+          field: field_alloted_land_habitation_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: 'Alloted land for habitation (field_alloted_land_habitation)'
+          plugin_id: standard
       title: 'Detailed List'
-      header: {  }
+      header:
+        area_entity_print_views:
+          id: area_entity_print_views
+          table: views
+          field: area_entity_print_views
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          export_type: word_docx
+          link_text: 'View PDF'
+          display_id: page_1
+          plugin_id: entity_print_views_link
       footer: {  }
       empty: {  }
-      relationships: {  }
+      relationships:
+        field_claimant_frc:
+          id: field_claimant_frc
+          table: node__field_claimant_frc
+          field: field_claimant_frc
+          relationship: none
+          group_type: group
+          admin_label: 'field_claimant_frc: Content'
+          required: false
+          plugin_id: standard
       arguments:
         field_claimant_district_target_id:
           id: field_claimant_district_target_id
@@ -1374,11 +1519,3413 @@ display:
   page_1:
     display_plugin: page
     id: page_1
-    display_title: Page
+    display_title: Received
     position: 1
     display_options:
       display_extenders: {  }
       path: detailed-list-view
+      filters:
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            application: application
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+        field_claimant_constituency_target_id:
+          id: field_claimant_constituency_target_id
+          table: node__field_claimant_constituency
+          field: field_claimant_constituency_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_claimant_constituency_target_id_op
+            label: 'Claimant Constituency (field_claimant_constituency)'
+            description: ''
+            use_operator: false
+            operator: field_claimant_constituency_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_claimant_constituency_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              contributor: '0'
+              promoter: '0'
+              sdlc: '0'
+              dlc: '0'
+              slc: '0'
+              panchayat: '0'
+              forest: '0'
+              teo: '0'
+              tdo: '0'
+              claimant: '0'
+              survey: '0'
+              archives: '0'
+              super_admin: '0'
+              la: '0'
+              frc: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: textfield
+          limit: true
+          vid: constituency_
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        nid:
+          id: nid
+          table: node_field_data
+          field: nid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: nid_op
+            label: ID
+            description: ''
+            use_operator: false
+            operator: nid_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: nid
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              contributor: '0'
+              promoter: '0'
+              sdlc: '0'
+              dlc: '0'
+              slc: '0'
+              panchayat: '0'
+              forest: '0'
+              teo: '0'
+              tdo: '0'
+              claimant: '0'
+              survey: '0'
+              archives: '0'
+              super_admin: '0'
+              la: '0'
+              frc: '0'
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          use_tokens: 0
+          entity_type: node
+          entity_field: nid
+          plugin_id: numeric
+        field_claimant_panchayat_target_id:
+          id: field_claimant_panchayat_target_id
+          table: node__field_claimant_panchayat
+          field: field_claimant_panchayat_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_claimant_panchayat_target_id_op
+            label: 'Claimant Panchayat (field_claimant_panchayat)'
+            description: ''
+            use_operator: false
+            operator: field_claimant_panchayat_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_claimant_panchayat_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              contributor: '0'
+              promoter: '0'
+              sdlc: '0'
+              dlc: '0'
+              slc: '0'
+              panchayat: '0'
+              forest: '0'
+              teo: '0'
+              tdo: '0'
+              claimant: '0'
+              survey: '0'
+              archives: '0'
+              super_admin: '0'
+              la: '0'
+              frc: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: textfield
+          limit: true
+          vid: grama_panchayat
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        field_habitation_value:
+          id: field_habitation_value
+          table: node__field_habitation
+          field: field_habitation_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: 'not empty'
+          value: ''
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          use_tokens: 0
+          plugin_id: string
+        field__claimant_taluk_target_id:
+          id: field__claimant_taluk_target_id
+          table: node__field__claimant_taluk
+          field: field__claimant_taluk_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field__claimant_taluk_target_id_op
+            label: ' Claimant Taluk (field__claimant_taluk)'
+            description: ''
+            use_operator: false
+            operator: field__claimant_taluk_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field__claimant_taluk_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              contributor: '0'
+              promoter: '0'
+              sdlc: '0'
+              dlc: '0'
+              slc: '0'
+              panchayat: '0'
+              forest: '0'
+              teo: '0'
+              tdo: '0'
+              claimant: '0'
+              survey: '0'
+              archives: '0'
+              super_admin: '0'
+              la: '0'
+              frc: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: textfield
+          limit: true
+          vid: taluk
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        field_claimant_village_target_id:
+          id: field_claimant_village_target_id
+          table: node__field_claimant_village
+          field: field_claimant_village_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_claimant_village_target_id_op
+            label: 'Claimant Village (field_claimant_village)'
+            description: ''
+            use_operator: false
+            operator: field_claimant_village_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_claimant_village_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              contributor: '0'
+              promoter: '0'
+              sdlc: '0'
+              dlc: '0'
+              slc: '0'
+              panchayat: '0'
+              forest: '0'
+              teo: '0'
+              tdo: '0'
+              claimant: '0'
+              survey: '0'
+              archives: '0'
+              super_admin: '0'
+              la: '0'
+              frc: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: textfield
+          limit: true
+          vid: village
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        field__claimant_range_target_id:
+          id: field__claimant_range_target_id
+          table: node__field__claimant_range
+          field: field__claimant_range_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field__claimant_range_target_id_op
+            label: ' Claimant Range (field__claimant_range)'
+            description: ''
+            use_operator: false
+            operator: field__claimant_range_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field__claimant_range_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              contributor: '0'
+              promoter: '0'
+              sdlc: '0'
+              dlc: '0'
+              slc: '0'
+              panchayat: '0'
+              forest: '0'
+              teo: '0'
+              tdo: '0'
+              claimant: '0'
+              survey: '0'
+              archives: '0'
+              super_admin: '0'
+              la: '0'
+              frc: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: textfield
+          limit: true
+          vid: forest_range
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        field_claimant_tdo_target_id:
+          id: field_claimant_tdo_target_id
+          table: node__field_claimant_tdo
+          field: field_claimant_tdo_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_claimant_tdo_target_id_op
+            label: 'Claimant TDO (field_claimant_tdo)'
+            description: ''
+            use_operator: false
+            operator: field_claimant_tdo_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_claimant_tdo_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              contributor: '0'
+              promoter: '0'
+              sdlc: '0'
+              dlc: '0'
+              slc: '0'
+              panchayat: '0'
+              forest: '0'
+              teo: '0'
+              tdo: '0'
+              claimant: '0'
+              survey: '0'
+              archives: '0'
+              super_admin: '0'
+              la: '0'
+              frc: '0'
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          use_tokens: 0
+          plugin_id: numeric
+        field_claimant_teo_target_id:
+          id: field_claimant_teo_target_id
+          table: node__field_claimant_teo
+          field: field_claimant_teo_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_claimant_teo_target_id_op
+            label: 'Claimant TEO (field_claimant_teo)'
+            description: ''
+            use_operator: false
+            operator: field_claimant_teo_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_claimant_teo_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              contributor: '0'
+              promoter: '0'
+              sdlc: '0'
+              dlc: '0'
+              slc: '0'
+              panchayat: '0'
+              forest: '0'
+              teo: '0'
+              tdo: '0'
+              claimant: '0'
+              survey: '0'
+              archives: '0'
+              super_admin: '0'
+              la: '0'
+              frc: '0'
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          use_tokens: 0
+          plugin_id: numeric
+        field_claimant_sdlc_target_id:
+          id: field_claimant_sdlc_target_id
+          table: node__field_claimant_sdlc
+          field: field_claimant_sdlc_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_claimant_sdlc_target_id_op
+            label: 'Claimant SDLC (field_claimant_sdlc)'
+            description: ''
+            use_operator: false
+            operator: field_claimant_sdlc_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_claimant_sdlc_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              contributor: '0'
+              promoter: '0'
+              sdlc: '0'
+              dlc: '0'
+              slc: '0'
+              panchayat: '0'
+              forest: '0'
+              teo: '0'
+              tdo: '0'
+              claimant: '0'
+              survey: '0'
+              archives: '0'
+              super_admin: '0'
+              la: '0'
+              frc: '0'
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          use_tokens: 0
+          plugin_id: numeric
+        field_claimant_frc_target_id:
+          id: field_claimant_frc_target_id
+          table: node__field_claimant_frc
+          field: field_claimant_frc_target_id
+          relationship: field_claimant_frc
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_claimant_frc_target_id_op
+            label: 'Claimant FRC (field_claimant_frc)'
+            description: ''
+            use_operator: false
+            operator: field_claimant_frc_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_claimant_frc_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              contributor: '0'
+              promoter: '0'
+              sdlc: '0'
+              dlc: '0'
+              slc: '0'
+              panchayat: '0'
+              forest: '0'
+              teo: '0'
+              tdo: '0'
+              claimant: '0'
+              survey: '0'
+              archives: '0'
+              super_admin: '0'
+              la: '0'
+              frc: '0'
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          use_tokens: 0
+          plugin_id: numeric
+        eref_node_titles:
+          id: eref_node_titles
+          table: node_field_data
+          field: eref_node_titles
+          relationship: field_claimant_frc
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_frc
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              contributor: '0'
+              promoter: '0'
+              sdlc: '0'
+              dlc: '0'
+              slc: '0'
+              panchayat: '0'
+              forest: '0'
+              teo: '0'
+              tdo: '0'
+              claimant: '0'
+              survey: '0'
+              archives: '0'
+              super_admin: '0'
+              la: '0'
+              frc: '0'
+            reduce: 0
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          entity_type: node
+          plugin_id: eref_node_titles
+          sort_order: '0'
+          sort_by: '1'
+          get_unpublished: '1'
+          get_filter_no_results: '1'
+      defaults:
+        filters: false
+        filter_groups: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      display_description: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field__photo'
+        - 'config:field.storage.node.field_address'
+        - 'config:field.storage.node.field_application_no'
+        - 'config:field.storage.node.field_claimant_village'
+        - 'config:field.storage.node.field_family_category'
+        - 'config:field.storage.node.field_name_of_father'
+        - 'config:field.storage.node.field_name_of_mother'
+        - 'config:field.storage.node.field_name_of_other_claimants'
+        - 'config:field.storage.node.field_photo_couple'
+        - 'config:field.storage.node.field_survey_details'
+  page_2:
+    display_plugin: page
+    id: page_2
+    display_title: 'Rights Recognised'
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: rights-recognised
+      filters:
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            application: application
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        field_claimant_constituency_target_id:
+          id: field_claimant_constituency_target_id
+          table: node__field_claimant_constituency
+          field: field_claimant_constituency_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_claimant_constituency_target_id_op
+            label: 'Claimant Constituency (field_claimant_constituency)'
+            description: ''
+            use_operator: false
+            operator: field_claimant_constituency_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_claimant_constituency_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              contributor: '0'
+              promoter: '0'
+              sdlc: '0'
+              dlc: '0'
+              slc: '0'
+              panchayat: '0'
+              forest: '0'
+              teo: '0'
+              tdo: '0'
+              claimant: '0'
+              survey: '0'
+              archives: '0'
+              super_admin: '0'
+              la: '0'
+              frc: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: textfield
+          limit: true
+          vid: constituency_
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        nid:
+          id: nid
+          table: node_field_data
+          field: nid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: nid_op
+            label: ID
+            description: ''
+            use_operator: false
+            operator: nid_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: nid
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              contributor: '0'
+              promoter: '0'
+              sdlc: '0'
+              dlc: '0'
+              slc: '0'
+              panchayat: '0'
+              forest: '0'
+              teo: '0'
+              tdo: '0'
+              claimant: '0'
+              survey: '0'
+              archives: '0'
+              super_admin: '0'
+              la: '0'
+              frc: '0'
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          use_tokens: 0
+          entity_type: node
+          entity_field: nid
+          plugin_id: numeric
+        field_claimant_panchayat_target_id:
+          id: field_claimant_panchayat_target_id
+          table: node__field_claimant_panchayat
+          field: field_claimant_panchayat_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_claimant_panchayat_target_id_op
+            label: 'Claimant Panchayat (field_claimant_panchayat)'
+            description: ''
+            use_operator: false
+            operator: field_claimant_panchayat_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_claimant_panchayat_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              contributor: '0'
+              promoter: '0'
+              sdlc: '0'
+              dlc: '0'
+              slc: '0'
+              panchayat: '0'
+              forest: '0'
+              teo: '0'
+              tdo: '0'
+              claimant: '0'
+              survey: '0'
+              archives: '0'
+              super_admin: '0'
+              la: '0'
+              frc: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: textfield
+          limit: true
+          vid: grama_panchayat
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        field_alloted_land_for_both_value:
+          id: field_alloted_land_for_both_value
+          table: node__field_alloted_land_for_both
+          field: field_alloted_land_for_both_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: 'not empty'
+          value: ''
+          group: 2
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          use_tokens: 0
+          plugin_id: string
+        field_alloted_land_habitation_value:
+          id: field_alloted_land_habitation_value
+          table: node__field_alloted_land_habitation
+          field: field_alloted_land_habitation_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: 'not empty'
+          value: ''
+          group: 2
+          exposed: false
+          expose:
+            operator_id: field_alloted_land_habitation_value_op
+            label: 'Alloted land for habitation (field_alloted_land_habitation)'
+            description: null
+            use_operator: false
+            operator: field_alloted_land_habitation_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_alloted_land_habitation_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: null
+          is_grouped: true
+          group_info:
+            label: 'Alloted land for habitation (field_alloted_land_habitation)'
+            description: null
+            identifier: field_alloted_land_habitation_value
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1: {  }
+              2: {  }
+              3: {  }
+          use_tokens: 0
+          plugin_id: string
+      defaults:
+        filters: false
+        filter_groups: false
+        sorts: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+          2: OR
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          order: DESC
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          exposed: false
+          expose:
+            label: ''
+          granularity: second
+        field_alloted_land_habitation_value:
+          id: field_alloted_land_habitation_value
+          table: node__field_alloted_land_habitation
+          field: field_alloted_land_habitation_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: 'Alloted land for habitation (field_alloted_land_habitation)'
+          plugin_id: standard
+      display_description: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field__photo'
+        - 'config:field.storage.node.field_address'
+        - 'config:field.storage.node.field_application_no'
+        - 'config:field.storage.node.field_claimant_village'
+        - 'config:field.storage.node.field_family_category'
+        - 'config:field.storage.node.field_name_of_father'
+        - 'config:field.storage.node.field_name_of_mother'
+        - 'config:field.storage.node.field_name_of_other_claimants'
+        - 'config:field.storage.node.field_photo_couple'
+        - 'config:field.storage.node.field_survey_details'
+  page_3:
+    display_plugin: page
+    id: page_3
+    display_title: Demarcated
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: demarcated
+      filters:
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            application: application
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        field_claimant_constituency_target_id:
+          id: field_claimant_constituency_target_id
+          table: node__field_claimant_constituency
+          field: field_claimant_constituency_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_claimant_constituency_target_id_op
+            label: 'Claimant Constituency (field_claimant_constituency)'
+            description: ''
+            use_operator: false
+            operator: field_claimant_constituency_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_claimant_constituency_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              contributor: '0'
+              promoter: '0'
+              sdlc: '0'
+              dlc: '0'
+              slc: '0'
+              panchayat: '0'
+              forest: '0'
+              teo: '0'
+              tdo: '0'
+              claimant: '0'
+              survey: '0'
+              archives: '0'
+              super_admin: '0'
+              la: '0'
+              frc: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: textfield
+          limit: true
+          vid: constituency_
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        nid:
+          id: nid
+          table: node_field_data
+          field: nid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: nid_op
+            label: ID
+            description: ''
+            use_operator: false
+            operator: nid_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: nid
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              contributor: '0'
+              promoter: '0'
+              sdlc: '0'
+              dlc: '0'
+              slc: '0'
+              panchayat: '0'
+              forest: '0'
+              teo: '0'
+              tdo: '0'
+              claimant: '0'
+              survey: '0'
+              archives: '0'
+              super_admin: '0'
+              la: '0'
+              frc: '0'
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          use_tokens: 0
+          entity_type: node
+          entity_field: nid
+          plugin_id: numeric
+        field_claimant_panchayat_target_id:
+          id: field_claimant_panchayat_target_id
+          table: node__field_claimant_panchayat
+          field: field_claimant_panchayat_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_claimant_panchayat_target_id_op
+            label: 'Claimant Panchayat (field_claimant_panchayat)'
+            description: ''
+            use_operator: false
+            operator: field_claimant_panchayat_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_claimant_panchayat_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              contributor: '0'
+              promoter: '0'
+              sdlc: '0'
+              dlc: '0'
+              slc: '0'
+              panchayat: '0'
+              forest: '0'
+              teo: '0'
+              tdo: '0'
+              claimant: '0'
+              survey: '0'
+              archives: '0'
+              super_admin: '0'
+              la: '0'
+              frc: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: textfield
+          limit: true
+          vid: grama_panchayat
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        field_survey_details_target_id:
+          id: field_survey_details_target_id
+          table: node__field_survey_details
+          field: field_survey_details_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: 'not empty'
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          use_tokens: 0
+          plugin_id: numeric
+      defaults:
+        filters: false
+        filter_groups: false
+        sorts: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+          2: OR
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          order: DESC
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          exposed: false
+          expose:
+            label: ''
+          granularity: second
+        field_alloted_land_habitation_value:
+          id: field_alloted_land_habitation_value
+          table: node__field_alloted_land_habitation
+          field: field_alloted_land_habitation_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: 'Alloted land for habitation (field_alloted_land_habitation)'
+          plugin_id: standard
+      display_description: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field__photo'
+        - 'config:field.storage.node.field_address'
+        - 'config:field.storage.node.field_application_no'
+        - 'config:field.storage.node.field_claimant_village'
+        - 'config:field.storage.node.field_family_category'
+        - 'config:field.storage.node.field_name_of_father'
+        - 'config:field.storage.node.field_name_of_mother'
+        - 'config:field.storage.node.field_name_of_other_claimants'
+        - 'config:field.storage.node.field_photo_couple'
+        - 'config:field.storage.node.field_survey_details'
+  page_4:
+    display_plugin: page
+    id: page_4
+    display_title: 'RoR Issued'
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: ror-issued
+      filters:
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            application: application
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        field_claimant_constituency_target_id:
+          id: field_claimant_constituency_target_id
+          table: node__field_claimant_constituency
+          field: field_claimant_constituency_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_claimant_constituency_target_id_op
+            label: 'Claimant Constituency (field_claimant_constituency)'
+            description: ''
+            use_operator: false
+            operator: field_claimant_constituency_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_claimant_constituency_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              contributor: '0'
+              promoter: '0'
+              sdlc: '0'
+              dlc: '0'
+              slc: '0'
+              panchayat: '0'
+              forest: '0'
+              teo: '0'
+              tdo: '0'
+              claimant: '0'
+              survey: '0'
+              archives: '0'
+              super_admin: '0'
+              la: '0'
+              frc: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: textfield
+          limit: true
+          vid: constituency_
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        nid:
+          id: nid
+          table: node_field_data
+          field: nid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: nid_op
+            label: ID
+            description: ''
+            use_operator: false
+            operator: nid_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: nid
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              contributor: '0'
+              promoter: '0'
+              sdlc: '0'
+              dlc: '0'
+              slc: '0'
+              panchayat: '0'
+              forest: '0'
+              teo: '0'
+              tdo: '0'
+              claimant: '0'
+              survey: '0'
+              archives: '0'
+              super_admin: '0'
+              la: '0'
+              frc: '0'
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          use_tokens: 0
+          entity_type: node
+          entity_field: nid
+          plugin_id: numeric
+        field_claimant_panchayat_target_id:
+          id: field_claimant_panchayat_target_id
+          table: node__field_claimant_panchayat
+          field: field_claimant_panchayat_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_claimant_panchayat_target_id_op
+            label: 'Claimant Panchayat (field_claimant_panchayat)'
+            description: ''
+            use_operator: false
+            operator: field_claimant_panchayat_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_claimant_panchayat_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              contributor: '0'
+              promoter: '0'
+              sdlc: '0'
+              dlc: '0'
+              slc: '0'
+              panchayat: '0'
+              forest: '0'
+              teo: '0'
+              tdo: '0'
+              claimant: '0'
+              survey: '0'
+              archives: '0'
+              super_admin: '0'
+              la: '0'
+              frc: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: textfield
+          limit: true
+          vid: grama_panchayat
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        field_upload_ror_issued_target_id:
+          id: field_upload_ror_issued_target_id
+          table: node__field_upload_ror_issued
+          field: field_upload_ror_issued_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: 'not empty'
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 2
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          use_tokens: 0
+          plugin_id: numeric
+        field_ror_issued_value:
+          id: field_ror_issued_value
+          table: node__field_ror_issued
+          field: field_ror_issued_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 2
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: boolean
+        field_alloted_land_habitation_value:
+          id: field_alloted_land_habitation_value
+          table: node__field_alloted_land_habitation
+          field: field_alloted_land_habitation_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: 'not empty'
+          value: ''
+          group: 3
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          use_tokens: 0
+          plugin_id: string
+        field_alloted_land_for_both_value:
+          id: field_alloted_land_for_both_value
+          table: node__field_alloted_land_for_both
+          field: field_alloted_land_for_both_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: 'not empty'
+          value: ''
+          group: 3
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          use_tokens: 0
+          plugin_id: string
+      defaults:
+        filters: false
+        filter_groups: false
+        sorts: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+          2: OR
+          3: OR
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          order: DESC
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          exposed: false
+          expose:
+            label: ''
+          granularity: second
+        field_alloted_land_habitation_value:
+          id: field_alloted_land_habitation_value
+          table: node__field_alloted_land_habitation
+          field: field_alloted_land_habitation_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: 'Alloted land for habitation (field_alloted_land_habitation)'
+          plugin_id: standard
+      display_description: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field__photo'
+        - 'config:field.storage.node.field_address'
+        - 'config:field.storage.node.field_application_no'
+        - 'config:field.storage.node.field_claimant_village'
+        - 'config:field.storage.node.field_family_category'
+        - 'config:field.storage.node.field_name_of_father'
+        - 'config:field.storage.node.field_name_of_mother'
+        - 'config:field.storage.node.field_name_of_other_claimants'
+        - 'config:field.storage.node.field_photo_couple'
+        - 'config:field.storage.node.field_survey_details'
+  page_5:
+    display_plugin: page
+    id: page_5
+    display_title: 'Issued Couple'
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: issued-couple
+      filters:
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            application: application
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        field_claimant_constituency_target_id:
+          id: field_claimant_constituency_target_id
+          table: node__field_claimant_constituency
+          field: field_claimant_constituency_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_claimant_constituency_target_id_op
+            label: 'Claimant Constituency (field_claimant_constituency)'
+            description: ''
+            use_operator: false
+            operator: field_claimant_constituency_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_claimant_constituency_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              contributor: '0'
+              promoter: '0'
+              sdlc: '0'
+              dlc: '0'
+              slc: '0'
+              panchayat: '0'
+              forest: '0'
+              teo: '0'
+              tdo: '0'
+              claimant: '0'
+              survey: '0'
+              archives: '0'
+              super_admin: '0'
+              la: '0'
+              frc: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: textfield
+          limit: true
+          vid: constituency_
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        nid:
+          id: nid
+          table: node_field_data
+          field: nid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: nid_op
+            label: ID
+            description: ''
+            use_operator: false
+            operator: nid_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: nid
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              contributor: '0'
+              promoter: '0'
+              sdlc: '0'
+              dlc: '0'
+              slc: '0'
+              panchayat: '0'
+              forest: '0'
+              teo: '0'
+              tdo: '0'
+              claimant: '0'
+              survey: '0'
+              archives: '0'
+              super_admin: '0'
+              la: '0'
+              frc: '0'
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          use_tokens: 0
+          entity_type: node
+          entity_field: nid
+          plugin_id: numeric
+        field_claimant_panchayat_target_id:
+          id: field_claimant_panchayat_target_id
+          table: node__field_claimant_panchayat
+          field: field_claimant_panchayat_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_claimant_panchayat_target_id_op
+            label: 'Claimant Panchayat (field_claimant_panchayat)'
+            description: ''
+            use_operator: false
+            operator: field_claimant_panchayat_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_claimant_panchayat_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              contributor: '0'
+              promoter: '0'
+              sdlc: '0'
+              dlc: '0'
+              slc: '0'
+              panchayat: '0'
+              forest: '0'
+              teo: '0'
+              tdo: '0'
+              claimant: '0'
+              survey: '0'
+              archives: '0'
+              super_admin: '0'
+              la: '0'
+              frc: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: textfield
+          limit: true
+          vid: grama_panchayat
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        field_alloted_land_habitation_value:
+          id: field_alloted_land_habitation_value
+          table: node__field_alloted_land_habitation
+          field: field_alloted_land_habitation_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: 'not empty'
+          value: ''
+          group: 3
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          use_tokens: 0
+          plugin_id: string
+        field_alloted_land_for_both_value:
+          id: field_alloted_land_for_both_value
+          table: node__field_alloted_land_for_both
+          field: field_alloted_land_for_both_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: 'not empty'
+          value: ''
+          group: 3
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          use_tokens: 0
+          plugin_id: string
+        field_family_category_value:
+          id: field_family_category_value
+          table: node__field_family_category
+          field: field_family_category_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            Couple: Couple
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: list_field
+      defaults:
+        filters: false
+        filter_groups: false
+        sorts: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+          2: OR
+          3: OR
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          order: DESC
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          exposed: false
+          expose:
+            label: ''
+          granularity: second
+        field_alloted_land_habitation_value:
+          id: field_alloted_land_habitation_value
+          table: node__field_alloted_land_habitation
+          field: field_alloted_land_habitation_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: 'Alloted land for habitation (field_alloted_land_habitation)'
+          plugin_id: standard
+      display_description: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field__photo'
+        - 'config:field.storage.node.field_address'
+        - 'config:field.storage.node.field_application_no'
+        - 'config:field.storage.node.field_claimant_village'
+        - 'config:field.storage.node.field_family_category'
+        - 'config:field.storage.node.field_name_of_father'
+        - 'config:field.storage.node.field_name_of_mother'
+        - 'config:field.storage.node.field_name_of_other_claimants'
+        - 'config:field.storage.node.field_photo_couple'
+        - 'config:field.storage.node.field_survey_details'
+  page_6:
+    display_plugin: page
+    id: page_6
+    display_title: 'Issued women'
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: issued-women
+      filters:
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            application: application
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        field_claimant_constituency_target_id:
+          id: field_claimant_constituency_target_id
+          table: node__field_claimant_constituency
+          field: field_claimant_constituency_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_claimant_constituency_target_id_op
+            label: 'Claimant Constituency (field_claimant_constituency)'
+            description: ''
+            use_operator: false
+            operator: field_claimant_constituency_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_claimant_constituency_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              contributor: '0'
+              promoter: '0'
+              sdlc: '0'
+              dlc: '0'
+              slc: '0'
+              panchayat: '0'
+              forest: '0'
+              teo: '0'
+              tdo: '0'
+              claimant: '0'
+              survey: '0'
+              archives: '0'
+              super_admin: '0'
+              la: '0'
+              frc: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: textfield
+          limit: true
+          vid: constituency_
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        nid:
+          id: nid
+          table: node_field_data
+          field: nid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: nid_op
+            label: ID
+            description: ''
+            use_operator: false
+            operator: nid_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: nid
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              contributor: '0'
+              promoter: '0'
+              sdlc: '0'
+              dlc: '0'
+              slc: '0'
+              panchayat: '0'
+              forest: '0'
+              teo: '0'
+              tdo: '0'
+              claimant: '0'
+              survey: '0'
+              archives: '0'
+              super_admin: '0'
+              la: '0'
+              frc: '0'
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          use_tokens: 0
+          entity_type: node
+          entity_field: nid
+          plugin_id: numeric
+        field_claimant_panchayat_target_id:
+          id: field_claimant_panchayat_target_id
+          table: node__field_claimant_panchayat
+          field: field_claimant_panchayat_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_claimant_panchayat_target_id_op
+            label: 'Claimant Panchayat (field_claimant_panchayat)'
+            description: ''
+            use_operator: false
+            operator: field_claimant_panchayat_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_claimant_panchayat_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              contributor: '0'
+              promoter: '0'
+              sdlc: '0'
+              dlc: '0'
+              slc: '0'
+              panchayat: '0'
+              forest: '0'
+              teo: '0'
+              tdo: '0'
+              claimant: '0'
+              survey: '0'
+              archives: '0'
+              super_admin: '0'
+              la: '0'
+              frc: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: textfield
+          limit: true
+          vid: grama_panchayat
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        field_alloted_land_habitation_value:
+          id: field_alloted_land_habitation_value
+          table: node__field_alloted_land_habitation
+          field: field_alloted_land_habitation_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: 'not empty'
+          value: ''
+          group: 3
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          use_tokens: 0
+          plugin_id: string
+        field_alloted_land_for_both_value:
+          id: field_alloted_land_for_both_value
+          table: node__field_alloted_land_for_both
+          field: field_alloted_land_for_both_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: 'not empty'
+          value: ''
+          group: 3
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          use_tokens: 0
+          plugin_id: string
+        field_family_category_value:
+          id: field_family_category_value
+          table: node__field_family_category
+          field: field_family_category_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            female: female
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: list_field
+      defaults:
+        filters: false
+        filter_groups: false
+        sorts: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+          2: OR
+          3: OR
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          order: DESC
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          exposed: false
+          expose:
+            label: ''
+          granularity: second
+        field_alloted_land_habitation_value:
+          id: field_alloted_land_habitation_value
+          table: node__field_alloted_land_habitation
+          field: field_alloted_land_habitation_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: 'Alloted land for habitation (field_alloted_land_habitation)'
+          plugin_id: standard
+      display_description: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field__photo'
+        - 'config:field.storage.node.field_address'
+        - 'config:field.storage.node.field_application_no'
+        - 'config:field.storage.node.field_claimant_village'
+        - 'config:field.storage.node.field_family_category'
+        - 'config:field.storage.node.field_name_of_father'
+        - 'config:field.storage.node.field_name_of_mother'
+        - 'config:field.storage.node.field_name_of_other_claimants'
+        - 'config:field.storage.node.field_photo_couple'
+        - 'config:field.storage.node.field_survey_details'
+  page_7:
+    display_plugin: page
+    id: page_7
+    display_title: otfd
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: otfd
+      filters:
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            application: application
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        field_claimant_constituency_target_id:
+          id: field_claimant_constituency_target_id
+          table: node__field_claimant_constituency
+          field: field_claimant_constituency_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_claimant_constituency_target_id_op
+            label: 'Claimant Constituency (field_claimant_constituency)'
+            description: ''
+            use_operator: false
+            operator: field_claimant_constituency_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_claimant_constituency_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              contributor: '0'
+              promoter: '0'
+              sdlc: '0'
+              dlc: '0'
+              slc: '0'
+              panchayat: '0'
+              forest: '0'
+              teo: '0'
+              tdo: '0'
+              claimant: '0'
+              survey: '0'
+              archives: '0'
+              super_admin: '0'
+              la: '0'
+              frc: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: textfield
+          limit: true
+          vid: constituency_
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        nid:
+          id: nid
+          table: node_field_data
+          field: nid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: nid_op
+            label: ID
+            description: ''
+            use_operator: false
+            operator: nid_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: nid
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              contributor: '0'
+              promoter: '0'
+              sdlc: '0'
+              dlc: '0'
+              slc: '0'
+              panchayat: '0'
+              forest: '0'
+              teo: '0'
+              tdo: '0'
+              claimant: '0'
+              survey: '0'
+              archives: '0'
+              super_admin: '0'
+              la: '0'
+              frc: '0'
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          use_tokens: 0
+          entity_type: node
+          entity_field: nid
+          plugin_id: numeric
+        field_claimant_panchayat_target_id:
+          id: field_claimant_panchayat_target_id
+          table: node__field_claimant_panchayat
+          field: field_claimant_panchayat_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_claimant_panchayat_target_id_op
+            label: 'Claimant Panchayat (field_claimant_panchayat)'
+            description: ''
+            use_operator: false
+            operator: field_claimant_panchayat_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_claimant_panchayat_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              contributor: '0'
+              promoter: '0'
+              sdlc: '0'
+              dlc: '0'
+              slc: '0'
+              panchayat: '0'
+              forest: '0'
+              teo: '0'
+              tdo: '0'
+              claimant: '0'
+              survey: '0'
+              archives: '0'
+              super_admin: '0'
+              la: '0'
+              frc: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: textfield
+          limit: true
+          vid: grama_panchayat
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        field_alloted_land_habitation_value:
+          id: field_alloted_land_habitation_value
+          table: node__field_alloted_land_habitation
+          field: field_alloted_land_habitation_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: 'not empty'
+          value: ''
+          group: 3
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          use_tokens: 0
+          plugin_id: string
+        field_alloted_land_for_both_value:
+          id: field_alloted_land_for_both_value
+          table: node__field_alloted_land_for_both
+          field: field_alloted_land_for_both_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: 'not empty'
+          value: ''
+          group: 3
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          use_tokens: 0
+          plugin_id: string
+        field_caste_cert_spouse__value:
+          id: field_caste_cert_spouse__value
+          table: node__field_caste_cert_spouse_
+          field: field_caste_cert_spouse__value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: boolean
+      defaults:
+        filters: false
+        filter_groups: false
+        sorts: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+          2: OR
+          3: OR
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          order: DESC
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          exposed: false
+          expose:
+            label: ''
+          granularity: second
+        field_alloted_land_habitation_value:
+          id: field_alloted_land_habitation_value
+          table: node__field_alloted_land_habitation
+          field: field_alloted_land_habitation_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: 'Alloted land for habitation (field_alloted_land_habitation)'
+          plugin_id: standard
+      display_description: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field__photo'
+        - 'config:field.storage.node.field_address'
+        - 'config:field.storage.node.field_application_no'
+        - 'config:field.storage.node.field_claimant_village'
+        - 'config:field.storage.node.field_family_category'
+        - 'config:field.storage.node.field_name_of_father'
+        - 'config:field.storage.node.field_name_of_mother'
+        - 'config:field.storage.node.field_name_of_other_claimants'
+        - 'config:field.storage.node.field_photo_couple'
+        - 'config:field.storage.node.field_survey_details'
+  page_8:
+    display_plugin: page
+    id: page_8
+    display_title: fdst
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: fdst
+      filters:
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            application: application
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        field_claimant_constituency_target_id:
+          id: field_claimant_constituency_target_id
+          table: node__field_claimant_constituency
+          field: field_claimant_constituency_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_claimant_constituency_target_id_op
+            label: 'Claimant Constituency (field_claimant_constituency)'
+            description: ''
+            use_operator: false
+            operator: field_claimant_constituency_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_claimant_constituency_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              contributor: '0'
+              promoter: '0'
+              sdlc: '0'
+              dlc: '0'
+              slc: '0'
+              panchayat: '0'
+              forest: '0'
+              teo: '0'
+              tdo: '0'
+              claimant: '0'
+              survey: '0'
+              archives: '0'
+              super_admin: '0'
+              la: '0'
+              frc: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: textfield
+          limit: true
+          vid: constituency_
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        nid:
+          id: nid
+          table: node_field_data
+          field: nid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: nid_op
+            label: ID
+            description: ''
+            use_operator: false
+            operator: nid_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: nid
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              contributor: '0'
+              promoter: '0'
+              sdlc: '0'
+              dlc: '0'
+              slc: '0'
+              panchayat: '0'
+              forest: '0'
+              teo: '0'
+              tdo: '0'
+              claimant: '0'
+              survey: '0'
+              archives: '0'
+              super_admin: '0'
+              la: '0'
+              frc: '0'
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          use_tokens: 0
+          entity_type: node
+          entity_field: nid
+          plugin_id: numeric
+        field_claimant_panchayat_target_id:
+          id: field_claimant_panchayat_target_id
+          table: node__field_claimant_panchayat
+          field: field_claimant_panchayat_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_claimant_panchayat_target_id_op
+            label: 'Claimant Panchayat (field_claimant_panchayat)'
+            description: ''
+            use_operator: false
+            operator: field_claimant_panchayat_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_claimant_panchayat_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              contributor: '0'
+              promoter: '0'
+              sdlc: '0'
+              dlc: '0'
+              slc: '0'
+              panchayat: '0'
+              forest: '0'
+              teo: '0'
+              tdo: '0'
+              claimant: '0'
+              survey: '0'
+              archives: '0'
+              super_admin: '0'
+              la: '0'
+              frc: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: textfield
+          limit: true
+          vid: grama_panchayat
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        field_alloted_land_habitation_value:
+          id: field_alloted_land_habitation_value
+          table: node__field_alloted_land_habitation
+          field: field_alloted_land_habitation_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: 'not empty'
+          value: ''
+          group: 3
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          use_tokens: 0
+          plugin_id: string
+        field_alloted_land_for_both_value:
+          id: field_alloted_land_for_both_value
+          table: node__field_alloted_land_for_both
+          field: field_alloted_land_for_both_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: 'not empty'
+          value: ''
+          group: 3
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          use_tokens: 0
+          plugin_id: string
+        field_is_schedules_tribe_value:
+          id: field_is_schedules_tribe_value
+          table: node__field_is_schedules_tribe
+          field: field_is_schedules_tribe_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: boolean
+      defaults:
+        filters: false
+        filter_groups: false
+        sorts: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+          2: OR
+          3: OR
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          order: DESC
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          exposed: false
+          expose:
+            label: ''
+          granularity: second
+        field_alloted_land_habitation_value:
+          id: field_alloted_land_habitation_value
+          table: node__field_alloted_land_habitation
+          field: field_alloted_land_habitation_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: 'Alloted land for habitation (field_alloted_land_habitation)'
+          plugin_id: standard
+      display_description: ''
     cache_metadata:
       max-age: -1
       contexts:

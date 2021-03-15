@@ -8,9 +8,10 @@
   // Store our function as a property of Drupal.behaviors.
   Drupal.behaviors.ClaimantRegister = {
     attach: function (context, settings) {
+      $('#datatable-ind').DataTable();
       $('#datatable-cul').DataTable();
       $('#datatable-hub').DataTable();
-      $('#datatable-ind').DataTable();
+
       $(window).scroll(function() {
         if ($(this).scrollTop() > 100){
           $('header').addClass("sticky");
@@ -19,6 +20,11 @@
           $('header').removeClass("sticky");
         }
       });
+
+     /* jQuery('.path-node #node-application-claimant-form #edit-field-family-category').on('change', function() {
+
+
+      });*/
       jQuery("#views-form-dashboard-panchayat-applications-page-pan-sec th.select-all").attr("checked","checked");
 
       if (window.location.pathname == '/claimant/register') {
@@ -32,7 +38,7 @@
         // $('#edit-frc-profiles-0-entity-field-grama-panchayat').empty();
         // $('#edit-frc-profiles-0-entity-field-frc').empty();
 
-        // Get panchayat list
+        // Get panchayat listedit-field-family-category
         $('#edit-claimant-profiles-0-entity-field-district', context).once('frams').on('change', function (e) {
           $(panchayat_select).empty();
           $(frc_select).empty();

@@ -1,6 +1,6 @@
 minimum_single: 0
 minimum_multiple: 0
-disable_search_threshold: 10
+disable_search_threshold: 5
 minimum_width: 0
 use_relative_width: false
 jquery_selector: 'select:visible'
@@ -10,8 +10,9 @@ allow_single_deselect: false
 placeholder_text_multiple: 'Choose some options'
 placeholder_text_single: 'Choose an option'
 no_results_text: 'No results match'
-max_shown_results: null
+max_shown_results: 10
 disabled_themes:
+  bartik: '0'
   claro: '0'
   radix: '0'
   frams: '0'

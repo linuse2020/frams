@@ -1,37 +1,37 @@
 <table id="datatable-cul" class="display" style="width:100%">
-		<thead>
-		<tr>
-			<th rowspan="2">Sl No</th>
-			<th rowspan="2">District</th>
-			<th colspan="8">Individual Cultivation Rights</th>
-		</tr>
-		<tr>
-			<th>No of Claim Received</th>
-			<th>No Of Rights Recognised</th>
-			<th>No of title demarcated</th>
-			<th>No of Rights Updated in RoR.</th>
-			<th>No of title Issued joinly in the name of both the spouses</th>
-			<th>No of title Issued single woman headedhouseholds</th>
-			<!-- <th>No of title Issued single Male headedhouseholds</th> -->
-			<th>No of FDST benificiaries</th>
-			<th>No of OTFD benificiaries</th>
-		</tr>
-		</thead>
-		<tbody>
-			{% for type, district in ind_cul_data %}
-			 <tr>
-					<td>{{ district['sl_no'] }}</td>
-					<td>{{ district['district'] }}</td>
-					<td>{{ district['tot_ind_cul_received'] }}</td>
-					<td>{{ district['tot_ind_cul_recognised'] }}</td>
-					<td>{{ district['tot_ind_cul_demarcated'] }}</td>
-					<td>{{ district['tot_ind_cul_ror_issued'] }}</td>
-					<td>{{ district['tot_ind_cul_issued_couple'] }}</td>
-					<td>{{ district['tot_ind_cul_issue_wom'] }}</td>
-					<td>{{ district['tot_ind_cul_fdst'] }}</td>
-					<td>{{ district['tot_ind_cul_otfd'] }}</td>
-				</tr>
-			{% endfor %}
-		</tbody>
+    <thead>
+    <tr>
+      <th rowspan="2">Sl No</th>
+      <th rowspan="2">District</th>
+      <th colspan="8">Individual Cultivation Rights</th>
+    </tr>
+    <tr>
+      <th>No of Claim Received</th>
+      <th>No Of Rights Recognised</th>
+      <th>No of title demarcated</th>
+      <th>No of Rights Updated in RoR.</th>
+      <th>No of title Issued joinly in the name of both the spouses</th>
+      <th>No of title Issued single woman headedhouseholds</th>
+      <!-- <th>No of title Issued single Male headedhouseholds</th> -->
+      <th>No of FDST benificiaries</th>
+      <th>No of OTFD benificiaries</th>
+    </tr>
+    </thead>
+    <tbody>
+      {% for type, district in ind_cul_data %}
+        <tr>
+            <td>{{ district['sl_no'] }}</td>
+            <td>{{ district['district'] }}</td>
+            <td><a href="/detailed-list-view/{{district['district_id']}}">{{ district['tot_ind_cul_received'] }}</a></td>
+            <td><a href="/rights-recognised/{{district['district_id']}}">{{ district['tot_ind_cul_recognised'] }}</a></td>
+            <td><a href="/demarcated/{{district['district_id']}}">{{ district['tot_ind_cul_demarcated'] }}</a></td>
+            <td><a href="/ror_issued/{{district['district_id']}}">{{ district['tot_ind_cul_ror_issued'] }}</td>
+            <td><a href="/issued-couple/{{district['district_id']}}">{{ district['tot_ind_cul_issued_couple'] }}</a></td>
+            <td><a href="/issued-women/{{district['district_id']}}">{{ district['tot_ind_cul_issue_wom'] }}</a></td>
+            <td><a href="/fdst/{{district['district_id']}}">{{ district['tot_ind_cul_fdst'] }}</a></td>
+            <td><a href="/otfd/{{district['district_id']}}">{{ district['tot_ind_cul_otfd'] }}</a></td>
+          </tr>
+      {% endfor %}
+    </tbody>
 
 </table>
