@@ -29,11 +29,8 @@ dependencies:
     - image
     - node
     - options
-    - rest
-    - serialization
     - taxonomy
     - user
-    - views_data_export
 id: detailed_list
 label: 'Detailed List'
 module: views
@@ -1457,6 +1454,33 @@ display:
           admin_label: 'field_claimant_frc: Content'
           required: false
           plugin_id: standard
+        field_claimant_sdlc:
+          id: field_claimant_sdlc
+          table: node__field_claimant_sdlc
+          field: field_claimant_sdlc
+          relationship: none
+          group_type: group
+          admin_label: 'field_claimant_sdlc: Content'
+          required: false
+          plugin_id: standard
+        field_claimant_teo:
+          id: field_claimant_teo
+          table: node__field_claimant_teo
+          field: field_claimant_teo
+          relationship: none
+          group_type: group
+          admin_label: 'field_claimant_teo: Content'
+          required: false
+          plugin_id: standard
+        field_claimant_tdo:
+          id: field_claimant_tdo
+          table: node__field_claimant_tdo
+          field: field_claimant_tdo
+          relationship: none
+          group_type: group
+          admin_label: 'field_claimant_tdo: Content'
+          required: false
+          plugin_id: standard
       arguments:
         field_claimant_district_target_id:
           id: field_claimant_district_target_id
@@ -1951,254 +1975,6 @@ display:
           hierarchy: false
           error_message: true
           plugin_id: taxonomy_index_tid
-        field_claimant_tdo_target_id:
-          id: field_claimant_tdo_target_id
-          table: node__field_claimant_tdo
-          field: field_claimant_tdo_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value:
-            min: ''
-            max: ''
-            value: ''
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_claimant_tdo_target_id_op
-            label: 'Claimant TDO (field_claimant_tdo)'
-            description: ''
-            use_operator: false
-            operator: field_claimant_tdo_target_id_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: field_claimant_tdo_target_id
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              contributor: '0'
-              promoter: '0'
-              sdlc: '0'
-              dlc: '0'
-              slc: '0'
-              panchayat: '0'
-              forest: '0'
-              teo: '0'
-              tdo: '0'
-              claimant: '0'
-              survey: '0'
-              archives: '0'
-              super_admin: '0'
-              la: '0'
-              frc: '0'
-            placeholder: ''
-            min_placeholder: ''
-            max_placeholder: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          use_tokens: 0
-          plugin_id: numeric
-        field_claimant_teo_target_id:
-          id: field_claimant_teo_target_id
-          table: node__field_claimant_teo
-          field: field_claimant_teo_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value:
-            min: ''
-            max: ''
-            value: ''
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_claimant_teo_target_id_op
-            label: 'Claimant TEO (field_claimant_teo)'
-            description: ''
-            use_operator: false
-            operator: field_claimant_teo_target_id_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: field_claimant_teo_target_id
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              contributor: '0'
-              promoter: '0'
-              sdlc: '0'
-              dlc: '0'
-              slc: '0'
-              panchayat: '0'
-              forest: '0'
-              teo: '0'
-              tdo: '0'
-              claimant: '0'
-              survey: '0'
-              archives: '0'
-              super_admin: '0'
-              la: '0'
-              frc: '0'
-            placeholder: ''
-            min_placeholder: ''
-            max_placeholder: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          use_tokens: 0
-          plugin_id: numeric
-        field_claimant_sdlc_target_id:
-          id: field_claimant_sdlc_target_id
-          table: node__field_claimant_sdlc
-          field: field_claimant_sdlc_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value:
-            min: ''
-            max: ''
-            value: ''
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_claimant_sdlc_target_id_op
-            label: 'Claimant SDLC (field_claimant_sdlc)'
-            description: ''
-            use_operator: false
-            operator: field_claimant_sdlc_target_id_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: field_claimant_sdlc_target_id
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              contributor: '0'
-              promoter: '0'
-              sdlc: '0'
-              dlc: '0'
-              slc: '0'
-              panchayat: '0'
-              forest: '0'
-              teo: '0'
-              tdo: '0'
-              claimant: '0'
-              survey: '0'
-              archives: '0'
-              super_admin: '0'
-              la: '0'
-              frc: '0'
-            placeholder: ''
-            min_placeholder: ''
-            max_placeholder: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          use_tokens: 0
-          plugin_id: numeric
-        field_claimant_frc_target_id:
-          id: field_claimant_frc_target_id
-          table: node__field_claimant_frc
-          field: field_claimant_frc_target_id
-          relationship: field_claimant_frc
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value:
-            min: ''
-            max: ''
-            value: ''
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_claimant_frc_target_id_op
-            label: 'Claimant FRC (field_claimant_frc)'
-            description: ''
-            use_operator: false
-            operator: field_claimant_frc_target_id_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: field_claimant_frc_target_id
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              contributor: '0'
-              promoter: '0'
-              sdlc: '0'
-              dlc: '0'
-              slc: '0'
-              panchayat: '0'
-              forest: '0'
-              teo: '0'
-              tdo: '0'
-              claimant: '0'
-              survey: '0'
-              archives: '0'
-              super_admin: '0'
-              la: '0'
-              frc: '0'
-            placeholder: ''
-            min_placeholder: ''
-            max_placeholder: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          use_tokens: 0
-          plugin_id: numeric
         eref_node_titles:
           id: eref_node_titles
           table: node_field_data
@@ -2212,13 +1988,199 @@ display:
           exposed: true
           expose:
             operator_id: ''
-            label: ''
+            label: FRC
             description: ''
             use_operator: false
             operator: ''
             operator_limit_selection: false
             operator_list: {  }
             identifier: field_frc
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              contributor: '0'
+              promoter: '0'
+              sdlc: '0'
+              dlc: '0'
+              slc: '0'
+              panchayat: '0'
+              forest: '0'
+              teo: '0'
+              tdo: '0'
+              claimant: '0'
+              survey: '0'
+              archives: '0'
+              super_admin: '0'
+              la: '0'
+              frc: '0'
+            reduce: 0
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          entity_type: node
+          plugin_id: eref_node_titles
+          sort_order: '0'
+          sort_by: '1'
+          get_unpublished: '1'
+          get_filter_no_results: '1'
+        eref_node_titles_1:
+          id: eref_node_titles_1
+          table: node_field_data
+          field: eref_node_titles
+          relationship: field_claimant_sdlc
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: ''
+            label: SDLC
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_sdlc
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              contributor: '0'
+              promoter: '0'
+              sdlc: '0'
+              dlc: '0'
+              slc: '0'
+              panchayat: '0'
+              forest: '0'
+              teo: '0'
+              tdo: '0'
+              claimant: '0'
+              survey: '0'
+              archives: '0'
+              super_admin: '0'
+              la: '0'
+              frc: '0'
+            reduce: 0
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          entity_type: node
+          plugin_id: eref_node_titles
+          sort_order: '0'
+          sort_by: '1'
+          get_unpublished: '1'
+          get_filter_no_results: '1'
+        eref_node_titles_2:
+          id: eref_node_titles_2
+          table: node_field_data
+          field: eref_node_titles
+          relationship: field_claimant_teo
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: ''
+            label: TEO
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_teo
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              contributor: '0'
+              promoter: '0'
+              sdlc: '0'
+              dlc: '0'
+              slc: '0'
+              panchayat: '0'
+              forest: '0'
+              teo: '0'
+              tdo: '0'
+              claimant: '0'
+              survey: '0'
+              archives: '0'
+              super_admin: '0'
+              la: '0'
+              frc: '0'
+            reduce: 0
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          entity_type: node
+          plugin_id: eref_node_titles
+          sort_order: '0'
+          sort_by: '1'
+          get_unpublished: '1'
+          get_filter_no_results: '1'
+        eref_node_titles_3:
+          id: eref_node_titles_3
+          table: node_field_data
+          field: eref_node_titles
+          relationship: field_claimant_tdo
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: ''
+            label: TDO
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_tdo
             required: false
             remember: false
             multiple: false
