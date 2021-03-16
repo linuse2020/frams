@@ -10,7 +10,6 @@ dependencies:
     - user.role.dlc
     - user.role.frc
     - user.role.sdlc
-    - user.role.tdo
   module:
     - block_content
     - search
@@ -33,8 +32,7 @@ display:
         type: role
         options:
           role:
-            administrator: administrator
-            tdo: tdo
+            frc: frc
       cache:
         type: tag
         options: {  }
@@ -278,6 +276,36 @@ display:
       defaults:
         access: false
       block_description: 'Add Archives'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - user.roles
+      tags: {  }
+  block_3:
+    display_plugin: block
+    id: block_3
+    display_title: 'Add Community Rights'
+    position: 3
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content: "<a class=\"btn shadow btn-md btn-primary\" href=\"/node/add/community_rights\">Apply Now for <br />Community Rights</a>\r\n<a class=\"btn shadow btn-md btn-primary\" href=\"/node/add/dev_rights\">Apply Now for <br />Community Rights to Forest Resource</a>"
+          plugin_id: text_custom
+      defaults:
+        header: false
+      block_description: 'Add Community'
     cache_metadata:
       max-age: -1
       contexts:
