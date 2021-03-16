@@ -93,6 +93,13 @@ header .user-menu ul {
   display: none;
 }
 .view-detailed-list {
+  .views-exposed-form {
+    .form-group {
+      margin-bottom: 1rem;
+      width: 30%;
+      display: inline-block;
+    }
+  }
   td {
     font-size: 0.8rem;
   }

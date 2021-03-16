@@ -8,9 +8,29 @@
   // Store our function as a property of Drupal.behaviors.
   Drupal.behaviors.ClaimantRegister = {
     attach: function (context, settings) {
-      $('#datatable-ind').DataTable();
+     /* $('#datatable-ind').DataTable();
       $('#datatable-cul').DataTable();
-      $('#datatable-hub').DataTable();
+      $('#datatable-hub').DataTable();*/
+      $('#datatable-hub').dataTable({
+        "aLengthMenu": [[10, 25, 50, 75, -1], [10, 25, 50, 75, "All"]],
+        "iDisplayLength": 15,
+        "iDeferLoading": 0,
+        "destroy": true
+      });
+
+      $('#datatable-cul').dataTable({
+        "aLengthMenu": [[10, 25, 50, 75, -1], [10, 25, 50, 75, "All"]],
+        "iDisplayLength": 15,
+        "iDeferLoading": 0,
+        "destroy": true
+      });
+
+      $('#datatable-ind').dataTable({
+        "aLengthMenu": [[10, 25, 50, 75, -1], [10, 25, 50, 75, "All"]],
+        "iDisplayLength": 15,
+        "iDeferLoading": 0,
+        "destroy": true
+      });
 
       $(window).scroll(function() {
         if ($(this).scrollTop() > 100){
