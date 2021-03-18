@@ -9623,6 +9623,7 @@ body {
 
 body.simplelogin {
   font-family: "M PLUS Rounded 1c", sans-serif;
+  background-image: none !important;
 }
 
 body.path-frontpage {
@@ -10513,13 +10514,17 @@ header .user-menu ul li {
   display: none;
 }
 
-.view-detailed-list .views-exposed-form .form-group {
+.view-detailed-list .views-exposed-form .form-group, .view-detailed-list-individual- .views-exposed-form .form-group, .view-detailed-list-individual-cultivation .views-exposed-form .form-group {
   margin-bottom: 1rem;
   width: 30%;
   display: inline-block;
 }
-.view-detailed-list td {
+.view-detailed-list td, .view-detailed-list-individual- td, .view-detailed-list-individual-cultivation td {
   font-size: 0.8rem;
+}
+
+#print-logo {
+  width: 100px !important;
 }
 
 .page-front h1.display-3 {
